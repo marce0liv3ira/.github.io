@@ -26,10 +26,9 @@ jobs:
           extended: true
 
       - name: Build
-        # Forzamos a Hugo a cocinar lo que está en 'web' y ponerlo en 'public'
+        # Este comando es más robusto: entra a web, cocina y sale
         run: |
-          cd web
-          hugo --destination ../public
+          hugo --source web --destination ../public
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
