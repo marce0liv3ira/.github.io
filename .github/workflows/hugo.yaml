@@ -25,10 +25,10 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      - name: Build
-        # Este comando es más robusto: entra a web, cocina y sale
+      - name: Build with Hugo
+        # Forzamos la ruta absoluta desde la raíz del repo
         run: |
-          hugo --source web --destination ../public
+          hugo --source ./web --destination ../public
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
