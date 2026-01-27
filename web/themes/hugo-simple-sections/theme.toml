@@ -1,0 +1,19 @@
+name = "Hugo Simple Sections"
+license = "AGPL"
+licenselink = "https://codeberg.org/VaDeCodiNet/hugo-simple-sections/src/branch/main/LICENSE"
+description = "A simple site with sections"
+homepage = "https://codeberg.org/VaDeCodiNet/hugo-simple-sections"
+demosite = "https://hugo-simple-sections.demo.vadecodi.net"
+tags = [
+  "bootstrap",
+  "company",
+  "landing",
+  "minimal",
+  "organization",
+  "sections",
+]
+features = ["responsive", "instagram-feed"]
+
+[author]
+  name = "Mònica Ramírez Arceda"
+  homepage = "https://vadecodi.net"

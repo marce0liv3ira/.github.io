@@ -1,0 +1,4 @@
+# Do not force line tables to have 80 characters
+MD013:
+  line_length: 80
+  tables: false
