@@ -1,3 +1,2 @@
 User-agent: *
 Disallow:
-Sitemap: https://hormigue.ar/sitemap.xml
