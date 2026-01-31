@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><title>bonus - HORMIGUEAR</title><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="canonical" href="https://hormigue.ar/bonus/"><link rel="alternate" type="application/atom+xml" href="https://hormigue.ar/feed.xml" title="HORMIGUEAR - RSS"><link rel="alternate" type="application/json" href="https://hormigue.ar/feed.json" title="HORMIGUEAR - JSON"><meta property="og:title" content="bonus"><meta property="og:image" content="https://hormigue.ar/media/website/hormigueo-logo.png"><meta property="og:image:width" content="767"><meta property="og:image:height" content="752"><meta property="og:site_name" content="HORMIGUEAR"><meta property="og:description" content=""><meta property="og:url" content="https://hormigue.ar/bonus/"><meta property="og:type" content="article"><link rel="shortcut icon" href="https://hormigue.ar/media/website/hormigueo-logo-2.png" type="image/x-icon"><link rel="stylesheet" href="https://hormigue.ar/assets/css/fontawesome-all.min.css?v=85514f933f9e0b82460af63f1a403fa5"><link rel="stylesheet" href="https://hormigue.ar/assets/css/style.css?v=770d337510379abafd3db36a1bb43d00"><noscript><link rel="stylesheet" href="https://hormigue.ar/assets/css/noscript.css?v=efa867a99f5064d6729e4dc2008ad50b"></noscript><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://hormigue.ar/bonus/"},"headline":"bonus","datePublished":"2026-01-31T08:45-03:00","dateModified":"2026-01-31T08:45-03:00","image":{"@type":"ImageObject","url":"https://hormigue.ar/media/website/hormigueo-logo-6.png","height":752,"width":767},"description":"","author":{"@type":"Person","name":"marce oliveira","url":"https://hormigue.ar/authors/marce-oliveira/"},"publisher":{"@type":"Organization","name":"marce oliveira","logo":{"@type":"ImageObject","url":"https://hormigue.ar/media/website/hormigueo-logo-6.png","height":752,"width":767}}}</script><style>#wrapper > .bg {
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><title>bonus - HORMIGUEAR</title><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="canonical" href="https://hormigue.ar/bonus/"><link rel="alternate" type="application/atom+xml" href="https://hormigue.ar/feed.xml" title="HORMIGUEAR - RSS"><link rel="alternate" type="application/json" href="https://hormigue.ar/feed.json" title="HORMIGUEAR - JSON"><meta property="og:title" content="bonus"><meta property="og:image" content="https://hormigue.ar/media/website/hormigueo-logo.png"><meta property="og:image:width" content="767"><meta property="og:image:height" content="752"><meta property="og:site_name" content="HORMIGUEAR"><meta property="og:description" content=""><meta property="og:url" content="https://hormigue.ar/bonus/"><meta property="og:type" content="article"><link rel="shortcut icon" href="https://hormigue.ar/media/website/hormigueo-logo-2.png" type="image/x-icon"><link rel="stylesheet" href="https://hormigue.ar/assets/css/fontawesome-all.min.css?v=85514f933f9e0b82460af63f1a403fa5"><link rel="stylesheet" href="https://hormigue.ar/assets/css/style.css?v=c63ff7ffc8b6bfd50f4ed5e637a411a9"><noscript><link rel="stylesheet" href="https://hormigue.ar/assets/css/noscript.css?v=efa867a99f5064d6729e4dc2008ad50b"></noscript><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://hormigue.ar/bonus/"},"headline":"bonus","datePublished":"2026-01-31T08:45-03:00","dateModified":"2026-01-31T08:45-03:00","image":{"@type":"ImageObject","url":"https://hormigue.ar/media/website/hormigueo-logo-6.png","height":752,"width":767},"description":"","author":{"@type":"Person","name":"marce oliveira","url":"https://hormigue.ar/authors/marce-oliveira/"},"publisher":{"@type":"Organization","name":"marce oliveira","logo":{"@type":"ImageObject","url":"https://hormigue.ar/media/website/hormigueo-logo-6.png","height":752,"width":767}}}</script><style>#wrapper > .bg {
                background-image: url(https://hormigue.ar/assets/images/overlay.png), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(https://hormigue.ar/media/website/hormigas-negativas-rojo-3.png);
            }</style><noscript><style>img[loading] {
                     opacity: 1;
@@ -79,7 +79,28 @@ document.addEventListener('keyup', (e) => {
 });</script><script>document.addEventListener('contextmenu',function(e){e.preventDefault();e.stopPropagation();});
 document.addEventListener('copy',function(e){e.preventDefault();e.stopPropagation();});
 document.addEventListener('cut',function(e){e.preventDefault();e.stopPropagation();});</script><style>.jw-album-image img, .jw-element-image img { pointer-events: none; -webkit-touch-callout: none; }
-.pswp__share-tooltip .pswp__share--download { display: none; }</style>iframe { pointer-events: none; }<script>(function() {
+.pswp__share-tooltip .pswp__share--download { display: none; }</style>iframe { pointer-events: none; }<script>document.addEventListener("DOMContentLoaded", function() {
+    // Función para buscar y reemplazar texto en elementos
+    function traducirBoton(selector, ingles, castellano) {
+        const elementos = document.querySelectorAll(selector);
+        elementos.forEach(el => {
+            if (el.textContent.includes(ingles)) {
+                // Mantenemos los iconos si los hay y cambiamos solo el texto
+                el.innerHTML = el.innerHTML.replace(ingles, castellano);
+            }
+        });
+    }
+
+    // 1. Traducir botones de navegación de posts y paginado
+    traducirBoton('a', 'Next', 'Siguiente');
+    traducirBoton('a', 'Previous', 'Anterior');
+    traducirBoton('.pagination-next', 'Next', 'Siguiente');
+    traducirBoton('.pagination-prev', 'Previous', 'Anterior');
+    
+    // 2. Por si son botones de tipo "button" en lugar de enlaces
+    traducirBoton('button', 'Next', 'Siguiente');
+    traducirBoton('button', 'Previous', 'Anterior');
+});</script><script>(function() {
 			var originalTitle = document.title;
 			var timeout;
 			document.addEventListener("visibilitychange", function() {
