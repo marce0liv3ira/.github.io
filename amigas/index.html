@@ -8,9 +8,9 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 // Reemplazar copiado por la URL de la página
 document.addEventListener('copy', (e) => {
     const link = window.location.href;
-    e.clipboardData.setData('text/plain', 'Mirá esto sobre la UNaM en: ' + link);
+    e.clipboardData.setData('text/plain', '🐜Mirá esto picando en: ' + link);
     e.preventDefault();
-    alert('Hormigueá y compartí el contenido 🔗.');
+    alert('Hormigueá y compartí el contenido 🔗. Ya te facilitamos el enlace.');
 });
 
 // Bloqueo de descarga en audios
@@ -38,7 +38,7 @@ function secuestrarPortapapeles() {
 document.addEventListener('keyup', (e) => {
     if (e.key === 'PrintScreen' || e.keyCode === 44) {
         secuestrarPortapapeles();
-        alert('Captura detectada: Para hormiguear y difundir, compartí el enlace a este sitio 🔗');
+        alert('¡Pintó captura! Para hormiguear y difundir, compartí el enlace a este sitio 🔗');
     }
 });
 
@@ -58,9 +58,9 @@ function mostrarBloqueo() {
     // Contenido del mensaje
     overlay.innerHTML = `
         <div style="padding: 20px; border: 2px solid #A30000; background: #1a1a1a; max-width: 80%;">
-            <h2 style="color: #A30000; margin-bottom: 10px;">HICISTE UNA CAPTURA</h2>
-            <p>Si te gustó (o disgustó) el contenido y querés hormiguear, compartí el enlace a este sitio 🔗. Con esa mínima acción ya estás colaborando con la producción de está web.</p>
-            <p style="font-size: 0.8rem; margin-top: 15px;">(Hacé clic para volver al búnker)</p>
+            <h2 style="color: #A30000; margin-bottom: 10px;">¡PINTÓ CAPTURA!</h2>
+            <p>Si te gustó (o disgustó) el contenido y querés hormiguear, compartí el enlace a este sitio 🔗.<br> Con esa mínima acción ya estás colaborando con la producción de esta web.</p>
+            <p style="font-size: 0.8rem; margin-top: 15px;">(Picá en cualquier parte para volver al sitio)</p>
         </div>
     `;
     
