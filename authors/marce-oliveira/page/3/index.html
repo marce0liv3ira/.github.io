@@ -66,13 +66,24 @@ function mostrarBloqueo() {
     if (document.getElementById('bloqueo-hormigueo')) return;
     const overlay = document.createElement('div');
     overlay.id = 'bloqueo-hormigueo';
-    overlay.style = "position:fixed; top:0; left:0; width:100%; height:100%; background:#000; z-index:9999999; display:flex; align-items:center; justify-content:center; color:white; text-align:center; cursor:pointer;";
+    
+    // Fondo negro translúcido al 50%
+    overlay.style = "position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9999999; display:flex; align-items:center; justify-content:center; color:white; text-align:center; cursor:pointer; backdrop-filter: blur(2px);";
     
     overlay.innerHTML = `
-        <div style="padding: 40px; border: 4px solid #A30000; background: #000; max-width: 80%; box-shadow: 0 0 20px #A30000;">
-            <h1 style="color: #A30000; font-family: 'Arial Narrow', sans-serif; font-weight: bold; margin-bottom: 20px;">¡PINTÓ CAPTURA!</h1>
-            <p style="font-size: 1.2rem; line-height: 1.5;">Si te gustó el contenido y querés hormiguear,<br><b>compartí el enlace de este sitio 🔗</b>.</p>
-            <p style="margin-top: 20px; color: #888;">(Picá en cualquier lado para volver al Tacurú)</p>
+        <div style="padding: 40px; border: 4px solid #A30000; background: rgba(0,0,0,0.8); max-width: 80%; box-shadow: 0 0 30px rgba(163, 0, 0, 0.5); border-radius: 8px;">
+            <h1 style="color: #A30000; font-family: 'Arial Narrow', sans-serif; font-weight: bold; margin-bottom: 20px; font-size: 3rem; 
+                text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #A30000; 
+                -webkit-text-stroke: 1px rgba(255,255,255,0.8);">
+                ¡PINTÓ CAPTURA!
+            </h1>
+            <p style="font-size: 1.2rem; line-height: 1.5; color: #ffffff; text-shadow: 1px 1px 2px #000;">
+                Si te gustó el contenido y querés hormiguear,<br>
+                <b style="color: #fff;">compartí el enlace de este sitio 🔗</b>.
+            </p>
+            <p style="margin-top: 20px; color: #bbb; font-size: 0.9rem;">
+                (Picá en cualquier lado para volver al Tacurú)
+            </p>
         </div>
     `;
     
