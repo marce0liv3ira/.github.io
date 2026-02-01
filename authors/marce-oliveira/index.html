@@ -15,20 +15,24 @@
         box-sizing: border-box !important;
         border-top: none !important;
     }
-    /* IMÁGENES CUADRADAS Y PEQUEÑAS */
+    /* IMÁGENES CUADRADAS Y CENTRADAS */
     .posts > article .image.main, 
     .posts > article .image {
-        width: 120px !important; /* Tamaño reducido */
-        height: 120px !important; /* Proporción 1:1 */
-        margin: 0 auto 1.5rem auto !important; /* Centrado y con aire abajo */
+        width: 120px !important;
+        height: 120px !important;
+        margin: 0 auto 1.5rem auto !important;
         overflow: hidden !important;
-        border-radius: 4px; /* Un toque de suavizado */
+        border-radius: 4px;
+        position: relative !important; /* Resetea desplazamientos */
+        padding: 0 !important;
     }
 
     .posts > article .image img {
         width: 100% !important;
         height: 100% !important;
-        object-fit: cover !important; /* Recorte inteligente al centro */
+        object-fit: cover !important; /* Recorte centrado */
+        position: static !important; /* Evita que se "caiga" */
+        margin: 0 !important;
     }
 
     .posts > article h2 {
@@ -50,7 +54,6 @@ iframe { pointer-events: none; }</style><script>function secuestrarPortapapeles(
     document.body.removeChild(el);
 }
 
-// Bloqueo de Clic Derecho y Copia personalizada
 document.addEventListener('contextmenu', e => e.preventDefault());
 document.addEventListener('copy', (e) => {
     const link = window.location.href;
@@ -59,12 +62,10 @@ document.addEventListener('copy', (e) => {
     alert('Hormigueá y compartí el contenido 🔗. Ya te facilitamos el enlace.');
 });
 
-// FUNCIÓN DE BLOQUEO VISUAL (CARTEL NEGRO/ROJO)
 function mostrarBloqueo() {
     if (document.getElementById('bloqueo-hormigueo')) return;
     const overlay = document.createElement('div');
     overlay.id = 'bloqueo-hormigueo';
-    // Estilo agresivo: Negro total, z-index máximo
     overlay.style = "position:fixed; top:0; left:0; width:100%; height:100%; background:#000; z-index:9999999; display:flex; align-items:center; justify-content:center; color:white; text-align:center; cursor:pointer;";
     
     overlay.innerHTML = `
@@ -80,19 +81,38 @@ function mostrarBloqueo() {
     secuestrarPortapapeles();
 }
 
-// Disparadores
 window.addEventListener('keyup', (e) => {
     if (e.key === 'PrintScreen' || e.keyCode === 44) {
         mostrarBloqueo();
     }
 });
-document.addEventListener('visibilitychange', () => { if (document.hidden) secuestrarPortapapeles(); });</script><script>document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('visibilitychange', () => { if (document.hidden) secuestrarPortapapeles(); });
+
+// TIEMPO DE LECTURA Y TRADUCCIONES
+document.addEventListener("DOMContentLoaded", function() {
     const traducciones = {'Next': 'Siguiente', 'Previous': 'Anterior'};
-    document.querySelectorAll('a, button, .pagination-next, .pagination-
+    document.querySelectorAll('a, button, .pagination-next, .pagination-prev').forEach(el => {
+        Object.keys(traducciones).forEach(key => {
+            if (el.textContent.includes(key)) el.innerHTML = el.innerHTML.replace(key, traducciones[key]);
+        });
+    });
 
-
-	<script>
-		(function() {
+    const postBody = document.querySelector('.post__content, .post__body');
+    const title = document.querySelector('.post__header h1, .post h1, h1');
+    if (postBody && title && document.body.classList.contains('post-template')) {
+        const wpm = 200;
+        const text = postBody.innerText || postBody.textContent;
+        const wordCount = text.trim().split(/\s+/).length;
+        const time = Math.ceil(wordCount / wpm);
+        if (time > 0) {
+            const rt = document.createElement('div');
+            rt.className = 'rt-tacuru';
+            rt.style.cssText = "font-size:0.75rem; font-weight:bold; color:#a30000; letter-spacing:1px; margin-bottom:10px; text-transform:uppercase; font-style:normal !important;";
+            rt.innerHTML = `&#8986; ${time} MIN DE LECTURA`;
+            title.parentNode.insertBefore(rt, title);
+        }
+    }
+});</script><script>(function() {
 			var originalTitle = document.title;
 			var timeout;
 			document.addEventListener("visibilitychange", function() {
