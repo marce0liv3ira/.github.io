@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><title>contacto - HORMIGUEAR</title><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="canonical" href="https://hormigue.ar/contacto/"><link rel="alternate" type="application/atom+xml" href="https://hormigue.ar/feed.xml" title="HORMIGUEAR - RSS"><link rel="alternate" type="application/json" href="https://hormigue.ar/feed.json" title="HORMIGUEAR - JSON"><meta property="og:title" content="contacto"><meta property="og:image" content="https://hormigue.ar/media/website/hormigueo-logo.png"><meta property="og:image:width" content="767"><meta property="og:image:height" content="752"><meta property="og:site_name" content="HORMIGUEAR"><meta property="og:description" content=""><meta property="og:url" content="https://hormigue.ar/contacto/"><meta property="og:type" content="article"><link rel="shortcut icon" href="https://hormigue.ar/media/website/hormigueo-logo-2.png" type="image/x-icon"><link rel="stylesheet" href="https://hormigue.ar/assets/css/fontawesome-all.min.css?v=85514f933f9e0b82460af63f1a403fa5"><link rel="stylesheet" href="https://hormigue.ar/assets/css/style.css?v=7328dca37101ec10e21bcb6c29e82847"><noscript><link rel="stylesheet" href="https://hormigue.ar/assets/css/noscript.css?v=efa867a99f5064d6729e4dc2008ad50b"></noscript><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://hormigue.ar/contacto/"},"headline":"contacto","datePublished":"2026-01-30T19:49-03:00","dateModified":"2026-01-30T21:54-03:00","image":{"@type":"ImageObject","url":"https://hormigue.ar/media/website/hormigueo-logo-6.png","height":752,"width":767},"description":"","author":{"@type":"Person","name":"marce oliveira","url":"https://hormigue.ar/authors/marce-oliveira/"},"publisher":{"@type":"Organization","name":"marce oliveira","logo":{"@type":"ImageObject","url":"https://hormigue.ar/media/website/hormigueo-logo-6.png","height":752,"width":767}}}</script><style>#wrapper > .bg {
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><title>contacto - HORMIGUEAR</title><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="canonical" href="https://hormigue.ar/contacto/"><link rel="alternate" type="application/atom+xml" href="https://hormigue.ar/feed.xml" title="HORMIGUEAR - RSS"><link rel="alternate" type="application/json" href="https://hormigue.ar/feed.json" title="HORMIGUEAR - JSON"><meta property="og:title" content="contacto"><meta property="og:image" content="https://hormigue.ar/media/website/hormigueo-logo.png"><meta property="og:image:width" content="767"><meta property="og:image:height" content="752"><meta property="og:site_name" content="HORMIGUEAR"><meta property="og:description" content=""><meta property="og:url" content="https://hormigue.ar/contacto/"><meta property="og:type" content="article"><link rel="shortcut icon" href="https://hormigue.ar/media/website/hormigueo-logo-2.png" type="image/x-icon"><link rel="stylesheet" href="https://hormigue.ar/assets/css/fontawesome-all.min.css?v=85514f933f9e0b82460af63f1a403fa5"><link rel="stylesheet" href="https://hormigue.ar/assets/css/style.css?v=25236fdb2367a6828ee26fd8086322fd"><noscript><link rel="stylesheet" href="https://hormigue.ar/assets/css/noscript.css?v=efa867a99f5064d6729e4dc2008ad50b"></noscript><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://hormigue.ar/contacto/"},"headline":"contacto","datePublished":"2026-01-30T19:49-03:00","dateModified":"2026-01-30T21:54-03:00","image":{"@type":"ImageObject","url":"https://hormigue.ar/media/website/hormigueo-logo-6.png","height":752,"width":767},"description":"","author":{"@type":"Person","name":"marce oliveira","url":"https://hormigue.ar/authors/marce-oliveira/"},"publisher":{"@type":"Organization","name":"marce oliveira","logo":{"@type":"ImageObject","url":"https://hormigue.ar/media/website/hormigueo-logo-6.png","height":752,"width":767}}}</script><style>#wrapper > .bg {
                background-image: url(https://hormigue.ar/assets/images/overlay.png), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(https://hormigue.ar/media/website/hormigas-negativas-rojo-3.png);
            }</style><noscript><style>img[loading] {
                     opacity: 1;
@@ -43,7 +43,30 @@
 }
 /* Protecciones visuales */
 .jw-album-image img, .jw-element-image img { pointer-events: none; -webkit-touch-callout: none; }
-iframe { pointer-events: none; }</style><script>function secuestrarPortapapeles() {
+iframe { pointer-events: none; }
+
+/* DOMANDO TÍTULOS DE PÁGINAS Y POSTS EN CELULARES */
+@media screen and (max-width: 480px) {
+    .post__header h1, 
+    .page__header h1, 
+    .post h1, 
+    .page h1,
+    header h1,
+    h1.post__title,
+    h1.page__title {
+        font-size: 1.5rem !important;
+        line-height: 1.1 !important;
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        hyphens: auto !important;
+        width: 100% !important;
+    }
+
+    .main > header > h1 {
+        font-size: 1.5rem !important;
+        padding: 0 10px !important;
+    }
+}</style><script>function secuestrarPortapapeles() {
     const link = window.location.href;
     const mensaje = 'Mirá esto sobre la UNaM en:  ' + link;
     const el = document.createElement('textarea');
@@ -55,10 +78,13 @@ iframe { pointer-events: none; }</style><script>function secuestrarPortapapeles(
 }
 
 document.addEventListener('contextmenu', e => e.preventDefault());
+
 document.addEventListener('copy', (e) => {
     const link = window.location.href;
-    e.clipboardData.setData('text/plain', '🐜Mirá esto picando en: ' + link);
+    // Seteamos el texto que se copia efectivamente
+    e.clipboardData.setData('text/plain', '🐜 Mirá esto picando en: ' + link);
     e.preventDefault();
+    // Mensaje de alerta personalizado por Marce
     alert('Hormigueá y compartí el contenido 🔗. Ya te facilitamos el enlace.');
 });
 
@@ -67,7 +93,6 @@ function mostrarBloqueo() {
     const overlay = document.createElement('div');
     overlay.id = 'bloqueo-hormigueo';
     
-    // Fondo negro translúcido al 50%
     overlay.style = "position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9999999; display:flex; align-items:center; justify-content:center; color:white; text-align:center; cursor:pointer; backdrop-filter: blur(2px);";
     
     overlay.innerHTML = `
@@ -97,9 +122,9 @@ window.addEventListener('keyup', (e) => {
         mostrarBloqueo();
     }
 });
-document.addEventListener('visibilitychange', () => { if (document.hidden) secuestrarPortapapeles(); });
 
-// TIEMPO DE LECTURA, TRADUCCIONES Y BLOQUEO DE DESCARGA AUDIO
+// REMOVIDO: El disparador de visibilitychange para evitar carteles al minimizar.
+
 document.addEventListener("DOMContentLoaded", function() {
     // 1. Traducciones
     const traducciones = {'Next': 'Siguiente', 'Previous': 'Anterior'};
@@ -129,12 +154,10 @@ document.addEventListener("DOMContentLoaded", function() {
             rt.className = 'rt-tacuru';
             rt.style.cssText = "font-size:0.75rem; font-weight:bold; color:#a30000; letter-spacing:1px; margin-bottom:10px; text-transform:uppercase; font-style:normal !important; text-align:center;";
             rt.innerHTML = `${time} MINUTOS DE LECTURA`;
-            
-            // Asegura que se inserte arriba del título
             title.parentNode.insertBefore(rt, title);
         }
     }
-});</script>/* DOMANDO TÍTULOS DE PÁGINAS Y POSTS EN CELULARES */ @media screen and (max-width: 480px) { /* Título principal de Páginas y Entradas */ .post__header h1, .page__header h1, .post h1, .page h1, header h1, h1.post__title, h1.page__title { font-size: 1.5rem !important; /* Un tamaño más seguro para que no desborde */ line-height: 1.1 !important; word-wrap: break-word !important; overflow-wrap: break-word !important; hyphens: auto !important; /* Si la palabra es muy larga, le mete un guion y baja */ width: 100% !important; } /* Ajuste extra para el contenedor de títulos en el tema Massively */ .main > header > h1 { font-size: 1.5rem !important; padding: 0 10px !important; /* Un poco de aire en los bordes */ } }<script>(function() {
+});</script><script>(function() {
 			var originalTitle = document.title;
 			var timeout;
 			document.addEventListener("visibilitychange", function() {
