@@ -145,59 +145,64 @@ document.addEventListener("DOMContentLoaded", function() {
             title.parentNode.insertBefore(rt, title);
         }
     }
-});</script>/* DOMANDO TÍTULOS DE PÁGINAS Y POSTS EN CELULARES */ @media screen and (max-width: 480px) { /* Título principal de Páginas y Entradas */ .post__header h1, .page__header h1, .post h1, .page h1, header h1, h1.post__title, h1.page__title { font-size: 1.5rem !important; /* Un tamaño más seguro para que no desborde */ line-height: 1.1 !important; word-wrap: break-word !important; overflow-wrap: break-word !important; hyphens: auto !important; /* Si la palabra es muy larga, le mete un guion y baja */ width: 100% !important; } /* Ajuste extra para el contenedor de títulos en el tema Massively */ .main > header > h1 { font-size: 1.5rem !important; padding: 0 10px !important; /* Un poco de aire en los bordes */ } }<style>/* Estilos del contenedor del zoom (el fondo) */
+});</script>/* DOMANDO TÍTULOS DE PÁGINAS Y POSTS EN CELULARES */ @media screen and (max-width: 480px) { /* Título principal de Páginas y Entradas */ .post__header h1, .page__header h1, .post h1, .page h1, header h1, h1.post__title, h1.page__title { font-size: 1.5rem !important; /* Un tamaño más seguro para que no desborde */ line-height: 1.1 !important; word-wrap: break-word !important; overflow-wrap: break-word !important; hyphens: auto !important; /* Si la palabra es muy larga, le mete un guion y baja */ width: 100% !important; } /* Ajuste extra para el contenedor de títulos en el tema Massively */ .main > header > h1 { font-size: 1.5rem !important; padding: 0 10px !important; /* Un poco de aire en los bordes */ } }<style>/* El fondo (overlay) */
 #zoom-overlay {
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Fondo negro al 50% */
+    background: rgba(0, 0, 0, 0.5) !important; /* Negro al 50% */
     display: none;
     align-items: center;
     justify-content: center;
-    z-index: 1000000;
+    z-index: 9999999 !important; /* Por encima de todo */
     cursor: zoom-out;
-    backdrop-filter: blur(3px); /* Un toque de desenfoque al fondo */
+    backdrop-filter: blur(3px);
 }
 
-/* La imagen ampliada con el neón */
+/* La imagen con neón */
 #zoom-overlay img {
-    max-width: 90%;
-    max-height: 90%;
-    border: 4px solid #A30000; /* Rojo Hormiguear */
-    box-shadow: 0 0 20px #A30000, 0 0 40px rgba(163, 0, 0, 0.6); /* El brillo neón */
+    max-width: 90% !important;
+    max-height: 90% !important;
+    border: 4px solid #A30000 !important;
+    box-shadow: 0 0 20px #A30000, 0 0 40px rgba(163, 0, 0, 0.6) !important;
     border-radius: 4px;
     background-color: #000;
-    transition: transform 0.3s ease;
+    object-fit: contain;
 }
 
-/* Cursor de lupa para las imágenes del post */
-.post__content img, .page__content img {
-    cursor: zoom-in;
-    transition: opacity 0.3s;
-}
+/* Indicador de que se puede clickear */
+main img, .post__content img, .page__content img {
+    cursor: zoom-in !important;
+}</style><div id="zoom-overlay" onclick="this.style.display='none'"><img id="zoomed-image" src=""></div><script>(function() {
+    function inicializarZoom() {
+        // Buscamos todas las imágenes dentro del contenido principal
+        const imagenes = document.querySelectorAll('main img, .post__content img, .page__content img');
+        const overlay = document.getElementById('zoom-overlay');
+        const zoomedImg = document.getElementById('zoomed-image');
 
-.post__content img:hover {
-    opacity: 0.9;
-}</style><div id="zoom-overlay"><img id="zoomed-image" src="" alt="Zoom"></div><script>document.addEventListener('DOMContentLoaded', function() {
-    const overlay = document.getElementById('zoom-overlay');
-    const zoomedImg = document.getElementById('zoomed-image');
-    
-    // Buscamos todas las imágenes dentro del contenido de posts o páginas
-    const images = document.querySelectorAll('.post__content img, .page__content img');
+        imagenes.forEach(img => {
+            // Evitamos que se auto-aplique a la imagen que ya está en zoom
+            if (img.id === 'zoomed-image') return;
 
-    images.forEach(img => {
-        img.addEventListener('click', function() {
-            zoomedImg.src = this.src;
-            overlay.style.display = 'flex';
+            img.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                zoomedImg.src = this.src;
+                overlay.style.display = 'flex';
+            });
         });
-    });
+    }
 
-    // Cerrar al hacer clic en cualquier parte del fondo
-    overlay.addEventListener('click', function() {
-        overlay.style.display = 'none';
-        zoomedImg.src = '';
-    });
-});</script><script type="module">import PhotoSwipeLightbox from 'https://hormigue.ar/media/plugins/coreLightboxGallery/photoswipe-lightbox.esm.min.js';
+    // Ejecutar al cargar y por si las moscas un segundo después
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', inicializarZoom);
+    } else {
+        inicializarZoom();
+    }
+    
+    // Refuerzo para Publii y sus scripts de carga
+    setTimeout(inicializarZoom, 1500);
+})();</script><script type="module">import PhotoSwipeLightbox from 'https://hormigue.ar/media/plugins/coreLightboxGallery/photoswipe-lightbox.esm.min.js';
 				 const galleries = document.querySelectorAll('.gallery');
 				 galleries.forEach(gallery => {
 					  const lightbox = new PhotoSwipeLightbox({
