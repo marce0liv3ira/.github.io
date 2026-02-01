@@ -145,61 +145,29 @@ document.addEventListener("DOMContentLoaded", function() {
             title.parentNode.insertBefore(rt, title);
         }
     }
-});</script>/* DOMANDO TÍTULOS DE PÁGINAS Y POSTS EN CELULARES */ @media screen and (max-width: 480px) { /* Título principal de Páginas y Entradas */ .post__header h1, .page__header h1, .post h1, .page h1, header h1, h1.post__title, h1.page__title { font-size: 1.5rem !important; /* Un tamaño más seguro para que no desborde */ line-height: 1.1 !important; word-wrap: break-word !important; overflow-wrap: break-word !important; hyphens: auto !important; /* Si la palabra es muy larga, le mete un guion y baja */ width: 100% !important; } /* Ajuste extra para el contenedor de títulos en el tema Massively */ .main > header > h1 { font-size: 1.5rem !important; padding: 0 10px !important; /* Un poco de aire en los bordes */ } }<style>/* El fondo oscuro */
-#zoom-overlay-fondo {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.5); z-index: 999998;
-    display: none; backdrop-filter: blur(3px); cursor: zoom-out;
-}
-
-/* La imagen "explotada" */
-.img-hormigueo-zoom {
-    position: fixed !important; top: 50% !important; left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    max-width: 90vw !important; max-height: 90vh !important;
-    z-index: 999999 !important; border: 4px solid #A30000 !important;
-    box-shadow: 0 0 20px #A30000, 0 0 40px rgba(163, 0, 0, 0.6) !important;
-    border-radius: 4px; object-fit: contain !important;
-}
-
-.post__content img, .page__content img { cursor: zoom-in; }</style><div id="zoom-overlay-fondo" onclick="cerrarZoom()"></div><script>function cerrarZoom() {
-    const img = document.querySelector('.img-hormigueo-zoom');
-    if (img) img.classList.remove('img-hormigueo-zoom');
-    document.getElementById('zoom-overlay-fondo').style.display = 'none';
-}
-
-// ÚNICO ESCUCHADOR DE CLICS PARA TODO EL SITIO
-document.addEventListener('click', function(e) {
-    // 1. LÓGICA DEL ZOOM: Si clickea una imagen en el contenido
-    if (e.target.tagName === 'IMG' && (e.target.closest('.post__content') || e.target.closest('.page__content'))) {
-        const img = e.target;
-        const fondo = document.getElementById('zoom-overlay-fondo');
+});</script>/* DOMANDO TÍTULOS DE PÁGINAS Y POSTS EN CELULARES */ @media screen and (max-width: 480px) { /* Título principal de Páginas y Entradas */ .post__header h1, .page__header h1, .post h1, .page h1, header h1, h1.post__title, h1.page__title { font-size: 1.5rem !important; /* Un tamaño más seguro para que no desborde */ line-height: 1.1 !important; word-wrap: break-word !important; overflow-wrap: break-word !important; hyphens: auto !important; /* Si la palabra es muy larga, le mete un guion y baja */ width: 100% !important; } /* Ajuste extra para el contenedor de títulos en el tema Massively */ .main > header > h1 { font-size: 1.5rem !important; padding: 0 10px !important; /* Un poco de aire en los bordes */ } }<div id="h-zoom-bg" style="position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9999998; display:none; backdrop-filter:blur(3px); cursor:zoom-out;" onclick="this.style.display='none'; document.getElementById('h-zoom-img').className='';"><img id="h-zoom-img" src="" style="position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); max-width:90%; max-height:90%; border:4px solid #A30000; box-shadow:0 0 30px #A30000; border-radius:4px; object-fit:contain; z-index:9999999;"></div><style>/* Forzamos el cursor de lupa en todo el contenido */
+    .post__content img, .page__content img, article img, main img { cursor: zoom-in !important; }</style><script>(function() {
+    // Escuchamos CUALQUIER clic en el documento
+    document.addEventListener('click', function(e) {
+        // Buscamos si lo que se clickeó es una imagen o está dentro de una
+        const target = e.target;
         
-        if (!img.classList.contains('img-hormigueo-zoom')) {
-            img.classList.add('img-hormigueo-zoom');
-            fondo.style.display = 'block';
-            return; // Salimos para que no dispare otras funciones
+        if (target.tagName === 'IMG' && target.id !== 'h-zoom-img') {
+            // Si la imagen está dentro de un link, evitamos que se vaya a otra página
+            e.preventDefault();
+            e.stopPropagation();
+
+            const zoomBg = document.getElementById('h-zoom-bg');
+            const zoomImg = document.getElementById('h-zoom-img');
+
+            // Cargamos la fuente y mostramos
+            zoomImg.src = target.src;
+            zoomBg.style.display = 'block';
+            
+            console.log("Hormigueo: Zoom activado en " + target.src);
         }
-    }
-
-    // 2. LÓGICA DE PROTECCIÓN (Tu script de antes)
-    // Si hay un zoom abierto y clickean fuera, cerrar
-    if (document.querySelector('.img-hormigueo-zoom')) {
-        cerrarZoom();
-        return;
-    }
-
-    // Aquí sigue tu lógica de "Pintó Captura" si la querés mantener activa para el resto del texto
-    // mostrarBloqueo(); 
-}, false);
-
-// BLOQUEO DE CLIC DERECHO (Solo para que no rompa el zoom)
-document.oncontextmenu = function(e) {
-    if (e.target.tagName === 'IMG') {
-        // Opcional: Podés dejar que el clic derecho funcione en zoom o bloquearlo
-        // return false; 
-    }
-}</script><script type="module">import PhotoSwipeLightbox from 'https://hormigue.ar/media/plugins/coreLightboxGallery/photoswipe-lightbox.esm.min.js';
+    }, true); // El 'true' aquí es clave: captura el clic antes que los scripts del tema
+})();</script><script type="module">import PhotoSwipeLightbox from 'https://hormigue.ar/media/plugins/coreLightboxGallery/photoswipe-lightbox.esm.min.js';
 				 const galleries = document.querySelectorAll('.gallery');
 				 galleries.forEach(gallery => {
 					  const lightbox = new PhotoSwipeLightbox({
