@@ -19,7 +19,7 @@ function mostrarBloqueo() {
     const overlay = document.createElement('div');
     overlay.id = 'bloqueo-hormigueo';
     overlay.style = "position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9999999; display:flex; align-items:center; justify-content:center; color:white; text-align:center; cursor:pointer; backdrop-filter: blur(2px);";
-    overlay.innerHTML = '<div style="padding:40px; border:4px solid #A30000; background:rgba(0,0,0,0.8); max-width:80%; box-shadow:0 0 30px rgba(163,0,0,0.5); border-radius:8px;"><h1 style="color:#A30000; font-family:sans-serif; font-weight:bold; margin-bottom:20px; font-size:2rem; text-shadow:0 0 20px #A30000;">¡PINTÓ CAPTURA!</h1><p>Si te gustó o disgustó el contenido y querés hormiguear,<br><b>compartí el enlace de este sitio 🔗</b>.</p></div>';
+    overlay.innerHTML = '<div style="padding:40px; border:4px solid #A30000; background:rgba(0,0,0,0.8); max-width:80%; box-shadow:0 0 30px rgba(163,0,0,0.5); border-radius:8px;"><h1 style="color:#A30000; font-family:sans-serif; font-weight:bold; margin-bottom:20px; font-size:2rem; text-shadow:0 0 20px #A30000;">¡PINTÓ CAPTURA!</h1><p>Si te gustó o disgustó el contenido y querés hormiguear,<br><b style="color:#FFFFFF">compartí el enlace de este sitio 🔗</b>.<br><b style="color:#FFFFFF;font-size:0.8rem">(Escape y picá en cualquier parte para volver al tacurú)</b></p></div>';
     overlay.onclick = () => overlay.remove();
     document.body.appendChild(overlay);
 }
