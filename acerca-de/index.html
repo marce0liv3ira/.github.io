@@ -143,6 +143,26 @@ document.addEventListener('cut',function(e){e.preventDefault();e.stopPropagation
     // 2. Por si son botones de tipo "button" en lugar de enlaces
     traducirBoton('button', 'Next', 'Siguiente');
     traducirBoton('button', 'Previous', 'Anterior');
+});</script><script>document.addEventListener("DOMContentLoaded", function() {
+    // Buscamos dónde poner el tiempo de lectura (debajo del título o fecha)
+    const postMeta = document.querySelector('.post__meta, .post-meta, #main article header p');
+    
+    // El plugin de Publii genera un shortcode o una variable. 
+    // Si el plugin está activo, intentaremos capturar el texto que genera.
+    const readingTime = "{{readingTime}}"; 
+
+    if (postMeta && !postMeta.innerHTML.includes('min read')) {
+        // Creamos un pequeño elemento con estética del tacurú
+        const timeSpan = document.createElement('span');
+        timeSpan.style.display = 'block';
+        timeSpan.style.marginTop = '5px';
+        timeSpan.style.fontSize = '0.8rem';
+        timeSpan.style.textTransform = 'uppercase';
+        timeSpan.style.color = '#a30000';
+        timeSpan.innerHTML = '⏱ Tiempo de lectura: ' + readingTime;
+        
+        postMeta.appendChild(timeSpan);
+    }
 });</script><script>(function() {
 			var originalTitle = document.title;
 			var timeout;
