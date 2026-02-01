@@ -23,15 +23,15 @@
         margin: 0 auto 1.5rem auto !important;
         overflow: hidden !important;
         border-radius: 4px;
-        position: relative !important; /* Resetea desplazamientos */
+        position: relative !important; 
         padding: 0 !important;
     }
 
     .posts > article .image img {
         width: 100% !important;
         height: 100% !important;
-        object-fit: cover !important; /* Recorte centrado */
-        position: static !important; /* Evita que se "caiga" */
+        object-fit: cover !important; 
+        position: static !important; 
         margin: 0 !important;
     }
 
@@ -88,8 +88,9 @@ window.addEventListener('keyup', (e) => {
 });
 document.addEventListener('visibilitychange', () => { if (document.hidden) secuestrarPortapapeles(); });
 
-// TIEMPO DE LECTURA Y TRADUCCIONES
+// TIEMPO DE LECTURA, TRADUCCIONES Y BLOQUEO DE DESCARGA AUDIO
 document.addEventListener("DOMContentLoaded", function() {
+    // 1. Traducciones
     const traducciones = {'Next': 'Siguiente', 'Previous': 'Anterior'};
     document.querySelectorAll('a, button, .pagination-next, .pagination-prev').forEach(el => {
         Object.keys(traducciones).forEach(key => {
@@ -97,18 +98,28 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    const postBody = document.querySelector('.post__content, .post__body');
-    const title = document.querySelector('.post__header h1, .post h1, h1');
-    if (postBody && title && document.body.classList.contains('post-template')) {
+    // 2. Bloqueo de descarga en reproductores de audio
+    document.querySelectorAll('audio').forEach(audio => {
+        audio.setAttribute('controlsList', 'nodownload');
+    });
+
+    // 3. Tiempo de lectura (solo en entradas)
+    const postBody = document.querySelector('.post__content, .post__body, article.post');
+    const title = document.querySelector('h1.post__title, .post__header h1, h1');
+    
+    if (postBody && title && (document.body.classList.contains('post-template') || document.querySelector('article.post'))) {
         const wpm = 200;
         const text = postBody.innerText || postBody.textContent;
         const wordCount = text.trim().split(/\s+/).length;
         const time = Math.ceil(wordCount / wpm);
+        
         if (time > 0) {
             const rt = document.createElement('div');
             rt.className = 'rt-tacuru';
-            rt.style.cssText = "font-size:0.75rem; font-weight:bold; color:#a30000; letter-spacing:1px; margin-bottom:10px; text-transform:uppercase; font-style:normal !important;";
+            rt.style.cssText = "font-size:0.75rem; font-weight:bold; color:#a30000; letter-spacing:1px; margin-bottom:10px; text-transform:uppercase; font-style:normal !important; text-align: left;";
             rt.innerHTML = `&#8986; ${time} MIN DE LECTURA`;
+            
+            // Asegura que se inserte arriba del título
             title.parentNode.insertBefore(rt, title);
         }
     }
