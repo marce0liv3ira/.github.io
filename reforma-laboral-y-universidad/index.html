@@ -116,8 +116,8 @@ document.addEventListener("DOMContentLoaded", function() {
         if (time > 0) {
             const rt = document.createElement('div');
             rt.className = 'rt-tacuru';
-            rt.style.cssText = "font-size:0.75rem; font-weight:bold; color:#a30000; letter-spacing:1px; margin-bottom:10px; text-transform:uppercase; font-style:normal !important; text-align: left;";
-            rt.innerHTML = `&#8986; ${time} MIN DE LECTURA`;
+            rt.style.cssText = "font-size:0.75rem; font-weight:bold; color:#a30000; letter-spacing:1px; margin-bottom:10px; text-transform:uppercase; font-style:normal !important; text-align:center;";
+            rt.innerHTML = `${time} MINUTOS DE LECTURA`;
             
             // Asegura que se inserte arriba del título
             title.parentNode.insertBefore(rt, title);
