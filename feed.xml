@@ -3,7 +3,7 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-02-01T14:44:06-03:00</updated>
+    <updated>2026-02-01T15:22:29-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
@@ -291,18 +291,18 @@
         </author>
         <link href="https://hormigue.ar/ocio-y-pasion/"/>
         <id>https://hormigue.ar/ocio-y-pasion/</id>
-        <media:content url="https://hormigue.ar/media/posts/32/hormigakichikawaii.webp" medium="image" />
+        <media:content url="https://hormigue.ar/media/posts/32/kawaii.jpg" medium="image" />
 
         <updated>2025-11-24T21:52:00-03:00</updated>
             <summary type="html">
                 <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/32/hormigakichikawaii.webp" alt="" />
+                        <img src="https://hormigue.ar/media/posts/32/kawaii.jpg" alt="" />
                     escuchá este texto y, al final de la página, la crítica iA en podcast Hace poco escuché nuevamente la muletilla que se popularizó todavía más con el movimiento progresista de&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                    <p><img src="https://hormigue.ar/media/posts/32/hormigakichikawaii.webp" class="type:primaryImage" alt="" /></p>
+                    <p><img src="https://hormigue.ar/media/posts/32/kawaii.jpg" class="type:primaryImage" alt="" /></p>
                 <p style="text-align: center; line-height: 1.3;"><span style="font-family: arial, helvetica, sans-serif;"><abbr title="Podés modificar la velocidad de reproducción pinchando en los tres puntos"><audio loading="lazy" style="min-width: 50%; max-width: 100%;" controls="controls">
 				<source src="https://hormigueira.uno/HORMIGUEO/audio/kawaiieinaccion.mp3" type="audio/mpeg" />
 			</audio></abbr></span></p>
