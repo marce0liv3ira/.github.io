@@ -69,6 +69,17 @@ document.addEventListener("DOMContentLoaded", function() {
             updatedBox.appendChild(timeTag); // Volvemos a pegar la fecha
         }
     }
+            // Dentro de tu bloque document.addEventListener("DOMContentLoaded", function() ...
+
+    // Traducción de Menú con tilde y otros botones
+    const traduccionesExtras = {'Next': 'Siguiente', 'Previous': 'Anterior', 'Menu': 'MENÚ'};
+    document.querySelectorAll('a, button, .pagination-next, .pagination-prev, #navPanel a').forEach(el => {
+        Object.keys(traduccionesExtras).forEach(key => {
+            if (el.textContent.trim() === key) {
+                el.innerHTML = el.innerHTML.replace(key, traduccionesExtras[key]);
+            }
+        });
+    });
 
     // Bloqueo de descarga audio
     document.querySelectorAll('audio').forEach(audio => audio.setAttribute('controlsList', 'nodownload'));
