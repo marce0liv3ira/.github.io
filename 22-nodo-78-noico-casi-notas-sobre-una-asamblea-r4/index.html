@@ -18,7 +18,7 @@ document.addEventListener('copy', (e) => {
     const link = window.location.href;
     e.clipboardData.setData('text/plain', '🐜 Picá y mirá esto en: ' + link);
     e.preventDefault();
-    alert('Hormigueá y compartí el contenido 🔗. Ya te facilitamos el enlace.');
+    alert('Hormigueá y compartí el contenido 🔗<br>Ya te facilitamos el enlace.');
 });
 
 // 2. CARTEL "PINTÓ CAPTURA"
@@ -30,7 +30,14 @@ function mostrarBloqueo() {
     overlay.innerHTML = `
         <div style="padding: 40px; border: 4px solid #A30000; background: rgba(0,0,0,0.8); max-width: 80%; box-shadow: 0 0 30px rgba(163, 0, 0, 0.5); border-radius: 8px;">
             <h1 style="color: #A30000; font-family: sans-serif; font-weight: bold; margin-bottom: 20px; font-size: 2rem;">¡PINTÓ CAPTURA!</h1>
-            <p>Si te gustó o disgustó el contenido y querés hormiguear,<br><b>compartí el enlace de este sitio 🔗</b>.</p>
+           <p style="font-size: 1.rem; line-height: 1.5; color: #ffffff; text-shadow: 1px 1px 2px #000;">
+                Si te gustó o disgustó el contenido y querés hormiguear,<br>
+                <b style="color: #fff;">compartí el enlace de este sitio 🔗</b>.
+            </p>
+            <p style="margin-top: 20px; color: #bbb; font-size: 0.9rem;">
+                (Tocá escape y picá en cualquier parte para volver al tacurú)
+            </p>
+
         </div>
     `;
     overlay.onclick = () => overlay.remove();
