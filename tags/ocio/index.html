@@ -49,21 +49,28 @@
         e.preventDefault();
         alert('Hormigueá y compartí el contenido 🔗 Ya te facilitamos el enlace.');
     });
-        window.addEventListener('keydown', e=>{
-    if(
-        e.key === 'PrintScreen' ||
-        (e.shiftKey && e.key === 'PrintScreen') ||
-        (e.ctrlKey && e.key === 'PrintScreen') ||
-        (e.altKey && e.key === 'PrintScreen')
-    ){
-        mostrarBloqueo();
-    }
-});
-                document.addEventListener("visibilitychange", ()=>{
-    if(document.visibilityState === "hidden"){
-        mostrarBloqueo();
-    }
-});
+
+    // Bloqueo de combinaciones de teclas (PrintScreen con Shift/Ctrl/Alt)
+    window.addEventListener('keydown', e=>{
+        if(
+            e.key === 'PrintScreen' ||
+            (e.shiftKey && e.key === 'PrintScreen') ||
+            (e.ctrlKey && e.key === 'PrintScreen') ||
+            (e.altKey && e.key === 'PrintScreen')
+        ){
+            mostrarBloqueo();
+        }
+    });
+
+    /* --- CORRECCIÓN: ESTO CAUSABA EL ERROR AL ABRIR PESTAÑAS ---
+       Lo comentamos para que no salte la alarma al cambiar de tab.
+    document.addEventListener("visibilitychange", ()=>{
+        if(document.visibilityState === "hidden"){
+            mostrarBloqueo();
+        }
+    });
+    */
+
     /* ============================================================
        2. CONTENIDO Y UI (Traducciones, Audio y Tiempo de Lectura)
        ============================================================ */
@@ -76,6 +83,17 @@
             Object.keys(dic).forEach(key => {
                 if (txt.includes(key)) el.innerHTML = el.innerHTML.replace(key, dic[key]);
             });
+        });
+
+        // ============================================================
+        // 3. FUGA CONTROLADA (Redes en nueva pestaña)
+        // ============================================================
+        // Busca todos los enlaces dentro de listas de íconos (redes sociales)
+        const socialLinks = document.querySelectorAll('ul.icons a, .social a');
+        
+        socialLinks.forEach(link => {
+            link.setAttribute('target', '_blank');
+            link.setAttribute('rel', 'noopener noreferrer'); // Candado de seguridad extra
         });
 
         // --- B. Ajustes de Texto en Post ---
