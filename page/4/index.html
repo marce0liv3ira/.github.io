@@ -150,10 +150,10 @@
 			var timeout;
 			document.addEventListener("visibilitychange", function() {
 				if (document.hidden) {
-					document.title = "🐜 volvé pué";
+					document.title = "volvé pué";
 				} else {
 					clearTimeout(timeout);
-					document.title = "hola 🐜";
+					document.title = "hola";
 							setTimeout(function() {
 								document.title = originalTitle;
 							}, 2000);

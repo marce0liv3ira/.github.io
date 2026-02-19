@@ -197,10 +197,10 @@ zoomSVG: `<svg  viewBox="0 0 24 24" width="24" height="24" stroke="currentColor"
 			var timeout;
 			document.addEventListener("visibilitychange", function() {
 				if (document.hidden) {
-					document.title = "🐜 volvé pué";
+					document.title = "volvé pué";
 				} else {
 					clearTimeout(timeout);
-					document.title = "hola 🐜";
+					document.title = "hola";
 							setTimeout(function() {
 								document.title = originalTitle;
 							}, 2000);
