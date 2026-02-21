@@ -3,7 +3,7 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-02-21T17:26:56-03:00</updated>
+    <updated>2026-02-21T17:32:00-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
@@ -28,9 +28,9 @@
         <content type="html">
             <![CDATA[
                     <p><img src="https://hormigue.ar/media/posts/53/1000158068.jpg" class="type:primaryImage" alt="" /></p>
-                <p class="align-center"><abbr title="Podés modificar la velocidad de reproducción pinchando en los tres puntos"><audio loading="lazy" style="min-width: 50%; max-width: 100%;" controls="controls">
+                <p style="text-align: center;"><abbr title="Podés modificar la velocidad de reproducción pinchando en los tres puntos"><audio loading="lazy" style="min-width: 50%; max-width: 100%;" controls="controls">
 			<source src="https://pica.hormigue.ar/audio/minutasindical.mp3" type="audio/mpeg" />
-    </audio></abbr></p>
+		</audio></abbr></p>
 <p><span data-contrast="auto">En Misiones recrudecen los problemas económicos y laborales: despidos y ahogamiento de Dass en Eldorado; cesantías en el hipermercado Libertad de Posadas; éxodo de trabajadores rurales a Brasil desde Alba Posse; comercios cerrados y pymes quebradas en toda la provincia. El Estado renovador contrae dependencias y precariza aún más a sus empleados, por mencionar alguito. Además, día de por medio, los </span><i><span data-contrast="auto">arbolitos</span></i><span data-contrast="auto"> se trompean por el mercado informal de cambio de divisas en el microcentro posadeño.</span></p>
 <p><span data-contrast="auto">Quizás este cuadro produjo cierta efervescencia en enero ante el inminente tratamiento de la reforma laboral en el Congreso y su muy posible aprobación, según estimaba el periodismo político en diciembre de 2025.</span></p>
 <p><span data-contrast="auto">Durante el mes pasado se realizaron encuentros de autoconvocados y multisectoriales para atender el atropello del Gobierno nacional. También hubo convocatorias de organizaciones sindicales como la CTAa y ATE. Para la CGT, la siesta es sagrada y, en verano misionero, todavía más. Por parte de los gremios universitarios, nada de nada.</span></p>
@@ -51,8 +51,8 @@
 <div class="palabra-capital">6 feb</div>
 <p>CTAa impulsa un paro con movilización y acto en Plaza 9 de Julio. En algún momento se reunió la CGT Misiones, pero, como no convocaron a las bases (a diferencia de ATE y CTAa), solo sabemos qué decidieron: acto sin paro en Plaza 9 de Julio. Igual que en diciembre de 2025, el 2026 comenzó con dos convocatorias, una de mañana, otra de tarde.</p>
 <div class="flota-der"><video loading="lazy" style="width: 170px; height: 263px;" controls="controls" controlslist="nodownload" oncontextmenu="return false;">
-        <source src="https://pica.hormigue.ar/video/turnosreformamovi2026.mp4" type="video/mp4" />
-    </video></div>
+		<source src="https://pica.hormigue.ar/video/turnosreformamovi2026.mp4" type="video/mp4" />
+	</video></div>
 <div class="palabra-capital">11 feb</div>
 <p>CTAa, turno mañana, marcha y acto, micrófono abierto. CGT, turno tarde, acto peronista dispuesto en la poca sombra de la plaza, micrófono exclusivo. De color: durante el acto, la dirigencia cegetista expresó algunas observaciones sobre la traición del Gobierno renovador a los trabajadores; al fin pudieron decir algo después de tantos años de fidelidad y mutismo. Mirta Chemes volvió a declarar lo mismo que en diciembre «ahora sí que comienza la lucha». En la tribuna, desde la cúpula, deslizaron que no llamaron a paro «para no gastar uno ni bien empieza el año». Debe ser que la renovación le pone un techo anual de paros.</p>
 <p><span data-contrast="auto">Por parte de la universidad, a la mañana, hubo un par de nodocentes y un grupo de docentes, algunos, integrantes de Adunam; en el turno tarde, una compa sumó precisamente 3 secres sindicales (general, capacitación y Fatun), el decano de FHyCS, la secretaria gral de recursos humanos, 6 docentes (entre ellos, el secre gral de UDUM), 5 nodos de rectorado, 2 de ingeniería, 1 de económicas, 1 de enfermería, 30 de humanidades.</span></p>
@@ -118,7 +118,6 @@
 <figcaption>El dueño de Fate se declara en quiebra y deja a 920 familias en la calle.</figcaption>
 </figure>
 </div></div>
-<p><span data-ccp-props="{}"> </span></p>
             ]]>
         </content>
     </entry>
