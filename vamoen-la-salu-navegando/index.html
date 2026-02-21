@@ -65,7 +65,7 @@
     });
 
     /* ============================================================
-       2. DOM READY (UI + Audio + Lectura + Lightbox)
+       2. DOM READY
        ============================================================ */
 
     document.addEventListener("DOMContentLoaded", function() {
@@ -82,7 +82,7 @@
             });
         });
 
-        /* --- B. Redes en nueva pestaña --- */
+        /* --- B. Redes --- */
         document.querySelectorAll('ul.icons a, .social a')
         .forEach(link => {
             link.setAttribute('target','_blank');
@@ -108,57 +108,59 @@
             audio.setAttribute('playsinline','');
         });
 
-       /* --- Reproductor flotante inteligente --- */
+        /* --- E. Reproductor flotante inteligente --- */
 
-const originalAudio = document.querySelector(".post__content audio"); 
-const floatingPlayer = document.getElementById("floating-player");
-const floatingAudio = document.getElementById("audio-player");
+        const originalAudio = document.querySelector("article.post audio");
+        const floatingPlayer = document.getElementById("floating-player");
+        const floatingAudio = document.getElementById("audio-player");
 
-if (originalAudio && floatingPlayer && floatingAudio) {
+        if (originalAudio && floatingPlayer && floatingAudio) {
 
-    let isPlaying = false;
-    let isVisible = true;
+            let usandoFlotante = false;
 
-    // Sincroniza play
-    originalAudio.addEventListener("play", () => {
-        isPlaying = true;
-        floatingAudio.currentTime = originalAudio.currentTime;
-        floatingAudio.play();
-    });
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
 
-    originalAudio.addEventListener("pause", () => {
-        isPlaying = false;
-        floatingAudio.pause();
-        floatingPlayer.classList.remove("player-visible");
-        floatingPlayer.classList.add("player-hidden");
-    });
+                    if (!entry.isIntersecting && !originalAudio.paused) {
+                        // Sale de pantalla → pasa al flotante
+                        usandoFlotante = true;
+                        floatingAudio.currentTime = originalAudio.currentTime;
+                        originalAudio.pause();
+                        floatingAudio.play();
+                        floatingPlayer.classList.remove("player-hidden");
+                        floatingPlayer.classList.add("player-visible");
+                    }
 
-    // Detecta si el reproductor original está visible
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            isVisible = entry.isIntersecting;
+                    if (entry.isIntersecting && usandoFlotante) {
+                        // Vuelve a pantalla → regresa al original
+                        usandoFlotante = false;
+                        originalAudio.currentTime = floatingAudio.currentTime;
+                        floatingAudio.pause();
+                        originalAudio.play();
+                        floatingPlayer.classList.remove("player-visible");
+                        floatingPlayer.classList.add("player-hidden");
+                    }
 
-            if (isPlaying && !isVisible) {
-                floatingPlayer.classList.remove("player-hidden");
-                floatingPlayer.classList.add("player-visible");
-            } else {
-                floatingPlayer.classList.remove("player-visible");
-                floatingPlayer.classList.add("player-hidden");
-            }
-        });
-    }, {
-        threshold: 0.2
-    });
+                });
+            }, { threshold: 0.2 });
 
-    observer.observe(originalAudio);
+            observer.observe(originalAudio);
 
-    // Sincroniza tiempo si usan el flotante
-    floatingAudio.addEventListener("timeupdate", () => {
-        if (Math.abs(floatingAudio.currentTime - originalAudio.currentTime) > 0.5) {
-            originalAudio.currentTime = floatingAudio.currentTime;
+            originalAudio.addEventListener("pause", () => {
+                if (!usandoFlotante) {
+                    floatingAudio.pause();
+                    floatingPlayer.classList.remove("player-visible");
+                    floatingPlayer.classList.add("player-hidden");
+                }
+            });
+
+            floatingAudio.addEventListener("pause", () => {
+                if (usandoFlotante) {
+                    floatingPlayer.classList.remove("player-visible");
+                    floatingPlayer.classList.add("player-hidden");
+                }
+            });
         }
-    });
-}
 
         /* --- F. Tiempo de lectura --- */
         const postBody = document.querySelector('.post__content, .post__body, article.post');
@@ -179,7 +181,7 @@ if (originalAudio && floatingPlayer && floatingAudio) {
             }
         }
 
-        /* --- G. Lightbox imágenes --- */
+        /* --- G. Lightbox --- */
         const overlay = document.createElement("div");
         overlay.classList.add("lightbox-overlay");
         document.body.appendChild(overlay);
