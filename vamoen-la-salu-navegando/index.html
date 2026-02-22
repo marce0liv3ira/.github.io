@@ -107,10 +107,11 @@
             audio.setAttribute('controlsList','nodownload');
             audio.setAttribute('playsinline','');
         });
+                
 /* --- E. Protección video --- */
 document.querySelectorAll("video").forEach(video => {
     video.setAttribute("controlsList", "nodownload noremoteplayback");
-    video.setAttribute("disableRemotePlayback", "");
+    
 });
 
 /* --- E2. Protección PDF --- */
