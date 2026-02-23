@@ -195,6 +195,24 @@ document.addEventListener("DOMContentLoaded", function() {
         video.setAttribute("controlsList", "nodownload noremoteplayback");
     });
 
+            /* Tiempo de lectura */
+        const postBody = document.querySelector('.post__content, .post__body, article.post');
+        const title = document.querySelector('h1.post__title, .post__header h1, h1');
+
+        if (postBody && title) {
+            const text = postBody.innerText || postBody.textContent;
+            const wordCount = text.trim().split(/\s+/).length;
+            const time = Math.ceil(wordCount / 220);
+
+            if (time > 0) {
+                const rt = document.createElement('div');
+                rt.style.cssText = "font-size:0.75rem; font-weight:bold; color:#a30000; letter-spacing:1px; margin-bottom:10px; text-transform:uppercase; text-align:center;";
+                rt.innerHTML = time + " MINUTOS DE LECTURA";
+                title.parentNode.insertBefore(rt, title);
+            }
+        }
+
+            
     /* LIGHTBOX */
     const overlay = document.createElement("div");
     overlay.classList.add("lightbox-overlay");
