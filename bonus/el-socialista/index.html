@@ -149,6 +149,27 @@ document.addEventListener('copy', e => {
 ============================================================ */
 
 document.addEventListener("DOMContentLoaded", function() {
+// --- A. Traducciones Unificadas ---
+        const dic = {'Next': 'Siguiente', 'Previous': 'Anterior', 'Menu': 'MENÚ'};
+        document.querySelectorAll('a, button, .pagination-next, .pagination-prev, #navPanel a').forEach(el => {
+            const txt = el.textContent.trim();
+            Object.keys(dic).forEach(key => {
+                if (txt.includes(key)) el.innerHTML = el.innerHTML.replace(key, dic[key]);
+            });
+        });
+
+        // --- B. Ajustes de Texto en Post ---
+        const relatedTitle = document.querySelector('.post__related h3');
+        if (relatedTitle) relatedTitle.innerHTML = 'TAMBIÉN DEBERÍAS LEER...';
+
+        const updatedBox = document.querySelector('.post__last-updated');
+        if (updatedBox) {
+            const timeTag = updatedBox.querySelector('time');
+            if (timeTag) {
+                updatedBox.innerHTML = 'ÚLTIMA ACTUALIZACIÓN: ';
+                updatedBox.appendChild(timeTag);
+            }
+        }
 
     /* AUDIO FLOTANTE */
     const audios = document.querySelectorAll("article.post audio, article.page audio");
