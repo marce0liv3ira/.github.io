@@ -3,7 +3,7 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-03-07T16:29:29-03:00</updated>
+    <updated>2026-03-07T16:34:43-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
@@ -576,12 +576,12 @@
                 <p class="align-center"><abbr title="Podés modificar la velocidad de reproducción pinchando en los tres puntos"> <audio loading="lazy" style="min-width: 50%; max-width: 100%;" controls="controls">
 			<source src="https://pica.hormigue.ar/audio/colmena%20unam.mp3" type="audio/mpeg" />
 		</audio> </abbr></p>
-<table style="border-collapse: collapse; width: 100%;" border="1">
+<table class="align-center" style="border-collapse: collapse; width: 80%; margin: 0 auto; background-color: rgba(163, 0, 0, 0.2); border: 2px solid #A30000;">
 <tbody>
 <tr>
-<td style="width: 71.3088%;"><div class="post__iframe"><iframe loading="lazy" style="width: 374px; height: 226px;" src="https://www.youtube.com/embed/videoseries?si=_bdWZOLheRiNxE78&amp;list=PLO6JwpV0OMsz43lRjdNzGScwgkbP7t5Lt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="allowfullscreen"></iframe></div></td>
-<td style="width: 28.6912%;">
-<p style="font-size: 0.9rem !important;">Escuchá los tres episodios de una iA comentando la jornada asamblearia.</p>
+<td style="width: 60%; vertical-align: middle; text-align: center; padding: 15px; border-color: #A30000;"><div class="post__iframe"><iframe loading="lazy" style="width: 100%; aspect-ratio: 16/9; max-width: 374px; display: block; margin: 0 auto;" src="https://www.youtube.com/embed/videoseries?si=_bdWZOLheRiNxE78&amp;list=PLO6JwpV0OMsz43lRjdNzGScwgkbP7t5Lt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="allowfullscreen"></iframe></div></td>
+<td style="width: 40%; vertical-align: middle; text-align: center; padding: 15px; border-color: #A30000;">
+<p style="font-size: 0.9rem !important; margin: 0; color: #1a1a1a;">Escuchá los tres episodios de una iA comentando la jornada asamblearia.</p>
 </td>
 </tr>
 </tbody>
