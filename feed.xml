@@ -3,7 +3,7 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-03-09T15:25:56-03:00</updated>
+    <updated>2026-03-09T18:28:29-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
@@ -69,16 +69,12 @@
 <h2>Tres consideraciones antes de votar</h2>
 <div class="palabra-capital">base</div>
 <p>Una forma fácil y cómoda de iniciar este camino es preguntarle a cualquier inteligencia artificial genérica (no especializada), lo básico, por ejemplo:<br>    1. ¿Qué es la política y cómo se practica?<br>    2. ¿Las prácticas políticas son públicas o privadas (o ambas)?<br>    3. ¿Qué es la democracia representativa y qué es la democracia participativa, pueden coexistir?<br>    4. ¿Qué es un sindicato?, ¿para qué sirve?<br>    5. ¿Mediante qué prácticas y acciones un sindicato cumple con su cometido?<br>    6. ¿Cuáles son sus competencias, deberes y obligaciones?<br>    7. ¿Cuándo y por qué un sindicato debe realizar medidas de fuerza?<br>    8. ¿Cuándo un sindicato fracasa o traiciona su razón de ser?<br>    9. ¿Es conveniente que la comisión directiva se integre con agentes que compartan un proyecto colectivo afín o puede conformarse con agentes con proyectos gremiales distintos o individuales?</p>
-<div style="text-align: center; margin: 2rem 0; width: 75%;"><button id="boton-asalto" style="background-color: #a30000; color: #ffffff; border: none; padding: 10px 10px; font-family: 'Arial Narrow', sans-serif; font-size: 0.8rem; border-radius: 4px; cursor: pointer; box-shadow: 3px 3px 0px #8E7171; transition: transform 0.1s;"> Picá para copiar las preguntas al portapapeles y pegarlas en tu iA favorita </button>
-<p id="mensaje-exito" style="color: #991a1a; font-family: 'Arial Narrow', 'Liberation Sans Narrow', sans-serif; font-size: 1rem; margin-top: 15px; font-weight: bold; display: none;">¡Preguntas copiadas! Preparadas para exigir respuestas</p>
+<div style="text-align: center; margin: 2rem auto; width: 95%; max-width: 550px;"><button id="boton-asalto" style="/* fondo negro traslúcido */        background-color: rgba(0, 0, 0, 0.75); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); /* letras blancas */        color: #ffffff; /* borde rojo sangre seca con efecto neón */        border: 2px solid #a30000; box-shadow: 0 0 8px #a30000, inset 0 0 4px #a30000, 2px 2px 0px #000000; /* tipografía y cuerpo */        padding: 12px 12px; font-family: 'Arial Narrow', 'Roboto Condensed', sans-serif; font-size: 0.5rem; border-radius: 4px; cursor: pointer; /* comportamiento */        transition: all 0.2s ease; width: 100%; display: block; white-space: normal; line-height: 1.1; text-transform: uppercase; font-weight: bold; letter-spacing: 1.2px; text-shadow: 0 0 2px rgba(255, 255, 255, 0.5);"> Picá para copiar las preguntas al portapapeles y pegarlas en tu iA favorita </button>
+<p id="mensaje-exito" style="color: #ffffff; font-family: 'Arial Narrow', sans-serif; font-size: 1rem; margin-top: 15px; font-weight: bold; display: none; text-shadow: 0 0 10px #a30000;">¡PREGUNTAS COPIADAS! EXIGÍ LAS RESPUESTAS</p>
 </div>
-<p>
 <script>
-		// El script busca el botón y le inyecta la acción cuando la página ya cargó
-		document.getElementById('boton-asalto').addEventListener('click', function() {
-
-			// El texto exacto con saltos de línea
-			const textoIncomodo = `1. ¿Qué es la política y cómo se practica?
+    document.getElementById('boton-asalto').addEventListener('click', function() {
+        const textoIncomodo = `1. ¿Qué es la política y cómo se practica?
 2. ¿Las prácticas políticas son públicas o privadas (o ambas)?
 3. ¿Qué es la democracia representativa y qué es la democracia participativa, pueden coexistir?
 4. ¿Qué es un sindicato?, ¿para qué sirve?
@@ -88,22 +84,18 @@
 8. ¿Cuándo un sindicato fracasa o traiciona su razón de ser?
 9. ¿Es conveniente que la comisión directiva se integre con agentes que compartan un proyecto colectivo afín o puede conformarse con agentes con proyectos gremiales distintos o individuales?`;
 
-			// La orden de copiado al sistema operativo
-			navigator.clipboard.writeText(textoIncomodo).then(() => {
-				// Mostramos el mensaje de éxito
-				const mensaje = document.getElementById('mensaje-exito');
-				mensaje.style.display = 'block';
-
-				// Lo volvemos a esconder después de 2 segundos
-				setTimeout(() => {
-					mensaje.style.display = 'none';
-				}, 2000);
-			}).catch(err => {
-				alert('Error táctico: Tu navegador bloqueó el copiado automático. Seleccioná el texto a mano, compa.');
-			});
-		});
-	</script>
-</p>
+        navigator.clipboard.writeText(textoIncomodo).then(() => {
+            const mensaje = document.getElementById('mensaje-exito');
+            mensaje.style.display = 'block';
+            setTimeout(() => {
+                mensaje.style.display = 'none';
+            }, 3000);
+        }).catch(err => {
+            console.error('Fallo en la matriz:', err);
+            alert('Error táctico: Bloqueo de sistema. Copiá a mano.');
+        });
+    });
+</script>
 <p>La inteligencia artificial dará un pantallazo adecuado, aunque impreciso e insulso, porque responde según las convenciones que están disponibles en internet. Suficiente para nuestro caso: ya tenemos una idea general.</p>
 <div class="palabra-capital">cosa</div>
 <p>En la universidad, una agrupación es un conjunto de personas capaces de ofrecer votos y gobernabilidad a cambio de beneficios individuales o posiciones institucionales. </p>

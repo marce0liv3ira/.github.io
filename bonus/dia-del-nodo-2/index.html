@@ -222,7 +222,13 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
 
-            
+ /* ============================================================
+       FORZAR REDES SOCIALES EN PESTAÑA NUEVA
+    ============================================================ */
+    document.querySelectorAll('.post__footer .icons a, .share-buttons a, div.shared a, ul.icons a').forEach(boton => {
+        boton.setAttribute('target', '_blank');
+        boton.setAttribute('rel', 'noopener noreferrer');
+    });           
             
     /* LIGHTBOX */
     const overlay = document.createElement("div");
