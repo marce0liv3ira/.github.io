@@ -405,6 +405,9 @@
 <loc>https://hormigue.ar/page/4/</loc>
 </url>
 <url>
+<loc>https://hormigue.ar/page/5/</loc>
+</url>
+<url>
 <loc>https://hormigue.ar/planeta-colorado/</loc>
 <lastmod>2026-03-05T15:57:00-03:00</lastmod>
 <image:image>
@@ -461,6 +464,14 @@
 </image:image>
 <image:image>
 <image:loc>https://hormigue.ar/media/posts/29/gallery/repostCIN-thumbnail.webp</image:loc>
+<image:title><![CDATA[]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://hormigue.ar/r/</loc>
+<lastmod>2026-03-11T19:27:23-03:00</lastmod>
+<image:image>
+<image:loc>https://hormigue.ar/media/posts/61/dospropuestas.jpg</image:loc>
 <image:title><![CDATA[]]></image:title>
 </image:image>
 </url>
