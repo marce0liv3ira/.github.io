@@ -405,6 +405,9 @@
 <loc>https://hormigue.ar/page/4/</loc>
 </url>
 <url>
+<loc>https://hormigue.ar/page/5/</loc>
+</url>
+<url>
 <loc>https://hormigue.ar/planeta-colorado/</loc>
 <lastmod>2026-03-05T15:57:00-03:00</lastmod>
 <image:image>
@@ -595,6 +598,14 @@
 <url>
 <loc>https://hormigue.ar/videos/</loc>
 <lastmod>2026-02-14T16:06:27-03:00</lastmod>
+</url>
+<url>
+<loc>https://hormigue.ar/x/</loc>
+<lastmod>2026-03-11T19:08:51-03:00</lastmod>
+<image:image>
+<image:loc>https://hormigue.ar/media/posts/59/image.png</image:loc>
+<image:title><![CDATA[]]></image:title>
+</image:image>
 </url>
 <url>
 <loc>https://hormigue.ar/yo-no-fui-antinotas-de-una-asamblea-apunam-r3/</loc>
