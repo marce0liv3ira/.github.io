@@ -3,7 +3,7 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-03-11T19:24:03-03:00</updated>
+    <updated>2026-03-11T19:33:04-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
@@ -16,20 +16,20 @@
         </author>
         <link href="https://hormigue.ar/dos-propuestas/"/>
         <id>https://hormigue.ar/dos-propuestas/</id>
-        <media:content url="https://hormigue.ar/media/posts/58/dospro-2.png" medium="image" />
+        <media:content url="https://hormigue.ar/media/posts/58/dos1000185805.jpg" medium="image" />
             <category term="sindicalismo"/>
             <category term="blendi U"/>
 
         <updated>2026-03-11T15:55:33-03:00</updated>
             <summary type="html">
                 <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/58/dospro-2.png" alt="" />
+                        <img src="https://hormigue.ar/media/posts/58/dos1000185805.jpg" alt="" />
                     1Estoy armando una caracterización de las listas y de quienes se postulan a cargos en Apunam. Hay personas que no conozco y, en particular, trayectorias sindicales o políticas sobre las&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                    <p><img src="https://hormigue.ar/media/posts/58/dospro-2.png" class="type:primaryImage" alt="" /></p>
+                    <p><img src="https://hormigue.ar/media/posts/58/dos1000185805.jpg" class="type:primaryImage" alt="" /></p>
                 <p style="text-align: center;"><abbr title="Podés modificar la velocidad de reproducción pinchando en los tres puntos"><audio loading="lazy" style="min-width: 50%; max-width: 100%;" controls="controls">
 			<source src="https://pica.hormigue.ar/audio/dos%20propuestas.mp3" type="audio/mpeg" />
 		</audio></abbr></p>
