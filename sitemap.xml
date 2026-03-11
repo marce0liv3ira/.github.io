@@ -109,7 +109,7 @@
 </url>
 <url>
 <loc>https://hormigue.ar/dos-propuestas/</loc>
-<lastmod>2026-03-11T19:33:04-03:00</lastmod>
+<lastmod>2026-03-11T20:02:03-03:00</lastmod>
 <image:image>
 <image:loc>https://hormigue.ar/media/posts/58/dos1000185805.jpg</image:loc>
 <image:title><![CDATA[]]></image:title>
@@ -136,6 +136,14 @@
 </image:image>
 <image:image>
 <image:loc>https://hormigue.ar/media/posts/58/gallery/calendarionodo-thumbnail.png</image:loc>
+<image:title><![CDATA[]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://hormigue.ar/dos-propuestas-2/</loc>
+<lastmod>2026-03-11T20:03:48-03:00</lastmod>
+<image:image>
+<image:loc>https://hormigue.ar/media/posts/62/dos1000185805.jpg</image:loc>
 <image:title><![CDATA[]]></image:title>
 </image:image>
 </url>
@@ -403,6 +411,9 @@
 </url>
 <url>
 <loc>https://hormigue.ar/page/4/</loc>
+</url>
+<url>
+<loc>https://hormigue.ar/page/5/</loc>
 </url>
 <url>
 <loc>https://hormigue.ar/planeta-colorado/</loc>
