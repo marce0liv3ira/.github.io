@@ -11,8 +11,8 @@
     },
     "items": [
         {
-            "id": "https://hormigue.ar/dos-propuestas-4/",
-            "url": "https://hormigue.ar/dos-propuestas-4/",
+            "id": "https://hormigue.ar/dos-propuestas/",
+            "url": "https://hormigue.ar/dos-propuestas/",
             "title": "dos propuestas",
             "summary": "1Estoy armando una caracterización de las listas y de quienes se postulan a cargos en Apunam. Hay personas que no conozco y, en particular, trayectorias sindicales o políticas sobre las&hellip;",
             "image": "https://hormigue.ar/media/posts/65/dos1000185805.jpg",
@@ -24,11 +24,11 @@
                    "blendi U"
             ],
             "date_published": "2026-03-11T20:26:08-03:00",
-            "date_modified": "2026-03-12T15:05:01-03:00"
+            "date_modified": "2026-03-12T15:16:43-03:00"
         },
         {
-            "id": "https://hormigue.ar/eventos-electorales-consideraciones-5/",
-            "url": "https://hormigue.ar/eventos-electorales-consideraciones-5/",
+            "id": "https://hormigue.ar/eventos-electorales-consideraciones/",
+            "url": "https://hormigue.ar/eventos-electorales-consideraciones/",
             "title": "Eventos electorales. Consideraciones",
             "summary": "Así comienza esta contienda electoral. Con las mañas tradicionales. Ni bien se oficialicen las listas, arranca el despliegue de campaña y sabremos qué tienen para decir los aspirantes en pugna:&hellip;",
             "image": "https://hormigue.ar/media/posts/57/tres-2.jpg",
@@ -36,9 +36,10 @@
                 "name": "marce oliveira"
             },
             "tags": [
+                   "sindicalismo"
             ],
             "date_published": "2026-03-08T21:06:57-03:00",
-            "date_modified": "2026-03-11T21:10:55-03:00"
+            "date_modified": "2026-03-12T15:15:53-03:00"
         },
         {
             "id": "https://hormigue.ar/minuta-sindical/",

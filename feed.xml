@@ -3,7 +3,7 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-03-12T15:05:01-03:00</updated>
+    <updated>2026-03-12T15:16:43-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
@@ -14,8 +14,8 @@
         <author>
             <name>marce oliveira</name>
         </author>
-        <link href="https://hormigue.ar/dos-propuestas-4/"/>
-        <id>https://hormigue.ar/dos-propuestas-4/</id>
+        <link href="https://hormigue.ar/dos-propuestas/"/>
+        <id>https://hormigue.ar/dos-propuestas/</id>
         <media:content url="https://hormigue.ar/media/posts/65/dos1000185805.jpg" medium="image" />
             <category term="sindicalismo"/>
             <category term="blendi U"/>
@@ -34,9 +34,10 @@
         <author>
             <name>marce oliveira</name>
         </author>
-        <link href="https://hormigue.ar/eventos-electorales-consideraciones-5/"/>
-        <id>https://hormigue.ar/eventos-electorales-consideraciones-5/</id>
+        <link href="https://hormigue.ar/eventos-electorales-consideraciones/"/>
+        <id>https://hormigue.ar/eventos-electorales-consideraciones/</id>
         <media:content url="https://hormigue.ar/media/posts/57/tres-2.jpg" medium="image" />
+            <category term="sindicalismo"/>
 
         <updated>2026-03-08T21:06:57-03:00</updated>
             <summary type="html">
