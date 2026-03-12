@@ -3,7 +3,7 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-03-11T20:57:03-03:00</updated>
+    <updated>2026-03-11T21:10:55-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
@@ -73,18 +73,18 @@
         </author>
         <link href="https://hormigue.ar/eventos-electorales-consideraciones-5/"/>
         <id>https://hormigue.ar/eventos-electorales-consideraciones-5/</id>
-        <media:content url="https://hormigue.ar/media/posts/57/tres.jpg" medium="image" />
+        <media:content url="https://hormigue.ar/media/posts/57/tres-2.jpg" medium="image" />
 
         <updated>2026-03-08T21:06:57-03:00</updated>
             <summary type="html">
                 <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/57/tres.jpg" alt="" />
+                        <img src="https://hormigue.ar/media/posts/57/tres-2.jpg" alt="" />
                     Así comienza esta contienda electoral. Con las mañas tradicionales. Ni bien se oficialicen las listas, arranca el despliegue de campaña y sabremos qué tienen para decir los aspirantes en pugna:&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                    <p><img src="https://hormigue.ar/media/posts/57/tres.jpg" class="type:primaryImage" alt="" /></p>
+                    <p><img src="https://hormigue.ar/media/posts/57/tres-2.jpg" class="type:primaryImage" alt="" /></p>
                 <p style="text-align: center;"><abbr title="Podés modificar la velocidad de reproducción pinchando en los tres puntos"><audio loading="lazy" style="min-width: 50%; max-width: 100%;" controls="controls">
 			<source src="https://pica.hormigue.ar/audio/evensindicall.mp3" type="audio/mpeg" />
 		</audio></abbr></p>
