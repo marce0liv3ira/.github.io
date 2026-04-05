@@ -348,4 +348,18 @@ document.addEventListener("DOMContentLoaded", function() {
     };
     window.onload = recalcular;
     setTimeout(recalcular, 2000);
-})();</script></body></html>
+})();</script><script>(function() {
+			var originalTitle = document.title;
+			var timeout;
+			document.addEventListener("visibilitychange", function() {
+				if (document.hidden) {
+					document.title = "hormigue.ar";
+				} else {
+					clearTimeout(timeout);
+					document.title = "hola";
+							setTimeout(function() {
+								document.title = originalTitle;
+							}, 2000);
+				}
+			});
+		})();</script></body></html>
