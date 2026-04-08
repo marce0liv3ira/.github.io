@@ -11,6 +11,29 @@
     },
     "items": [
         {
+            "id": "https://hormigue.ar/la-paja-2/",
+            "url": "https://hormigue.ar/la-paja-2/",
+            "title": "La paja (2)",
+            "summary": "La primera parte ilustra la atmósfera universitaria. Esta confirma una época. La efervescencia electoral está en retirada hace rato, y cada vez más rápido. No logró revitalizar el entusiasmo hablar&hellip;",
+            "image": "https://hormigue.ar/media/posts/73/1000211316.jpg",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "sindicalismo",
+                   "pose",
+                   "ombliguismo",
+                   "oficialismo permanente",
+                   "democracia",
+                   "canicheo",
+                   "blendi U",
+                   "asamblea",
+                   "Smaunam"
+            ],
+            "date_published": "2026-04-08T18:56:04-03:00",
+            "date_modified": "2026-04-08T20:34:33-03:00"
+        },
+        {
             "id": "https://hormigue.ar/la-paja-1/",
             "url": "https://hormigue.ar/la-paja-1/",
             "title": "La paja (1)",
@@ -29,7 +52,7 @@
                    "Smaunam"
             ],
             "date_published": "2026-04-07T16:03:00-03:00",
-            "date_modified": "2026-04-08T18:26:43-03:00"
+            "date_modified": "2026-04-08T20:36:29-03:00"
         },
         {
             "id": "https://hormigue.ar/bajan/",
@@ -183,25 +206,6 @@
             ],
             "date_published": "2025-12-17T12:55:00-03:00",
             "date_modified": "2026-04-04T10:42:52-03:00"
-        },
-        {
-            "id": "https://hormigue.ar/planeta-colorado/",
-            "url": "https://hormigue.ar/planeta-colorado/",
-            "title": "Planeta Colorado",
-            "summary": "La injusticia renovadora condenó a Mónica Gurina y Leandro Sánchez por protestar junto a miles de personas durante las movilizaciones de mayo de 2024. Más abajo enlazo notas y aportes&hellip;",
-            "image": "https://hormigue.ar/media/posts/33/17644258675792.webp",
-            "author": {
-                "name": "marce oliveira"
-            },
-            "tags": [
-                   "pose",
-                   "ombliguismo",
-                   "movimiento",
-                   "democracia",
-                   "blendi U"
-            ],
-            "date_published": "2025-11-30T12:54:00-03:00",
-            "date_modified": "2026-03-26T16:51:12-03:00"
         }
     ]
 }

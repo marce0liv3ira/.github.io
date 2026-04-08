@@ -3,12 +3,39 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-04-08T18:26:43-03:00</updated>
+    <updated>2026-04-08T20:36:29-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
     <id>https://hormigue.ar</id>
 
+    <entry>
+        <title>La paja (2)</title>
+        <author>
+            <name>marce oliveira</name>
+        </author>
+        <link href="https://hormigue.ar/la-paja-2/"/>
+        <id>https://hormigue.ar/la-paja-2/</id>
+        <media:content url="https://hormigue.ar/media/posts/73/1000211316.jpg" medium="image" />
+            <category term="sindicalismo"/>
+            <category term="pose"/>
+            <category term="ombliguismo"/>
+            <category term="oficialismo permanente"/>
+            <category term="democracia"/>
+            <category term="canicheo"/>
+            <category term="blendi U"/>
+            <category term="asamblea"/>
+            <category term="Smaunam"/>
+
+        <updated>2026-04-08T18:56:04-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://hormigue.ar/media/posts/73/1000211316.jpg" alt="" />
+                    La primera parte ilustra la atmósfera universitaria. Esta confirma una época. La efervescencia electoral está en retirada hace rato, y cada vez más rápido. No logró revitalizar el entusiasmo hablar&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
     <entry>
         <title>La paja (1)</title>
         <author>
@@ -215,29 +242,6 @@
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/34/file00000000b16071f5a59cb3130176d7ea.webp" alt="" />
                     Dijo alguien alguna vez: «Toda generalización es injusta; excepto esta» Notas sobre la reforma laboral y algunas ideas relacionadas con la UNaM. ¿Por qué a una parte de los trabajadores&hellip;
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>Planeta Colorado</title>
-        <author>
-            <name>marce oliveira</name>
-        </author>
-        <link href="https://hormigue.ar/planeta-colorado/"/>
-        <id>https://hormigue.ar/planeta-colorado/</id>
-        <media:content url="https://hormigue.ar/media/posts/33/17644258675792.webp" medium="image" />
-            <category term="pose"/>
-            <category term="ombliguismo"/>
-            <category term="movimiento"/>
-            <category term="democracia"/>
-            <category term="blendi U"/>
-
-        <updated>2025-11-30T12:54:00-03:00</updated>
-            <summary type="html">
-                <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/33/17644258675792.webp" alt="" />
-                    La injusticia renovadora condenó a Mónica Gurina y Leandro Sánchez por protestar junto a miles de personas durante las movilizaciones de mayo de 2024. Más abajo enlazo notas y aportes&hellip;
                 ]]>
             </summary>
         <content></content>
