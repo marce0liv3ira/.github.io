@@ -3,12 +3,37 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-04-07T04:37:14-03:00</updated>
+    <updated>2026-04-08T16:06:14-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
     <id>https://hormigue.ar</id>
 
+    <entry>
+        <title>La paja (1)</title>
+        <author>
+            <name>marce oliveira</name>
+        </author>
+        <link href="https://hormigue.ar/la-paja-1/"/>
+        <id>https://hormigue.ar/la-paja-1/</id>
+        <media:content url="https://hormigue.ar/media/posts/72/1000211316.jpg" medium="image" />
+            <category term="pose"/>
+            <category term="plastas"/>
+            <category term="oficialismo permanente"/>
+            <category term="democracia"/>
+            <category term="canicheo"/>
+            <category term="asamblea"/>
+            <category term="Smaunam"/>
+
+        <updated>2026-04-07T16:03:00-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://hormigue.ar/media/posts/72/1000211316.jpg" alt="" />
+                    La comunidad UNaM no está en un momento cualquiera. Y no hablo del desfinanciamiento, la crisis pedagógica, el colapso salarial ni el creciente arancelamiento. Eso ya es paisaje. Otra vez&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
     <entry>
         <title>bajan</title>
         <author>
@@ -213,27 +238,6 @@
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/33/17644258675792.webp" alt="" />
                     La injusticia renovadora condenó a Mónica Gurina y Leandro Sánchez por protestar junto a miles de personas durante las movilizaciones de mayo de 2024. Más abajo enlazo notas y aportes&hellip;
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>Ocio y pasión</title>
-        <author>
-            <name>marce oliveira</name>
-        </author>
-        <link href="https://hormigue.ar/ocio-y-pasion/"/>
-        <id>https://hormigue.ar/ocio-y-pasion/</id>
-        <media:content url="https://hormigue.ar/media/posts/32/kawaii.jpg" medium="image" />
-            <category term="ocio"/>
-            <category term="literatura"/>
-            <category term="libros"/>
-
-        <updated>2025-11-24T21:52:00-03:00</updated>
-            <summary type="html">
-                <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/32/kawaii.jpg" alt="" />
-                    Hace poco escuché nuevamente la muletilla que se popularizó todavía más con el movimiento progresista de los últimos años: «debemos encarar esto con las pasiones alegres». El parafraseo de Spinoza. Sucedió&hellip;
                 ]]>
             </summary>
         <content></content>
