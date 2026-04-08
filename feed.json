@@ -1,0 +1,207 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "HORMIGUEAR",
+    "description": "",
+    "home_page_url": "https://hormigue.ar",
+    "feed_url": "https://hormigue.ar/feed.json",
+    "user_comment": "",
+    "icon": "https://hormigue.ar/media/website/logo-hormi-new-2.png",
+    "author": {
+        "name": "marce oliveira"
+    },
+    "items": [
+        {
+            "id": "https://hormigue.ar/la-paja-1/",
+            "url": "https://hormigue.ar/la-paja-1/",
+            "title": "La paja (1)",
+            "summary": "La comunidad UNaM no está en un momento cualquiera. Y no hablo del desfinanciamiento, la crisis pedagógica, el colapso salarial ni el creciente arancelamiento. Eso ya es paisaje. Otra vez&hellip;",
+            "image": "https://hormigue.ar/media/posts/72/1000211316.jpg",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "pose",
+                   "plastas",
+                   "oficialismo permanente",
+                   "democracia",
+                   "canicheo",
+                   "asamblea",
+                   "Smaunam"
+            ],
+            "date_published": "2026-04-07T16:03:00-03:00",
+            "date_modified": "2026-04-08T16:06:14-03:00"
+        },
+        {
+            "id": "https://hormigue.ar/bajan/",
+            "url": "https://hormigue.ar/bajan/",
+            "title": "bajan",
+            "summary": "Según la Organización Mundial de la Salud, la principal causa de trastornos mentales y cognitivos es el estrés. Así que esta entrega llega sin nervios. Si el Ejecutivo nacional se&hellip;",
+            "image": "https://hormigue.ar/media/posts/71/canicheCUC.png",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "sindicalismo",
+                   "salario",
+                   "pose",
+                   "oficialismo permanente",
+                   "movimiento",
+                   "democracia",
+                   "canicheo",
+                   "blendi U"
+            ],
+            "date_published": "2026-03-30T15:29:50-03:00",
+            "date_modified": "2026-04-03T07:42:40-03:00"
+        },
+        {
+            "id": "https://hormigue.ar/las-nubes/",
+            "url": "https://hormigue.ar/las-nubes/",
+            "title": "las nubes",
+            "summary": "El 24M revitalizó la movilización de todas las disidencias habidas y por haber. Una vez más, la memoria sobre los crímenes de lesa humanidad cometidos por los genocidas que utilizaron&hellip;",
+            "image": "https://hormigue.ar/media/posts/70/24m2026ch.jpg",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "sindicalismo",
+                   "pose",
+                   "ombliguismo",
+                   "movimiento",
+                   "blendi U"
+            ],
+            "date_published": "2026-03-25T04:45:00-03:00",
+            "date_modified": "2026-03-27T05:26:46-03:00"
+        },
+        {
+            "id": "https://hormigue.ar/data-unam/",
+            "url": "https://hormigue.ar/data-unam/",
+            "title": "Data UNaM",
+            "summary": "Esto es un avance de la revisión de datos que fui reuniendo en los últimos meses. Todo lo expuesto debe tomarse como parte de un proceso inacabado. Iré completando y&hellip;",
+            "image": "https://hormigue.ar/media/posts/68/datosUNaM.jpg",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "sindicalismo",
+                   "salario",
+                   "recursos",
+                   "laboral"
+            ],
+            "date_published": "2026-03-13T05:36:00-03:00",
+            "date_modified": "2026-04-04T20:02:49-03:00"
+        },
+        {
+            "id": "https://hormigue.ar/dos-propuestas/",
+            "url": "https://hormigue.ar/dos-propuestas/",
+            "title": "dos propuestas",
+            "summary": "Año electoral universitario. Primero las elecciones gremiales nodocentes, después el resto. El ajuste se siente en el bolsillo de los trabajadores universitarios y en la institución; pero, sobre todo, se&hellip;",
+            "image": "https://hormigue.ar/media/posts/65/dospronodo.jpg",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "sindicalismo",
+                   "pose",
+                   "democracia",
+                   "comunicación"
+            ],
+            "date_published": "2026-03-11T20:26:08-03:00",
+            "date_modified": "2026-03-26T16:47:29-03:00"
+        },
+        {
+            "id": "https://hormigue.ar/eventos-electorales-consideraciones/",
+            "url": "https://hormigue.ar/eventos-electorales-consideraciones/",
+            "title": "Eventos electorales: consideraciones",
+            "summary": "Así comienza esta contienda electoral. Con las mañas tradicionales. Ni bien se oficialicen las listas, arranca el despliegue de campaña y sabremos qué tienen para decir los aspirantes en pugna:&hellip;",
+            "image": "https://hormigue.ar/media/posts/57/tricota.jpg",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "sindicalismo",
+                   "pose",
+                   "oficialismo permanente",
+                   "democracia",
+                   "comunicación",
+                   "canicheo"
+            ],
+            "date_published": "2026-03-08T21:06:57-03:00",
+            "date_modified": "2026-04-07T04:37:14-03:00"
+        },
+        {
+            "id": "https://hormigue.ar/minuta-sindical/",
+            "url": "https://hormigue.ar/minuta-sindical/",
+            "title": "minuta sindical",
+            "summary": "En Misiones recrudecen los problemas económicos y laborales: despidos y ahogamiento de Dass en Eldorado; cesantías en el hipermercado Libertad de Posadas; éxodo de trabajadores rurales a Brasil desde Alba&hellip;",
+            "image": "https://hormigue.ar/media/posts/53/1000158068.jpg",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "sindicalismo",
+                   "pose",
+                   "movimiento",
+                   "democracia",
+                   "comunicación"
+            ],
+            "date_published": "2026-02-19T11:52:24-03:00",
+            "date_modified": "2026-03-26T16:49:31-03:00"
+        },
+        {
+            "id": "https://hormigue.ar/horizonte-de-eventos-politicos-elecciones-gremiales-nodocentes/",
+            "url": "https://hormigue.ar/horizonte-de-eventos-politicos-elecciones-gremiales-nodocentes/",
+            "title": "Horizonte de eventos políticos: elecciones gremiales nodocentes",
+            "summary": "Desde hace dos años, escuchamos decir con frecuencia que Sergio Katogui (vicerrector actual) será el próximo rector de la Universidad Nacional de Misiones. Y es muy probable que suceda. Así&hellip;",
+            "image": "https://hormigue.ar/media/posts/35/hole-unam.webp",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "sindicalismo",
+                   "pose",
+                   "oficialismo permanente",
+                   "mersada",
+                   "democracia"
+            ],
+            "date_published": "2025-12-22T12:56:00-03:00",
+            "date_modified": "2026-03-26T16:49:55-03:00"
+        },
+        {
+            "id": "https://hormigue.ar/reforma-laboral-y-universidad/",
+            "url": "https://hormigue.ar/reforma-laboral-y-universidad/",
+            "title": "Reforma laboral y universidad",
+            "summary": "Dijo alguien alguna vez: «Toda generalización es injusta; excepto esta» Notas sobre la reforma laboral y algunas ideas relacionadas con la UNaM. ¿Por qué a una parte de los trabajadores&hellip;",
+            "image": "https://hormigue.ar/media/posts/34/file00000000b16071f5a59cb3130176d7ea.webp",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "sindicalismo",
+                   "salario",
+                   "recursos",
+                   "laboral"
+            ],
+            "date_published": "2025-12-17T12:55:00-03:00",
+            "date_modified": "2026-04-04T10:42:52-03:00"
+        },
+        {
+            "id": "https://hormigue.ar/planeta-colorado/",
+            "url": "https://hormigue.ar/planeta-colorado/",
+            "title": "Planeta Colorado",
+            "summary": "La injusticia renovadora condenó a Mónica Gurina y Leandro Sánchez por protestar junto a miles de personas durante las movilizaciones de mayo de 2024. Más abajo enlazo notas y aportes&hellip;",
+            "image": "https://hormigue.ar/media/posts/33/17644258675792.webp",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "pose",
+                   "ombliguismo",
+                   "movimiento",
+                   "democracia",
+                   "blendi U"
+            ],
+            "date_published": "2025-11-30T12:54:00-03:00",
+            "date_modified": "2026-03-26T16:51:12-03:00"
+        }
+    ]
+}

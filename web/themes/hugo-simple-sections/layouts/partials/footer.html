@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-lg-3">
+      <p class="text-uppercase">{{ site.Title }}</p>
+      <p>
+        {{ i18n "contact" }}
+        <br />
+        <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>
+      </p>
+      {{ if site.Params.instagram.enabled }}
+      <p>
+        {{ i18n "follow" }}
+        <br />
+        <a href="{{ site.Params.instagram.url }}">Instagram</a>
+      </p>
+      {{ end }}
+    </div>
+    <div class="col-md-6 col-lg-3">
+      {{ range site.RegularPages }}
+      <div>
+        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+{{ define "head" }}
+{{ partial "head.html" . }}
+{{ partial "head-instagram-feed.html" . }}
+{{ end }}
+{{ define "main" }}
+<div class="container">
+  <div id="banner" class="row mt-xxl-5 pt-xxl-5 mt-2 pt-2 mb-5">
+    <img src="{{ (printf "images/%s" .Site.Params.banner) | relURL }}"
+         class="img-fluid"
+         alt="Banner">
+  </div>
+  <div class="row justify-content-center gy-4 mb-5">
+    {{ range site.RegularPages }}
+    <div class="section col-sm-6 col-md-3 pb-3 col-6">
+      <a class="d-block" href="{{ .RelPermalink }}">
+        <div class="icon text-center py-3"
+             style="color: {{ .Params.iconColor }};
+                    background-color: {{ .Params.iconBgColor }}">
+          <i class="bi bi-{{ .Params.icon }}"></i>
+        </div>
+        <div class="fs-4 fw-light mt-1">{{ .LinkTitle }}</div>
+      </a>
+    </div>
+    {{ end }}
+  </div>
+  {{ if site.Params.instagram.enabled }}
+  <div id="instafeed"
+       class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3 pb-5 pt-5"></div>
+  {{ end }}
+</div>
+{{ end }}
