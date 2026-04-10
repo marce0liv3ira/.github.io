@@ -1,0 +1,29 @@
+name: Autogenerar Agenda de Lucha CLU
+
+on:
+  push:
+    paths:
+      - 'agenda/agendaCLU.json' # Se activa solo cuando tocás los datos
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v3
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Ejecutar Generador CLU
+        run: python agenda/generar_agenda_CLU.py
+
+      - name: Publicar cambios en la web
+        run: |
+          git config --global user.name "Hormigueo Bot"
+          git config --global user.email "bot@hormigue.ar"
+          git add agenda/index.html
+          git commit -m "Actualización automática: Nueva acción docente" || exit 0
+          git push
