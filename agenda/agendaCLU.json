@@ -1,0 +1,27 @@
+[
+  {
+    "dia": "LUNES 13",
+    "actividades": [
+      {
+        "hora": "09:00",
+        "titulo": "Clase Pública: El ajuste en la UNaM",
+        "detalle": "Lugar: Entrada Campus. Traer cartelería y algo para hacer ruido."
+      },
+      {
+        "hora": "18:00",
+        "titulo": "Ruidazo en el Mástil",
+        "detalle": "Concentración de todos los sectores nodocentes y estudiantiles. Av. Mitre y Uruguay."
+      }
+    ]
+  },
+  {
+    "dia": "MARTES 14",
+    "actividades": [
+      {
+        "hora": "10:00",
+        "titulo": "Asamblea Permanente",
+        "detalle": "Discusión sobre el presupuesto de Ciencia y Técnica. Aula Magna."
+      }
+    ]
+  }
+]
