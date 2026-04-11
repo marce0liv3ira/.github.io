@@ -1,27 +1,39 @@
-[
-  {
-    "dia": "LUNES 13",
-    "actividades": [
-      {
-        "hora": "19:30",
-        "titulo": "Clase Pública: El ajuste en la UNaM",
-        "detalle": "Lugar: Entrada Campus. Traer cartelería y algo para hacer ruido."
-      },
-      {
-        "hora": "18:00",
-        "titulo": "Ruidazo en el Mástil",
-        "detalle": "Concentración de todos los sectores nodocentes y estudiantiles. Av. Mitre y Uruguay."
-      }
-    ]
-  },
-  {
-    "dia": "MARTES 14",
-    "actividades": [
-      {
-        "hora": "10:00",
-        "titulo": "Asamblea Permanente",
-        "detalle": "Discusión sobre el presupuesto de Ciencia y Técnica. Aula Magna."
-      }
-    ]
-  }
-]
+{
+  "introduccion": "La Asamblea General Extraordinaria de Adunam se pronunció por un paro activo y por el diseño de un calendario de actividades de lucha para la <a href='https://www.instagram.com/p/DW7DJkUFGgu/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==' target='_blank'>próxima semana</a> y también para la del 27 de abril. Entendemos que esa agenda debe estar disponible con el suficiente tiempo de antelación para que las actividades sean centralizadas y cuenten con la participación de estudiantes, docentes y nodocentes. Te invitamos a sumarte o agregar actividades en este archivo.",
+  "cronograma": [
+    {
+      "dia": "LUNES 13",
+      "actividades": [
+        {"hora": "08:00", "titulo": "Confección de carteles", "detalle": "Escuela de Enfermería (hall frente a la Biblioteca)."},
+        {"hora": "09:00", "titulo": "Clase pública: Historia Americana y Argentina III", "detalle": "Carrera de Historia. Humanidades (Edificio Tucumán)."},
+        {"hora": "16:00", "titulo": "Clase pública: Lengua y Comunicación", "detalle": "Carrera de Comunicación Social. Humanidades (Edificio Anexo)."},
+        {"hora": "18:00", "titulo": "Clase pública: Historia Americana y Argentina I", "detalle": "Carrera de Historia. Humanidades (Edificio Tucumán)."}
+      ]
+    },
+    {
+      "dia": "MARTES 14",
+      "actividades": [
+        {"hora": "18:00", "titulo": "Clase pública: Análisis del Discurso Periodístico", "detalle": "Carrera de Comunicación Social. Humanidades (Edificio Anexo)."}
+      ]
+    },
+    {
+      "dia": "MIÉRCOLES 15",
+      "actividades": [
+        {"hora": "18:00", "titulo": "Clase pública: Historia Americana y Argentina III", "detalle": "Carrera de Historia. Humanidades (Edificio Tucumán)."},
+        {"hora": "19:00", "titulo": "Asamblea Interclaustros", "detalle": "Docentes, nodocentes y estudiantil. Humanidades (Edificio Tucumán)."}
+      ]
+    },
+    {
+      "dia": "JUEVES 16",
+      "actividades": [
+        {"hora": "--:--", "titulo": "[ A COMPLETAR ]", "detalle": "Envía tu actividad para centralizar la lucha."}
+      ]
+    },
+    {
+      "dia": "VIERNES 17",
+      "actividades": [
+        {"hora": "--:--", "titulo": "[ A COMPLETAR ]", "detalle": "Envía tu actividad para centralizar la lucha."}
+      ]
+    }
+  ]
+}
