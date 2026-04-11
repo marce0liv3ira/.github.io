@@ -27,52 +27,48 @@ HTML_TEMPLATE = """
             background: var(--white); 
             color: var(--black); 
             font-family: 'Roboto Condensed', sans-serif; 
-            font-size: 1.15rem; /* Aumento de ~2pt sobre el estándar */
+            font-size: 1.25rem; 
             padding: 20px; 
-            line-height: 1.6; 
+            line-height: 1.5; 
             margin: 0; 
         }}
         
-        /* 1. RECUADRO GENERAL CON NEÓN NEGRO */
+        /* 1. RECUADRO GENERAL: Neón negro centrado, sin "sombras de oficina" */
         .wrap {{ 
             max-width: 800px; 
-            margin: 40px auto; 
-            border: 5px solid var(--black); 
-            padding: 30px; 
+            margin: 30px auto; 
+            border: 6px solid var(--black); 
+            padding: 25px; 
             background-color: var(--white);
-            /* Efecto neón negro: resplandor sólido y profundo */
-            box-shadow: 0 0 10px var(--black), 
-                        0 0 20px rgba(0,0,0,0.5),
-                        10px 10px 0px var(--black); 
+            /* Brillo concéntrico, cero desplazamiento lateral o inferior */
+            box-shadow: 0 0 20px rgba(0,0,0,0.3), 0 0 5px rgba(0,0,0,0.6); 
         }}
         
-        header {{ text-align: center; border-bottom: 5px solid var(--black); margin-bottom: 30px; padding-bottom: 20px; }}
+        header {{ text-align: center; border-bottom: 5px solid var(--black); margin-bottom: 25px; padding-bottom: 20px; }}
         
-        /* 4. LOGO REDUCIDO UN CUARTO */
         .logo-clu {{ 
             width: 100%; 
-            max-width: 240px; /* Reducción a 3/4 del tamaño anterior */
+            max-width: 180px; 
             height: auto; 
             margin: 0 auto 15px auto; 
             display: block; 
             object-fit: contain; 
         }}
         
-        /* 3. TÍTULO CRONOGRAMA PARO ACTIVO */
         h1 {{ 
             font-family: 'Archivo Narrow', sans-serif; 
             font-weight: 700;
-            font-size: 3rem; /* Tamaño aumentado */
+            font-size: 3.2rem; 
             text-transform: uppercase; 
             margin: 0; 
-            line-height: 0.95; /* Interlineado reducido */
-            letter-spacing: -1px;
+            line-height: 0.9; 
+            letter-spacing: -1.5px;
         }}
         
-        .intro-text {{ text-align: justify; border: 1px solid #ddd; padding: 20px; background: #fafafa; margin-bottom: 30px; font-size: 1rem; }}
+        .intro-text {{ text-align: justify; border: 1px solid #eee; padding: 20px; background: #fafafa; margin-bottom: 30px; font-size: 1.05rem; }}
         .intro-text a {{ color: var(--black); font-weight: bold; text-decoration: underline; text-decoration-color: var(--neon-green); }}
         
-        .dia-bloque {{ margin-bottom: 40px; }}
+        .dia-bloque {{ margin-bottom: 35px; }}
         .fecha {{ 
             font-family: 'Archivo Narrow', sans-serif; 
             font-size: 1.8rem; 
@@ -80,11 +76,11 @@ HTML_TEMPLATE = """
             color: var(--neon-green); 
             padding: 5px 15px; 
             display: inline-block; 
-            margin-bottom: 15px; 
+            margin-bottom: 12px; 
         }}
         
         details {{ border-bottom: 1px solid var(--black); }}
-        summary {{ padding: 15px 0; cursor: pointer; font-weight: 700; display: flex; justify-content: space-between; align-items: center; list-style: none; font-size: 1.2rem; }}
+        summary {{ padding: 15px 0; cursor: pointer; font-weight: 700; display: flex; justify-content: space-between; align-items: center; list-style: none; font-size: 1.3rem; }}
         
         summary::after {{ 
             content: '→'; 
@@ -92,15 +88,25 @@ HTML_TEMPLATE = """
             font-size: 1.3rem; 
             background: var(--black); 
             padding: 0 10px; 
-            border: 1px solid var(--neon-green);
         }}
         details[open] summary::after {{ content: '↓'; }}
         
-        .info {{ padding: 20px; background: #f9f9f9; border-left: 6px solid var(--neon-green); }}
+        .info {{ padding: 18px; background: #f9f9f9; border-left: 6px solid var(--neon-green); font-size: 1.1rem; }}
         .hora {{ background: var(--neon-green); color: var(--black); padding: 2px 8px; margin-right: 10px; font-weight: bold; border: 1px solid var(--black); }}
         
-        footer {{ margin-top: 50px; text-align: center; font-family: 'Archivo Narrow', sans-serif; border-top: 5px solid var(--black); padding-top: 20px; text-transform: uppercase; font-size: 1.1rem; }}
+        footer {{ margin-top: 40px; text-align: center; font-family: 'Archivo Narrow', sans-serif; border-top: 5px solid var(--black); padding-top: 20px; text-transform: uppercase; font-size: 1.1rem; }}
         .insta-footer {{ color: var(--black); font-size: 1.8rem; margin: 0 10px; vertical-align: middle; }}
+
+        /* RESPONSIVE: Ajuste de tipografía para móviles */
+        @media (max-width: 600px) {{
+            body {{ font-size: 1rem; padding: 10px; }}
+            .wrap {{ margin: 10px; padding: 15px; border-width: 4px; }}
+            h1 {{ font-size: 2.2rem; }}
+            .fecha {{ font-size: 1.4rem; }}
+            summary {{ font-size: 1.1rem; }}
+            .info {{ font-size: 0.95rem; }}
+            .logo-clu {{ max-width: 140px; }}
+        }}
     </style>
 </head>
 <body>
@@ -136,20 +142,20 @@ def hormiguear_web():
         
         bloques_html = ""
         for dia in data['cronograma']:
-            bloques_html += f'<div class="dia-bloque"><div class="fecha">{dia["dia"]}</div>'
+            bloques_html += f'<div class="dia-bloque"><div class="fecha">{{dia["dia"]}}</div>'
             for act in dia["actividades"]:
                 bloques_html += f"""
                 <details>
-                    <summary><span><span class="hora">{act['hora']}</span> {act['titulo']}</span></summary>
-                    <div class="info">{act['detalle']}</div>
+                    <summary><span><span class="hora">{{act['hora']}}</span> {{act['titulo']}}</span></summary>
+                    <div class="info">{{act['detalle']}}</div>
                 </details>"""
             bloques_html += "</div>"
         
         with open(os.path.join(base_path, 'index.html'), 'w', encoding='utf-8') as f:
             f.write(HTML_TEMPLATE.format(intro=data['introduccion'], contenido=bloques_html))
-        print(">>> Orden técnica establecida. Despliegue finalizado.")
+        print(">>> Despliegue CLU: Sombra eliminada y Responsive activado.")
     except Exception as e:
-        print(f">>> ERROR TÉCNICO: {e}")
+        print(f">>> ERROR EN EL TACURÚ: {{e}}")
 
 if __name__ == "__main__":
     hormiguear_web()
