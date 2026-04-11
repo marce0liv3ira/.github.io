@@ -141,9 +141,9 @@ HTML_TEMPLATE = """
         .insta-footer {{ color: var(--black); font-size: 1.5rem; margin: 0 10px; vertical-align: middle; }}
 
         @media (max-width: 600px) {{
-            body {{ font-size: 1rem; padding: 10px; }}
+            body {{ font-size: 0.9rem; padding: 10px; }}
             .wrap {{ margin: 10px; padding: 15px; border-width: 4px; }}
-            h1 {{ font-size: 2.2rem; }}
+            h1 {{ font-size: 1.9rem; }}
             summary::after {{ width: 30px; height: 30px; }}
         }}
     </style>
