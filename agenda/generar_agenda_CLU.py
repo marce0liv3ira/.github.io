@@ -21,9 +21,9 @@ HTML_TEMPLATE = """
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        :root { --neon-green: #00FF00; --black: #000000; --white: #FFFFFF; }
+        :root {{ --neon-green: #00FF00; --black: #000000; --white: #FFFFFF; }}
         
-        body { 
+        body {{ 
             background: var(--white); 
             color: var(--black); 
             font-family: 'Roboto Condensed', sans-serif; 
@@ -31,35 +31,34 @@ HTML_TEMPLATE = """
             padding: 20px; 
             line-height: 1.5; 
             margin: 0; 
-        }
+        }}
         
-        .wrap { 
+        .wrap {{ 
             max-width: 800px; 
             margin: 30px auto; 
             border: 6px solid var(--black); 
             padding: 25px; 
             background-color: var(--white);
             box-shadow: 0 0 20px rgba(0,0,0,0.3), 0 0 5px rgba(0,0,0,0.6); 
-        }
+        }}
         
-        header { text-align: center; border-bottom: 5px solid var(--black); margin-bottom: 25px; padding-bottom: 20px; }
+        header {{ text-align: center; border-bottom: 5px solid var(--black); margin-bottom: 25px; padding-bottom: 20px; }}
         
-        .logo-clu { 
+        .logo-clu {{ 
             width: 100%; 
-            max-width: 135px; /* Reducción a 1/4 del original */
+            max-width: 135px; 
             height: auto; 
             margin: 0 auto 15px auto; 
             display: block; 
             object-fit: contain; 
-            transition: transform 0.3s ease; /* Transición suave */
-        }
+            transition: transform 0.3s ease; 
+        }}
 
-        /* MODIFICACIÓN: Efecto de agrandado al pasar el mouse */
-        .logo-clu:hover {
-            transform: scale(1.1); /* Agranda un 10% */
-        }
+        .logo-clu:hover {{
+            transform: scale(1.1); 
+        }}
         
-        h1 { 
+        h1 {{ 
             font-family: 'Archivo Narrow', sans-serif; 
             font-weight: 700;
             font-size: 3.4rem; 
@@ -68,14 +67,13 @@ HTML_TEMPLATE = """
             line-height: 0.85; 
             letter-spacing: -1.5px;
             text-align: center;
-        }
+        }}
         
-        /* 2. TEXTOS */
-        .intro-text { text-align: left; border: 1px solid #eee; padding: 20px; background: #fafafa; margin-bottom: 30px; font-size: 1.05rem; }
-        .intro-text a { color: var(--black); font-weight: bold; text-decoration: underline; text-decoration-color: var(--neon-green); }
+        .intro-text {{ text-align: left; border: 1px solid #eee; padding: 20px; background: #fafafa; margin-bottom: 30px; font-size: 1.05rem; }}
+        .intro-text a {{ color: var(--black); font-weight: bold; text-decoration: underline; text-decoration-color: var(--neon-green); }}
         
-        .dia-bloque { margin-bottom: 35px; }
-        .fecha { 
+        .dia-bloque {{ margin-bottom: 35px; }}
+        .fecha {{ 
             font-family: 'Archivo Narrow', sans-serif; 
             font-size: 1.8rem; 
             background: var(--black); 
@@ -83,25 +81,24 @@ HTML_TEMPLATE = """
             padding: 5px 15px; 
             display: inline-block; 
             margin-bottom: 12px; 
-            text-align: center; /* Exceptuado del centrado */
-            border-radius: 5px; /* Redondeo sutil */
-        }
+            text-align: center; 
+            border-radius: 5px; 
+        }}
         
-        details { border-bottom: 1px solid var(--black); }
-        summary { 
+        details {{ border-bottom: 1px solid var(--black); }}
+        summary {{ 
             padding: 15px 0; 
             cursor: pointer; 
             font-weight: 700; 
             display: flex; 
-            justify-content: left; /* Centramos el texto del summary */
+            justify-content: left; 
             align-items: left; 
             list-style: none; 
             font-size: 1.3rem; 
             position: relative;
-        }
+        }}
         
-        /* 1. FLECHAS CERRADO/DESPLEGADO */
-        summary::after { 
+        summary::after {{ 
             content: '➘'; 
             color: var(--neon-green); 
             font-size: 0.9rem; 
@@ -113,48 +110,47 @@ HTML_TEMPLATE = """
             justify-content: center;
             position: absolute;
             right: 0;
-            border-radius: 50%; /* Botón circular */
-        }
-        details[open] summary::after { content: '⬍'; font-size: 1rem; }
+            border-radius: 50%; 
+        }}
+        details[open] summary::after {{ content: '⬍'; font-size: 1rem; }}
         
-        .info { 
+        .info {{ 
             padding: 18px; 
             background: #f9f9f9; 
             border-left: 6px solid var(--neon-green); 
             font-size: 1.1rem; 
-            text-align: left; /* */
-        }
+            text-align: left; 
+        }}
         
-        .hora { 
+        .hora {{ 
             background: var(--neon-green); 
             color: var(--black); 
             padding: 2px 8px; 
             margin-right: 10px; 
             font-weight: bold; 
             border: 1px solid var(--black); 
-            text-align: center; /* Exceptuado por estructura, pero es un span */
-            border-radius: 4px; /* Redondeo sutil */
-        }
+            text-align: center; 
+            border-radius: 4px; 
+        }}
         
-        /* 3. PIE DE PÁGINA MÁS PEQUEÑO */
-        footer { 
+        footer {{ 
             margin-top: 40px; 
             text-align: center; 
             font-family: 'Archivo Narrow', sans-serif; 
             border-top: 5px solid var(--black); 
             padding-top: 20px; 
             text-transform: uppercase; 
-            font-size: 0.85rem; /* Reducido */
+            font-size: 0.85rem; 
             color: #444;
-        }
-        .insta-footer { color: var(--black); font-size: 1.5rem; margin: 0 10px; vertical-align: middle; }
+        }}
+        .insta-footer {{ color: var(--black); font-size: 1.5rem; margin: 0 10px; vertical-align: middle; }}
 
-        @media (max-width: 600px) {
-            body { font-size: 0.9rem; padding: 10px; }
-            .wrap { margin: 10px; padding: 15px; border-width: 4px; }
-            h1 { font-size: 2.1rem; }
-            summary::after { width: 30px; height: 30px; }
-        }
+        @media (max-width: 600px) {{
+            body {{ font-size: 0.9rem; padding: 10px; }}
+            .wrap {{ margin: 10px; padding: 15px; border-width: 4px; }}
+            h1 {{ font-size: 2.1rem; }}
+            summary::after {{ width: 30px; height: 30px; }}
+        }}
     </style>
 </head>
 <body>
@@ -189,7 +185,6 @@ def hormiguear_web():
         
         bloques_html = ""
         for dia in data['cronograma']:
-            # Reparación: llaves simples en f-strings para inyectar el valor real
             bloques_html += f'<div class="dia-bloque"><div class="fecha">{dia["dia"]}</div>'
             for act in dia["actividades"]:
                 bloques_html += f"""
@@ -201,7 +196,7 @@ def hormiguear_web():
         
         with open(os.path.join(base_path, 'index.html'), 'w', encoding='utf-8') as f:
             f.write(HTML_TEMPLATE.format(intro=data['introduccion'], contenido=bloques_html))
-        print(">>> Despliegue CLU: Código restaurado y estructurado.")
+        print(">>> Despliegue CLU: Llaves dobles restauradas. Archivo generado.")
     except Exception as e:
         print(f">>> ERROR TÉCNICO EN EL TACURÚ: {e}")
 
