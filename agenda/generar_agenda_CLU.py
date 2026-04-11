@@ -164,8 +164,7 @@ HTML_TEMPLATE = """
 
         <footer>
             Comité de Lucha Universitaria 
-            <a href="https://www.instagram.com/comitedelucha" class="insta-footer" target="_blank"><i class="fab fa-instagram"></i></a> 
-            Universidad Nacional de Misiones
+            <a href="https://www.instagram.com/comitedelucha" class="insta-footer" target="_blank"><i class="fab fa-instagram"></i></a><br>Universidad Nacional de Misiones
         </footer>
     </div>
 </body>
