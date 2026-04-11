@@ -97,17 +97,17 @@ HTML_TEMPLATE = """
         summary::after {{ 
             content: '➘'; 
             color: var(--neon-green); 
-            font-size: 1.1rem; 
+            font-size: 0.9rem; 
             background: var(--black); 
-            width: 35px;
-            height: 35px;
+            width: 32px;
+            height: 32px;
             display: flex;
             align-items: center;
             justify-content: center;
             position: absolute;
             right: 0;
         }}
-        details[open] summary::after {{ content: '⬍'; font-size: 1.3rem; }}
+        details[open] summary::after {{ content: '⬍'; font-size: 1rem; }}
         
         .info {{ 
             padding: 18px; 
