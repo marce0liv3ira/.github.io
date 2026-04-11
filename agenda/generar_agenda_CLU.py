@@ -9,7 +9,7 @@ HTML_TEMPLATE = """
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>CRONOGRAMA PARO ACTIVO - CLU</title>
+    <title>CRONOGRAMA PARO ACTIVO</title>
     <meta name="description" content="Propuesta del Comité de Lucha Universitaria para las actividades de paro activo del 13 al 17 de abril.">
     <meta property="og:title" content="CRONOGRAMA PARO ACTIVO - CLU">
     <meta property="og:description" content="Actividades de paro activo (13-17 de abril). Unidad de estudiantes, docentes y nodocentes.">
