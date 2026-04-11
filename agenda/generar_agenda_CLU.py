@@ -78,6 +78,7 @@ HTML_TEMPLATE = """
             display: inline-block; 
             margin-bottom: 12px; 
             text-align: center; /* Exceptuado del centrado */
+            border-radius: 5px; /* Redondeo sutil */
         }}
         
         details {{ border-bottom: 1px solid var(--black); }}
@@ -106,6 +107,7 @@ HTML_TEMPLATE = """
             justify-content: center;
             position: absolute;
             right: 0;
+            border-radius: 50%; /* Botón circular */
         }}
         details[open] summary::after {{ content: '⬍'; font-size: 1rem; }}
         
@@ -114,7 +116,7 @@ HTML_TEMPLATE = """
             background: #f9f9f9; 
             border-left: 6px solid var(--neon-green); 
             font-size: 1.1rem; 
-            text-align: left; /*  */
+            text-align: left; /* */
         }}
         
         .hora {{ 
@@ -125,6 +127,7 @@ HTML_TEMPLATE = """
             font-weight: bold; 
             border: 1px solid var(--black); 
             text-align: center; /* Exceptuado por estructura, pero es un span */
+            border-radius: 4px; /* Redondeo sutil */
         }}
         
         /* 3. PIE DE PÁGINA MÁS PEQUEÑO */
