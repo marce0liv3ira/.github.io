@@ -29,14 +29,12 @@
             margin: 0; 
         }
         
-        /* 1. RECUADRO GENERAL: Neón negro centrado, sin "sombras de oficina" */
         .wrap { 
             max-width: 800px; 
             margin: 30px auto; 
             border: 6px solid var(--black); 
             padding: 25px; 
             background-color: var(--white);
-            /* Brillo concéntrico, cero desplazamiento lateral o inferior */
             box-shadow: 0 0 20px rgba(0,0,0,0.3), 0 0 5px rgba(0,0,0,0.6); 
         }
         
@@ -93,7 +91,6 @@
         footer { margin-top: 40px; text-align: center; font-family: 'Archivo Narrow', sans-serif; border-top: 5px solid var(--black); padding-top: 20px; text-transform: uppercase; font-size: 1.1rem; }
         .insta-footer { color: var(--black); font-size: 1.8rem; margin: 0 10px; vertical-align: middle; }
 
-        /* RESPONSIVE: Ajuste de tipografía para móviles */
         @media (max-width: 600px) {
             body { font-size: 1rem; padding: 10px; }
             .wrap { margin: 10px; padding: 15px; border-width: 4px; }
@@ -117,42 +114,42 @@
 
         <div class="intro-text">La Asamblea General Extraordinaria de Adunam se pronunció por un paro activo y el diseño de un calendario de actividades de lucha para la <strong><a href='https://www.instagram.com/p/DW7DJkUFGgu/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==' target='_blank'>próxima semana</a></strong>, también para la del 27 de abril. Entendemos que esa agenda debe estar disponible con suficiente antelación para que las actividades sean centralizadas y cuenten con la participación de estudiantes, docentes y nodocentes. Te invitamos a sumarte y agregar actividades <a href='https://docs.google.com/document/d/18n0EWi_lxeXA2NG-WeO5kli0Lksjd0R2KpV5s3KBIKs/edit?usp=sharing' target='_blank'><strong>en este archivo</strong></a>.</div>
         
-        <div class="dia-bloque"><div class="fecha">{dia["dia"]}</div>
+        <div class="dia-bloque"><div class="fecha">LUNES 13</div>
                 <details>
-                    <summary><span><span class="hora">{act['hora']}</span> {act['titulo']}</span></summary>
-                    <div class="info">{act['detalle']}</div>
+                    <summary><span><span class="hora">08:00</span> Confección de carteles</span></summary>
+                    <div class="info">Escuela de Enfermería (hall frente a la Biblioteca).</div>
                 </details>
                 <details>
-                    <summary><span><span class="hora">{act['hora']}</span> {act['titulo']}</span></summary>
-                    <div class="info">{act['detalle']}</div>
+                    <summary><span><span class="hora">09:00</span> Clase pública: Historia Americana y Argentina III</span></summary>
+                    <div class="info">Carrera de Historia. Humanidades (Edificio Tucumán).</div>
                 </details>
                 <details>
-                    <summary><span><span class="hora">{act['hora']}</span> {act['titulo']}</span></summary>
-                    <div class="info">{act['detalle']}</div>
+                    <summary><span><span class="hora">16:00</span> Clase pública: Lengua y Comunicación</span></summary>
+                    <div class="info">Carrera de Comunicación Social. Humanidades (Edificio Anexo).</div>
                 </details>
                 <details>
-                    <summary><span><span class="hora">{act['hora']}</span> {act['titulo']}</span></summary>
-                    <div class="info">{act['detalle']}</div>
-                </details></div><div class="dia-bloque"><div class="fecha">{dia["dia"]}</div>
+                    <summary><span><span class="hora">18:00</span> Clase pública: Historia Americana y Argentina I</span></summary>
+                    <div class="info">Carrera de Historia. Humanidades (Edificio Tucumán).</div>
+                </details></div><div class="dia-bloque"><div class="fecha">MARTES 14</div>
                 <details>
-                    <summary><span><span class="hora">{act['hora']}</span> {act['titulo']}</span></summary>
-                    <div class="info">{act['detalle']}</div>
-                </details></div><div class="dia-bloque"><div class="fecha">{dia["dia"]}</div>
+                    <summary><span><span class="hora">18:00</span> Clase pública: Análisis del Discurso Periodístico</span></summary>
+                    <div class="info">Carrera de Comunicación Social. Humanidades (Edificio Anexo).</div>
+                </details></div><div class="dia-bloque"><div class="fecha">MIÉRCOLES 15</div>
                 <details>
-                    <summary><span><span class="hora">{act['hora']}</span> {act['titulo']}</span></summary>
-                    <div class="info">{act['detalle']}</div>
+                    <summary><span><span class="hora">18:00</span> Clase pública: Historia Americana y Argentina III</span></summary>
+                    <div class="info">Carrera de Historia. Humanidades (Edificio Tucumán).</div>
                 </details>
                 <details>
-                    <summary><span><span class="hora">{act['hora']}</span> {act['titulo']}</span></summary>
-                    <div class="info">{act['detalle']}</div>
-                </details></div><div class="dia-bloque"><div class="fecha">{dia["dia"]}</div>
+                    <summary><span><span class="hora">19:00</span> Asamblea Interclaustros</span></summary>
+                    <div class="info">Docentes, nodocentes y estudiantil. Humanidades (Edificio Central Tucumán).</div>
+                </details></div><div class="dia-bloque"><div class="fecha">JUEVES 16</div>
                 <details>
-                    <summary><span><span class="hora">{act['hora']}</span> {act['titulo']}</span></summary>
-                    <div class="info">{act['detalle']}</div>
-                </details></div><div class="dia-bloque"><div class="fecha">{dia["dia"]}</div>
+                    <summary><span><span class="hora">--:--</span> ASUETO. ANIVERSARIO UNIVERSIDAD NACIONAL DE MISIONES</span></summary>
+                    <div class="info">Enviá tu actividad.</div>
+                </details></div><div class="dia-bloque"><div class="fecha">VIERNES 17</div>
                 <details>
-                    <summary><span><span class="hora">{act['hora']}</span> {act['titulo']}</span></summary>
-                    <div class="info">{act['detalle']}</div>
+                    <summary><span><span class="hora">--:--</span> PARO NACIONAL UNIVERSITARIO. Sin asistencia a los lugares de trabajo</span></summary>
+                    <div class="info">Enviá tu actividad.</div>
                 </details></div>
 
         <footer>
