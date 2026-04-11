@@ -11,7 +11,7 @@ HTML_TEMPLATE = """
     
     <title>CRONOGRAMA PARO ACTIVO - CLU</title>
     <meta name="description" content="Propuesta del Comité de Lucha Universitaria para las actividades de paro activo del 13 al 17 de abril.">
-    <meta property="og:title" content="CRONOGRAMA PARO ACTIVO - CLU">
+    <meta property="og:title" content="CRONOGRAMA PARO ACTIVO">
     <meta property="og:description" content="Actividades de paro activo (13-17 de abril). Unidad de estudiantes, docentes y nodocentes.">
     <meta property="og:image" content="https://hormigue.ar/agenda/logo_clu.png">
     <meta property="og:url" content="https://hormigue.ar/agenda/">
@@ -27,7 +27,7 @@ HTML_TEMPLATE = """
             background: var(--white); 
             color: var(--black); 
             font-family: 'Roboto Condensed', sans-serif; 
-            font-size: 1.25rem; 
+            font-size: 1.3rem; 
             padding: 20px; 
             line-height: 1.5; 
             margin: 0; 
@@ -46,7 +46,7 @@ HTML_TEMPLATE = """
         
         .logo-clu {{ 
             width: 100%; 
-            max-width: 135px; 
+            max-width: 300px; 
             height: auto; 
             margin: 0 auto 15px auto; 
             display: block; 
@@ -55,7 +55,7 @@ HTML_TEMPLATE = """
         }}
 
         .logo-clu:hover {{
-            transform: scale(1.1); 
+            transform: scale(1.2); 
         }}
         
         h1 {{ 
@@ -65,7 +65,7 @@ HTML_TEMPLATE = """
             text-transform: uppercase; 
             margin: 0; 
             line-height: 0.85; 
-            letter-spacing: -1.5px;
+            letter-spacing: -1.3px;
             text-align: center;
         }}
         
@@ -75,7 +75,7 @@ HTML_TEMPLATE = """
         .dia-bloque {{ margin-bottom: 35px; }}
         .fecha {{ 
             font-family: 'Archivo Narrow', sans-serif; 
-            font-size: 1.8rem; 
+            font-size: 1.7rem; 
             background: var(--black); 
             color: var(--neon-green); 
             padding: 5px 15px; 
@@ -101,7 +101,7 @@ HTML_TEMPLATE = """
         summary::after {{ 
             content: '➘'; 
             color: var(--neon-green); 
-            font-size: 0.9rem; 
+            font-size: 0.95rem; 
             background: var(--black); 
             width: 32px;
             height: 32px;
@@ -146,9 +146,9 @@ HTML_TEMPLATE = """
         .insta-footer {{ color: var(--black); font-size: 1.5rem; margin: 0 10px; vertical-align: middle; }}
 
         @media (max-width: 600px) {{
-            body {{ font-size: 0.9rem; padding: 10px; }}
+            body {{ font-size: 0.95rem; padding: 10px; }}
             .wrap {{ margin: 10px; padding: 15px; border-width: 4px; }}
-            h1 {{ font-size: 2.1rem; }}
+            h1 {{ font-size: 2rem; }}
             summary::after {{ width: 30px; height: 30px; }}
         }}
     </style>
