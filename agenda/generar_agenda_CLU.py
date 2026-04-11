@@ -143,7 +143,7 @@ HTML_TEMPLATE = """
         @media (max-width: 600px) {{
             body {{ font-size: 0.9rem; padding: 10px; }}
             .wrap {{ margin: 10px; padding: 15px; border-width: 4px; }}
-            h1 {{ font-size: 1.9rem; }}
+            h1 {{ font-size: 2.1rem; }}
             summary::after {{ width: 30px; height: 30px; }}
         }}
     </style>
