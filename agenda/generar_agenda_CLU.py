@@ -33,14 +33,12 @@ HTML_TEMPLATE = """
             margin: 0; 
         }}
         
-        /* 1. RECUADRO GENERAL: Neón negro centrado, sin "sombras de oficina" */
         .wrap {{ 
             max-width: 800px; 
             margin: 30px auto; 
             border: 6px solid var(--black); 
             padding: 25px; 
             background-color: var(--white);
-            /* Brillo concéntrico, cero desplazamiento lateral o inferior */
             box-shadow: 0 0 20px rgba(0,0,0,0.3), 0 0 5px rgba(0,0,0,0.6); 
         }}
         
@@ -97,7 +95,6 @@ HTML_TEMPLATE = """
         footer {{ margin-top: 40px; text-align: center; font-family: 'Archivo Narrow', sans-serif; border-top: 5px solid var(--black); padding-top: 20px; text-transform: uppercase; font-size: 1.1rem; }}
         .insta-footer {{ color: var(--black); font-size: 1.8rem; margin: 0 10px; vertical-align: middle; }}
 
-        /* RESPONSIVE: Ajuste de tipografía para móviles */
         @media (max-width: 600px) {{
             body {{ font-size: 1rem; padding: 10px; }}
             .wrap {{ margin: 10px; padding: 15px; border-width: 4px; }}
@@ -142,20 +139,21 @@ def hormiguear_web():
         
         bloques_html = ""
         for dia in data['cronograma']:
-            bloques_html += f'<div class="dia-bloque"><div class="fecha">{{dia["dia"]}}</div>'
+            # Reparación: llaves simples en f-strings para inyectar el valor real
+            bloques_html += f'<div class="dia-bloque"><div class="fecha">{dia["dia"]}</div>'
             for act in dia["actividades"]:
                 bloques_html += f"""
                 <details>
-                    <summary><span><span class="hora">{{act['hora']}}</span> {{act['titulo']}}</span></summary>
-                    <div class="info">{{act['detalle']}}</div>
+                    <summary><span><span class="hora">{act['hora']}</span> {act['titulo']}</span></summary>
+                    <div class="info">{act['detalle']}</div>
                 </details>"""
             bloques_html += "</div>"
         
         with open(os.path.join(base_path, 'index.html'), 'w', encoding='utf-8') as f:
             f.write(HTML_TEMPLATE.format(intro=data['introduccion'], contenido=bloques_html))
-        print(">>> Despliegue CLU: Sombra eliminada y Responsive activado.")
+        print(">>> Despliegue CLU: Datos inyectados, sombra eliminada y Responsive OK.")
     except Exception as e:
-        print(f">>> ERROR EN EL TACURÚ: {{e}}")
+        print(f">>> ERROR EN EL TACURÚ: {e}")
 
 if __name__ == "__main__":
     hormiguear_web()
