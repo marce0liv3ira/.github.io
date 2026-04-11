@@ -11,9 +11,9 @@ HTML_TEMPLATE = """
     
     <title>CRONOGRAMA PARO ACTIVO</title>
     <meta name="description" content="Propuesta del Comité de Lucha Universitaria para las actividades de paro activo del 13 al 17 de abril.">
-    <meta property="og:title" content="CRONOGRAMA PARO ACTIVO - CLU">
+    <meta property="og:title" content="CRONOGRAMA PARO ACTIVO">
     <meta property="og:description" content="Actividades de paro activo (13-17 de abril). Unidad de estudiantes, docentes y nodocentes.">
-    <meta property="og:image" content="https://hormigue.ar/agenda/logo_clu.png">
+    <meta property="og:image" content="https://hormigue.ar/agenda/logo_.png">
     <meta property="og:url" content="https://hormigue.ar/agenda/">
     <meta property="og:type" content="website">
 
@@ -44,7 +44,7 @@ HTML_TEMPLATE = """
         
         header {{ text-align: center; border-bottom: 5px solid var(--black); margin-bottom: 25px; padding-bottom: 20px; }}
         
-        .logo-clu {{ 
+        .logo- {{ 
             width: 100%; 
             max-width: 135px; /* Reducción a 1/4 del original */
             height: auto; 
@@ -155,7 +155,7 @@ HTML_TEMPLATE = """
     <div class="wrap">
         <header>
             <a href="https://www.instagram.com/comitedelucha" target="_blank">
-                <img src="logo_clu.png" alt="CLU" class="logo-clu" onerror="this.style.display='none'">
+                <img src="logo_.png" alt="" class="logo-" onerror="this.style.display='none'">
             </a>
             <h1>CRONOGRAMA<br>PARO ACTIVO</h1>
             <p style="margin-top:10px; font-weight: bold; text-align: center;">Semana del 13 al 17 de abril</p>
@@ -177,7 +177,7 @@ HTML_TEMPLATE = """
 def hormiguear_web():
     try:
         base_path = os.path.dirname(__file__)
-        ruta_json = os.path.join(base_path, 'agendaCLU.json')
+        ruta_json = os.path.join(base_path, 'agenda.json')
         with open(ruta_json, 'r', encoding='utf-8') as f:
             data = json.load(f)
         
@@ -194,7 +194,7 @@ def hormiguear_web():
         
         with open(os.path.join(base_path, 'index.html'), 'w', encoding='utf-8') as f:
             f.write(HTML_TEMPLATE.format(intro=data['introduccion'], contenido=bloques_html))
-        print(">>> Despliegue CLU: Centrado táctico, flechas corregidas y pie de página ajustado.")
+        print(">>> Despliegue : Centrado táctico, flechas corregidas y pie de página ajustado.")
     except Exception as e:
         print(f">>> ERROR TÉCNICO EN EL TACURÚ: {e}")
 
