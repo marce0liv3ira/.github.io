@@ -9,11 +9,11 @@ HTML_TEMPLATE = """
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>CRONOGRAMA PARO ACTIVO</title>
+    <title>CRONOGRAMA PARO ACTIVO - CLU</title>
     <meta name="description" content="Propuesta del Comité de Lucha Universitaria para las actividades de paro activo del 13 al 17 de abril.">
-    <meta property="og:title" content="CRONOGRAMA PARO ACTIVO">
+    <meta property="og:title" content="CRONOGRAMA PARO ACTIVO - CLU">
     <meta property="og:description" content="Actividades de paro activo (13-17 de abril). Unidad de estudiantes, docentes y nodocentes.">
-    <meta property="og:image" content="https://hormigue.ar/agenda/logo_.png">
+    <meta property="og:image" content="https://hormigue.ar/agenda/logo_clu.png">
     <meta property="og:url" content="https://hormigue.ar/agenda/">
     <meta property="og:type" content="website">
 
@@ -44,13 +44,19 @@ HTML_TEMPLATE = """
         
         header {{ text-align: center; border-bottom: 5px solid var(--black); margin-bottom: 25px; padding-bottom: 20px; }}
         
-        .logo- {{ 
+        .logo-clu {{ 
             width: 100%; 
-            max-width: 135px; /* Reducción a 1/4 del original */
+            max-width: 165px; /* Reducción a 1/4 del original */
             height: auto; 
             margin: 0 auto 15px auto; 
             display: block; 
             object-fit: contain; 
+        }}
+
+        /* MODIFICACIÓN: Efecto de agrandado al pasar el mouse */
+        .logo-clu:hover {{
+            transform: scale(1.1); /* Agranda un 10% */
+            transition: transform 0.3s ease; /* Transición suave */
         }}
         
         h1 {{ 
@@ -155,7 +161,7 @@ HTML_TEMPLATE = """
     <div class="wrap">
         <header>
             <a href="https://www.instagram.com/comitedelucha" target="_blank">
-                <img src="logo_.png" alt="" class="logo-" onerror="this.style.display='none'">
+                <img src="logo_clu.png" alt="CLU" class="logo-clu" onerror="this.style.display='none'">
             </a>
             <h1>CRONOGRAMA<br>PARO ACTIVO</h1>
             <p style="margin-top:10px; font-weight: bold; text-align: center;">Semana del 13 al 17 de abril</p>
@@ -177,12 +183,13 @@ HTML_TEMPLATE = """
 def hormiguear_web():
     try:
         base_path = os.path.dirname(__file__)
-        ruta_json = os.path.join(base_path, 'agenda.json')
+        ruta_json = os.path.join(base_path, 'agendaCLU.json')
         with open(ruta_json, 'r', encoding='utf-8') as f:
             data = json.load(f)
         
         bloques_html = ""
         for dia in data['cronograma']:
+            # Reparación: llaves simples en f-strings para inyectar el valor real
             bloques_html += f'<div class="dia-bloque"><div class="fecha">{dia["dia"]}</div>'
             for act in dia["actividades"]:
                 bloques_html += f"""
@@ -194,7 +201,7 @@ def hormiguear_web():
         
         with open(os.path.join(base_path, 'index.html'), 'w', encoding='utf-8') as f:
             f.write(HTML_TEMPLATE.format(intro=data['introduccion'], contenido=bloques_html))
-        print(">>> Despliegue : Centrado táctico, flechas corregidas y pie de página ajustado.")
+        print(">>> Despliegue CLU: Centrado táctico, flechas corregidas y pie de página ajustado.")
     except Exception as e:
         print(f">>> ERROR TÉCNICO EN EL TACURÚ: {e}")
 
