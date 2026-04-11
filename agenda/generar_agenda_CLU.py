@@ -46,7 +46,7 @@ HTML_TEMPLATE = """
         
         .logo-clu {{ 
             width: 100%; 
-            max-width: 180px; 
+            max-width: 135px; /* Reducción a 1/4 del original */
             height: auto; 
             margin: 0 auto 15px auto; 
             display: block; 
@@ -56,14 +56,16 @@ HTML_TEMPLATE = """
         h1 {{ 
             font-family: 'Archivo Narrow', sans-serif; 
             font-weight: 700;
-            font-size: 3.2rem; 
+            font-size: 3.4rem; 
             text-transform: uppercase; 
             margin: 0; 
-            line-height: 0.9; 
+            line-height: 0.85; 
             letter-spacing: -1.5px;
+            text-align: center;
         }}
         
-        .intro-text {{ text-align: justify; border: 1px solid #eee; padding: 20px; background: #fafafa; margin-bottom: 30px; font-size: 1.05rem; }}
+        /* 2. TEXTOS CENTRADOS */
+        .intro-text {{ text-align: center; border: 1px solid #eee; padding: 20px; background: #fafafa; margin-bottom: 30px; font-size: 1.05rem; }}
         .intro-text a {{ color: var(--black); font-weight: bold; text-decoration: underline; text-decoration-color: var(--neon-green); }}
         
         .dia-bloque {{ margin-bottom: 35px; }}
@@ -75,34 +77,74 @@ HTML_TEMPLATE = """
             padding: 5px 15px; 
             display: inline-block; 
             margin-bottom: 12px; 
+            text-align: left; /* Exceptuado del centrado */
         }}
         
         details {{ border-bottom: 1px solid var(--black); }}
-        summary {{ padding: 15px 0; cursor: pointer; font-weight: 700; display: flex; justify-content: space-between; align-items: center; list-style: none; font-size: 1.3rem; }}
-        
-        summary::after {{ 
-            content: '→'; 
-            color: var(--neon-green); 
+        summary {{ 
+            padding: 15px 0; 
+            cursor: pointer; 
+            font-weight: 700; 
+            display: flex; 
+            justify-content: center; /* Centramos el texto del summary */
+            align-items: center; 
+            list-style: none; 
             font-size: 1.3rem; 
-            background: var(--black); 
-            padding: 0 10px; 
+            position: relative;
         }}
-        details[open] summary::after {{ content: '↓'; }}
         
-        .info {{ padding: 18px; background: #f9f9f9; border-left: 6px solid var(--neon-green); font-size: 1.1rem; }}
-        .hora {{ background: var(--neon-green); color: var(--black); padding: 2px 8px; margin-right: 10px; font-weight: bold; border: 1px solid var(--black); }}
+        /* 1. FLECHAS CERRADO/DESPLEGADO */
+        summary::after {{ 
+            content: '➘'; 
+            color: var(--neon-green); 
+            font-size: 1.1rem; 
+            background: var(--black); 
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: 0;
+        }}
+        details[open] summary::after {{ content: '⬍'; font-size: 1.3rem; }}
         
-        footer {{ margin-top: 40px; text-align: center; font-family: 'Archivo Narrow', sans-serif; border-top: 5px solid var(--black); padding-top: 20px; text-transform: uppercase; font-size: 1.1rem; }}
-        .insta-footer {{ color: var(--black); font-size: 1.8rem; margin: 0 10px; vertical-align: middle; }}
+        .info {{ 
+            padding: 18px; 
+            background: #f9f9f9; 
+            border-left: 6px solid var(--neon-green); 
+            font-size: 1.1rem; 
+            text-align: center; /* Centrado */
+        }}
+        
+        .hora {{ 
+            background: var(--neon-green); 
+            color: var(--black); 
+            padding: 2px 8px; 
+            margin-right: 10px; 
+            font-weight: bold; 
+            border: 1px solid var(--black); 
+            text-align: center; /* Exceptuado por estructura, pero es un span */
+        }}
+        
+        /* 3. PIE DE PÁGINA MÁS PEQUEÑO */
+        footer {{ 
+            margin-top: 40px; 
+            text-align: center; 
+            font-family: 'Archivo Narrow', sans-serif; 
+            border-top: 5px solid var(--black); 
+            padding-top: 20px; 
+            text-transform: uppercase; 
+            font-size: 0.85rem; /* Reducido */
+            color: #444;
+        }}
+        .insta-footer {{ color: var(--black); font-size: 1.5rem; margin: 0 10px; vertical-align: middle; }}
 
         @media (max-width: 600px) {{
             body {{ font-size: 1rem; padding: 10px; }}
             .wrap {{ margin: 10px; padding: 15px; border-width: 4px; }}
             h1 {{ font-size: 2.2rem; }}
-            .fecha {{ font-size: 1.4rem; }}
-            summary {{ font-size: 1.1rem; }}
-            .info {{ font-size: 0.95rem; }}
-            .logo-clu {{ max-width: 140px; }}
+            summary::after {{ width: 30px; height: 30px; }}
         }}
     </style>
 </head>
@@ -110,10 +152,10 @@ HTML_TEMPLATE = """
     <div class="wrap">
         <header>
             <a href="https://www.instagram.com/comitedelucha" target="_blank">
-                <img src="logo_clu.png" alt="CLU" class="logo-clu" onerror="this.src='https://via.placeholder.com/240x100?text=CLU+UNAM'">
+                <img src="logo_clu.png" alt="CLU" class="logo-clu" onerror="this.style.display='none'">
             </a>
             <h1>CRONOGRAMA<br>PARO ACTIVO</h1>
-            <p style="margin-top:10px; font-weight: bold;">Semana del 13 al 17 de abril</p>
+            <p style="margin-top:10px; font-weight: bold; text-align: center;">Semana del 13 al 17 de abril</p>
         </header>
 
         <div class="intro-text">{intro}</div>
@@ -139,7 +181,6 @@ def hormiguear_web():
         
         bloques_html = ""
         for dia in data['cronograma']:
-            # Reparación: llaves simples en f-strings para inyectar el valor real
             bloques_html += f'<div class="dia-bloque"><div class="fecha">{dia["dia"]}</div>'
             for act in dia["actividades"]:
                 bloques_html += f"""
@@ -151,9 +192,9 @@ def hormiguear_web():
         
         with open(os.path.join(base_path, 'index.html'), 'w', encoding='utf-8') as f:
             f.write(HTML_TEMPLATE.format(intro=data['introduccion'], contenido=bloques_html))
-        print(">>> Despliegue CLU: Datos inyectados, sombra eliminada y Responsive OK.")
+        print(">>> Despliegue CLU: Centrado táctico, flechas corregidas y pie de página ajustado.")
     except Exception as e:
-        print(f">>> ERROR EN EL TACURÚ: {e}")
+        print(f">>> ERROR TÉCNICO EN EL TACURÚ: {e}")
 
 if __name__ == "__main__":
     hormiguear_web()
