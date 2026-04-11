@@ -64,8 +64,8 @@ HTML_TEMPLATE = """
             text-align: center;
         }}
         
-        /* 2. TEXTOS CENTRADOS */
-        .intro-text {{ text-align: center; border: 1px solid #eee; padding: 20px; background: #fafafa; margin-bottom: 30px; font-size: 1.05rem; }}
+        /* 2. TEXTOS */
+        .intro-text {{ text-align: left; border: 1px solid #eee; padding: 20px; background: #fafafa; margin-bottom: 30px; font-size: 1.05rem; }}
         .intro-text a {{ color: var(--black); font-weight: bold; text-decoration: underline; text-decoration-color: var(--neon-green); }}
         
         .dia-bloque {{ margin-bottom: 35px; }}
@@ -77,7 +77,7 @@ HTML_TEMPLATE = """
             padding: 5px 15px; 
             display: inline-block; 
             margin-bottom: 12px; 
-            text-align: left; /* Exceptuado del centrado */
+            text-align: center; /* Exceptuado del centrado */
         }}
         
         details {{ border-bottom: 1px solid var(--black); }}
@@ -86,8 +86,8 @@ HTML_TEMPLATE = """
             cursor: pointer; 
             font-weight: 700; 
             display: flex; 
-            justify-content: center; /* Centramos el texto del summary */
-            align-items: center; 
+            justify-content: left; /* Centramos el texto del summary */
+            align-items: left; 
             list-style: none; 
             font-size: 1.3rem; 
             position: relative;
@@ -114,7 +114,7 @@ HTML_TEMPLATE = """
             background: #f9f9f9; 
             border-left: 6px solid var(--neon-green); 
             font-size: 1.1rem; 
-            text-align: center; /* Centrado */
+            text-align: left; /*  */
         }}
         
         .hora {{ 
