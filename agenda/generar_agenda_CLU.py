@@ -14,32 +14,46 @@ HTML_TEMPLATE = """
     <style>
         :root {{ --neon: #00FF00; --black: #000000; --white: #FFFFFF; }}
         body {{ background: var(--white); color: var(--black); font-family: 'Roboto Condensed', sans-serif; padding: 20px; line-height: 1.6; margin: 0; }}
-        .wrap {{ max-width: 800px; margin: 40px auto; border: 4px solid var(--black); padding: 30px; box-shadow: 10px 10px 0px var(--neon); }}
+        
+        /* Recuadro General con Neón Negro */
+        .wrap {{ 
+            max-width: 800px; 
+            margin: 40px auto; 
+            border: 4px solid var(--black); 
+            padding: 30px; 
+            box-shadow: 0 0 20px rgba(0,0,0,0.8); /* Efecto Neón Negro */
+            background-color: var(--white);
+        }}
+        
         header {{ text-align: center; border-bottom: 4px solid var(--black); margin-bottom: 30px; padding-bottom: 20px; }}
-        .logo-link img {{ max-width: 180px; height: auto; transition: transform 0.2s; }}
-        .logo-link img:hover {{ transform: scale(1.05); }}
+        .logo-link img {{ max-width: 180px; height: auto; }}
         h1 {{ font-family: 'Archivo Narrow', sans-serif; font-size: 2.5rem; text-transform: uppercase; margin: 15px 0 0 0; line-height: 1; }}
+        
         .intro-text {{ text-align: justify; border: 1px solid #ddd; padding: 15px; background: #fafafa; margin-bottom: 30px; font-size: 0.95rem; }}
-        .intro-text a {{ color: var(--black); font-weight: bold; text-decoration: underline; text-decoration-color: var(--neon); }}
+        .intro-text a {{ color: var(--black); text-decoration: underline; text-decoration-color: var(--neon); }}
+        
         .dia-bloque {{ margin-bottom: 40px; }}
         .fecha {{ font-family: 'Archivo Narrow', sans-serif; font-size: 1.6rem; background: var(--black); color: var(--neon); padding: 5px 15px; display: inline-block; margin-bottom: 15px; }}
+        
         details {{ border-bottom: 1px solid var(--black); }}
         summary {{ padding: 15px 0; cursor: pointer; font-weight: 700; display: flex; justify-content: space-between; align-items: center; list-style: none; }}
+        
+        /* Flecha Verde de despliegue */
         summary::after {{ content: '→'; color: var(--neon); font-size: 1.2rem; background: var(--black); padding: 0 10px; }}
-        details[open] summary {{ color: var(--neon); background: var(--black); padding-left: 10px; }}
-        details[open] summary::after {{ content: '↓'; transform: rotate(180deg); }}
+        details[open] summary::after {{ content: '↓'; }}
+        
         .info {{ padding: 20px; background: #f9f9f9; border-left: 6px solid var(--neon); }}
         .hora {{ background: var(--neon); color: var(--black); padding: 2px 8px; margin-right: 10px; font-weight: bold; border: 1px solid var(--black); }}
+        
         footer {{ margin-top: 50px; text-align: center; font-family: 'Archivo Narrow', sans-serif; border-top: 4px solid var(--black); padding-top: 20px; text-transform: uppercase; font-size: 1rem; }}
-        .insta-footer {{ color: var(--black); font-size: 1.5rem; margin: 0 10px; vertical-align: middle; transition: color 0.2s; }}
-        .insta-footer:hover {{ color: var(--neon); }}
+        .insta-footer {{ color: var(--black); font-size: 1.5rem; margin: 0 10px; vertical-align: middle; }}
     </style>
 </head>
 <body>
     <div class="wrap">
         <header>
             <a href="https://www.instagram.com/comitedelucha" class="logo-link" target="_blank">
-                <img src="logo_clu.png" alt="Comité de Lucha Universitaria" onerror="this.src='https://via.placeholder.com/200x80?text=CLU+UNAM'">
+                <img src="logo_clu.png" alt="CLU" onerror="this.src='https://via.placeholder.com/200x80?text=CLU+UNAM'">
             </a>
             <h1>Cronograma de Paro Activo</h1>
             <p><strong>Semana del 13 al 17 de abril</strong></p>
@@ -63,7 +77,6 @@ def hormiguear_web():
     try:
         base_path = os.path.dirname(__file__)
         ruta_json = os.path.join(base_path, 'agendaCLU.json')
-        
         with open(ruta_json, 'r', encoding='utf-8') as f:
             data = json.load(f)
         
