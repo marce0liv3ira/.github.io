@@ -2,7 +2,6 @@ import json
 import os
 from datetime import datetime
 
-# Estética: Blanco, Negro y Neón Negro (Sombra sólida)
 HTML_TEMPLATE = """
 <!DOCTYPE html>
 <html lang="es">
@@ -10,13 +9,16 @@ HTML_TEMPLATE = """
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Cronograma de Paro Activo - CLU</title>
-    <meta name="description" content="Esta es la propuesta del Comité de Lucha Universitaria para las actividades de paro activo del 13 al 17 de abril. Sumá tu propuesta.">
-    <meta property="og:title" content="Cronograma de Paro Activo - CLU">
-    <meta property="og:description" content="Esta es la propuesta del Comité de Lucha Universitaria para las actividades de paro activo del 13 al 17 de abril. Sumá tu propuesta.">
+    <title>Agenda de Paro Activo - CLU</title>
+    <meta name="description" content="Propuesta del Comité de Lucha Universitaria: Paro activo del 13 al 17 de abril. ¡Sumá tu actividad aquí!">
+    
+    <meta property="og:title" content="CRONOGRAMA DE LUCHA - CLU">
+    <meta property="og:description" content="Cronograma de actividades para el paro activo (13-17 de abril). Unidad de estudiantes, docentes y nodocentes.">
     <meta property="og:image" content="https://hormigue.ar/agenda/logo_clu.png">
     <meta property="og:url" content="https://hormigue.ar/agenda/">
     <meta property="og:type" content="website">
+    
+    <meta name="twitter:card" content="summary_large_image">
 
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -25,7 +27,6 @@ HTML_TEMPLATE = """
         :root {{ --neon: #00FF00; --black: #000000; --white: #FFFFFF; }}
         body {{ background: var(--white); color: var(--black); font-family: 'Roboto Condensed', sans-serif; padding: 20px; line-height: 1.6; margin: 0; }}
         
-        /* Recuadro con Sombra Negra Sólida */
         .wrap {{ 
             max-width: 800px; 
             margin: 40px auto; 
@@ -37,20 +38,20 @@ HTML_TEMPLATE = """
         
         header {{ text-align: center; border-bottom: 5px solid var(--black); margin-bottom: 30px; padding-bottom: 20px; }}
         
-        /* Estilo del Logo */
+        /* FIX LOGO: Sin recortes, ajuste flexible */
         .logo-clu {{ 
-            max-width: 220px; 
+            width: 100%;
+            max-width: 350px; /* Aumentamos el ancho máximo */
             height: auto; 
             display: block; 
-            margin: 0 auto 15px auto;
-            transition: transform 0.2s ease-in-out;
+            margin: 0 auto 20px auto;
+            object-fit: contain; /* Asegura que se vea toda la imagen */
         }}
-        .logo-clu:hover {{ transform: scale(1.03); }}
         
         h1 {{ font-family: 'Archivo Narrow', sans-serif; font-size: 2.5rem; text-transform: uppercase; margin: 0; line-height: 1.1; }}
         
         .intro-text {{ text-align: justify; border: 1px solid #ddd; padding: 20px; background: #fafafa; margin-bottom: 30px; font-size: 0.95rem; }}
-        .intro-text a {{ color: var(--black); text-decoration: underline; text-decoration-color: var(--neon); }}
+        .intro-text a {{ color: var(--black); font-weight: bold; text-decoration: underline; text-decoration-color: var(--neon); }}
         
         .dia-bloque {{ margin-bottom: 40px; }}
         .fecha {{ font-family: 'Archivo Narrow', sans-serif; font-size: 1.6rem; background: var(--black); color: var(--neon); padding: 5px 15px; display: inline-block; margin-bottom: 15px; }}
@@ -71,7 +72,7 @@ HTML_TEMPLATE = """
     <div class="wrap">
         <header>
             <a href="https://www.instagram.com/comitedelucha" target="_blank">
-                <img src="logo_clu.png" alt="Logo Comité de Lucha" class="logo-clu" onerror="this.src='https://via.placeholder.com/220x100?text=CLU+UNAM'">
+                <img src="logo_clu.png" alt="Logo Comité de Lucha" class="logo-clu" onerror="this.src='https://via.placeholder.com/350x120?text=CLU+UNAM'">
             </a>
             <h1>Cronograma de Paro Activo</h1>
             <p style="margin-top:10px;"><strong>Semana del 13 al 17 de abril</strong></p>
@@ -111,9 +112,9 @@ def hormiguear_web():
         
         with open(os.path.join(base_path, 'index.html'), 'w', encoding='utf-8') as f:
             f.write(HTML_TEMPLATE.format(intro=data['introduccion'], contenido=bloques_html))
-        print(">>> Despliegue CLU Finalizado con Logo y SEO.")
+        print(">>> Motor CLU ajustado. Logo liberado y SEO optimizado.")
     except Exception as e:
-        print(f">>> ERROR TÉCNICO: {e}")
+        print(f">>> ERROR EN LA CARRETA: {e}")
 
 if __name__ == "__main__":
     hormiguear_web()
