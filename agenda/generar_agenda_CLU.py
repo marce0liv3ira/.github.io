@@ -46,7 +46,7 @@ HTML_TEMPLATE = """
         
         .logo-clu {{ 
             width: 100%; 
-            max-width: 400px; /* Reducción */
+            max-width: 300px; /* Reducción */
             height: auto; 
             margin: 0 auto 15px auto; 
             display: block; 
