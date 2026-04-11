@@ -26,13 +26,13 @@
     {
       "dia": "JUEVES 16",
       "actividades": [
-        {"hora": "--:--", "titulo": "ASUETO UNIVERSITARIO", "Aniversario 53 de la Universidad Nacional de Misiones": "Enviá tu actividad."}
+        {"hora": "--:--", "titulo": "ASUETO UNIVERSITARIO", "detalle": "Aniversario 53 de la Universidad Nacional de Misiones. Enviá tu actividad."}
       ]
     },
     {
       "dia": "VIERNES 17",
       "actividades": [
-        {"hora": "--:--", "titulo": "PARO UNIVERSITARIO NACIONAL.", "Sin asistencia a los lugares de trabajo": "Enviá tu actividad."}
+        {"hora": "--:--", "titulo": "PARO UNIVERSITARIO NACIONAL.", "detalle": "Sin asistencia a los lugares de trabajo. Enviá tu actividad."}
       ]
     }
   ]
