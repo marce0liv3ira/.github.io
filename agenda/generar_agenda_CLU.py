@@ -2,37 +2,57 @@ import json
 import os
 from datetime import datetime
 
-# Estética: Terminal de Resistencia (Verde, Negro, Blanco)
 HTML_TEMPLATE = """
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenda de Lucha - Universidad Pública</title>
+    <title>CRONOGRAMA DE PARO ACTIVO - CLU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body {{ background-color: #000000; color: #FFFFFF; font-family: 'Courier New', monospace; padding: 20px; line-height: 1.5; }}
-        .wrap {{ max-width: 800px; margin: auto; border: 1px solid #00FF00; padding: 20px; box-shadow: 0 0 15px #004400; }}
-        h1 {{ color: #00FF00; text-align: center; border-bottom: 2px solid #00FF00; padding-bottom: 10px; text-transform: uppercase; }}
-        .dia-bloque {{ margin-top: 30px; border-left: 4px solid #00FF00; padding-left: 15px; }}
-        .fecha {{ color: #00FF00; font-weight: bold; font-size: 1.3rem; margin-bottom: 15px; }}
-        details {{ background: #0a0a0a; margin-bottom: 10px; border: 1px solid #333; cursor: pointer; }}
-        summary {{ padding: 12px; font-weight: bold; outline: none; }}
-        summary:hover {{ background: #002200; color: #00FF00; }}
-        .info {{ padding: 15px; border-top: 1px solid #00FF00; color: #CCC; font-size: 0.95rem; background: #050505; }}
-        .hora {{ color: #00FF00; font-weight: bold; margin-right: 10px; border: 1px solid #00FF00; padding: 2px 5px; }}
-        footer {{ margin-top: 40px; text-align: center; font-size: 0.7rem; color: #444; border-top: 1px dashed #333; padding-top: 10px; }}
+        :root {{ --neon: #00FF00; --black: #000000; --white: #FFFFFF; }}
+        body {{ background: var(--white); color: var(--black); font-family: 'Roboto Condensed', sans-serif; padding: 20px; line-height: 1.6; margin: 0; }}
+        .wrap {{ max-width: 800px; margin: 40px auto; border: 4px solid var(--black); padding: 30px; box-shadow: 10px 10px 0px var(--neon); }}
+        header {{ text-align: center; border-bottom: 4px solid var(--black); margin-bottom: 30px; padding-bottom: 20px; }}
+        .logo-link img {{ max-width: 180px; height: auto; transition: transform 0.2s; }}
+        .logo-link img:hover {{ transform: scale(1.05); }}
+        h1 {{ font-family: 'Archivo Narrow', sans-serif; font-size: 2.5rem; text-transform: uppercase; margin: 15px 0 0 0; line-height: 1; }}
+        .intro-text {{ text-align: justify; border: 1px solid #ddd; padding: 15px; background: #fafafa; margin-bottom: 30px; font-size: 0.95rem; }}
+        .intro-text a {{ color: var(--black); font-weight: bold; text-decoration: underline; text-decoration-color: var(--neon); }}
+        .dia-bloque {{ margin-bottom: 40px; }}
+        .fecha {{ font-family: 'Archivo Narrow', sans-serif; font-size: 1.6rem; background: var(--black); color: var(--neon); padding: 5px 15px; display: inline-block; margin-bottom: 15px; }}
+        details {{ border-bottom: 1px solid var(--black); }}
+        summary {{ padding: 15px 0; cursor: pointer; font-weight: 700; display: flex; justify-content: space-between; align-items: center; list-style: none; }}
+        summary::after {{ content: '→'; color: var(--neon); font-size: 1.2rem; background: var(--black); padding: 0 10px; }}
+        details[open] summary {{ color: var(--neon); background: var(--black); padding-left: 10px; }}
+        details[open] summary::after {{ content: '↓'; transform: rotate(180deg); }}
+        .info {{ padding: 20px; background: #f9f9f9; border-left: 6px solid var(--neon); }}
+        .hora {{ background: var(--neon); color: var(--black); padding: 2px 8px; margin-right: 10px; font-weight: bold; border: 1px solid var(--black); }}
+        footer {{ margin-top: 50px; text-align: center; font-family: 'Archivo Narrow', sans-serif; border-top: 4px solid var(--black); padding-top: 20px; text-transform: uppercase; font-size: 1rem; }}
+        .insta-footer {{ color: var(--black); font-size: 1.5rem; margin: 0 10px; vertical-align: middle; transition: color 0.2s; }}
+        .insta-footer:hover {{ color: var(--neon); }}
     </style>
 </head>
 <body>
     <div class="wrap">
-        <h1>[ AGENDA DE MOVILIZACIÓN ]</h1>
-        <p style="text-align: center; color: #00FF00;">> ESTADO: EN LUCHA | ACTUALIZADO: {fecha_act}</p>
+        <header>
+            <a href="https://www.instagram.com/comitedelucha" class="logo-link" target="_blank">
+                <img src="logo_clu.png" alt="Comité de Lucha Universitaria" onerror="this.src='https://via.placeholder.com/200x80?text=CLU+UNAM'">
+            </a>
+            <h1>Cronograma de Paro Activo</h1>
+            <p><strong>Semana del 13 al 17 de abril</strong></p>
+        </header>
+
+        <div class="intro-text">{intro}</div>
         
         {contenido}
 
         <footer>
-            GENERADO AUTOMÁTICAMENTE - TACURÚ DIGITAL - POSADAS, MISIONES
+            Comité de Lucha Universitaria 
+            <a href="https://www.instagram.com/comitedelucha" class="insta-footer" target="_blank"><i class="fab fa-instagram"></i></a> 
+            Universidad Nacional de Misiones
         </footer>
     </div>
 </body>
@@ -41,40 +61,28 @@ HTML_TEMPLATE = """
 
 def hormiguear_web():
     try:
-        # Buscamos el archivo con el nombre específico que definiste
         base_path = os.path.dirname(__file__)
         ruta_json = os.path.join(base_path, 'agendaCLU.json')
         
-        if not os.path.exists(ruta_json):
-            print(f">>> ERROR: No encuentro el archivo {ruta_json}")
-            return
-
         with open(ruta_json, 'r', encoding='utf-8') as f:
-            datos = json.load(f)
-        
-        fecha_str = datetime.now().strftime("%d/%m/%Y %H:%M")
+            data = json.load(f)
         
         bloques_html = ""
-        for dia in datos:
+        for dia in data['cronograma']:
             bloques_html += f'<div class="dia-bloque"><div class="fecha">{dia["dia"]}</div>'
             for act in dia["actividades"]:
                 bloques_html += f"""
                 <details>
-                    <summary><span class="hora">{act['hora']}</span> {act['titulo']}</summary>
+                    <summary><span><span class="hora">{act['hora']}</span> {act['titulo']}</span></summary>
                     <div class="info">{act['detalle']}</div>
-                </details>
-                """
+                </details>"""
             bloques_html += "</div>"
         
-        # El resultado siempre será index.html para que el servidor lo reconozca
-        ruta_salida = os.path.join(base_path, 'index.html')
-        with open(ruta_salida, 'w', encoding='utf-8') as f:
-            f.write(HTML_TEMPLATE.format(fecha_act=fecha_str, contenido=bloques_html))
-            
-        print(">>> Éxito: index.html generado quirúrgicamente.")
-        
+        with open(os.path.join(base_path, 'index.html'), 'w', encoding='utf-8') as f:
+            f.write(HTML_TEMPLATE.format(intro=data['introduccion'], contenido=bloques_html))
+        print(">>> Despliegue CLU finalizado.")
     except Exception as e:
-        print(f">>> FALLO LÓGICO: {e}")
+        print(f">>> ERROR TÉCNICO: {e}")
 
 if __name__ == "__main__":
     hormiguear_web()
