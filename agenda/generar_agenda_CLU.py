@@ -2,34 +2,54 @@ import json
 import os
 from datetime import datetime
 
+# Estética: Blanco, Negro y Neón Negro (Sombra sólida)
 HTML_TEMPLATE = """
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRONOGRAMA DE PARO ACTIVO - CLU</title>
+    
+    <title>Cronograma de Paro Activo - CLU</title>
+    <meta name="description" content="Esta es la propuesta del Comité de Lucha Universitaria para las actividades de paro activo del 13 al 17 de abril. Sumá tu propuesta.">
+    <meta property="og:title" content="Cronograma de Paro Activo - CLU">
+    <meta property="og:description" content="Esta es la propuesta del Comité de Lucha Universitaria para las actividades de paro activo del 13 al 17 de abril. Sumá tu propuesta.">
+    <meta property="og:image" content="https://hormigue.ar/agenda/logo_clu.png">
+    <meta property="og:url" content="https://hormigue.ar/agenda/">
+    <meta property="og:type" content="website">
+
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
         :root {{ --neon: #00FF00; --black: #000000; --white: #FFFFFF; }}
         body {{ background: var(--white); color: var(--black); font-family: 'Roboto Condensed', sans-serif; padding: 20px; line-height: 1.6; margin: 0; }}
         
-        /* Recuadro General con Neón Negro */
+        /* Recuadro con Sombra Negra Sólida */
         .wrap {{ 
             max-width: 800px; 
             margin: 40px auto; 
-            border: 4px solid var(--black); 
+            border: 5px solid var(--black); 
             padding: 30px; 
-            box-shadow: 0 0 20px rgba(0,0,0,0.8); /* Efecto Neón Negro */
+            box-shadow: 12px 12px 0px var(--black); 
             background-color: var(--white);
         }}
         
-        header {{ text-align: center; border-bottom: 4px solid var(--black); margin-bottom: 30px; padding-bottom: 20px; }}
-        .logo-link img {{ max-width: 180px; height: auto; }}
-        h1 {{ font-family: 'Archivo Narrow', sans-serif; font-size: 2.5rem; text-transform: uppercase; margin: 15px 0 0 0; line-height: 1; }}
+        header {{ text-align: center; border-bottom: 5px solid var(--black); margin-bottom: 30px; padding-bottom: 20px; }}
         
-        .intro-text {{ text-align: justify; border: 1px solid #ddd; padding: 15px; background: #fafafa; margin-bottom: 30px; font-size: 0.95rem; }}
+        /* Estilo del Logo */
+        .logo-clu {{ 
+            max-width: 220px; 
+            height: auto; 
+            display: block; 
+            margin: 0 auto 15px auto;
+            transition: transform 0.2s ease-in-out;
+        }}
+        .logo-clu:hover {{ transform: scale(1.03); }}
+        
+        h1 {{ font-family: 'Archivo Narrow', sans-serif; font-size: 2.5rem; text-transform: uppercase; margin: 0; line-height: 1.1; }}
+        
+        .intro-text {{ text-align: justify; border: 1px solid #ddd; padding: 20px; background: #fafafa; margin-bottom: 30px; font-size: 0.95rem; }}
         .intro-text a {{ color: var(--black); text-decoration: underline; text-decoration-color: var(--neon); }}
         
         .dia-bloque {{ margin-bottom: 40px; }}
@@ -37,26 +57,24 @@ HTML_TEMPLATE = """
         
         details {{ border-bottom: 1px solid var(--black); }}
         summary {{ padding: 15px 0; cursor: pointer; font-weight: 700; display: flex; justify-content: space-between; align-items: center; list-style: none; }}
-        
-        /* Flecha Verde de despliegue */
         summary::after {{ content: '→'; color: var(--neon); font-size: 1.2rem; background: var(--black); padding: 0 10px; }}
         details[open] summary::after {{ content: '↓'; }}
         
         .info {{ padding: 20px; background: #f9f9f9; border-left: 6px solid var(--neon); }}
         .hora {{ background: var(--neon); color: var(--black); padding: 2px 8px; margin-right: 10px; font-weight: bold; border: 1px solid var(--black); }}
         
-        footer {{ margin-top: 50px; text-align: center; font-family: 'Archivo Narrow', sans-serif; border-top: 4px solid var(--black); padding-top: 20px; text-transform: uppercase; font-size: 1rem; }}
-        .insta-footer {{ color: var(--black); font-size: 1.5rem; margin: 0 10px; vertical-align: middle; }}
+        footer {{ margin-top: 50px; text-align: center; font-family: 'Archivo Narrow', sans-serif; border-top: 5px solid var(--black); padding-top: 20px; text-transform: uppercase; font-size: 1rem; }}
+        .insta-footer {{ color: var(--black); font-size: 1.6rem; margin: 0 10px; vertical-align: middle; }}
     </style>
 </head>
 <body>
     <div class="wrap">
         <header>
-            <a href="https://www.instagram.com/comitedelucha" class="logo-link" target="_blank">
-                <img src="logo_clu.png" alt="CLU" onerror="this.src='https://via.placeholder.com/200x80?text=CLU+UNAM'">
+            <a href="https://www.instagram.com/comitedelucha" target="_blank">
+                <img src="logo_clu.png" alt="Logo Comité de Lucha" class="logo-clu" onerror="this.src='https://via.placeholder.com/220x100?text=CLU+UNAM'">
             </a>
             <h1>Cronograma de Paro Activo</h1>
-            <p><strong>Semana del 13 al 17 de abril</strong></p>
+            <p style="margin-top:10px;"><strong>Semana del 13 al 17 de abril</strong></p>
         </header>
 
         <div class="intro-text">{intro}</div>
@@ -93,7 +111,7 @@ def hormiguear_web():
         
         with open(os.path.join(base_path, 'index.html'), 'w', encoding='utf-8') as f:
             f.write(HTML_TEMPLATE.format(intro=data['introduccion'], contenido=bloques_html))
-        print(">>> Despliegue CLU finalizado.")
+        print(">>> Despliegue CLU Finalizado con Logo y SEO.")
     except Exception as e:
         print(f">>> ERROR TÉCNICO: {e}")
 
