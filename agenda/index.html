@@ -4,45 +4,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenda de Lucha - Universidad Pública</title>
+    <title>CRONOGRAMA DE PARO ACTIVO - CLU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { background-color: #000000; color: #FFFFFF; font-family: 'Courier New', monospace; padding: 20px; line-height: 1.5; }
-        .wrap { max-width: 800px; margin: auto; border: 1px solid #00FF00; padding: 20px; box-shadow: 0 0 15px #004400; }
-        h1 { color: #00FF00; text-align: center; border-bottom: 2px solid #00FF00; padding-bottom: 10px; text-transform: uppercase; }
-        .dia-bloque { margin-top: 30px; border-left: 4px solid #00FF00; padding-left: 15px; }
-        .fecha { color: #00FF00; font-weight: bold; font-size: 1.3rem; margin-bottom: 15px; }
-        details { background: #0a0a0a; margin-bottom: 10px; border: 1px solid #333; cursor: pointer; }
-        summary { padding: 12px; font-weight: bold; outline: none; }
-        summary:hover { background: #002200; color: #00FF00; }
-        .info { padding: 15px; border-top: 1px solid #00FF00; color: #CCC; font-size: 0.95rem; background: #050505; }
-        .hora { color: #00FF00; font-weight: bold; margin-right: 10px; border: 1px solid #00FF00; padding: 2px 5px; }
-        footer { margin-top: 40px; text-align: center; font-size: 0.7rem; color: #444; border-top: 1px dashed #333; padding-top: 10px; }
+        :root { --neon: #00FF00; --black: #000000; --white: #FFFFFF; }
+        body { background: var(--white); color: var(--black); font-family: 'Roboto Condensed', sans-serif; padding: 20px; line-height: 1.6; margin: 0; }
+        .wrap { max-width: 800px; margin: 40px auto; border: 4px solid var(--black); padding: 30px; box-shadow: 10px 10px 0px var(--neon); }
+        header { text-align: center; border-bottom: 4px solid var(--black); margin-bottom: 30px; padding-bottom: 20px; }
+        .logo-link img { max-width: 180px; height: auto; transition: transform 0.2s; }
+        .logo-link img:hover { transform: scale(1.05); }
+        h1 { font-family: 'Archivo Narrow', sans-serif; font-size: 2.5rem; text-transform: uppercase; margin: 15px 0 0 0; line-height: 1; }
+        .intro-text { text-align: justify; border: 1px solid #ddd; padding: 15px; background: #fafafa; margin-bottom: 30px; font-size: 0.95rem; }
+        .intro-text a { color: var(--black); font-weight: bold; text-decoration: underline; text-decoration-color: var(--neon); }
+        .dia-bloque { margin-bottom: 40px; }
+        .fecha { font-family: 'Archivo Narrow', sans-serif; font-size: 1.6rem; background: var(--black); color: var(--neon); padding: 5px 15px; display: inline-block; margin-bottom: 15px; }
+        details { border-bottom: 1px solid var(--black); }
+        summary { padding: 15px 0; cursor: pointer; font-weight: 700; display: flex; justify-content: space-between; align-items: center; list-style: none; }
+        summary::after { content: '→'; color: var(--neon); font-size: 1.2rem; background: var(--black); padding: 0 10px; }
+        details[open] summary { color: var(--neon); background: var(--black); padding-left: 10px; }
+        details[open] summary::after { content: '↓'; transform: rotate(180deg); }
+        .info { padding: 20px; background: #f9f9f9; border-left: 6px solid var(--neon); }
+        .hora { background: var(--neon); color: var(--black); padding: 2px 8px; margin-right: 10px; font-weight: bold; border: 1px solid var(--black); }
+        footer { margin-top: 50px; text-align: center; font-family: 'Archivo Narrow', sans-serif; border-top: 4px solid var(--black); padding-top: 20px; text-transform: uppercase; font-size: 1rem; }
+        .insta-footer { color: var(--black); font-size: 1.5rem; margin: 0 10px; vertical-align: middle; transition: color 0.2s; }
+        .insta-footer:hover { color: var(--neon); }
     </style>
 </head>
 <body>
     <div class="wrap">
-        <h1>[ AGENDA DE MOVILIZACIÓN ]</h1>
-        <p style="text-align: center; color: #00FF00;">> ESTADO: EN LUCHA | ACTUALIZADO: 10/04/2026 23:01</p>
+        <header>
+            <a href="https://www.instagram.com/comitedelucha" class="logo-link" target="_blank">
+                <img src="logo_clu.png" alt="Comité de Lucha Universitaria" onerror="this.src='https://via.placeholder.com/200x80?text=CLU+UNAM'">
+            </a>
+            <h1>Cronograma de Paro Activo</h1>
+            <p><strong>Semana del 13 al 17 de abril</strong></p>
+        </header>
+
+        <div class="intro-text">La Asamblea General Extraordinaria de Adunam se pronunció por un paro activo y por el diseño de un calendario de actividades de lucha para la <a href='https://www.instagram.com/p/DW7DJkUFGgu/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==' target='_blank'>próxima semana</a> y también para la del 27 de abril. Entendemos que esa agenda debe estar disponible con el suficiente tiempo de antelación para que las actividades sean centralizadas y cuenten con la participación de estudiantes, docentes y nodocentes. Te invitamos a sumarte o agregar actividades en este archivo.</div>
         
         <div class="dia-bloque"><div class="fecha">LUNES 13</div>
                 <details>
-                    <summary><span class="hora">19:30</span> Clase Pública: El ajuste en la UNaM</summary>
-                    <div class="info">Lugar: Entrada Campus. Traer cartelería y algo para hacer ruido.</div>
+                    <summary><span><span class="hora">08:00</span> Confección de carteles</span></summary>
+                    <div class="info">Escuela de Enfermería (hall frente a la Biblioteca).</div>
                 </details>
-                
                 <details>
-                    <summary><span class="hora">18:00</span> Ruidazo en el Mástil</summary>
-                    <div class="info">Concentración de todos los sectores nodocentes y estudiantiles. Av. Mitre y Uruguay.</div>
+                    <summary><span><span class="hora">09:00</span> Clase pública: Historia Americana y Argentina III</span></summary>
+                    <div class="info">Carrera de Historia. Humanidades (Edificio Tucumán).</div>
                 </details>
-                </div><div class="dia-bloque"><div class="fecha">MARTES 14</div>
                 <details>
-                    <summary><span class="hora">10:00</span> Asamblea Permanente</summary>
-                    <div class="info">Discusión sobre el presupuesto de Ciencia y Técnica. Aula Magna.</div>
+                    <summary><span><span class="hora">16:00</span> Clase pública: Lengua y Comunicación</span></summary>
+                    <div class="info">Carrera de Comunicación Social. Humanidades (Edificio Anexo).</div>
                 </details>
-                </div>
+                <details>
+                    <summary><span><span class="hora">18:00</span> Clase pública: Historia Americana y Argentina I</span></summary>
+                    <div class="info">Carrera de Historia. Humanidades (Edificio Tucumán).</div>
+                </details></div><div class="dia-bloque"><div class="fecha">MARTES 14</div>
+                <details>
+                    <summary><span><span class="hora">18:00</span> Clase pública: Análisis del Discurso Periodístico</span></summary>
+                    <div class="info">Carrera de Comunicación Social. Humanidades (Edificio Anexo).</div>
+                </details></div><div class="dia-bloque"><div class="fecha">MIÉRCOLES 15</div>
+                <details>
+                    <summary><span><span class="hora">18:00</span> Clase pública: Historia Americana y Argentina III</span></summary>
+                    <div class="info">Carrera de Historia. Humanidades (Edificio Tucumán).</div>
+                </details>
+                <details>
+                    <summary><span><span class="hora">19:00</span> Asamblea Interclaustros</span></summary>
+                    <div class="info">Docentes, nodocentes y estudiantil. Humanidades (Edificio Tucumán).</div>
+                </details></div><div class="dia-bloque"><div class="fecha">JUEVES 16</div>
+                <details>
+                    <summary><span><span class="hora">--:--</span> [ A COMPLETAR ]</span></summary>
+                    <div class="info">Envía tu actividad.</div>
+                </details></div><div class="dia-bloque"><div class="fecha">VIERNES 17</div>
+                <details>
+                    <summary><span><span class="hora">--:--</span> [ A COMPLETAR ]</span></summary>
+                    <div class="info">Envía tu actividad.</div>
+                </details></div>
 
         <footer>
-            GENERADO AUTOMÁTICAMENTE - TACURÚ DIGITAL - POSADAS, MISIONES
+            Comité de Lucha Universitaria 
+            <a href="https://www.instagram.com/comitedelucha" class="insta-footer" target="_blank"><i class="fab fa-instagram"></i></a> 
+            Universidad Nacional de Misiones
         </footer>
     </div>
 </body>
