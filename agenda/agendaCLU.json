@@ -26,13 +26,13 @@
     {
       "dia": "JUEVES 16",
       "actividades": [
-        {"hora": "--:--", "titulo": "[ A COMPLETAR ]", "detalle": "Envía tu actividad para centralizar la lucha."}
+        {"hora": "--:--", "titulo": "[ A COMPLETAR ]", "detalle": "Envía tu actividad."}
       ]
     },
     {
       "dia": "VIERNES 17",
       "actividades": [
-        {"hora": "--:--", "titulo": "[ A COMPLETAR ]", "detalle": "Envía tu actividad para centralizar la lucha."}
+        {"hora": "--:--", "titulo": "[ A COMPLETAR ]", "detalle": "Envía tu actividad."}
       ]
     }
   ]
