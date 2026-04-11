@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>CRONOGRAMA PARO ACTIVO</title>
+    <title>CRONOGRAMA PARO ACTIVO - CLU</title>
     <meta name="description" content="Propuesta del Comité de Lucha Universitaria para las actividades de paro activo del 13 al 17 de abril.">
     <meta property="og:title" content="CRONOGRAMA PARO ACTIVO - CLU">
     <meta property="og:description" content="Actividades de paro activo (13-17 de abril). Unidad de estudiantes, docentes y nodocentes.">
@@ -42,11 +42,17 @@
         
         .logo-clu { 
             width: 100%; 
-            max-width: 135px; /* Reducción a 1/4 del original */
+            max-width: 165px; /* Reducción a 1/4 del original */
             height: auto; 
             margin: 0 auto 15px auto; 
             display: block; 
             object-fit: contain; 
+        }
+
+        /* MODIFICACIÓN: Efecto de agrandado al pasar el mouse */
+        .logo-clu:hover {
+            transform: scale(1.1); /* Agranda un 10% */
+            transition: transform 0.3s ease; /* Transición suave */
         }
         
         h1 { 
