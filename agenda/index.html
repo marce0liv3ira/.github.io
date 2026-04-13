@@ -118,7 +118,6 @@
             text-align: left; 
         }
 
-        /* AJUSTE PARA JERARQUÍA: Título arriba, fotos abajo */
         .contenedor-galeria {
             display: block;
             width: 100%;
@@ -135,6 +134,12 @@
             margin-right: 12px;
             margin-bottom: 8px;
             border: 2px solid var(--black);
+            cursor: pointer; /* Le avisa al usuario que puede clickear */
+            transition: transform 0.2s ease;
+        }
+
+        .img-actividad:hover {
+            transform: scale(1.1); /* Micro-interacción al pasar el mouse */
         }
         
         .hora { 
@@ -160,12 +165,46 @@
         }
         .insta-footer { color: var(--black); font-size: 1.5rem; margin: 0 10px; vertical-align: middle; }
 
+        /* EL VISOR TÁCTICO (Lightbox) */
+        .visor-oscuro {
+            display: none; 
+            position: fixed; 
+            z-index: 9999; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(0,0,0,0.9); 
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+        .visor-oscuro img {
+            max-width: 90%;
+            max-height: 85vh;
+            margin-top: 5vh;
+            border: 3px solid var(--neon-green);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
+            border-radius: 4px;
+        }
+        .cerrar-visor {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            color: var(--neon-green);
+            font-size: 45px;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: sans-serif;
+        }
+        .cerrar-visor:hover { color: var(--white); }
+
         @media (max-width: 600px) {
             body { font-size: 0.95rem; padding: 10px; }
             .wrap { margin: 10px; padding: 15px; border-width: 4px; }
             h1 { font-size: 2rem; }
             summary::after { width: 30px; height: 30px; }
             .img-actividad { width: 60px; height: 60px; }
+            .cerrar-visor { right: 15px; top: 10px; font-size: 40px; }
         }
     </style>
 </head>
@@ -185,14 +224,14 @@
                 <details>
                     <summary><span><span class="hora">08:00</span> Confección de carteles</span></summary>
                     <div class="info">
-                        <div class="contenedor-galeria"><img src="cartelENF1.jpg" alt="Actividad CLU" class="img-actividad"><img src="cartelENF2.jpg" alt="Actividad CLU" class="img-actividad"><img src="cartelENF3.jpg" alt="Actividad CLU" class="img-actividad"><img src="cartelENF4.jpg" alt="Actividad CLU" class="img-actividad"><img src="cartelENF5.jpg" alt="Actividad CLU" class="img-actividad"><img src="cartelENF6.jpg" alt="Actividad CLU" class="img-actividad"><img src="cartelENF7.jpg" alt="Actividad CLU" class="img-actividad"><img src="cartelENF8.jpg" alt="Actividad CLU" class="img-actividad"><img src="cartelENF9.jpg" alt="Actividad CLU" class="img-actividad"></div>
-                        <div class="detalle-texto">Escuela de Enfermería (hall frente a la Biblioteca).</div>
+                        <div class="contenedor-galeria"><img src="cartelENF1.jpg" alt="Actividad CLU" class="img-actividad" onclick="abrirVisor(this.src)"><img src="cartelENF2.jpg" alt="Actividad CLU" class="img-actividad" onclick="abrirVisor(this.src)"><img src="cartelENF3.jpg" alt="Actividad CLU" class="img-actividad" onclick="abrirVisor(this.src)"><img src="cartelENF4.jpg" alt="Actividad CLU" class="img-actividad" onclick="abrirVisor(this.src)"><img src="cartelENF5.jpg" alt="Actividad CLU" class="img-actividad" onclick="abrirVisor(this.src)"><img src="cartelENF6.jpg" alt="Actividad CLU" class="img-actividad" onclick="abrirVisor(this.src)"><img src="cartelENF7.jpg" alt="Actividad CLU" class="img-actividad" onclick="abrirVisor(this.src)"><img src="cartelENF8.jpg" alt="Actividad CLU" class="img-actividad" onclick="abrirVisor(this.src)"><img src="cartelENF9.jpg" alt="Actividad CLU" class="img-actividad" onclick="abrirVisor(this.src)"></div>
+                        <div class="detalle-texto"><strong>Escuela de Enfermería (hall frente a la Biblioteca)</strong>.</div>
                     </div>
                 </details>
                 <details>
                     <summary><span><span class="hora">09:00</span> Clase pública: Historia Americana y Argentina III</span></summary>
                     <div class="info">
-                        <div class="contenedor-galeria"><img src="ClasPuH1.jpg" alt="Actividad CLU" class="img-actividad"><img src="ClasPuH2.jpg" alt="Actividad CLU" class="img-actividad"><img src="ClasPuH3.jpg" alt="Actividad CLU" class="img-actividad"><img src="ClasPuH4.jpg" alt="Actividad CLU" class="img-actividad"><img src="ClasPuH5.jpg" alt="Actividad CLU" class="img-actividad"></div>
+                        <div class="contenedor-galeria"><img src="ClasPuH1.jpg" alt="Actividad CLU" class="img-actividad" onclick="abrirVisor(this.src)"><img src="ClasPuH2.jpg" alt="Actividad CLU" class="img-actividad" onclick="abrirVisor(this.src)"><img src="ClasPuH3.jpg" alt="Actividad CLU" class="img-actividad" onclick="abrirVisor(this.src)"><img src="ClasPuH4.jpg" alt="Actividad CLU" class="img-actividad" onclick="abrirVisor(this.src)"><img src="ClasPuH5.jpg" alt="Actividad CLU" class="img-actividad" onclick="abrirVisor(this.src)"></div>
                         <div class="detalle-texto">Carrera de Historia. Humanidades (Edificio Tucumán).</div>
                     </div>
                 </details>
@@ -258,5 +297,20 @@
             <a href="https://www.instagram.com/comitedelucha" class="insta-footer" target="_blank"><i class="fab fa-instagram"></i></a><br>Universidad Nacional de Misiones
         </footer>
     </div>
+
+    <div id="visorFotos" class="visor-oscuro" onclick="cerrarVisor()">
+        <span class="cerrar-visor">&times;</span>
+        <img id="fotoAmpliada" src="">
+    </div>
+
+    <script>
+        function abrirVisor(rutaImagen) {
+            document.getElementById('visorFotos').style.display = 'block';
+            document.getElementById('fotoAmpliada').src = rutaImagen;
+        }
+        function cerrarVisor() {
+            document.getElementById('visorFotos').style.display = 'none';
+        }
+    </script>
 </body>
 </html>
