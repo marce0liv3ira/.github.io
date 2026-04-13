@@ -122,7 +122,6 @@ HTML_TEMPLATE = """
             text-align: left; 
         }}
 
-        /* AJUSTE PARA JERARQUÍA: Título arriba, fotos abajo */
         .contenedor-galeria {{
             display: block;
             width: 100%;
@@ -139,6 +138,12 @@ HTML_TEMPLATE = """
             margin-right: 12px;
             margin-bottom: 8px;
             border: 2px solid var(--black);
+            cursor: pointer; /* Le avisa al usuario que puede clickear */
+            transition: transform 0.2s ease;
+        }}
+
+        .img-actividad:hover {{
+            transform: scale(1.1); /* Micro-interacción al pasar el mouse */
         }}
         
         .hora {{ 
@@ -164,12 +169,46 @@ HTML_TEMPLATE = """
         }}
         .insta-footer {{ color: var(--black); font-size: 1.5rem; margin: 0 10px; vertical-align: middle; }}
 
+        /* EL VISOR TÁCTICO (Lightbox) */
+        .visor-oscuro {{
+            display: none; 
+            position: fixed; 
+            z-index: 9999; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(0,0,0,0.9); 
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }}
+        .visor-oscuro img {{
+            max-width: 90%;
+            max-height: 85vh;
+            margin-top: 5vh;
+            border: 3px solid var(--neon-green);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
+            border-radius: 4px;
+        }}
+        .cerrar-visor {{
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            color: var(--neon-green);
+            font-size: 45px;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: sans-serif;
+        }}
+        .cerrar-visor:hover {{ color: var(--white); }}
+
         @media (max-width: 600px) {{
             body {{ font-size: 0.95rem; padding: 10px; }}
             .wrap {{ margin: 10px; padding: 15px; border-width: 4px; }}
             h1 {{ font-size: 2rem; }}
             summary::after {{ width: 30px; height: 30px; }}
             .img-actividad {{ width: 60px; height: 60px; }}
+            .cerrar-visor {{ right: 15px; top: 10px; font-size: 40px; }}
         }}
     </style>
 </head>
@@ -192,6 +231,21 @@ HTML_TEMPLATE = """
             <a href="https://www.instagram.com/comitedelucha" class="insta-footer" target="_blank"><i class="fab fa-instagram"></i></a><br>Universidad Nacional de Misiones
         </footer>
     </div>
+
+    <div id="visorFotos" class="visor-oscuro" onclick="cerrarVisor()">
+        <span class="cerrar-visor">&times;</span>
+        <img id="fotoAmpliada" src="">
+    </div>
+
+    <script>
+        function abrirVisor(rutaImagen) {{
+            document.getElementById('visorFotos').style.display = 'block';
+            document.getElementById('fotoAmpliada').src = rutaImagen;
+        }}
+        function cerrarVisor() {{
+            document.getElementById('visorFotos').style.display = 'none';
+        }}
+    </script>
 </body>
 </html>
 """
@@ -205,20 +259,18 @@ def hormiguear_web():
         
         bloques_html = ""
         for dia in data['cronograma']:
-            # Usamos llaves simples { } para que el f-string inyecte el dato real
             bloques_html += f'<div class="dia-bloque"><div class="fecha">{dia["dia"]}</div>'
             for act in dia["actividades"]:
                 img_content = ""
                 
-                # Recolectar imágenes (una o varias)
+                # Le inyectamos el 'onclick' a cada foto generada para disparar el visor
                 if "imagen" in act:
-                    img_content += f'<img src="{act["imagen"]}" alt="Actividad CLU" class="img-actividad">'
+                    img_content += f'<img src="{act["imagen"]}" alt="Actividad CLU" class="img-actividad" onclick="abrirVisor(this.src)">'
                 
                 if "imagenes" in act:
                     for img in act["imagenes"]:
-                        img_content += f'<img src="{img}" alt="Actividad CLU" class="img-actividad">'
+                        img_content += f'<img src="{img}" alt="Actividad CLU" class="img-actividad" onclick="abrirVisor(this.src)">'
                 
-                # El contenedor de fotos aparece debajo del título (que está en el summary)
                 img_tag = f'<div class="contenedor-galeria">{img_content}</div>' if img_content else ""
                 
                 bloques_html += f"""
@@ -231,10 +283,9 @@ def hormiguear_web():
                 </details>"""
             bloques_html += "</div>"
         
-        # El .format() final procesa las llaves {{ }} del CSS del template
         with open(os.path.join(base_path, 'index.html'), 'w', encoding='utf-8') as f:
             f.write(HTML_TEMPLATE.format(intro=data['introduccion'], contenido=bloques_html))
-        print(">>> Despliegue CLU: Variables normalizadas. Jerarquía Title -> Photos -> Text viva y operativa.")
+        print(">>> Despliegue CLU: Visor táctico de imágenes operativo.")
     except Exception as e:
         print(f">>> ERROR TÉCNICO EN EL TACURÚ: {e}")
 
