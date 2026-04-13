@@ -4,7 +4,7 @@
     {
       "dia": "LUNES 13",
       "actividades": [
-        {"hora": "08:00", "titulo": "Confección de carteles", "detalle": "Escuela de Enfermería (hall frente a la Biblioteca).", "imagenes": ["cartelENF1.jpg", "cartelENF2.jpg", "cartelENF3.jpg", "cartelENF4.jpg", "cartelENF5.jpg", "cartelENF6.jpg", "cartelENF7.jpg", "cartelENF8.jpg", "cartelENF9.jpg"]},
+        {"hora": "08:00", "titulo": "Confección de carteles", "detalle": "<strong>Escuela de Enfermería (hall frente a la Biblioteca)</strong>", "imagenes": ["cartelENF1.jpg", "cartelENF2.jpg", "cartelENF3.jpg", "cartelENF4.jpg", "cartelENF5.jpg", "cartelENF6.jpg", "cartelENF7.jpg", "cartelENF8.jpg", "cartelENF9.jpg"]},
         {"hora": "09:00", "titulo": "Clase pública: Historia Americana y Argentina III", "detalle": "Carrera de Historia. Humanidades (Edificio Tucumán).", "imagenes": ["ClasPuH5.jpg", "ClasPuH3.jpg"]},
         {"hora": "16:00", "titulo": "Clase pública: Lengua y Comunicación", "detalle": "Carrera de Comunicación Social. Humanidades (Edificio Anexo).", "imagenes": ["ClasPuH1.jpg", "ClasPuH2.jpg", "ClasPuH4.jpg"]},
         {"hora": "18:00", "titulo": "Clase pública: Historia Americana y Argentina I", "detalle": "Carrera de Historia. Humanidades (Edificio Tucumán)."}
