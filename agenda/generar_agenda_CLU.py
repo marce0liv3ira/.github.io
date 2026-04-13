@@ -205,33 +205,38 @@ def hormiguear_web():
         
         bloques_html = ""
         for dia in data['cronograma']:
-            bloques_html += f'<div class="dia-bloque"><div class="fecha">{{dia["dia"]}}</div>'
+            # Usamos llaves simples { } para que el f-string inyecte el dato real
+            bloques_html += f'<div class="dia-bloque"><div class="fecha">{dia["dia"]}</div>'
             for act in dia["actividades"]:
                 img_content = ""
                 
-                # Recolectar imágenes
+                # Recolectar imágenes (una o varias)
                 if "imagen" in act:
-                    img_content += f'<img src="{{act["imagen"]}}" alt="Actividad CLU" class="img-actividad">'
+                    img_content += f'<img src="{act["imagen"]}" alt="Actividad CLU" class="img-actividad">'
                 
                 if "imagenes" in act:
                     for img in act["imagenes"]:
-                        img_content += f'<img src="{{img}}" alt="Actividad CLU" class="img-actividad">'
+                        img_content += f'<img src="{img}" alt="Actividad CLU" class="img-actividad">'
                 
-                # Si hay imágenes, las envolvemos en su contenedor para forzar el salto de línea
-                img_tag = f'<div class="contenedor-galeria">{{img_content}}</div>' if img_content else ""
+                # El contenedor de fotos aparece debajo del título (que está en el summary)
+                img_tag = f'<div class="contenedor-galeria">{img_content}</div>' if img_content else ""
                 
                 bloques_html += f"""
                 <details>
-                    <summary><span><span class="hora">{{act['hora']}}</span> {{act['titulo']}}</span></summary>
-                    <div class="info">{{img_tag}}<div class="detalle-texto">{{act['detalle']}}</div></div>
+                    <summary><span><span class="hora">{act['hora']}</span> {act['titulo']}</span></summary>
+                    <div class="info">
+                        {img_tag}
+                        <div class="detalle-texto">{act['detalle']}</div>
+                    </div>
                 </details>"""
             bloques_html += "</div>"
         
+        # El .format() final procesa las llaves {{ }} del CSS del template
         with open(os.path.join(base_path, 'index.html'), 'w', encoding='utf-8') as f:
             f.write(HTML_TEMPLATE.format(intro=data['introduccion'], contenido=bloques_html))
-        print(">>> Despliegue CLU: Jerarquía Title -> Photos -> Text establecida.")
+        print(">>> Despliegue CLU: Variables normalizadas. Jerarquía Title -> Photos -> Text viva y operativa.")
     except Exception as e:
-        print(f">>> ERROR TÉCNICO EN EL TACURÚ: {{e}}")
+        print(f">>> ERROR TÉCNICO EN EL TACURÚ: {e}")
 
 if __name__ == "__main__":
     hormiguear_web()
