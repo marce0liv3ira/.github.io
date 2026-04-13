@@ -120,6 +120,18 @@ HTML_TEMPLATE = """
             border-left: 6px solid var(--neon-green); 
             font-size: 1.1rem; 
             text-align: left; 
+            overflow: hidden; /* Evita que la imagen flote fuera de la caja */
+        }}
+
+        /* NUEVA CLASE: Imagen circular para las actividades */
+        .img-actividad {{
+            float: left;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+            border: 2px solid var(--black);
         }}
         
         .hora {{ 
@@ -187,16 +199,19 @@ def hormiguear_web():
         for dia in data['cronograma']:
             bloques_html += f'<div class="dia-bloque"><div class="fecha">{dia["dia"]}</div>'
             for act in dia["actividades"]:
+                # INYECCIÓN: Si hay imagen en el JSON, armamos la etiqueta, si no, queda vacío.
+                img_tag = f'<img src="{act["imagen"]}" alt="Actividad CLU" class="img-actividad">' if "imagen" in act else ""
+                
                 bloques_html += f"""
                 <details>
                     <summary><span><span class="hora">{act['hora']}</span> {act['titulo']}</span></summary>
-                    <div class="info">{act['detalle']}</div>
+                    <div class="info">{img_tag}{act['detalle']}</div>
                 </details>"""
             bloques_html += "</div>"
         
         with open(os.path.join(base_path, 'index.html'), 'w', encoding='utf-8') as f:
             f.write(HTML_TEMPLATE.format(intro=data['introduccion'], contenido=bloques_html))
-        print(">>> Despliegue CLU: Llaves dobles restauradas. Archivo generado.")
+        print(">>> Despliegue CLU: Imágenes circulares operativas.")
     except Exception as e:
         print(f">>> ERROR TÉCNICO EN EL TACURÚ: {e}")
 
