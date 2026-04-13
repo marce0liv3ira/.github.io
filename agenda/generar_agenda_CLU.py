@@ -120,17 +120,24 @@ HTML_TEMPLATE = """
             border-left: 6px solid var(--neon-green); 
             font-size: 1.1rem; 
             text-align: left; 
-            overflow: hidden; 
+        }}
+
+        /* AJUSTE PARA JERARQUÍA: Título arriba, fotos abajo */
+        .contenedor-galeria {{
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+            clear: both;
         }}
 
         .img-actividad {{
-            float: left;
-            width: 65px;
-            height: 65px;
+            display: inline-block;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             object-fit: cover;
-            margin-right: 10px;
-            margin-bottom: 5px;
+            margin-right: 12px;
+            margin-bottom: 8px;
             border: 2px solid var(--black);
         }}
         
@@ -162,6 +169,7 @@ HTML_TEMPLATE = """
             .wrap {{ margin: 10px; padding: 15px; border-width: 4px; }}
             h1 {{ font-size: 2rem; }}
             summary::after {{ width: 30px; height: 30px; }}
+            .img-actividad {{ width: 60px; height: 60px; }}
         }}
     </style>
 </head>
@@ -197,31 +205,33 @@ def hormiguear_web():
         
         bloques_html = ""
         for dia in data['cronograma']:
-            bloques_html += f'<div class="dia-bloque"><div class="fecha">{dia["dia"]}</div>'
+            bloques_html += f'<div class="dia-bloque"><div class="fecha">{{dia["dia"]}}</div>'
             for act in dia["actividades"]:
-                img_tag = ""
+                img_content = ""
                 
-                # Soporte para una sola imagen
+                # Recolectar imágenes
                 if "imagen" in act:
-                    img_tag += f'<img src="{act["imagen"]}" alt="Actividad CLU" class="img-actividad">'
+                    img_content += f'<img src="{{act["imagen"]}}" alt="Actividad CLU" class="img-actividad">'
                 
-                # Soporte para múltiples imágenes (lista)
                 if "imagenes" in act:
                     for img in act["imagenes"]:
-                        img_tag += f'<img src="{img}" alt="Actividad CLU" class="img-actividad">'
+                        img_content += f'<img src="{{img}}" alt="Actividad CLU" class="img-actividad">'
+                
+                # Si hay imágenes, las envolvemos en su contenedor para forzar el salto de línea
+                img_tag = f'<div class="contenedor-galeria">{{img_content}}</div>' if img_content else ""
                 
                 bloques_html += f"""
                 <details>
-                    <summary><span><span class="hora">{act['hora']}</span> {act['titulo']}</span></summary>
-                    <div class="info">{img_tag}{act['detalle']}</div>
+                    <summary><span><span class="hora">{{act['hora']}}</span> {{act['titulo']}}</span></summary>
+                    <div class="info">{{img_tag}}<div class="detalle-texto">{{act['detalle']}}</div></div>
                 </details>"""
             bloques_html += "</div>"
         
         with open(os.path.join(base_path, 'index.html'), 'w', encoding='utf-8') as f:
             f.write(HTML_TEMPLATE.format(intro=data['introduccion'], contenido=bloques_html))
-        print(">>> Despliegue CLU: Soporte para galerías múltiples activado.")
+        print(">>> Despliegue CLU: Jerarquía Title -> Photos -> Text establecida.")
     except Exception as e:
-        print(f">>> ERROR TÉCNICO EN EL TACURÚ: {e}")
+        print(f">>> ERROR TÉCNICO EN EL TACURÚ: {{e}}")
 
 if __name__ == "__main__":
     hormiguear_web()
