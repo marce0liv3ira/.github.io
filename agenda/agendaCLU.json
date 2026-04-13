@@ -19,6 +19,7 @@
     {
       "dia": "MIÉRCOLES 15",
       "actividades": [
+        {"hora": "15:00", "titulo": "Clase pública: Clase pública: Práctica Profesional I", "detalle": "Área de Formación Docente, Humanidades (Edificio Tucumán)."},
         {"hora": "18:00", "titulo": "Clase pública: Historia Americana y Argentina III", "detalle": "Carrera de Historia. Humanidades (Edificio Tucumán)."},
         {"hora": "19:00", "titulo": "Asamblea Interclaustros", "detalle": "Docentes, nodocentes y estudiantes. Humanidades (Edificio Tucumán)."}
       ]
