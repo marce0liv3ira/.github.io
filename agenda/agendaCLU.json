@@ -13,7 +13,7 @@
     {
       "dia": "MARTES 14",
       "actividades": [
-        {"hora": "18:00", "titulo": "Clase pública: Análisis del Discurso Periodístico", "detalle": "Carrera de Comunicación Social. Humanidades (Edificio Anexo, calle San Lorenzo)."}
+        {"hora": "18:00", "titulo": "Clase pública: Análisis del Discurso Periodístico", "detalle": "<strong>Carrera de Comunicación Social. Humanidades (Edificio Anexo, calle San Lorenzo)</strong>.", "imagenes": ["ClasPCom6.jpg", "ClasPCom1.jpg", "ClasPCom2.jpg", "ClasPCom3.jpg", "ClasPCom4.jpg", "ClasPCom5.jpg"]}
       ]
     },
     {
