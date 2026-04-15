@@ -20,7 +20,7 @@
       "dia": "MIÉRCOLES 15",
       "actividades": [
         {"hora": "15:00", "titulo": "Confección de carteles: Práctica Profesional I", "detalle": "Área de Formación Docente. Humanidades (Aula Edificio Tucumán)."},
-        {"hora": "16:00", "titulo": "Clase pública: Taller de Monografía de Grado", "detalle": "Carrera de Historia. Humanidades (Edificio Anexo, calle San Lorenzo)."},
+        {"hora": "16:00", "titulo": "Clase pública: Taller de Monografía de Grado", "detalle": "Carrera de Historia. Humanidades (Edificio Anexo, calle San Lorenzo).", "imagenes": ["ClasPHT1.jpg", "ClasPHT2.jpg"]},
         {"hora": "18:00", "titulo": "Clase pública: Historia Americana y Argentina III", "detalle": "Carrera de Historia. Humanidades (Edificio Tucumán)."},
         {"hora": "19:00", "titulo": "Asamblea Interclaustros", "detalle": "Docentes, nodocentes y estudiantes. Humanidades (Edificio Tucumán)."}
       ]
