@@ -11,6 +11,26 @@
     },
     "items": [
         {
+            "id": "https://hormigue.ar/memo/",
+            "url": "https://hormigue.ar/memo/",
+            "title": "Memo",
+            "summary": "Corren litros de saliva nodocente diciendo que vamos a recuperar el gremio. Reacción pavloviana a los procesos electorales. Aunque no se precise recuperar qué, cómo ni con quiénes, la expresión&hellip;",
+            "image": "https://hormigue.ar/media/posts/75/mememascotafuego-P.png",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "sindicalismo",
+                   "recursos",
+                   "movimiento",
+                   "democracia",
+                   "comunicación",
+                   "asamblea"
+            ],
+            "date_published": "2026-04-17T17:28:54-03:00",
+            "date_modified": "2026-04-17T18:18:05-03:00"
+        },
+        {
             "id": "https://hormigue.ar/la-paja-2/",
             "url": "https://hormigue.ar/la-paja-2/",
             "title": "La paja (2)",
@@ -188,24 +208,6 @@
             ],
             "date_published": "2025-12-22T12:56:00-03:00",
             "date_modified": "2026-04-17T09:47:24-03:00"
-        },
-        {
-            "id": "https://hormigue.ar/reforma-laboral-y-universidad/",
-            "url": "https://hormigue.ar/reforma-laboral-y-universidad/",
-            "title": "Reforma laboral y universidad",
-            "summary": "Dijo alguien alguna vez: «Toda generalización es injusta; excepto esta» Notas sobre la reforma laboral y algunas ideas relacionadas con la UNaM. ¿Por qué a una parte de los trabajadores&hellip;",
-            "image": "https://hormigue.ar/media/posts/34/file00000000b16071f5a59cb3130176d7ea.webp",
-            "author": {
-                "name": "marce oliveira"
-            },
-            "tags": [
-                   "sindicalismo",
-                   "salario",
-                   "recursos",
-                   "laboral"
-            ],
-            "date_published": "2025-12-17T12:55:00-03:00",
-            "date_modified": "2026-04-13T15:51:17-03:00"
         }
     ]
 }
