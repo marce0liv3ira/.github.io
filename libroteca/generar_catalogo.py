@@ -10,6 +10,8 @@ HTML_TEMPLATE = """
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{titulo_head}</title>
     
+    <link rel="icon" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/book-half.svg" type="image/svg+xml">
+    
     <meta name="description" content="Libros usados, listos para seguir usándose. Picá y mirá.">
     <meta property="og:title" content="{titulo_head}">
     <meta property="og:description" content="Libros usados, listos para seguir usándose. Picá y mirá.">
@@ -114,17 +116,19 @@ HTML_TEMPLATE = """
             padding-top: 15px;
             border-top: 1px dashed var(--rojo-sangre);
         }}
+        
+        /* ÍNDICE: ALTURA AMPLIADA PARA EVITAR EL SCROLL VERTICAL */
         .lista-indice {{ 
             list-style-type: none; 
             padding: 0; 
             margin: 0;
-            max-height: 160px; 
+            max-height: 220px; 
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
             align-content: flex-start;
-            gap: 4px 15px; 
-            overflow-x: auto;
+            gap: 6px 15px; 
+            overflow: hidden; 
         }}
         .lista-indice li {{ 
             font-family: 'Bebas Neue', sans-serif; 
@@ -349,6 +353,7 @@ HTML_TEMPLATE = """
             h1 {{ font-size: 4rem !important; }}
             h2 {{ font-size: 2.2rem !important; }}
         }}
+        
         @media (max-width: 600px) {{
             .grilla-tacuru {{ grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }}
             h1 {{ font-size: 3.5rem !important; }}
@@ -361,6 +366,16 @@ HTML_TEMPLATE = """
             .tarjeta-expediente h3 {{ font-size: 1.15rem !important; margin-bottom: 4px !important; }}
             .tarjeta-expediente p {{ font-size: 0.85rem !important; }}
             .bajada {{ font-size: 1rem; padding: 10px 15px; }}
+            
+            /* TÁCTICA PARA MÓVILES: 2 COLUMNAS ILIMITADAS VERTICALMENTE */
+            .lista-indice {{ 
+                max-height: none !important; 
+                flex-direction: row !important; 
+            }}
+            .lista-indice li {{ 
+                width: 48%; 
+                box-sizing: border-box; 
+            }}
         }}
     </style>
 </head>
@@ -415,11 +430,11 @@ HTML_TEMPLATE = """
                     </a>
                 </span> 
                 <span style="text-shadow: 0 0 4px #000, 0 0 8px #000, 0 0 12px #000, 0 0 16px #000, 0 0 20px #000 !important;"> 
-                    <span style="display: inline-block; transform: scaleX(-1);">C</span>opyleft 
+                    <span style="display: inline-block; transform: scaleX(-1);">C</span>onfianza
                 </span>
             </p>
             <p class="sub-text-m" style="font-family: 'Arial Narrow', Arial, sans-serif; font-weight: 500; font-size: 0.8rem; color: #ffffff; margin: 0 auto; max-width: 90%; text-shadow: 0 0 5px #000, 0 0 9px #000; text-align: center; vertical-align: middle;">
-                un sitio creado con pocos recursos técnicos,<br>económicos e intelectuales
+                conocé el sitio creado con pocos recursos técnicos,<br>económicos e intelectuales
             </p>
         </div>
     </footer>
@@ -450,7 +465,6 @@ HTML_TEMPLATE = """
             document.getElementById('modAño').innerText = elemento.getAttribute('data-ano');
             document.getElementById('modEst').innerText = elemento.getAttribute('data-est');
             
-            // INYECTAMOS EL PRECIO EN EL VISOR
             document.getElementById('modPre').innerText = elemento.getAttribute('data-pre');
             
             const imgUrl = elemento.getAttribute('data-img');
@@ -470,7 +484,6 @@ HTML_TEMPLATE = """
             const edi = document.getElementById('modEdi').innerText;
             const ano = document.getElementById('modAño').innerText;
             
-            // EL PORTAPAPELES SIGUE LIMPIO, COMO SE ORDENÓ ORIGINALMENTE
             const textoFinal = `Quiero este libro: "${{titulo}}" de "${{aut}}" ("${{edi}}", "${{ano}}").`;
             
             navigator.clipboard.writeText(textoFinal).then(() => {{
@@ -552,7 +565,7 @@ def generar_catalogo():
         
         pestañas_forzadas = [
             {"id": "tab1", "titulo": "CONTENIDO", "texto": "Las categorías son orientativas. Algunos libros encajan en varias y otros en ninguna. Revisá todo, nunca confíes en las clasificaciones."},
-            {"id": "tab2", "titulo": "CÓMO", "texto": "Revisá, hacé picá en el título y copiá los datos del libro. Podés usarlos para escribirme, comparar precios o buscar reseñas en la web. Si no podés contactarme, este sitio no es para vos.<br>Si podés contactarme, coordinamos detalles: estado del libro, forma de pago y entrega. El pago es en pesos argentinos, por transferencia o efectivo. No acepto trueques, monedas extranjeras ni pagos en especies (por más seductora que sea la oferta)."},
+            {"id": "tab2", "titulo": "CÓMO", "texto": "Revisá, picá lo que te interese y copiá los datos del libro. Podés usarlos para enviarme un mensaje, comparar precios o buscar reseñas en la web. Si no podés contactarme, este sitio no es para vos.<br>Si podés contactarme, coordinamos detalles: estado del libro, forma de pago y entrega. El pago es en pesos argentinos, por transferencia o efectivo. No acepto trueques, monedas extranjeras ni pagos en especies (por más seductora que sea la oferta)."},
             {"id": "tab3", "titulo": "QUIÉNES", "texto": "Este sitio está pensado para lectoras y lectores cercanos. Posadas y Candelaria funcionan como referencia, pero lo central es el contacto: si podés ubicarme (directa o indirectamente), podés comprar. Si no, este sitio no es para vos."},
             {"id": "tab4", "titulo": "ENTREGA", "texto": "Las compras iguales o superiores a $25.000 tienen envío gratuito a domicilio dentro de Posadas y Candelaria. Cada entrega o retiro se coordina; fecha, lugar y horario se acuerdan entre ambas partes lectoras."}
         ]
@@ -600,8 +613,6 @@ def generar_catalogo():
                 ano = lib.get('año', '-').replace('"', '&quot;')
                 img = lib.get('imagen', '').replace('"', '&quot;')
                 est = lib.get('estado', 'Muy bueno').replace('"', '&quot;')
-                
-                # ACÁ EXTRAEMOS DE NUEVO EL PRECIO
                 pre = lib.get('precio', 'Consultar').replace('"', '&quot;')
                 
                 secciones_html += f"""
@@ -639,7 +650,7 @@ def generar_catalogo():
         with open(os.path.join(base_path, 'index.html'), 'w', encoding='utf-8') as f:
             f.write(html_final)
             
-        print(">>> Catálogo sellado. Textos puenteados y etiqueta de precio restaurada en el visor.")
+        print(">>> Catálogo sellado. Icono de pestaña cargado y regla vertical suprimida.")
         
     except Exception as e:
         print(f">>> ERROR TÉCNICO EN EL TACURÚ (Catálogo): {e}")
