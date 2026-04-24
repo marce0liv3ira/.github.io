@@ -126,17 +126,6 @@
       "imagen": "img/cartonero (Mediana).jpg"
     },
     {
-      "titulo": "Colonos y ocupantes en la frontera agraria de Misiones",
-      "autor": "Gabriela Schiavoni",
-      "editorial": "Edunam",
-      "categoria": "Antropología",
-      "coleccion": "Libros Arribeños",
-      "precio": "$9.000 - $22.000",
-      "año": "s/d",
-      "estado": "Muy bueno",
-      "imagen": "img/colonosocupan (Mediana).jpg"
-    },
-    {
       "titulo": "Combates por la memoria",
       "autor": "Federico Lorenz",
       "editorial": "Capital Intelectual",
@@ -170,17 +159,6 @@
       "imagen": "img/confeetica (Mediana).jpg"
     },
     {
-      "titulo": "Conocimiento y sociedad en Durkheim",
-      "autor": "Ernesto López",
-      "editorial": "Universidad Nacional de Quilmes",
-      "categoria": "Sociología",
-      "coleccion": "",
-      "precio": "9000-22000",
-      "año": "s/d",
-      "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
-    },
-    {
       "titulo": "Crimen y castigo",
       "autor": "Fiódor Dostoievski",
       "editorial": "Debolsillo",
@@ -201,17 +179,6 @@
       "año": "s/d",
       "estado": "Muy bueno",
       "imagen": "img/crisisreforma (Mediana).jpg"
-    },
-    {
-      "titulo": "Crítica en la democracia, democracia crítica",
-      "autor": "Sergio Waisman? / Nancy Fraser / Jürgen Habermas",
-      "editorial": "Universidad Nacional del Litoral",
-      "categoria": "Filosofía política",
-      "coleccion": "Revista de ciencias sociales",
-      "precio": "7000-18000",
-      "año": "s/d",
-      "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
     },
     {
       "titulo": "Crónica de una muerte anunciada",
@@ -269,17 +236,6 @@
       "imagen": "img/dedios (Mediana).jpg"
     },
     {
-      "titulo": "De Paulo VI a Bergoglio: las relaciones secretas de la Iglesia con la ESMA",
-      "autor": "",
-      "editorial": "Página/12 / Sudamericana",
-      "categoria": "Historia/Memoria",
-      "coleccion": "",
-      "precio": "13000",
-      "año": "2010",
-      "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
-    },
-    {
       "titulo": "Déjame que te cuente: ensayos sobre narrativa y educación",
       "autor": "Jorge Larrosa",
       "editorial": "Laertes",
@@ -300,17 +256,6 @@
       "año": "1994",
       "estado": "Muy bueno",
       "imagen": "img/amoryotro (Mediana).jpg"
-    },
-    {
-      "titulo": "Del intelectual orgánico al analista simbólico",
-      "autor": "Emilio Tenti Fanfani",
-      "editorial": "Universidad Nacional de Quilmes",
-      "categoria": "Sociología / Intelectuales",
-      "coleccion": "",
-      "precio": "9000-22000",
-      "año": "s/d",
-      "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
     },
     {
       "titulo": "Deleuze: los movimientos aberrantes",
@@ -497,7 +442,7 @@
       "precio": "7000-18000",
       "año": "2013",
       "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
+      "imagen": "img/espectaeman (Mediana).jpg"
     },
     {
       "titulo": "El existencialismo es un humanismo",
@@ -522,23 +467,12 @@
       "imagen": "img/elexorcis (Mediana).jpg"
     },
     {
-      "titulo": "El grito manso",
-      "autor": "Paulo Freire",
-      "editorial": "Siglo XXI",
-      "categoria": "Pedagogía",
-      "coleccion": "Educación",
-      "precio": "12500",
-      "año": "2003",
-      "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
-    },
-    {
       "titulo": "El hombre sin Dios (Pensamientos)",
       "autor": "Blaise Pascal",
       "editorial": "Folio",
       "categoria": "Filosofía",
       "coleccion": "Grandes Ideas",
-      "precio": "$3.000 - $8.000",
+      "precio": "$8.000",
       "año": "1670",
       "estado": "Muy bueno",
       "imagen": "img/hombresin (Mediana).jpg"
@@ -549,7 +483,7 @@
       "editorial": "Prometeo / Bordes",
       "categoria": "Filosofía / Estética",
       "coleccion": "Pensamiento contemporáneo",
-      "precio": "$7.000 - $18.000",
+      "precio": "$22.000",
       "año": "s/d",
       "estado": "Muy bueno",
       "imagen": "img/inconcienteeste (Mediana).jpg"
@@ -608,17 +542,6 @@
       "año": "1984",
       "estado": "Muy bueno",
       "imagen": "img/pudoerdel (Mediana).jpg"
-    },
-    {
-      "titulo": "El regreso de las palabras",
-      "autor": "Héctor Schmucler",
-      "editorial": "Universidad Nacional de Quilmes (UNQ)",
-      "categoria": "Comunicación",
-      "coleccion": "-",
-      "precio": "12000 - 18000",
-      "año": "1997",
-      "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
     },
     {
       "titulo": "El sentido práctico",
@@ -698,28 +621,6 @@
       "imagen": "img/encicloeduca (Mediana).jpg"
     },
     {
-      "titulo": "Enseñanza pública en Buenos Aires",
-      "autor": "Juan María Gutiérrez",
-      "editorial": "UNQ",
-      "categoria": "Historia",
-      "coleccion": "-",
-      "precio": "11000 - 18000",
-      "año": "1998",
-      "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
-    },
-    {
-      "titulo": "Entre la \"incertidumbre\" y la tradición política. Una crítica de la primera generación de estudios sobre la transición",
-      "autor": "José Álvaro Moisés",
-      "editorial": "Universidad Nacional del Litoral",
-      "categoria": "Sociología política",
-      "coleccion": "Revista de ciencias sociales",
-      "precio": "9000-22000",
-      "año": "s/d",
-      "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
-    },
-    {
       "titulo": "Epistemología, ética y ciencias de la educación",
       "autor": "Jean-Claude Filloux",
       "editorial": "Ediciones del Estante",
@@ -742,23 +643,12 @@
       "imagen": "img/estadosocied (Mediana).jpg"
     },
     {
-      "titulo": "Estrategias argumentativas: el caso de la \"infografía\"",
-      "autor": "Roberto Marafioti",
-      "editorial": "Universidad Nacional del Litoral",
-      "categoria": "Comunicación",
-      "coleccion": "Revista de ciencias sociales",
-      "precio": "8000-16000",
-      "año": "s/d",
-      "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
-    },
-    {
       "titulo": "Freud en Buenos Aires",
       "autor": "Hugo Vezzetti",
       "editorial": "Universidad Nacional de Quilmes",
       "categoria": "Psicoanálisis / Historia",
       "coleccion": "",
-      "precio": "$8.000 - $18.000",
+      "precio": "$28.000",
       "año": "s/d",
       "estado": "Muy bueno",
       "imagen": "img/freudbaires (Mediana).jpg"
@@ -805,7 +695,7 @@
       "precio": "200000",
       "año": "2005",
       "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
+      "imagen": "img/enciclopedia (Mediana).jpg"
     },
     {
       "titulo": "Guerra y paz en el siglo XXI",
@@ -849,7 +739,7 @@
       "precio": "17000",
       "año": "2010",
       "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
+      "imagen": "img/gillesherenc (Mediana).jpg"
     },
     {
       "titulo": "Jóvenes, crisis y saberes",
@@ -872,17 +762,6 @@
       "año": "2009",
       "estado": "Muy bueno",
       "imagen": "img/jovenescri (Mediana).jpg"
-    },
-    {
-      "titulo": "Karl Popper: Paradoja de la utopía racionalista",
-      "autor": "Roberto González Gentile",
-      "editorial": "Universidad Nacional de Quilmes",
-      "categoria": "Filosofía",
-      "coleccion": "",
-      "precio": "7000-18000",
-      "año": "s/d",
-      "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
     },
     {
       "titulo": "La antropología brasileña contemporánea",
@@ -962,17 +841,6 @@
       "imagen": "img/crisisconficto (Mediana).jpg"
     },
     {
-      "titulo": "La cuestión militar",
-      "autor": "Dekt Pion-Berlin; Thomas Schelling; Aaus Tibiletti",
-      "editorial": "Universidad Nacional del Litoral",
-      "categoria": "Política / Fuerzas armadas",
-      "coleccion": "Revista de ciencias sociales",
-      "precio": "7000-16000",
-      "año": "s/d",
-      "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
-    },
-    {
       "titulo": "La densidad nacional. El caso argentino",
       "autor": "Aldo Ferrer",
       "editorial": "Capital Intelectual",
@@ -1036,7 +904,7 @@
       "precio": "14000",
       "año": "1994",
       "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
+      "imagen": "img/literaturabioantro (Mediana).jpg"
     },
     {
       "titulo": "La marca de la gorra. Un análisis de la policía federal",
@@ -1105,17 +973,6 @@
       "imagen": "img/poeticaespa (Mediana).jpg"
     },
     {
-      "titulo": "La política social de los municipios argentinos: un panorama global",
-      "autor": "Eduardo Passalacqua; Alejandro Villar",
-      "editorial": "Universidad Nacional de Quilmes",
-      "categoria": "Política / Gestión pública",
-      "coleccion": "",
-      "precio": "7000-16000",
-      "año": "s/d",
-      "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
-    },
-    {
       "titulo": "La política y el Estado moderno",
       "autor": "Antonio Gramsci",
       "editorial": "Planeta-Agostini",
@@ -1158,17 +1015,6 @@
       "año": "1992",
       "estado": "Muy bueno",
       "imagen": "img/recepcinarrati (Mediana).jpg"
-    },
-    {
-      "titulo": "La Reforma Constitucional",
-      "autor": "María del Carmen Feijoó; Marcelo Fabián Saín",
-      "editorial": "Universidad Nacional de Quilmes (UNQ)",
-      "categoria": "Ciencia Política",
-      "coleccion": "-",
-      "precio": "7000 - 13000",
-      "año": "1994",
-      "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
     },
     {
       "titulo": "La religiosidad popular. Creencias y vida cotidiana",
@@ -1237,28 +1083,6 @@
       "imagen": "img/carceles (Mediana).jpg"
     },
     {
-      "titulo": "Las estrategias de la reproducción social",
-      "autor": "Pierre Bourdieu",
-      "editorial": "Siglo XXI Editores",
-      "categoria": "Sociología",
-      "coleccion": "Biblioteca esencial del pensamiento contemporáneo",
-      "precio": "9000-22000",
-      "año": "s/d",
-      "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
-    },
-    {
-      "titulo": "Las Prácticas Sociales",
-      "autor": "Alicia Gutiérrez",
-      "editorial": "Edunam",
-      "categoria": "Sociología",
-      "coleccion": "-",
-      "precio": "12000 | 8000 - 15000 | 14000",
-      "año": "2005 | 1995",
-      "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
-    },
-    {
       "titulo": "Las privatizadas I. Ayer, hoy y mañana",
       "autor": "Daniel Azpiazu",
       "editorial": "Capital Intelectual",
@@ -1303,28 +1127,6 @@
       "imagen": "img/leviatan (Mediana).jpg"
     },
     {
-      "titulo": "Literatura",
-      "autor": "María Teresa Martínez",
-      "editorial": "Editorial Universitaria (UNaM)",
-      "categoria": "Literatura / Crítica",
-      "coleccion": "-",
-      "precio": "7000 - 12000",
-      "año": "2000",
-      "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
-    },
-    {
-      "titulo": "Los ciclos de la historia",
-      "autor": "Nicolás Casullo",
-      "editorial": "Universidad Nacional del Litoral",
-      "categoria": "Historia / Ensayo",
-      "coleccion": "Revista de ciencias sociales",
-      "precio": "6000-15000",
-      "año": "s/d",
-      "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
-    },
-    {
       "titulo": "Los condenados de la ciudad: gueto, periferias y Estado",
       "autor": "Loïc Wacquant",
       "editorial": "Siglo XXI Editores",
@@ -1347,7 +1149,7 @@
       "imagen": "img/desafíosdesa (Mediana).jpg"
     },
     {
-      "titulo": "Los estudiantes y la cultura",
+      "titulo": "Los herederos. Los estudiantes y la cultura",
       "autor": "Pierre Bourdieu; Jean-Claude Passeron",
       "editorial": "Siglo XXI Editores",
       "categoria": "Sociología",
@@ -1355,7 +1157,7 @@
       "precio": "10000 - 15000",
       "año": "2003",
       "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
+      "imagen": "img/herederos (Mediana).jpg"
     },
     {
       "titulo": "Los gobiernos locales y los procesos de descentralización",
@@ -1367,50 +1169,6 @@
       "año": "s/d",
       "estado": "Muy bueno",
       "imagen": "img/goblocales (Mediana).jpg"
-    },
-    {
-      "titulo": "Los herederos",
-      "autor": "Bourdieu y Passeron",
-      "editorial": "Siglo XXI",
-      "categoria": "Sociología",
-      "coleccion": "Educación",
-      "precio": "$13.000",
-      "año": "2003",
-      "estado": "Muy bueno",
-      "imagen": "img/herederos (Mediana).jpg"
-    },
-    {
-      "titulo": "Los medios, las coartadas del \"New Order\" y la casuística",
-      "autor": "Aníbal Ford",
-      "editorial": "Universidad Nacional de Quilmes",
-      "categoria": "Comunicación",
-      "coleccion": "",
-      "precio": "8000-16000",
-      "año": "s/d",
-      "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
-    },
-    {
-      "titulo": "Los recursos financieros de los municipios del conurbano bonaerense",
-      "autor": "Sergio R. Bart",
-      "editorial": "Universidad Nacional del Litoral",
-      "categoria": "Gestión pública",
-      "coleccion": "Revista de ciencias sociales",
-      "precio": "6000-15000",
-      "año": "s/d",
-      "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
-    },
-    {
-      "titulo": "Los roles del sindicalismo durante la transición democrática (1983-1996)",
-      "autor": "Arturo Fernández",
-      "editorial": "Universidad Nacional del Litoral",
-      "categoria": "Sociología / Trabajo",
-      "coleccion": "Revista de ciencias sociales",
-      "precio": "9000-22000",
-      "año": "s/d",
-      "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
     },
     {
       "titulo": "Manifiesto comunista",
@@ -1468,18 +1226,18 @@
       "imagen": "img/miradaviajer (Mediana).jpg"
     },
     {
-      "titulo": "Mirada. Políticas y pedagogías de la imagen",
-      "autor": "Dussel / Gutiérrez",
-      "editorial": "Manantial/FLACSO",
+      "titulo": "Educar la mirada. Políticas y pedagogías de la imagen",
+      "autor": "Inés Dussel / Daniela Gutiérrez",
+      "editorial": "Manantial/FLACSO/OSDE",
       "categoria": "Educación",
       "coleccion": "",
-      "precio": "9000-18000",
-      "año": "",
+      "precio": "$24.000",
+      "año": "2006",
       "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
+      "imagen": "img/educarmira (Mediana).jpg"
     },
     {
-      "titulo": "Nación, etnia y género en Latinoamérica (Cumbia)",
+      "titulo": "Cumbia. Nación, etnia y género en Latinoamérica (Cumbia)",
       "autor": "Pablo Semán; Pablo Vila (comps.)",
       "editorial": "Editorial Gorla / Ediciones EPC",
       "categoria": "Antropología/Estudios Culturales",
@@ -1487,18 +1245,7 @@
       "precio": "11500 - 18000",
       "año": "2011",
       "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
-    },
-    {
-      "titulo": "Nacionalismos argentinos (1810-1930)",
-      "autor": "Oscar Terán",
-      "editorial": "Universidad Nacional de Quilmes (UNQ)",
-      "categoria": "Historia",
-      "coleccion": "-",
-      "precio": "10000 - 18000",
-      "año": "2003",
-      "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
+      "imagen": "img/cumbia (Mediana).jpg"
     },
     {
       "titulo": "No sabés lo que me hizo",
@@ -1521,17 +1268,6 @@
       "año": "1988",
       "estado": "Muy bueno",
       "imagen": "img/nopsdecimos (Mediana).jpg"
-    },
-    {
-      "titulo": "Noticias históricas sobre el origen y desarrollo de la enseñanza pública en Buenos Aires",
-      "autor": "Juan María Gutiérrez",
-      "editorial": "Universidad Nacional de Quilmes (UNQ)",
-      "categoria": "Historia/Memoria",
-      "coleccion": "",
-      "precio": "14000",
-      "año": "1997",
-      "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
     },
     {
       "titulo": "Ojos de perro azul",
@@ -1567,15 +1303,15 @@
       "imagen": "img/leerfacu (Mediana).jpg"
     },
     {
-      "titulo": "Parentesco, reciprocidad y diferenciación social en la frontera agraria de Misiones",
+      "titulo": "Colonos y Ocupantes",
       "autor": "Gabriela Schiavoni",
       "editorial": "Edunam",
       "categoria": "Antropología",
-      "coleccion": "",
-      "precio": "14000",
+      "coleccion": "Contemporánea",
+      "precio": "18.000",
       "año": "1995",
       "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
+      "imagen": "img/colonosocupan (Mediana).jpg"
     },
     {
       "titulo": "Parias urbanos: marginalidad en la ciudad",
@@ -1633,17 +1369,6 @@
       "imagen": "img/políticaexterior (Mediana).jpg"
     },
     {
-      "titulo": "Políticas y pedagogías de la imagen",
-      "autor": "Inés Dussel; Daniela Gutiérrez (comps.)",
-      "editorial": "Manantial / FLACSO",
-      "categoria": "Educación / Pedagogía",
-      "coleccion": "-",
-      "precio": "13000 - 29000",
-      "año": "2006",
-      "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
-    },
-    {
       "titulo": "Pueblo y política. La construcción de la república",
       "autor": "Hilda Sabato",
       "editorial": "Capital Intelectual",
@@ -1696,7 +1421,7 @@
       "precio": "10000",
       "año": "2007",
       "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
+      "imagen": "img/riesgopa (Mediana).jpg"
     },
     {
       "titulo": "San La Muerte. Culto y representación mágico religiosa",
@@ -1705,7 +1430,7 @@
       "categoria": "Antropología / Religión",
       "coleccion": "Libros de la memoria",
       "precio": "$6.000 - $15.000",
-      "año": "s/d",
+      "año": "2002",
       "estado": "Muy bueno",
       "imagen": "img/sanlamu (Mediana).jpg"
     },
@@ -1840,17 +1565,6 @@
       "año": "s/d",
       "estado": "Muy bueno",
       "imagen": "img/tragonada (Mediana).jpg"
-    },
-    {
-      "titulo": "Un examen del perfil competitivo de las exportaciones argentinas",
-      "autor": "José A. Bekinschtein",
-      "editorial": "Universidad Nacional de Quilmes",
-      "categoria": "Economía",
-      "coleccion": "",
-      "precio": "7000-18000",
-      "año": "s/d",
-      "estado": "Muy bueno",
-      "imagen": "img/default.jpg"
     },
     {
       "titulo": "Un médico rural",
