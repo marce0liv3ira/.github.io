@@ -82,7 +82,7 @@
         .tab-content { padding: 20px; display: none; font-size: 1.1rem; font-family: 'Inter', sans-serif; }
         .tab-content.active { display: block; }
 
-        /* ÍNDICE INTERNO (Dentro de la pestaña) */
+        /* ÍNDICE INTERNO (COMPRIMIDO) */
         .caja-indice-interna {
             margin-top: 25px;
             padding-top: 15px;
@@ -92,18 +92,19 @@
             list-style-type: none; 
             padding: 0; 
             margin: 0;
-            max-height: 180px; 
+            max-height: 160px; 
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
             align-content: flex-start;
-            gap: 8px 30px;
+            gap: 4px 15px; 
             overflow-x: auto;
         }
         .lista-indice li { 
             font-family: 'Bebas Neue', sans-serif; 
-            font-size: 1.5rem; 
+            font-size: 1.25rem; 
             letter-spacing: 1px; 
+            line-height: 1.1; 
         }
         .lista-indice li a { color: var(--rojo-oscuro) !important; transition: color 0.2s; }
         .lista-indice li a:hover { color: var(--rojo-sangre) !important; }
@@ -116,7 +117,7 @@
             box-shadow: 0 0 10px rgba(163, 0, 0, 0.3);
         }
 
-        /* GRILLA: 4 COLUMNAS y MÁS COMPACTA */
+        /* GRILLA: 4 COLUMNAS */
         .grilla-tacuru {
             display: grid !important;
             grid-template-columns: repeat(4, 1fr) !important;
@@ -184,7 +185,6 @@
             transition: background-color 0.4s ease !important;
         }
 
-        /* EL HOVER: Vitalidad radiactiva */
         .tarjeta-expediente:hover .tarjeta-imagen-wrapper::after {
             background-color: rgba(0, 0, 0, 0.15) !important;
         }
@@ -194,16 +194,24 @@
             opacity: 1 !important;
         }
 
+        /* TEXTOS CONTRACCIÓN DE DESBORDE */
         .tarjeta-expediente h3 {
             font-family: 'Bebas Neue', sans-serif !important;
             color: #ffffff !important;
             font-size: 1.8rem !important;
             font-weight: 700 !important;
-            margin: 0 0 8px 0 !important;
+            margin: 0 0 6px 0 !important;
             text-transform: uppercase !important;
             line-height: 1.1 !important;
             text-shadow: 0 0 8px #000, 2px 2px 4px #000 !important;
             z-index: 11 !important;
+            
+            /* Amputación de texto excedente para no romper la caja */
+            display: -webkit-box !important;
+            -webkit-line-clamp: 4 !important;
+            -webkit-box-orient: vertical !important;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
         }
 
         .tarjeta-expediente p {
@@ -215,6 +223,12 @@
             text-shadow: 0 0 5px #000, 1px 1px 3px #000 !important;
             z-index: 11 !important;
             font-weight: 500;
+            
+            display: -webkit-box !important;
+            -webkit-line-clamp: 2 !important;
+            -webkit-box-orient: vertical !important;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
         }
 
         /* MODAL VISOR */
@@ -234,7 +248,9 @@
         
         .modal-oscuridad {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.85); display: flex; flex-direction: column; 
+            /* OPACIDAD MÁS CLARA PARA QUE SE VEA LA PORTADA EN MÓVILES */
+            background: rgba(0, 0, 0, 0.65); 
+            display: flex; flex-direction: column; 
             justify-content: center; padding: 30px; box-sizing: border-box;
         }
         
@@ -245,9 +261,19 @@
         }
         .cerrar-modal:hover { color: var(--blanco); transform: scale(1.1); text-shadow: 0 0 10px rgba(163,0,0,0.8); }
         
-        .datos-expediente { color: var(--blanco); font-size: 1.2rem; line-height: 1.8; text-align: left; -webkit-user-select: text; user-select: text; font-family: 'Inter', sans-serif; }
+        .datos-expediente { 
+            color: var(--blanco); font-size: 1.2rem; line-height: 1.8; text-align: left; 
+            -webkit-user-select: text; user-select: text; font-family: 'Inter', sans-serif;
+            text-shadow: 0 0 8px #000, 0 0 15px #000; /* Blindaje visual contra fondo claro */
+        }
         .datos-expediente strong { color: var(--rojo-base); font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 1px; }
-        .modal-titulo { font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; color: var(--blanco); margin: 0 0 20px 0; border-bottom: 1px solid var(--rojo-sangre); line-height: 1.1; padding-bottom: 10px; box-shadow: 0 4px 6px -6px rgba(163, 0, 0, 0.8); }
+        
+        .modal-titulo { 
+            font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; color: var(--blanco); 
+            margin: 0 0 20px 0; border-bottom: 1px solid var(--rojo-sangre); line-height: 1.1; 
+            padding-bottom: 10px; box-shadow: 0 4px 6px -6px rgba(163, 0, 0, 0.8); 
+            text-shadow: 0 0 8px #000, 0 0 15px #000; /* Blindaje visual */
+        }
         
         .btn-copiar {
             margin-top: 25px; width: 100%; padding: 15px; background: var(--rojo-sangre); 
@@ -263,19 +289,54 @@
             box-shadow: 0 0 20px rgba(158, 40, 19, 0.8), inset 0 0 8px rgba(158, 40, 19, 0.4) !important;
         }
 
+        /* BOTÓN DE ASCENSO (BACK TO TOP) */
+        #btn-ascenso {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 55px;
+            height: 55px;
+            background: rgba(0, 0, 0, 0.8);
+            color: var(--blanco);
+            border: 2px solid var(--rojo-sangre);
+            border-radius: 50%;
+            font-size: 2rem;
+            cursor: pointer;
+            display: none; 
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 0 15px rgba(163, 0, 0, 0.5);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(4px);
+            text-decoration: none;
+            padding-bottom: 5px; 
+        }
+        #btn-ascenso:hover {
+            transform: scale(1.1);
+            background: var(--rojo-sangre);
+            box-shadow: 0 0 25px rgba(163, 0, 0, 0.8);
+        }
+
         @media (max-width: 900px) {
             .grilla-tacuru { grid-template-columns: repeat(3, 1fr) !important; }
             h1 { font-size: 4rem !important; }
             h2 { font-size: 2.2rem !important; }
         }
         @media (max-width: 600px) {
-            /* CELULAR: 2 COLUMNAS */
+            /* CELULAR: 2 COLUMNAS y FUENTES ACHICADAS */
             .grilla-tacuru { grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }
             h1 { font-size: 3.5rem !important; }
             h2 { font-size: 1.8rem !important; }
             .modal-caja { width: 95%; aspect-ratio: auto; min-height: 75vh; }
             .tabs-header { flex-direction: column; }
             .tab-btn { border-bottom: 1px solid var(--negro); }
+            #btn-ascenso { bottom: 20px; right: 20px; width: 45px; height: 45px; font-size: 1.5rem; }
+            
+            /* Ajuste quirúrgico para que los textos no revienten la caja */
+            .enlace-tarjeta { padding: 10px !important; }
+            .tarjeta-expediente h3 { font-size: 1.15rem !important; margin-bottom: 4px !important; }
+            .tarjeta-expediente p { font-size: 0.85rem !important; }
         }
     </style>
 </head>
@@ -287,12 +348,12 @@
             <div class="bajada">El manual de operaciones de esta trinchera literaria. Seleccioná una obra para abrir el expediente.</div>
         </header>
 
-        <div class="caja-menu">
+        <div class="caja-menu" id="menu-selector">
             <div class="tabs-header">
                 <button class="tab-btn active" onclick="abrirTab('tab1', this)">CONTENIDO</button><button class="tab-btn " onclick="abrirTab('tab2', this)">CÓMO</button><button class="tab-btn " onclick="abrirTab('tab3', this)">QUIÉNES</button><button class="tab-btn " onclick="abrirTab('tab4', this)">ENTREGA</button>
             </div>
             <div class="tabs-cuerpo">
-                <div id="tab1" class="tab-content active"><div class="texto-pestaña">.</div><div class="caja-indice-interna"><ul class="lista-indice"><li><a href="#antropologia">ANTROPOLOGÍA</a></li><li><a href="#ciencia">CIENCIA</a></li><li><a href="#cine">CINE</a></li><li><a href="#comunicacion">COMUNICACIÓN</a></li><li><a href="#cronica">CRÓNICA</a></li><li><a href="#derechos-humanos">DERECHOS HUMANOS</a></li><li><a href="#economia">ECONOMÍA</a></li><li><a href="#educacion">EDUCACIÓN</a></li><li><a href="#enciclopedia">ENCICLOPEDIA</a></li><li><a href="#ensayo">ENSAYO</a></li><li><a href="#ensayo-politico">ENSAYO POLÍTICO</a></li><li><a href="#filosofia">FILOSOFÍA</a></li><li><a href="#filosofia-de-la-ciencia">FILOSOFÍA DE LA CIENCIA</a></li><li><a href="#filosofia-politica">FILOSOFÍA POLÍTICA</a></li><li><a href="#género">GÉNERO</a></li><li><a href="#historia">HISTORIA</a></li><li><a href="#historia-de-la-ciencia">HISTORIA DE LA CIENCIA</a></li><li><a href="#historia-economica">HISTORIA ECONÓMICA</a></li><li><a href="#lingüistica">LINGÜÍSTICA</a></li><li><a href="#literatura">LITERATURA</a></li><li><a href="#narrativa-regional">NARRATIVA REGIONAL</a></li><li><a href="#periodismo">PERIODISMO</a></li><li><a href="#politica">POLÍTICA</a></li><li><a href="#politica-internacional">POLÍTICA INTERNACIONAL</a></li><li><a href="#psicoanalisis">PSICOANÁLISIS</a></li><li><a href="#psicologia">PSICOLOGÍA</a></li><li><a href="#sociedad">SOCIEDAD</a></li><li><a href="#sociologia">SOCIOLOGÍA</a></li><li><a href="#sociologia-urbana">SOCIOLOGÍA URBANA</a></li></ul></div></div><div id="tab2" class="tab-content ">Instrucciones tácticas: Elegí el libro, copiá los datos en el portapapeles con el botón de la ficha y contactanos.</div><div id="tab3" class="tab-content ">Somos el personal nodocente de la UNaM, administrando la circulación de saberes desde las sombras.</div><div id="tab4" class="tab-content ">Punto de encuentro y protocolos de entrega de los libros solicitados presencialmente.</div>
+                <div id="tab1" class="tab-content active"><div class="texto-pestaña">.</div><div class="caja-indice-interna"><ul class="lista-indice"><li><a href="#antropologia">ANTROPOLOGÍA</a></li><li><a href="#ciencia">CIENCIA</a></li><li><a href="#comunicacion">COMUNICACIÓN</a></li><li><a href="#cronica">CRÓNICA</a></li><li><a href="#derechos-humanos">DERECHOS HUMANOS</a></li><li><a href="#economia">ECONOMÍA</a></li><li><a href="#educacion">EDUCACIÓN</a></li><li><a href="#enciclopedia">ENCICLOPEDIA</a></li><li><a href="#ensayo">ENSAYO</a></li><li><a href="#filosofia">FILOSOFÍA</a></li><li><a href="#historia">HISTORIA</a></li><li><a href="#lingüistica">LINGÜÍSTICA</a></li><li><a href="#literatura">LITERATURA</a></li><li><a href="#politica">POLÍTICA</a></li><li><a href="#psicoanalisis">PSICOANÁLISIS</a></li><li><a href="#psicologia">PSICOLOGÍA</a></li><li><a href="#sociedad">SOCIEDAD</a></li><li><a href="#sociologia">SOCIOLOGÍA</a></li><li><a href="#sociologia-urbana">SOCIOLOGÍA URBANA</a></li></ul></div></div><div id="tab2" class="tab-content ">Instrucciones tácticas: Elegí el libro, copiá los datos en el portapapeles con el botón de la ficha y contactanos.</div><div id="tab3" class="tab-content ">Somos el personal nodocente de la UNaM, administrando la circulación de saberes desde las sombras.</div><div id="tab4" class="tab-content ">Punto de encuentro y protocolos de entrega de los libros solicitados presencialmente.</div>
             </div>
         </div>
 
@@ -483,23 +544,6 @@
                         <p>Albert Einstein</p>
                     </div>
                 </div>
-                </div><h2 class="titulo-categoria" id="cine">CINE</h2><div class="grilla-tacuru">
-                <div class="tarjeta-expediente" 
-                     data-tit="El oficio de ver" 
-                     data-aut="Enrique Lacolla" 
-                     data-edi="Universidad Nacional de Córdoba" 
-                     data-ano="2005" 
-                     data-img="img/oficiover (Mediana).jpg" 
-                     onclick="abrirExpediente(this)">
-                     
-                    <div class="tarjeta-imagen-wrapper">
-                        <img src="img/oficiover (Mediana).jpg" alt="El oficio de ver" onerror="this.style.display='none'">
-                    </div>
-                    <div class="enlace-tarjeta">
-                        <h3>El oficio de ver</h3>
-                        <p>Enrique Lacolla</p>
-                    </div>
-                </div>
                 </div><h2 class="titulo-categoria" id="comunicacion">COMUNICACIÓN</h2><div class="grilla-tacuru">
                 <div class="tarjeta-expediente" 
                      data-tit="Alfabetización semiótica en las fronteras. Volumen I." 
@@ -532,6 +576,23 @@
                     <div class="enlace-tarjeta">
                         <h3>Cumbia: nación, etnia y género en Latinoamérica</h3>
                         <p>Pablo Semán; Pablo Vila</p>
+                    </div>
+                </div>
+                
+                <div class="tarjeta-expediente" 
+                     data-tit="El oficio de ver" 
+                     data-aut="Enrique Lacolla" 
+                     data-edi="Universidad Nacional de Córdoba" 
+                     data-ano="2005" 
+                     data-img="img/oficiover (Mediana).jpg" 
+                     onclick="abrirExpediente(this)">
+                     
+                    <div class="tarjeta-imagen-wrapper">
+                        <img src="img/oficiover (Mediana).jpg" alt="El oficio de ver" onerror="this.style.display='none'">
+                    </div>
+                    <div class="enlace-tarjeta">
+                        <h3>El oficio de ver</h3>
+                        <p>Enrique Lacolla</p>
                     </div>
                 </div>
                 
@@ -859,23 +920,6 @@
                 </div>
                 
                 <div class="tarjeta-expediente" 
-                     data-tit="Historia de la pedagogía" 
-                     data-aut="Guillermo Dilthey" 
-                     data-edi="Losada" 
-                     data-ano="s/d" 
-                     data-img="img/historiaedupeda (Mediana).jpg" 
-                     onclick="abrirExpediente(this)">
-                     
-                    <div class="tarjeta-imagen-wrapper">
-                        <img src="img/historiaedupeda (Mediana).jpg" alt="Historia de la pedagogía" onerror="this.style.display='none'">
-                    </div>
-                    <div class="enlace-tarjeta">
-                        <h3>Historia de la pedagogía</h3>
-                        <p>Guillermo Dilthey</p>
-                    </div>
-                </div>
-                
-                <div class="tarjeta-expediente" 
                      data-tit="Jóvenes, crisis y saberes" 
                      data-aut="Alicia Susana Cibeira; Mario Betteo Barberis" 
                      data-edi="Noveduc" 
@@ -961,6 +1005,23 @@
                 </div>
                 
                 <div class="tarjeta-expediente" 
+                     data-tit="En tiempos de guerra y otros ensayos" 
+                     data-aut="Howard Zinn" 
+                     data-edi="Prometeo" 
+                     data-ano="s/d" 
+                     data-img="img/guerrapaz (Mediana).jpg" 
+                     onclick="abrirExpediente(this)">
+                     
+                    <div class="tarjeta-imagen-wrapper">
+                        <img src="img/guerrapaz (Mediana).jpg" alt="En tiempos de guerra y otros ensayos" onerror="this.style.display='none'">
+                    </div>
+                    <div class="enlace-tarjeta">
+                        <h3>En tiempos de guerra y otros ensayos</h3>
+                        <p>Howard Zinn</p>
+                    </div>
+                </div>
+                
+                <div class="tarjeta-expediente" 
                      data-tit="La razón humanitaria" 
                      data-aut="Didier Fassin" 
                      data-edi="Prometeo" 
@@ -1027,23 +1088,6 @@
                         <p>Aníbal Fernández</p>
                     </div>
                 </div>
-                </div><h2 class="titulo-categoria" id="ensayo-politico">ENSAYO POLÍTICO</h2><div class="grilla-tacuru">
-                <div class="tarjeta-expediente" 
-                     data-tit="En tiempos de guerra y otros ensayos" 
-                     data-aut="Howard Zinn" 
-                     data-edi="Prometeo" 
-                     data-ano="s/d" 
-                     data-img="img/guerrapaz (Mediana).jpg" 
-                     onclick="abrirExpediente(this)">
-                     
-                    <div class="tarjeta-imagen-wrapper">
-                        <img src="img/guerrapaz (Mediana).jpg" alt="En tiempos de guerra y otros ensayos" onerror="this.style.display='none'">
-                    </div>
-                    <div class="enlace-tarjeta">
-                        <h3>En tiempos de guerra y otros ensayos</h3>
-                        <p>Howard Zinn</p>
-                    </div>
-                </div>
                 </div><h2 class="titulo-categoria" id="filosofia">FILOSOFÍA</h2><div class="grilla-tacuru">
                 <div class="tarjeta-expediente" 
                      data-tit="Arte del buen vivir" 
@@ -1059,23 +1103,6 @@
                     <div class="enlace-tarjeta">
                         <h3>Arte del buen vivir</h3>
                         <p>Arthur Schopenhauer</p>
-                    </div>
-                </div>
-                
-                <div class="tarjeta-expediente" 
-                     data-tit="Bordes" 
-                     data-aut="Jacques Rancière" 
-                     data-edi="Del Estante" 
-                     data-ano="2004" 
-                     data-img="img/default.jpg" 
-                     onclick="abrirExpediente(this)">
-                     
-                    <div class="tarjeta-imagen-wrapper">
-                        <img src="img/default.jpg" alt="Bordes" onerror="this.style.display='none'">
-                    </div>
-                    <div class="enlace-tarjeta">
-                        <h3>Bordes</h3>
-                        <p>Jacques Rancière</p>
                     </div>
                 </div>
                 
@@ -1284,6 +1311,23 @@
                 </div>
                 
                 <div class="tarjeta-expediente" 
+                     data-tit="La ciencia, su método y su filosofía" 
+                     data-aut="Mario Bunge" 
+                     data-edi="Siglo Veinte" 
+                     data-ano="s/d" 
+                     data-img="img/cienciametobunge (Mediana).jpg" 
+                     onclick="abrirExpediente(this)">
+                     
+                    <div class="tarjeta-imagen-wrapper">
+                        <img src="img/cienciametobunge (Mediana).jpg" alt="La ciencia, su método y su filosofía" onerror="this.style.display='none'">
+                    </div>
+                    <div class="enlace-tarjeta">
+                        <h3>La ciencia, su método y su filosofía</h3>
+                        <p>Mario Bunge</p>
+                    </div>
+                </div>
+                
+                <div class="tarjeta-expediente" 
                      data-tit="La poética del espacio" 
                      data-aut="Gaston Bachelard" 
                      data-edi="Planeta" 
@@ -1384,41 +1428,7 @@
                         <p>Roberto Follari</p>
                     </div>
                 </div>
-                </div><h2 class="titulo-categoria" id="filosofia-de-la-ciencia">FILOSOFÍA DE LA CIENCIA</h2><div class="grilla-tacuru">
-                <div class="tarjeta-expediente" 
-                     data-tit="La ciencia, su método y su filosofía" 
-                     data-aut="Mario Bunge" 
-                     data-edi="Siglo Veinte" 
-                     data-ano="s/d" 
-                     data-img="img/cienciametobunge (Mediana).jpg" 
-                     onclick="abrirExpediente(this)">
-                     
-                    <div class="tarjeta-imagen-wrapper">
-                        <img src="img/cienciametobunge (Mediana).jpg" alt="La ciencia, su método y su filosofía" onerror="this.style.display='none'">
-                    </div>
-                    <div class="enlace-tarjeta">
-                        <h3>La ciencia, su método y su filosofía</h3>
-                        <p>Mario Bunge</p>
-                    </div>
-                </div>
-                </div><h2 class="titulo-categoria" id="filosofia-politica">FILOSOFÍA POLÍTICA</h2><div class="grilla-tacuru">
-                <div class="tarjeta-expediente" 
-                     data-tit="Leviatán, Tomo II" 
-                     data-aut="Thomas Hobbes" 
-                     data-edi="Losada" 
-                     data-ano="1651" 
-                     data-img="img/leviatan (Mediana).jpg" 
-                     onclick="abrirExpediente(this)">
-                     
-                    <div class="tarjeta-imagen-wrapper">
-                        <img src="img/leviatan (Mediana).jpg" alt="Leviatán, Tomo II" onerror="this.style.display='none'">
-                    </div>
-                    <div class="enlace-tarjeta">
-                        <h3>Leviatán, Tomo II</h3>
-                        <p>Thomas Hobbes</p>
-                    </div>
-                </div>
-                </div><h2 class="titulo-categoria" id="género">GÉNERO</h2><div class="grilla-tacuru">
+                </div><h2 class="titulo-categoria" id="historia">HISTORIA</h2><div class="grilla-tacuru">
                 <div class="tarjeta-expediente" 
                      data-tit="¿Tienen derechos las mujeres? Política y ciudadanía en la Argentina del siglo XX" 
                      data-aut="Mirta Zaida Lobato" 
@@ -1435,7 +1445,24 @@
                         <p>Mirta Zaida Lobato</p>
                     </div>
                 </div>
-                </div><h2 class="titulo-categoria" id="historia">HISTORIA</h2><div class="grilla-tacuru">
+                
+                <div class="tarjeta-expediente" 
+                     data-tit="Breve historia de la psiquiatría" 
+                     data-aut="E. H. Ackernecht" 
+                     data-edi="Losada" 
+                     data-ano="s/d" 
+                     data-img="img/historiapsiqui (Mediana).jpg" 
+                     onclick="abrirExpediente(this)">
+                     
+                    <div class="tarjeta-imagen-wrapper">
+                        <img src="img/historiapsiqui (Mediana).jpg" alt="Breve historia de la psiquiatría" onerror="this.style.display='none'">
+                    </div>
+                    <div class="enlace-tarjeta">
+                        <h3>Breve historia de la psiquiatría</h3>
+                        <p>E. H. Ackernecht</p>
+                    </div>
+                </div>
+                
                 <div class="tarjeta-expediente" 
                      data-tit="Combates por la memoria" 
                      data-aut="Federico Lorenz" 
@@ -1454,6 +1481,40 @@
                 </div>
                 
                 <div class="tarjeta-expediente" 
+                     data-tit="El silencio. De Paulo VI a Bergoglio" 
+                     data-aut="Horacio Verbitsky" 
+                     data-edi="Sudamericana" 
+                     data-ano="s/d" 
+                     data-img="img/silencio (Mediana).jpg" 
+                     onclick="abrirExpediente(this)">
+                     
+                    <div class="tarjeta-imagen-wrapper">
+                        <img src="img/silencio (Mediana).jpg" alt="El silencio. De Paulo VI a Bergoglio" onerror="this.style.display='none'">
+                    </div>
+                    <div class="enlace-tarjeta">
+                        <h3>El silencio. De Paulo VI a Bergoglio</h3>
+                        <p>Horacio Verbitsky</p>
+                    </div>
+                </div>
+                
+                <div class="tarjeta-expediente" 
+                     data-tit="Freud en Buenos Aires" 
+                     data-aut="Hugo Vezzetti" 
+                     data-edi="Universidad Nacional de Quilmes" 
+                     data-ano="s/d" 
+                     data-img="img/freudbaires (Mediana).jpg" 
+                     onclick="abrirExpediente(this)">
+                     
+                    <div class="tarjeta-imagen-wrapper">
+                        <img src="img/freudbaires (Mediana).jpg" alt="Freud en Buenos Aires" onerror="this.style.display='none'">
+                    </div>
+                    <div class="enlace-tarjeta">
+                        <h3>Freud en Buenos Aires</h3>
+                        <p>Hugo Vezzetti</p>
+                    </div>
+                </div>
+                
+                <div class="tarjeta-expediente" 
                      data-tit="Guerra y paz en el siglo XXI" 
                      data-aut="Eric Hobsbawm" 
                      data-edi="Crítica" 
@@ -1467,6 +1528,40 @@
                     <div class="enlace-tarjeta">
                         <h3>Guerra y paz en el siglo XXI</h3>
                         <p>Eric Hobsbawm</p>
+                    </div>
+                </div>
+                
+                <div class="tarjeta-expediente" 
+                     data-tit="Historia de la pedagogía" 
+                     data-aut="Guillermo Dilthey" 
+                     data-edi="Losada" 
+                     data-ano="s/d" 
+                     data-img="img/historiaedupeda (Mediana).jpg" 
+                     onclick="abrirExpediente(this)">
+                     
+                    <div class="tarjeta-imagen-wrapper">
+                        <img src="img/historiaedupeda (Mediana).jpg" alt="Historia de la pedagogía" onerror="this.style.display='none'">
+                    </div>
+                    <div class="enlace-tarjeta">
+                        <h3>Historia de la pedagogía</h3>
+                        <p>Guillermo Dilthey</p>
+                    </div>
+                </div>
+                
+                <div class="tarjeta-expediente" 
+                     data-tit="La burguesía terrateniente argentina 1810-1945" 
+                     data-aut="Roy Hora" 
+                     data-edi="Capital Intelectual" 
+                     data-ano="s/d" 
+                     data-img="img/burgueterra (Mediana).jpg" 
+                     onclick="abrirExpediente(this)">
+                     
+                    <div class="tarjeta-imagen-wrapper">
+                        <img src="img/burgueterra (Mediana).jpg" alt="La burguesía terrateniente argentina 1810-1945" onerror="this.style.display='none'">
+                    </div>
+                    <div class="enlace-tarjeta">
+                        <h3>La burguesía terrateniente argentina 1810-1945</h3>
+                        <p>Roy Hora</p>
                     </div>
                 </div>
                 
@@ -1539,6 +1634,23 @@
                 </div>
                 
                 <div class="tarjeta-expediente" 
+                     data-tit="Política exterior argentina" 
+                     data-aut="Mario Rapoport; Claudio Spiguel" 
+                     data-edi="Capital Intelectual" 
+                     data-ano="s/d" 
+                     data-img="img/políticaexterior (Mediana).jpg" 
+                     onclick="abrirExpediente(this)">
+                     
+                    <div class="tarjeta-imagen-wrapper">
+                        <img src="img/políticaexterior (Mediana).jpg" alt="Política exterior argentina" onerror="this.style.display='none'">
+                    </div>
+                    <div class="enlace-tarjeta">
+                        <h3>Política exterior argentina</h3>
+                        <p>Mario Rapoport; Claudio Spiguel</p>
+                    </div>
+                </div>
+                
+                <div class="tarjeta-expediente" 
                      data-tit="Pueblo y política. La construcción de la república" 
                      data-aut="Hilda Sabato" 
                      data-edi="Capital Intelectual" 
@@ -1569,40 +1681,6 @@
                     <div class="enlace-tarjeta">
                         <h3>Sarmiento, más allá de la educación</h3>
                         <p>Mauricio Lebedinsky</p>
-                    </div>
-                </div>
-                </div><h2 class="titulo-categoria" id="historia-de-la-ciencia">HISTORIA DE LA CIENCIA</h2><div class="grilla-tacuru">
-                <div class="tarjeta-expediente" 
-                     data-tit="Breve historia de la psiquiatría" 
-                     data-aut="E. H. Ackernecht" 
-                     data-edi="Losada" 
-                     data-ano="s/d" 
-                     data-img="img/historiapsiqui (Mediana).jpg" 
-                     onclick="abrirExpediente(this)">
-                     
-                    <div class="tarjeta-imagen-wrapper">
-                        <img src="img/historiapsiqui (Mediana).jpg" alt="Breve historia de la psiquiatría" onerror="this.style.display='none'">
-                    </div>
-                    <div class="enlace-tarjeta">
-                        <h3>Breve historia de la psiquiatría</h3>
-                        <p>E. H. Ackernecht</p>
-                    </div>
-                </div>
-                </div><h2 class="titulo-categoria" id="historia-economica">HISTORIA ECONÓMICA</h2><div class="grilla-tacuru">
-                <div class="tarjeta-expediente" 
-                     data-tit="La burguesía terrateniente argentina 1810-1945" 
-                     data-aut="Roy Hora" 
-                     data-edi="Capital Intelectual" 
-                     data-ano="s/d" 
-                     data-img="img/burgueterra (Mediana).jpg" 
-                     onclick="abrirExpediente(this)">
-                     
-                    <div class="tarjeta-imagen-wrapper">
-                        <img src="img/burgueterra (Mediana).jpg" alt="La burguesía terrateniente argentina 1810-1945" onerror="this.style.display='none'">
-                    </div>
-                    <div class="enlace-tarjeta">
-                        <h3>La burguesía terrateniente argentina 1810-1945</h3>
-                        <p>Roy Hora</p>
                     </div>
                 </div>
                 </div><h2 class="titulo-categoria" id="lingüistica">LINGÜÍSTICA</h2><div class="grilla-tacuru">
@@ -1930,6 +2008,23 @@
                 </div>
                 
                 <div class="tarjeta-expediente" 
+                     data-tit="Sumido en verde temblor" 
+                     data-aut="Rodolfo Nicolás Capaccio" 
+                     data-edi="Edunam" 
+                     data-ano="s/d" 
+                     data-img="img/sumidos (Mediana).jpg" 
+                     onclick="abrirExpediente(this)">
+                     
+                    <div class="tarjeta-imagen-wrapper">
+                        <img src="img/sumidos (Mediana).jpg" alt="Sumido en verde temblor" onerror="this.style.display='none'">
+                    </div>
+                    <div class="enlace-tarjeta">
+                        <h3>Sumido en verde temblor</h3>
+                        <p>Rodolfo Nicolás Capaccio</p>
+                    </div>
+                </div>
+                
+                <div class="tarjeta-expediente" 
                      data-tit="Trago de nada" 
                      data-aut="Javier Chemes" 
                      data-edi="Editorial Universitaria de Misiones" 
@@ -1979,41 +2074,24 @@
                         <p>Juan Sasturain</p>
                     </div>
                 </div>
-                </div><h2 class="titulo-categoria" id="narrativa-regional">NARRATIVA REGIONAL</h2><div class="grilla-tacuru">
-                <div class="tarjeta-expediente" 
-                     data-tit="Sumido en verde temblor" 
-                     data-aut="Rodolfo Nicolás Capaccio" 
-                     data-edi="Edunam" 
-                     data-ano="s/d" 
-                     data-img="img/sumidos (Mediana).jpg" 
-                     onclick="abrirExpediente(this)">
-                     
-                    <div class="tarjeta-imagen-wrapper">
-                        <img src="img/sumidos (Mediana).jpg" alt="Sumido en verde temblor" onerror="this.style.display='none'">
-                    </div>
-                    <div class="enlace-tarjeta">
-                        <h3>Sumido en verde temblor</h3>
-                        <p>Rodolfo Nicolás Capaccio</p>
-                    </div>
-                </div>
-                </div><h2 class="titulo-categoria" id="periodismo">PERIODISMO</h2><div class="grilla-tacuru">
-                <div class="tarjeta-expediente" 
-                     data-tit="El silencio. De Paulo VI a Bergoglio" 
-                     data-aut="Horacio Verbitsky" 
-                     data-edi="Sudamericana" 
-                     data-ano="s/d" 
-                     data-img="img/silencio (Mediana).jpg" 
-                     onclick="abrirExpediente(this)">
-                     
-                    <div class="tarjeta-imagen-wrapper">
-                        <img src="img/silencio (Mediana).jpg" alt="El silencio. De Paulo VI a Bergoglio" onerror="this.style.display='none'">
-                    </div>
-                    <div class="enlace-tarjeta">
-                        <h3>El silencio. De Paulo VI a Bergoglio</h3>
-                        <p>Horacio Verbitsky</p>
-                    </div>
-                </div>
                 </div><h2 class="titulo-categoria" id="politica">POLÍTICA</h2><div class="grilla-tacuru">
+                <div class="tarjeta-expediente" 
+                     data-tit="Bordes" 
+                     data-aut="Jacques Rancière" 
+                     data-edi="Del Estante" 
+                     data-ano="2004" 
+                     data-img="img/default.jpg" 
+                     onclick="abrirExpediente(this)">
+                     
+                    <div class="tarjeta-imagen-wrapper">
+                        <img src="img/default.jpg" alt="Bordes" onerror="this.style.display='none'">
+                    </div>
+                    <div class="enlace-tarjeta">
+                        <h3>Bordes</h3>
+                        <p>Jacques Rancière</p>
+                    </div>
+                </div>
+                
                 <div class="tarjeta-expediente" 
                      data-tit="Descentralización y reforma estatal en América Latina" 
                      data-aut="Carlos González Villar" 
@@ -2100,6 +2178,23 @@
                 </div>
                 
                 <div class="tarjeta-expediente" 
+                     data-tit="Gobernar el imperio. Los tiempos de Bush" 
+                     data-aut="Oscar Oszlak" 
+                     data-edi="Capital Intelectual" 
+                     data-ano="s/d" 
+                     data-img="img/gobernarimper (Mediana).jpg" 
+                     onclick="abrirExpediente(this)">
+                     
+                    <div class="tarjeta-imagen-wrapper">
+                        <img src="img/gobernarimper (Mediana).jpg" alt="Gobernar el imperio. Los tiempos de Bush" onerror="this.style.display='none'">
+                    </div>
+                    <div class="enlace-tarjeta">
+                        <h3>Gobernar el imperio. Los tiempos de Bush</h3>
+                        <p>Oscar Oszlak</p>
+                    </div>
+                </div>
+                
+                <div class="tarjeta-expediente" 
                      data-tit="La marca de la gorra" 
                      data-aut="Mariana Galvani" 
                      data-edi="Capital Intelectual" 
@@ -2147,6 +2242,23 @@
                     <div class="enlace-tarjeta">
                         <h3>La revolución de Evo Morales</h3>
                         <p>Pablo Stefanoni</p>
+                    </div>
+                </div>
+                
+                <div class="tarjeta-expediente" 
+                     data-tit="Leviatán, Tomo II" 
+                     data-aut="Thomas Hobbes" 
+                     data-edi="Losada" 
+                     data-ano="1651" 
+                     data-img="img/leviatan (Mediana).jpg" 
+                     onclick="abrirExpediente(this)">
+                     
+                    <div class="tarjeta-imagen-wrapper">
+                        <img src="img/leviatan (Mediana).jpg" alt="Leviatán, Tomo II" onerror="this.style.display='none'">
+                    </div>
+                    <div class="enlace-tarjeta">
+                        <h3>Leviatán, Tomo II</h3>
+                        <p>Thomas Hobbes</p>
                     </div>
                 </div>
                 
@@ -2219,23 +2331,6 @@
                 </div>
                 
                 <div class="tarjeta-expediente" 
-                     data-tit="Política exterior argentina" 
-                     data-aut="Mario Rapoport; Claudio Spiguel" 
-                     data-edi="Capital Intelectual" 
-                     data-ano="s/d" 
-                     data-img="img/políticaexterior (Mediana).jpg" 
-                     onclick="abrirExpediente(this)">
-                     
-                    <div class="tarjeta-imagen-wrapper">
-                        <img src="img/políticaexterior (Mediana).jpg" alt="Política exterior argentina" onerror="this.style.display='none'">
-                    </div>
-                    <div class="enlace-tarjeta">
-                        <h3>Política exterior argentina</h3>
-                        <p>Mario Rapoport; Claudio Spiguel</p>
-                    </div>
-                </div>
-                
-                <div class="tarjeta-expediente" 
                      data-tit="Que se vayan todos. Enigmas de la representación política" 
                      data-aut="Inés M. Pousadela" 
                      data-edi="Capital Intelectual" 
@@ -2268,23 +2363,6 @@
                         <p>Esteban Rodríguez Alzueta</p>
                     </div>
                 </div>
-                </div><h2 class="titulo-categoria" id="politica-internacional">POLÍTICA INTERNACIONAL</h2><div class="grilla-tacuru">
-                <div class="tarjeta-expediente" 
-                     data-tit="Gobernar el imperio. Los tiempos de Bush" 
-                     data-aut="Oscar Oszlak" 
-                     data-edi="Capital Intelectual" 
-                     data-ano="s/d" 
-                     data-img="img/gobernarimper (Mediana).jpg" 
-                     onclick="abrirExpediente(this)">
-                     
-                    <div class="tarjeta-imagen-wrapper">
-                        <img src="img/gobernarimper (Mediana).jpg" alt="Gobernar el imperio. Los tiempos de Bush" onerror="this.style.display='none'">
-                    </div>
-                    <div class="enlace-tarjeta">
-                        <h3>Gobernar el imperio. Los tiempos de Bush</h3>
-                        <p>Oscar Oszlak</p>
-                    </div>
-                </div>
                 </div><h2 class="titulo-categoria" id="psicoanalisis">PSICOANÁLISIS</h2><div class="grilla-tacuru">
                 <div class="tarjeta-expediente" 
                      data-tit="El deseo de Lacan" 
@@ -2300,23 +2378,6 @@
                     <div class="enlace-tarjeta">
                         <h3>El deseo de Lacan</h3>
                         <p>Jacques-Alain Miller</p>
-                    </div>
-                </div>
-                
-                <div class="tarjeta-expediente" 
-                     data-tit="Freud en Buenos Aires" 
-                     data-aut="Hugo Vezzetti" 
-                     data-edi="Universidad Nacional de Quilmes" 
-                     data-ano="s/d" 
-                     data-img="img/freudbaires (Mediana).jpg" 
-                     onclick="abrirExpediente(this)">
-                     
-                    <div class="tarjeta-imagen-wrapper">
-                        <img src="img/freudbaires (Mediana).jpg" alt="Freud en Buenos Aires" onerror="this.style.display='none'">
-                    </div>
-                    <div class="enlace-tarjeta">
-                        <h3>Freud en Buenos Aires</h3>
-                        <p>Hugo Vezzetti</p>
                     </div>
                 </div>
                 </div><h2 class="titulo-categoria" id="psicologia">PSICOLOGÍA</h2><div class="grilla-tacuru">
@@ -2621,12 +2682,15 @@
                     <strong>EDITORIAL:</strong> <span id="modEdi"></span><br>
                     <strong>AÑO:</strong> <span id="modAño"></span>
                 </div>
-                <button class="btn-copiar" id="btnCopiar" onclick="copiarAlPortapapeles()">COPIAR DATOS AL PORTAPAPELES</button>
+                <button class="btn-copiar" id="btnCopiar" onclick="copiarAlPortapapeles()">COPIAR</button>
             </div>
         </div>
     </div>
 
+    <div id="btn-ascenso" onclick="volverArriba()" title="Volver al índice">&#8679;</div>
+
     <script>
+        // Pestañas
         function abrirTab(idTab, elemento) {
             try {
                 var contenidos = document.querySelectorAll('.tab-content');
@@ -2643,6 +2707,7 @@
             }
         }
 
+        // Modal
         const modal = document.getElementById('modalLibro');
         
         function abrirExpediente(elemento) {
@@ -2662,15 +2727,20 @@
         }
         function cerrarModalFuerza() { modal.style.display = 'none'; }
 
+        // Portapapeles Formateado
         function copiarAlPortapapeles() {
             const titulo = document.getElementById('modTit').innerText;
-            const datos = document.getElementById('datosCopiar').innerText;
-            const textoFinal = `SOLICITUD DE LIBRO\n---\nTÍTULO: ${titulo}\n${datos}`;
+            const aut = document.getElementById('modAut').innerText;
+            const edi = document.getElementById('modEdi').innerText;
+            const ano = document.getElementById('modAño').innerText;
+            
+            const textoFinal = `Quiero este libro: "${titulo}" de "${aut}" ("${edi}", "${ano}").`;
             
             navigator.clipboard.writeText(textoFinal).then(() => {
                 const btn = document.getElementById('btnCopiar');
                 const textoOriginal = btn.innerText;
-                btn.innerText = '¡DATOS COPIADOS!';
+                // MENSAJE TELEGRÁFICO
+                btn.innerText = '¡COPIADO!';
                 btn.style.background = 'var(--negro)';
                 btn.style.color = 'var(--blanco)';
                 setTimeout(() => {
@@ -2679,6 +2749,20 @@
                     btn.style.color = 'var(--blanco)';
                 }, 2500);
             });
+        }
+
+        // Botón Ascensor
+        window.onscroll = function() {
+            var btn = document.getElementById("btn-ascenso");
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+                btn.style.display = "flex";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+
+        function volverArriba() {
+            document.getElementById('menu-selector').scrollIntoView({ behavior: 'smooth' });
         }
     </script>
 </body>
