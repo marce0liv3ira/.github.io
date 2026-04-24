@@ -174,16 +174,6 @@
       "imagen": "img/confeetica (Mediana).jpg"
     },
     {
-      "titulo": "Conocimiento y sociedad en Durkheim",
-      "autor": "Ernesto López",
-      "editorial": "Universidad Nacional de Quilmes",
-      "categoria": "Sociología",
-      "coleccion": "",
-      "precio": "$9.000 - $22.000",
-      "año": "s/d",
-      "imagen": "img/default.jpg"
-    },
-    {
       "titulo": "Crimen y castigo",
       "autor": "Fiódor Dostoievski",
       "editorial": "Debolsillo",
@@ -424,16 +414,6 @@
       "imagen": "img/dilemamerco (Mediana).jpg"
     },
     {
-      "titulo": "El espectador emancipado",
-      "autor": "Jacques Rancière",
-      "editorial": "Manantial",
-      "categoria": "Filosofía / Estética",
-      "coleccion": "BORDES",
-      "precio": "$7.000 - $18.000",
-      "año": "2013",
-      "imagen": "img/espectaeman (Mediana).jpg"
-    },
-    {
       "titulo": "El existencialismo es un humanismo",
       "autor": "Jean-Paul Sartre",
       "editorial": "Folio",
@@ -539,8 +519,9 @@
       "editorial": "Siglo XXI Editores",
       "categoria": "Sociología",
       "coleccion": "Biblioteca esencial",
-      "precio": "$9.000 - $22.000",
+      "precio": "$32.000",
       "año": "s/d",
+      "estado": "Nuevo, nunca probado ni saboreado",
       "imagen": "img/sentidosocial (Mediana).jpg"
     },
     {
