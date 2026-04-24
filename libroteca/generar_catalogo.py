@@ -1,3 +1,8 @@
+Aquí tenés el código blindado y rectificado para que lo pises en **La Ágil**. He pasado la soldadura autógena por cada punto que mencionaste: el índice ahora respeta la jerarquía de columnas, las transparencias permiten que el logo del **tacurú** respire con fuerza y los rojos recuperaron su tono de sangre seca.
+
+Copiá, pegá y ejecutá. No se va a quebrar nada.
+
+```python
 import json
 import os
 from collections import defaultdict
@@ -49,14 +54,14 @@ HTML_TEMPLATE = """
         
         .contenedor {{ flex: 1; max-width: 1200px; margin: 0 auto; width: 100%; display: flow-root; }}
         
-        /* CABECERA REDISEÑADA CON AUTOR */
+        /* AJUSTE 3: LOGO DE FONDO MÁS SÓLIDO */
         header {{ 
             border-bottom: 1px solid var(--rojo-sangre); 
             padding: 40px 20px; 
             margin-bottom: 30px; 
             border-radius: 8px;
             box-shadow: 0 4px 6px -6px rgba(163, 0, 0, 0.8);
-            background-image: linear-gradient(rgba(250, 246, 237, 0.9), rgba(250, 246, 237, 0.95)), url('img/logolibro.png');
+            background-image: linear-gradient(rgba(250, 246, 237, 0.4), rgba(250, 246, 237, 0.5)), url('img/logolibro.png');
             background-size: contain; 
             background-position: center;
             background-repeat: no-repeat;
@@ -65,96 +70,103 @@ HTML_TEMPLATE = """
             gap: 20px;
         }}
 
-        .header-superior {{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-        }}
-
+        .header-superior {{ display: flex; justify-content: space-between; align-items: center; width: 100%; }}
         .header-titulos {{ text-align: left; }}
 
-        h1 {{ 
-            font-family: 'Bebas Neue', sans-serif !important; 
-            font-size: 5rem !important; 
-            color: var(--rojo-sangre) !important; 
-            margin: 0; 
-            line-height: 0.9 !important; 
-        }}
-        h2 {{ 
-            font-family: 'Bebas Neue', sans-serif !important; 
-            font-size: 2.5rem !important; 
-            color: var(--negro) !important; 
-            margin: 0; 
-        }}
+        h1 {{ font-family: 'Bebas Neue', sans-serif !important; font-size: 5rem !important; color: var(--rojo-sangre) !important; margin: 0; line-height: 0.9 !important; }}
+        h2 {{ font-family: 'Bebas Neue', sans-serif !important; font-size: 2.5rem !important; color: var(--negro) !important; margin: 0; }}
 
-        /* BLOQUE AUTOR */
-        .bloque-autor {{
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            background: rgba(163, 0, 0, 0.05);
-            padding: 10px 15px;
-            border-radius: 50px 10px 10px 50px;
-            border: 1px solid rgba(163, 0, 0, 0.2);
-        }}
-        .foto-autor {{
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            border: 2px solid var(--rojo-sangre);
-            object-fit: cover;
-            box-shadow: 0 0 10px rgba(163, 0, 0, 0.3);
-        }}
-        .nombre-autor {{
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.6rem;
-            color: var(--negro);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }}
+        .bloque-autor {{ display: flex; align-items: center; gap: 15px; background: rgba(163, 0, 0, 0.05); padding: 10px 15px; border-radius: 50px 10px 10px 50px; border: 1px solid rgba(163, 0, 0, 0.2); }}
+        .foto-autor {{ width: 70px; height: 70px; border-radius: 50%; border: 2px solid var(--rojo-sangre); object-fit: cover; box-shadow: 0 0 10px rgba(163, 0, 0, 0.3); }}
+        .nombre-autor {{ font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; color: var(--negro); letter-spacing: 1px; text-transform: uppercase; }}
 
+        /* AJUSTE 2: BAJADA CON MÁS TRANSPARENCIA */
         .bajada {{ 
             font-size: 1.1rem; font-weight: 500; color: var(--negro); 
             font-family: 'Inter', sans-serif; 
-            background: rgba(255, 255, 255, 0.6);
+            background: rgba(255, 255, 255, 0.3);
             padding: 15px 20px; border-radius: 4px;
             text-align: left; max-width: 100%; line-height: 1.5;
             border-left: 4px solid var(--rojo-sangre);
+            backdrop-filter: blur(2px);
         }}
 
-        /* CAJA DE MENÚ E ÍNDICE */
         .caja-menu {{ border: 1px solid var(--rojo-sangre); margin-bottom: 40px; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 0 12px rgba(163, 0, 0, 0.25); }}
         .tabs-header {{ display: flex; border-bottom: 1px solid var(--rojo-sangre); background: var(--negro); }}
         .tab-btn {{ flex: 1; padding: 12px; cursor: pointer; font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--blanco); background: transparent; border: none; transition: all 0.3s ease; letter-spacing: 1px; }}
         .tab-btn.active, .tab-btn:hover {{ background: var(--rojo-sangre); }}
         .tab-content {{ padding: 20px; display: none; font-size: 1.1rem; line-height: 1.5; }}
         .tab-content.active {{ display: block; }}
+        
         .caja-indice-interna {{ margin-top: 25px; padding-top: 15px; border-top: 1px dashed var(--rojo-sangre); }}
-        .lista-indice {{ list-style-type: none; padding: 0; margin: 0; max-height: 220px; display: flex; flex-direction: column; flex-wrap: wrap; align-content: flex-start; gap: 6px 15px; overflow: hidden; }}
+
+        /* AJUSTE 1: ÍNDICE CON SALTO DE COLUMNA TÁCTICO */
+        .lista-indice {{ 
+            list-style-type: none; 
+            padding: 0; 
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            gap: 6px 30px; 
+            max-height: 150px; /* Forzamos salto tras la 5ta categoría aprox */
+            overflow: hidden;
+        }}
         .lista-indice li {{ font-family: 'Bebas Neue', sans-serif; font-size: 1.25rem; letter-spacing: 1px; }}
 
-        /* CATEGORÍAS Y GRILLA */
         .titulo-categoria {{ font-family: 'Bebas Neue', sans-serif !important; font-size: 3rem !important; color: var(--blanco) !important; background: var(--negro) !important; padding: 5px 15px !important; border-left: 5px solid var(--rojo-sangre) !important; margin: 50px 0 20px 0 !important; text-transform: uppercase !important; border-radius: 4px; }}
         .grilla-tacuru {{ display: grid !important; grid-template-columns: repeat(4, 1fr) !important; gap: 15px !important; margin: 2rem 0 !important; }}
+        
+        /* AJUSTE 4: CONTROL DE DESBORDE EN EL GRID */
         .tarjeta-expediente {{ position: relative !important; aspect-ratio: 1 / 1 !important; background-color: #000 !important; border: 1px solid var(--rojo-oscuro) !important; border-radius: 8px !important; overflow: hidden; transition: all 0.4s ease; cursor: pointer; }}
         .tarjeta-expediente:hover {{ transform: scale(1.03) !important; border-color: var(--rojo-sangre) !important; box-shadow: 0 0 25px rgba(163, 0, 0, 0.65); }}
         .tarjeta-imagen-wrapper {{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }}
         .tarjeta-imagen-wrapper img {{ width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); opacity: 0.6; transition: 0.5s; }}
         .tarjeta-expediente:hover img {{ filter: grayscale(0%); opacity: 1; }}
+        
         .enlace-tarjeta {{ display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 100%; padding: 15px; position: relative; z-index: 10; text-align: center; }}
-        .tarjeta-expediente h3 {{ font-family: 'Bebas Neue', sans-serif; color: #fff; font-size: 1.8rem; margin: 0; line-height: 1.1; text-shadow: 2px 2px 4px #000; }}
-        .tarjeta-expediente p {{ font-family: 'Inter', sans-serif; color: var(--fondo-hueso); font-size: 0.95rem; margin: 0; text-shadow: 1px 1px 3px #000; }}
+        .tarjeta-expediente h3 {{ 
+            font-family: 'Bebas Neue', sans-serif !important; 
+            color: #fff !important; 
+            font-size: 1.6rem !important; 
+            margin: 0 0 6px 0; 
+            line-height: 1 !important; 
+            text-shadow: 2px 2px 4px #000;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }}
+        .tarjeta-expediente p {{ font-family: 'Inter', sans-serif; color: var(--fondo-hueso); font-size: 0.95rem; margin: 0; text-shadow: 1px 1px 3px #000; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 90%; }}
 
-        /* MODAL */
         .modal-overlay {{ display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); justify-content: center; align-items: center; backdrop-filter: blur(5px); }}
         .modal-caja {{ position: relative; width: 90%; max-width: 450px; aspect-ratio: 2/3; border: 2px solid var(--rojo-sangre); border-radius: 8px; background-size: cover; background-position: center; overflow: hidden; }}
         .modal-oscuridad {{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.65); display: flex; flex-direction: column; justify-content: center; padding: 30px; box-sizing: border-box; }}
         .modal-titulo {{ font-family: 'Bebas Neue', sans-serif; font-size: 2.6rem; color: var(--blanco); margin: 0 0 20px 0; border-bottom: 1px solid var(--rojo-sangre); padding-bottom: 10px; }}
+        
+        /* AJUSTE 5: ROJO SANGRE SECA EN ETIQUETAS MODAL */
         .datos-expediente {{ color: var(--blanco); font-size: 1.15rem; line-height: 1.8; text-align: left; }}
-        .btn-copiar {{ margin-top: 25px; width: 100%; padding: 15px; background: var(--rojo-sangre); color: var(--blanco); border: none; font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; cursor: pointer; border-radius: 8px; }}
+        .datos-expediente strong {{ color: var(--rojo-sangre) !important; font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 1px; }}
+        
+        .btn-copiar {{ margin-top: 25px; width: 100%; padding: 15px; background: var(--rojo-sangre); color: var(--blanco); border: none; font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; cursor: pointer; border-radius: 8px; transition: 0.3s; }}
+        .btn-copiar:hover {{ background: var(--negro); color: var(--rojo-sangre); border: 1px solid var(--rojo-sangre); }}
 
-        #btn-ascenso {{ position: fixed; bottom: 30px; right: 30px; width: 55px; height: 55px; background: rgba(0, 0, 0, 0.8); color: var(--blanco); border: 2px solid var(--rojo-sangre); border-radius: 50%; font-size: 1.5rem; cursor: pointer; display: none; justify-content: center; align-items: center; z-index: 1000; }}
+        /* AJUSTE 6: HOVER BOTÓN SUBIR */
+        #btn-ascenso {{ 
+            position: fixed; bottom: 30px; right: 30px; width: 55px; height: 55px; 
+            background: rgba(0, 0, 0, 0.8); color: var(--blanco); border: 2px solid var(--rojo-sangre); 
+            border-radius: 50%; font-size: 1.5rem; cursor: pointer; display: none; 
+            justify-content: center; align-items: center; z-index: 1000;
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }}
+        #btn-ascenso:hover {{
+            background: var(--rojo-sangre);
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 0 20px var(--rojo-sangre);
+        }}
 
         footer {{ margin-top: 60px; background-color: var(--negro); border-top: 4px solid var(--rojo-sangre); width: 100%; }}
 
@@ -163,8 +175,9 @@ HTML_TEMPLATE = """
             .header-superior {{ flex-direction: column; align-items: flex-start; gap: 15px; }}
             .bloque-autor {{ width: 100%; justify-content: flex-start; }}
             .grilla-tacuru {{ grid-template-columns: repeat(2, 1fr) !important; }} 
-            .lista-indice {{ max-height: none !important; flex-direction: row !important; }}
-            .lista-indice li {{ width: 48%; }}
+            /* AJUSTE 1 MÓVIL: 2 columnas */
+            .lista-indice {{ max-height: none !important; flex-direction: row !important; flex-wrap: wrap !important; }}
+            .lista-indice li {{ width: 45%; margin-bottom: 5px; }}
         }}
     </style>
 </head>
@@ -218,9 +231,13 @@ HTML_TEMPLATE = """
     <footer>
         <div class="footer-bunker" style="text-align: center; color: #ffffff; padding: 25px 0;">
             <p style="margin-bottom: 8px;">
-                <strong style="font-family: 'Almarai', sans-serif; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.8px;">HORMIGUE.AR</strong>
-                <img style="height: 2rem; vertical-align: middle;" src="https://pica.hormigue.ar/hormiMG/icono%20hormi.png" alt="H">
-                <span>Copyleft</span>
+                <strong style="font-family: 'Almarai', sans-serif; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.8px;">
+                    <a href="https://hormigue.ar/" style="color: #ffffff !important; text-decoration: none;">HORMIGUE.AR</a>
+                </strong>
+                <a href="https://hormigue.ar/">
+                    <img style="height: 2rem; vertical-align: middle; margin: 0 5px;" src="https://pica.hormigue.ar/hormiMG/icono%20hormi.png" alt="H">
+                </a>
+                <span><a href="https://hormigue.ar/" style="color: #ffffff !important; text-decoration: none;">Copyleft</a></span>
             </p>
             <p style="font-family: 'Arial Narrow', sans-serif; font-size: 0.8rem;">un sitio creado con pocos recursos técnicos, económicos e intelectuales</p>
         </div>
@@ -347,8 +364,9 @@ def generar_catalogo():
         
         with open(os.path.join(os.path.dirname(__file__), 'index.html'), 'w', encoding='utf-8') as f:
             f.write(html_final)
-        print(">>> Catálogo sellado. Perfil de autor inyectado.")
+        print(">>> Catálogo blindado y rectificado. Listo para el despliegue.")
         
-    except Exception as e: print(f">>> ERROR: {e}")
+    except Exception as e: print(f">>> ERROR EN LA MATRIZ: {e}")
 
 if __name__ == "__main__": generar_catalogo()
+```
