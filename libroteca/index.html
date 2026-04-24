@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ESTANTE DE ABAJO</title>
     
+    <meta name="description" content="Libros usados, listos para seguir usándose. Picá y mirá.">
+    <meta property="og:title" content="ESTANTE DE ABAJO">
+    <meta property="og:description" content="Libros usados, listos para seguir usándose. Picá y mirá.">
+    <meta property="og:image" content="https://hormigue.ar/libroteca/img/logolibro.png">
+    <meta property="og:type" content="website">
+    
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
     
     <style>
@@ -27,20 +33,29 @@
             padding: 20px; 
             -webkit-user-select: none;
             user-select: none; 
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         
         a { color: var(--rojo-sangre) !important; text-decoration: none; transition: color 0.2s ease !important; }
         a:hover { color: #D62828 !important; text-shadow: 0 0 5px rgba(163, 0, 0, 0.4); }
         
-        .contenedor { max-width: 1200px; margin: 0 auto; display: flow-root; }
+        .contenedor { flex: 1; max-width: 1200px; margin: 0 auto; width: 100%; display: flow-root; }
         
-        /* CABECERA */
+        /* CABECERA CON LOGO DE FONDO Y VELADURA */
         header { 
             text-align: center; 
             border-bottom: 1px solid var(--rojo-sangre); 
-            padding-bottom: 20px; 
+            padding: 50px 20px; 
             margin-bottom: 30px; 
+            border-radius: 8px;
             box-shadow: 0 4px 6px -6px rgba(163, 0, 0, 0.8);
+            /* La veladura (rgba) protege el texto para que el logo no lo ahogue */
+            background-image: linear-gradient(rgba(250, 246, 237, 0.85), rgba(250, 246, 237, 0.92)), url('img/logolibro.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
         h1 { 
             font-family: 'Bebas Neue', sans-serif !important; 
@@ -50,6 +65,8 @@
             letter-spacing: -0.02em !important; 
             line-height: 1.1 !important; 
             text-shadow: 0 0 10px rgba(163, 0, 0, 0.2);
+            position: relative;
+            z-index: 2;
         }
         h2 { 
             font-family: 'Bebas Neue', sans-serif !important; 
@@ -57,8 +74,15 @@
             color: var(--negro) !important; 
             margin: 5px 0 15px 0; 
             line-height: 1.1;
+            position: relative;
+            z-index: 2;
         }
-        .bajada { font-size: 1.2rem; font-weight: bold; color: var(--gris-ceniza); font-family: 'Inter', sans-serif; }
+        .bajada { 
+            font-size: 1.2rem; font-weight: bold; color: var(--negro); 
+            font-family: 'Inter', sans-serif; position: relative; z-index: 2; 
+            background: rgba(250, 246, 237, 0.7);
+            display: inline-block; padding: 5px 15px; border-radius: 4px;
+        }
 
         /* CAJA DE MENÚ */
         .caja-menu { 
@@ -194,7 +218,6 @@
             opacity: 1 !important;
         }
 
-        /* TEXTOS CONTRACCIÓN DE DESBORDE */
         .tarjeta-expediente h3 {
             font-family: 'Bebas Neue', sans-serif !important;
             color: #ffffff !important;
@@ -206,7 +229,6 @@
             text-shadow: 0 0 8px #000, 2px 2px 4px #000 !important;
             z-index: 11 !important;
             
-            /* Amputación de texto excedente para no romper la caja */
             display: -webkit-box !important;
             -webkit-line-clamp: 4 !important;
             -webkit-box-orient: vertical !important;
@@ -231,6 +253,43 @@
             text-overflow: ellipsis !important;
         }
 
+        /* PIE DE PÁGINA HORMIGUEAR */
+        footer {
+            margin-top: 60px;
+            padding: 40px 20px;
+            text-align: center;
+            background-color: var(--negro);
+            border-top: 4px solid var(--rojo-sangre);
+            box-shadow: 0 -4px 15px rgba(163, 0, 0, 0.3);
+        }
+        .link-hormiguear {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            color: var(--fondo-hueso) !important;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease !important;
+        }
+        .link-hormiguear:hover {
+            color: var(--rojo-sangre) !important;
+            text-shadow: 0 0 10px rgba(163, 0, 0, 0.5);
+            transform: translateY(-3px);
+        }
+        .svg-hormiga {
+            width: 45px;
+            height: 45px;
+            fill: var(--rojo-sangre);
+            margin-bottom: 12px;
+            transition: fill 0.3s ease, transform 0.3s ease;
+        }
+        .link-hormiguear:hover .svg-hormiga {
+            fill: var(--fondo-hueso);
+            transform: scale(1.1);
+        }
+
         /* MODAL VISOR */
         .modal-overlay {
             display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%;
@@ -248,7 +307,6 @@
         
         .modal-oscuridad {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            /* OPACIDAD MÁS CLARA PARA QUE SE VEA LA PORTADA EN MÓVILES */
             background: rgba(0, 0, 0, 0.65); 
             display: flex; flex-direction: column; 
             justify-content: center; padding: 30px; box-sizing: border-box;
@@ -264,7 +322,7 @@
         .datos-expediente { 
             color: var(--blanco); font-size: 1.2rem; line-height: 1.8; text-align: left; 
             -webkit-user-select: text; user-select: text; font-family: 'Inter', sans-serif;
-            text-shadow: 0 0 8px #000, 0 0 15px #000; /* Blindaje visual contra fondo claro */
+            text-shadow: 0 0 8px #000, 0 0 15px #000; 
         }
         .datos-expediente strong { color: var(--rojo-base); font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 1px; }
         
@@ -272,7 +330,7 @@
             font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; color: var(--blanco); 
             margin: 0 0 20px 0; border-bottom: 1px solid var(--rojo-sangre); line-height: 1.1; 
             padding-bottom: 10px; box-shadow: 0 4px 6px -6px rgba(163, 0, 0, 0.8); 
-            text-shadow: 0 0 8px #000, 0 0 15px #000; /* Blindaje visual */
+            text-shadow: 0 0 8px #000, 0 0 15px #000; 
         }
         
         .btn-copiar {
@@ -289,7 +347,6 @@
             box-shadow: 0 0 20px rgba(158, 40, 19, 0.8), inset 0 0 8px rgba(158, 40, 19, 0.4) !important;
         }
 
-        /* BOTÓN DE ASCENSO (BACK TO TOP) */
         #btn-ascenso {
             position: fixed;
             bottom: 30px;
@@ -324,7 +381,6 @@
             h2 { font-size: 2.2rem !important; }
         }
         @media (max-width: 600px) {
-            /* CELULAR: 2 COLUMNAS y FUENTES ACHICADAS */
             .grilla-tacuru { grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }
             h1 { font-size: 3.5rem !important; }
             h2 { font-size: 1.8rem !important; }
@@ -332,8 +388,6 @@
             .tabs-header { flex-direction: column; }
             .tab-btn { border-bottom: 1px solid var(--negro); }
             #btn-ascenso { bottom: 20px; right: 20px; width: 45px; height: 45px; font-size: 1.5rem; }
-            
-            /* Ajuste quirúrgico para que los textos no revienten la caja */
             .enlace-tarjeta { padding: 10px !important; }
             .tarjeta-expediente h3 { font-size: 1.15rem !important; margin-bottom: 4px !important; }
             .tarjeta-expediente p { font-size: 0.85rem !important; }
@@ -2689,8 +2743,17 @@
 
     <div id="btn-ascenso" onclick="volverArriba()" title="Volver al índice">&#8679;</div>
 
+    <footer>
+        <a href="https://hormigue.ar/" class="link-hormiguear" target="_blank" rel="noopener noreferrer">
+            <svg class="svg-hormiga" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12,2C9.5,2 7.5,3.8 7.1,6.1C5.7,6.8 4.6,8 4.2,9.6C3.9,11 4.2,12.5 5,13.7L3.5,15.2C3.1,15.6 3.1,16.2 3.5,16.6C3.9,17 4.5,17 4.9,16.6L6.4,15.1C7.8,16.2 9.8,17 12,17C14.2,17 16.2,16.2 17.6,15.1L19.1,16.6C19.5,17 20.1,17 20.5,16.6C20.9,16.2 20.9,15.6 20.5,15.2L19,13.7C19.8,12.5 20.1,11 19.8,9.6C19.4,8 18.3,6.8 16.9,6.1C16.5,3.8 14.5,2 12,2ZM12,4C13.7,4 15,5.3 15,7C15,8.7 13.7,10 12,10C10.3,10 9,8.7 9,7C9,5.3 10.3,4 12,4ZM7.5,10.5C8.3,10.5 9,11.2 9,12C9,12.8 8.3,13.5 7.5,13.5C6.7,13.5 6,12.8 6,12C6,11.2 6.7,10.5 7.5,10.5ZM16.5,10.5C17.3,10.5 18,11.2 18,12C18,12.8 17.3,13.5 16.5,13.5C15.7,13.5 15,12.8 15,12C15,11.2 15.7,10.5 16.5,10.5Z"/>
+                <path d="M12,18C9,18 6.5,19.5 5.5,22H18.5C17.5,19.5 15,18 12,18Z"/>
+            </svg>
+            Conocé el sitio creado con pocos recursos económicos, técnicos e intelectuales.
+        </a>
+    </footer>
+
     <script>
-        // Pestañas
         function abrirTab(idTab, elemento) {
             try {
                 var contenidos = document.querySelectorAll('.tab-content');
@@ -2707,7 +2770,6 @@
             }
         }
 
-        // Modal
         const modal = document.getElementById('modalLibro');
         
         function abrirExpediente(elemento) {
@@ -2727,7 +2789,6 @@
         }
         function cerrarModalFuerza() { modal.style.display = 'none'; }
 
-        // Portapapeles Formateado
         function copiarAlPortapapeles() {
             const titulo = document.getElementById('modTit').innerText;
             const aut = document.getElementById('modAut').innerText;
@@ -2739,7 +2800,6 @@
             navigator.clipboard.writeText(textoFinal).then(() => {
                 const btn = document.getElementById('btnCopiar');
                 const textoOriginal = btn.innerText;
-                // MENSAJE TELEGRÁFICO
                 btn.innerText = '¡COPIADO!';
                 btn.style.background = 'var(--negro)';
                 btn.style.color = 'var(--blanco)';
@@ -2751,7 +2811,6 @@
             });
         }
 
-        // Botón Ascensor
         window.onscroll = function() {
             var btn = document.getElementById("btn-ascenso");
             if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
