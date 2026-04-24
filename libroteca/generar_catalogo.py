@@ -47,7 +47,7 @@ HTML_TEMPLATE = """
         
         .contenedor {{ flex: 1; max-width: 1200px; margin: 0 auto; width: 100%; display: flow-root; }}
         
-        /* CABECERA CON LOGO DE FONDO Y VELADURA */
+        /* CABECERA CON LOGO COMPLETO Y VELADURA */
         header {{ 
             text-align: center; 
             border-bottom: 1px solid var(--rojo-sangre); 
@@ -55,9 +55,8 @@ HTML_TEMPLATE = """
             margin-bottom: 30px; 
             border-radius: 8px;
             box-shadow: 0 4px 6px -6px rgba(163, 0, 0, 0.8);
-            /* La veladura (rgba) protege el texto para que el logo no lo ahogue */
             background-image: linear-gradient(rgba(250, 246, 237, 0.85), rgba(250, 246, 237, 0.92)), url('img/logolibro.png');
-            background-size: cover;
+            background-size: contain; /* Para que el logo se vea entero */
             background-position: center;
             background-repeat: no-repeat;
         }}
@@ -145,7 +144,7 @@ HTML_TEMPLATE = """
             box-shadow: 0 0 10px rgba(163, 0, 0, 0.3);
         }}
 
-        /* GRILLA: 4 COLUMNAS */
+        /* GRILLA */
         .grilla-tacuru {{
             display: grid !important;
             grid-template-columns: repeat(4, 1fr) !important;
@@ -232,7 +231,6 @@ HTML_TEMPLATE = """
             line-height: 1.1 !important;
             text-shadow: 0 0 8px #000, 2px 2px 4px #000 !important;
             z-index: 11 !important;
-            
             display: -webkit-box !important;
             -webkit-line-clamp: 4 !important;
             -webkit-box-orient: vertical !important;
@@ -249,49 +247,11 @@ HTML_TEMPLATE = """
             text-shadow: 0 0 5px #000, 1px 1px 3px #000 !important;
             z-index: 11 !important;
             font-weight: 500;
-            
             display: -webkit-box !important;
             -webkit-line-clamp: 2 !important;
             -webkit-box-orient: vertical !important;
             overflow: hidden !important;
             text-overflow: ellipsis !important;
-        }}
-
-        /* PIE DE PÁGINA HORMIGUEAR */
-        footer {{
-            margin-top: 60px;
-            padding: 40px 20px;
-            text-align: center;
-            background-color: var(--negro);
-            border-top: 4px solid var(--rojo-sangre);
-            box-shadow: 0 -4px 15px rgba(163, 0, 0, 0.3);
-        }}
-        .link-hormiguear {{
-            display: inline-flex;
-            flex-direction: column;
-            align-items: center;
-            color: var(--fondo-hueso) !important;
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease !important;
-        }}
-        .link-hormiguear:hover {{
-            color: var(--rojo-sangre) !important;
-            text-shadow: 0 0 10px rgba(163, 0, 0, 0.5);
-            transform: translateY(-3px);
-        }}
-        .svg-hormiga {{
-            width: 45px;
-            height: 45px;
-            fill: var(--rojo-sangre);
-            margin-bottom: 12px;
-            transition: fill 0.3s ease, transform 0.3s ease;
-        }}
-        .link-hormiguear:hover .svg-hormiga {{
-            fill: var(--fondo-hueso);
-            transform: scale(1.1);
         }}
 
         /* MODAL VISOR */
@@ -351,6 +311,7 @@ HTML_TEMPLATE = """
             box-shadow: 0 0 20px rgba(158, 40, 19, 0.8), inset 0 0 8px rgba(158, 40, 19, 0.4) !important;
         }}
 
+        /* BOTÓN ASCENSOR */
         #btn-ascenso {{
             position: fixed;
             bottom: 30px;
@@ -361,7 +322,7 @@ HTML_TEMPLATE = """
             color: var(--blanco);
             border: 2px solid var(--rojo-sangre);
             border-radius: 50%;
-            font-size: 2rem;
+            font-size: 1.5rem;
             cursor: pointer;
             display: none; 
             justify-content: center;
@@ -371,12 +332,21 @@ HTML_TEMPLATE = """
             transition: all 0.3s ease;
             backdrop-filter: blur(4px);
             text-decoration: none;
-            padding-bottom: 5px; 
+            padding-bottom: 2px;
         }}
         #btn-ascenso:hover {{
             transform: scale(1.1);
             background: var(--rojo-sangre);
             box-shadow: 0 0 25px rgba(163, 0, 0, 0.8);
+        }}
+
+        /* FOOTER HORMIGUEAR (Contenedor maestro) */
+        footer {{
+            margin-top: 60px;
+            background-color: var(--negro);
+            border-top: 4px solid var(--rojo-sangre);
+            box-shadow: 0 -4px 15px rgba(163, 0, 0, 0.3);
+            width: 100%;
         }}
 
         @media (max-width: 900px) {{
@@ -391,7 +361,7 @@ HTML_TEMPLATE = """
             .modal-caja {{ width: 95%; aspect-ratio: auto; min-height: 75vh; }}
             .tabs-header {{ flex-direction: column; }}
             .tab-btn {{ border-bottom: 1px solid var(--negro); }}
-            #btn-ascenso {{ bottom: 20px; right: 20px; width: 45px; height: 45px; font-size: 1.5rem; }}
+            #btn-ascenso {{ bottom: 20px; right: 20px; width: 45px; height: 45px; font-size: 1.2rem; }}
             .enlace-tarjeta {{ padding: 10px !important; }}
             .tarjeta-expediente h3 {{ font-size: 1.15rem !important; margin-bottom: 4px !important; }}
             .tarjeta-expediente p {{ font-size: 0.85rem !important; }}
@@ -433,16 +403,27 @@ HTML_TEMPLATE = """
         </div>
     </div>
 
-    <div id="btn-ascenso" onclick="volverArriba()" title="Volver al índice">&#8679;</div>
+    <div id="btn-ascenso" onclick="volverArriba()" title="Volver a arriba">&#9650;</div>
 
     <footer>
-        <a href="https://hormigue.ar/" class="link-hormiguear" target="_blank" rel="noopener noreferrer">
-            <svg class="svg-hormiga" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12,2C9.5,2 7.5,3.8 7.1,6.1C5.7,6.8 4.6,8 4.2,9.6C3.9,11 4.2,12.5 5,13.7L3.5,15.2C3.1,15.6 3.1,16.2 3.5,16.6C3.9,17 4.5,17 4.9,16.6L6.4,15.1C7.8,16.2 9.8,17 12,17C14.2,17 16.2,16.2 17.6,15.1L19.1,16.6C19.5,17 20.1,17 20.5,16.6C20.9,16.2 20.9,15.6 20.5,15.2L19,13.7C19.8,12.5 20.1,11 19.8,9.6C19.4,8 18.3,6.8 16.9,6.1C16.5,3.8 14.5,2 12,2ZM12,4C13.7,4 15,5.3 15,7C15,8.7 13.7,10 12,10C10.3,10 9,8.7 9,7C9,5.3 10.3,4 12,4ZM7.5,10.5C8.3,10.5 9,11.2 9,12C9,12.8 8.3,13.5 7.5,13.5C6.7,13.5 6,12.8 6,12C6,11.2 6.7,10.5 7.5,10.5ZM16.5,10.5C17.3,10.5 18,11.2 18,12C18,12.8 17.3,13.5 16.5,13.5C15.7,13.5 15,12.8 15,12C15,11.2 15.7,10.5 16.5,10.5Z"/>
-                <path d="M12,18C9,18 6.5,19.5 5.5,22H18.5C17.5,19.5 15,18 12,18Z"/>
-            </svg>
-            Conocé el sitio creado con pocos recursos económicos, técnicos e intelectuales.
-        </a>
+        <div class="footer-bunker" style="text-align: center; vertical-align: middle; width: 100%; color: #ffffff; line-height: 1.6; padding: 25px 0; display: block;">
+            <p style="margin-bottom: 8px; text-align: center !important; vertical-align: middle;">
+                <strong class="title-site-m" style="font-family: 'Almarai', sans-serif; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.8px; text-shadow: 0 0 4px #000, 0 0 8px #000, 0 0 12px #000, 0 0 16px #000, 0 0 20px #000 !important;"> 
+                    <a href="https://hormigue.ar/" style="color: #fff !important; text-decoration: none;">HORMIGUE.AR</a> 
+                </strong> 
+                <span class="no-break" style="white-space: nowrap !important; display: inline-block;"> 
+                    <a href="https://hormigue.ar/" style="text-decoration: none;">
+                        <img style="height: 2rem; width: auto; vertical-align: middle; margin-right: 0.3em; filter: drop-shadow(0 0 4px #000) drop-shadow(0 0 8px #000) drop-shadow(0 0 12px #000);" src="https://pica.hormigue.ar/hormiMG/icono%20hormi.png" alt="Ícono Hormi"> 
+                    </a>
+                </span> 
+                <span style="text-shadow: 0 0 4px #000, 0 0 8px #000, 0 0 12px #000, 0 0 16px #000, 0 0 20px #000 !important;"> 
+                    <span style="display: inline-block; transform: scaleX(-1);">C</span>opyleft 
+                </span>
+            </p>
+            <p class="sub-text-m" style="font-family: 'Arial Narrow', Arial, sans-serif; font-weight: 500; font-size: 0.8rem; color: #ffffff; margin: 0 auto; max-width: 90%; text-shadow: 0 0 5px #000, 0 0 9px #000; text-align: center; vertical-align: middle;">
+                un sitio creado con pocos recursos técnicos,<br>económicos e intelectuales
+            </p>
+        </div>
     </footer>
 
     <script>
@@ -535,8 +516,22 @@ def normalizar_categoria(cat_cruda):
         return 'Filosofía'
     if 'narrativa' in c or 'literatura' in c:
         return 'Literatura'
+    if 'sociolog' in c:
+        return 'Sociología'
+    if 'psicolog' in c or 'psiquiatr' in c or 'psicoan' in c:
+        return 'Psico'
+    if 'ciencia' in c:
+        return 'Divulgación Dura'
+    if 'derechos humanos' in c:
+        return 'Varios'
         
     return cat_cruda.split('/')[0].strip().title()
+
+def orden_mafioso(cat):
+    # Condena a "Varios" a estar siempre al final de la lista
+    if cat.upper() == 'VARIOS':
+        return 'ZZZZZZ'
+    return cat
 
 def generar_catalogo():
     try:
@@ -554,8 +549,11 @@ def generar_catalogo():
             cat_maestra = normalizar_categoria(cat_cruda)
             libros_agrupados[cat_maestra].append(lib)
             
+        # Generar lista de categorías con el orden especial (Varios al final)
+        categorias_ordenadas = sorted(libros_agrupados.keys(), key=orden_mafioso)
+
         indice_html = '<ul class="lista-indice">'
-        for cat in sorted(libros_agrupados.keys()):
+        for cat in categorias_ordenadas:
             cat_id = cat.lower().replace(' ', '-').replace('ñ', 'n').replace('ó','o').replace('í','i').replace('á','a')
             indice_html += f'<li><a href="#{cat_id}">{cat.upper()}</a></li>'
         indice_html += '</ul>'
@@ -577,7 +575,7 @@ def generar_catalogo():
             t_cont += f'<div id="{t_id}" class="tab-content {act}">{t_txt}</div>'
 
         secciones_html = ""
-        for cat in sorted(libros_agrupados.keys()):
+        for cat in categorias_ordenadas:
             cat_id = cat.lower().replace(' ', '-').replace('ñ', 'n').replace('ó','o').replace('í','i').replace('á','a')
             
             secciones_html += f'<h2 class="titulo-categoria" id="{cat_id}">{cat.upper()}</h2>'
@@ -611,9 +609,9 @@ def generar_catalogo():
             secciones_html += '</div>'
 
         html_final = HTML_TEMPLATE.format(
-            titulo_head=conf.get('titulo', 'Libroteca'),
-            titulo_pag=conf.get('titulo', 'Libroteca'),
-            sub_pag=conf.get('subtitulo', ''),
+            titulo_head="Libroteca",
+            titulo_pag="LIBROTECA",
+            sub_pag="ESTANTE DE ABAJO",
             bajada_pag=conf.get('bajada', ''),
             tabs_botones=t_btns,
             tabs_contenido=t_cont,
@@ -623,7 +621,7 @@ def generar_catalogo():
         with open(os.path.join(base_path, 'index.html'), 'w', encoding='utf-8') as f:
             f.write(html_final)
             
-        print(">>> Catálogo finalizado. Cabecera, carnada SEO y manifiesto nodocente inyectados con éxito.")
+        print(">>> Catálogo calibrado. Títulos sobreescritos, podadora operativa y footer del búnker anclado.")
         
     except Exception as e:
         print(f">>> ERROR TÉCNICO EN EL TACURÚ (Catálogo): {e}")
