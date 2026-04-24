@@ -237,9 +237,9 @@ HTML_TEMPLATE = """
                 <a href="https://hormigue.ar/">
                     <img style="height: 2rem; vertical-align: middle; margin: 0 5px;" src="https://pica.hormigue.ar/hormiMG/icono%20hormi.png" alt="H">
                 </a>
-                <span><a href="https://hormigue.ar/" style="color: #ffffff !important; text-decoration: none;">Copyleft</a></span>
+                <span><a href="https://hormigue.ar/" style="color: #ffffff !important; text-decoration: none;">Libroteca</a></span>
             </p>
-            <p style="font-family: 'Arial Narrow', sans-serif; font-size: 0.8rem;">un sitio creado con pocos recursos técnicos, económicos e intelectuales</p>
+            <p style="font-family: 'Arial Narrow', sans-serif; font-size: 0.8rem;"><a href="https://hormigue.ar/" style="color: #ffffff !important; text-decoration: none;">conocé el sitio creado con pocos recursos técnicos, económicos e intelectuales</a></p>
         </div>
     </footer>
 
@@ -321,7 +321,7 @@ def generar_catalogo():
         
         pestañas_forzadas = [
             {"id": "tab1", "titulo": "CONTENIDO", "texto": "Las categorías son orientativas. Algunos libros encajan en varias y otros en ninguna. Revisá todo, nunca confíes en las clasificaciones."},
-            {"id": "tab2", "titulo": "CÓMO", "texto": "Revisá, hacé picá en el título y copiá los datos del libro. Podés usarlos para escribirme, comparar precios o buscar reseñas en la web. Si no podés contactarme, este sitio no es para vos.<br>Si podés contactarme, coordinamos detalles: estado del libro, forma de pago y entrega. El pago es en pesos argentinos, por transferencia o efectivo. No acepto trueques, monedas extranjeras ni pagos en especies (por más seductora que sea la oferta)."},
+            {"id": "tab2", "titulo": "CÓMO", "texto": "Revisá, picá el libro que quieras y copiá los datos. Podés usarlos para escribirme por mensajería, comparar precios o buscar reseñas en la web. Si no podés contactarme, este sitio no es para vos.<br>Si podés contactarme, coordinamos detalles: estado del libro, forma de pago y entrega. El pago es en pesos argentinos, por transferencia o efectivo. No acepto trueques, monedas extranjeras ni pagos en especies (por más seductora que sea la oferta)."},
             {"id": "tab3", "titulo": "QUIÉNES", "texto": "Este sitio está pensado para lectoras y lectores cercanos. Posadas y Candelaria funcionan como referencia, pero lo central es el contacto: si podés ubicarme (directa o indirectamente), podés comprar. Si no, este sitio no es para vos."},
             {"id": "tab4", "titulo": "ENTREGA", "texto": "Las compras iguales o superiores a $25.000 tienen envío gratuito a domicilio dentro de Posadas y Candelaria. Cada entrega o retiro se coordina; fecha, lugar y horario se acuerdan entre ambas partes lectoras."}
         ]
