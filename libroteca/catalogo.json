@@ -2,7 +2,7 @@
   "config": {
     "titulo": "ESTANTE DE ABAJO",
     "subtitulo": "DE MI LIBROTECA",
-    "bajada": "Aquí va la breve explicación de la página, breve pero... El manual de operaciones de esta trinchera literaria."
+    "bajada": "El manual de operaciones de esta trinchera literaria. Seleccioná una obra para abrir el expediente."
   },
   "pestañas": [
     {"id": "tab1", "titulo": "CONTENIDO", "texto": "Explicación de qué tipo de expedientes y materiales se encuentran en esta colección."},
@@ -12,34 +12,74 @@
   ],
   "libros": [
     {
-      "titulo": "Realismo Capitalista",
-      "autor": "Mark Fisher",
-      "editorial": "Caja Negra",
-      "categoria": "Ensayo Político",
-      "coleccion": "Futuros Próximos",
-      "precio": "$15.000",
-      "año": "2016",
-      "imagen": "fisher.jpg"
+      "titulo": "¿Tienen derechos las mujeres? Política y ciudadanía en la Argentina del siglo XX",
+      "autor": "Mirta Zaida Lobato",
+      "editorial": "Capital Intelectual",
+      "categoria": "Género / Historia",
+      "coleccion": "Claves para Todos",
+      "precio": "$4.000 - $9.000",
+      "año": "s/d",
+      "imagen": "img/derechomujer (Mediana).jpg"
     },
     {
-      "titulo": "El Juguete Rabioso",
-      "autor": "Roberto Arlt",
-      "editorial": "Losada",
-      "categoria": "Ficción Nacional",
-      "coleccion": "Clásicos",
-      "precio": "$12.000",
-      "año": "1926",
-      "imagen": "arlt.jpg"
+      "titulo": "¿Y si el otro no estuviera ahí? Notas para una pedagogía (improbable) de la diferencia",
+      "autor": "Carlos Skliar",
+      "editorial": "Miño y Dávila / CTERA",
+      "categoria": "Educación/Pedagogía",
+      "coleccion": "",
+      "precio": "$14.000",
+      "año": "2003",
+      "imagen": "img/sielotro (Mediana).jpg"
     },
     {
-      "titulo": "Los pichiciegos",
-      "autor": "Fogwill",
-      "editorial": "Interzona",
-      "categoria": "Ficción Nacional",
-      "coleccion": "Narrativa",
-      "precio": "$14.500",
-      "año": "1983",
-      "imagen": "fogwill.jpg"
+      "titulo": "4 manos poesías",
+      "autor": "Inés Sarri",
+      "editorial": "Editorial Universitaria de Misiones",
+      "categoria": "Literatura",
+      "coleccion": "",
+      "precio": "$5.000 - $16.000",
+      "año": "s/d",
+      "imagen": "img/4manos (Mediana).jpg"
+    },
+    {
+      "titulo": "Alfabetización semiótica en las fronteras",
+      "autor": "Ana Camblong; Froilán Fernández",
+      "editorial": "Editorial Universitaria de Misiones",
+      "categoria": "Comunicación / Semiótica",
+      "coleccion": "",
+      "precio": "$8.000 - $16.000",
+      "año": "2010",
+      "imagen": "img/alfabetsemio (Mediana).jpg"
+    },
+    {
+      "titulo": "Un médico rural",
+      "autor": "Franz Kafka",
+      "editorial": "Página/12",
+      "categoria": "Literatura",
+      "coleccion": "",
+      "precio": "$5.000 - $16.000",
+      "año": "1919",
+      "imagen": "img/medicorural (Mediana).jpg"
+    },
+    {
+      "titulo": "La Voluntad. Una historia de la militancia revolucionaria en la Argentina 1966-1973",
+      "autor": "Eduardo Anguita; Martín Caparrós",
+      "editorial": "Grupo Editorial Norma",
+      "categoria": "Historia / Política",
+      "coleccion": "",
+      "precio": "$6.000 - $15.000",
+      "año": "1997",
+      "imagen": "img/voluntad (Mediana).jpg"
+    },
+    {
+      "titulo": "Wing de metegol",
+      "autor": "Juan Sasturain",
+      "editorial": "Página/12",
+      "categoria": "Literatura",
+      "coleccion": "",
+      "precio": "$6.000 - $12.000",
+      "año": "2003",
+      "imagen": "img/wing (Mediana).jpg"
     }
   ]
 }
