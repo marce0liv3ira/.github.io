@@ -2,19 +2,21 @@ import json
 import os
 from collections import defaultdict
 
-# --- COORDENADAS TÁCTICAS ---
-RUTA_JSON = r'C:\Users\sebam\bunker\HORMIgithub2\.github.io\libroteca\catalogo.json'
-RUTA_HTML_DESTINO = r'C:\Users\sebam\bunker\HORMIgithub2\.github.io\libroteca\index.html'
-
 HTML_TEMPLATE = """
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Libroteca - Hormiguear</title>
+    <title>{titulo_head}</title>
     
     <link rel="icon" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/book-half.svg" type="image/svg+xml">
+    
+    <meta name="description" content="Libros usados, listos para seguir usándose. Picá y mirá.">
+    <meta property="og:title" content="{titulo_head}">
+    <meta property="og:description" content="Libros usados, listos para seguir usándose. Picá y mirá.">
+    <meta property="og:image" content="https://hormigue.ar/libroteca/img/logolibro.png">
+    <meta property="og:type" content="website">
     
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
     
@@ -36,80 +38,112 @@ HTML_TEMPLATE = """
         
         .contenedor {{ flex: 1; max-width: 1200px; margin: 0 auto; width: 100%; display: flow-root; }}
         
-        /* HEADER: LOGO SÓLIDO Y PERFIL */
+        /* AJUSTE 3: LOGO DE FONDO MÁS SÓLIDO (Menos transparencia en el gradiente) */
         header {{ 
             border-bottom: 1px solid var(--rojo-sangre); padding: 40px 20px; margin-bottom: 30px; border-radius: 8px;
             box-shadow: 0 4px 6px -6px rgba(163, 0, 0, 0.8);
-            background-image: linear-gradient(rgba(250, 246, 237, 0.4), rgba(250, 246, 237, 0.5)), url('img/logolibro.png');
+            background-image: linear-gradient(rgba(250, 246, 237, 0.45), rgba(250, 246, 237, 0.55)), url('img/logolibro.png');
             background-size: contain; background-position: center; background-repeat: no-repeat;
             display: flex; flex-direction: column; gap: 20px;
         }}
 
         .header-superior {{ display: flex; justify-content: space-between; align-items: center; width: 100%; }}
+        .header-titulos {{ text-align: left; }}
+
         h1 {{ font-family: 'Bebas Neue', sans-serif !important; font-size: 5rem !important; color: var(--rojo-sangre) !important; margin: 0; line-height: 0.9 !important; }}
         h2 {{ font-family: 'Bebas Neue', sans-serif !important; font-size: 2.5rem !important; color: var(--negro) !important; margin: 0; }}
 
         .bloque-autor {{ display: flex; align-items: center; gap: 15px; background: rgba(163, 0, 0, 0.05); padding: 10px 15px; border-radius: 50px 10px 10px 50px; border: 1px solid rgba(163, 0, 0, 0.2); }}
         .foto-autor {{ width: 70px; height: 70px; border-radius: 50%; border: 2px solid var(--rojo-sangre); object-fit: cover; box-shadow: 0 0 10px rgba(163, 0, 0, 0.3); }}
-        .nombre-autor {{ font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; color: var(--negro); text-transform: uppercase; }}
+        .nombre-autor {{ font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; color: var(--negro); letter-spacing: 1px; text-transform: uppercase; }}
 
+        /* AJUSTE 2: BAJADA CON MÁS TRANSPARENCIA */
         .bajada {{ 
-            font-size: 1.1rem; font-weight: 500; background: rgba(255, 255, 255, 0.3); padding: 15px 20px; 
-            border-radius: 4px; border-left: 4px solid var(--rojo-sangre); backdrop-filter: blur(2px); 
+            font-size: 1.1rem; font-weight: 500; color: var(--negro); 
+            font-family: 'Inter', sans-serif; 
+            background: rgba(255, 255, 255, 0.35);
+            padding: 15px 20px; border-radius: 4px;
+            text-align: left; max-width: 100%; line-height: 1.5;
+            border-left: 4px solid var(--rojo-sangre);
+            backdrop-filter: blur(2px);
         }}
 
-        /* MENÚ E ÍNDICE DE COLUMNAS */
         .caja-menu {{ border: 1px solid var(--rojo-sangre); margin-bottom: 40px; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 0 12px rgba(163, 0, 0, 0.25); }}
         .tabs-header {{ display: flex; border-bottom: 1px solid var(--rojo-sangre); background: var(--negro); }}
-        .tab-btn {{ flex: 1; padding: 12px; cursor: pointer; font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--blanco); background: transparent; border: none; transition: 0.3s; }}
-        .tab-btn.active {{ background: var(--rojo-sangre); }}
+        .tab-btn {{ flex: 1; padding: 12px; cursor: pointer; font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--blanco); background: transparent; border: none; transition: all 0.3s ease; letter-spacing: 1px; }}
+        .tab-btn.active, .tab-btn:hover {{ background: var(--rojo-sangre); }}
         .tab-content {{ padding: 20px; display: none; font-size: 1.1rem; line-height: 1.5; }}
         .tab-content.active {{ display: block; }}
         
-        .lista-indice {{ 
-            list-style: none; padding: 0; margin: 15px 0 0 0; display: flex; flex-direction: column; 
-            flex-wrap: wrap; align-content: flex-start; gap: 6px 30px; max-height: 150px; 
-        }}
-        .lista-indice li {{ font-family: 'Bebas Neue', sans-serif; font-size: 1.25rem; }}
+        .caja-indice-interna {{ margin-top: 25px; padding-top: 15px; border-top: 1px dashed var(--rojo-sangre); }}
 
-        /* GRID Y TARJETAS */
-        .titulo-categoria {{ font-family: 'Bebas Neue', sans-serif !important; font-size: 3rem !important; color: var(--blanco) !important; background: var(--negro) !important; padding: 5px 15px !important; border-left: 5px solid var(--rojo-sangre) !important; margin: 50px 0 20px 0 !important; border-radius: 4px; }}
+        /* AJUSTE 1: ÍNDICE CON SALTO DE COLUMNA TÁCTICO (PC) */
+        .lista-indice {{ 
+            list-style-type: none; padding: 0; margin: 0;
+            display: flex; flex-direction: column; flex-wrap: wrap;
+            align-content: flex-start; gap: 6px 30px; 
+            max-height: 140px; /* Forzamos el quiebre después de la 5ta categoría aprox */
+            overflow: hidden;
+        }}
+        .lista-indice li {{ font-family: 'Bebas Neue', sans-serif; font-size: 1.25rem; letter-spacing: 1px; }}
+
+        .titulo-categoria {{ font-family: 'Bebas Neue', sans-serif !important; font-size: 3rem !important; color: var(--blanco) !important; background: var(--negro) !important; padding: 5px 15px !important; border-left: 5px solid var(--rojo-sangre) !important; margin: 50px 0 20px 0 !important; text-transform: uppercase !important; border-radius: 4px; }}
+        
+        /* AJUSTE MOBILE: GRILLA DE 2 COLUMNAS */
         .grilla-tacuru {{ display: grid !important; grid-template-columns: repeat(4, 1fr) !important; gap: 15px !important; margin: 2rem 0 !important; }}
         
-        .tarjeta-expediente {{ position: relative !important; aspect-ratio: 1 / 1 !important; background-color: #000 !important; border: 1px solid var(--rojo-oscuro) !important; border-radius: 8px !important; overflow: hidden; transition: 0.4s; cursor: pointer; }}
+        .tarjeta-expediente {{ position: relative !important; aspect-ratio: 1 / 1 !important; background-color: #000 !important; border: 1px solid var(--rojo-oscuro) !important; border-radius: 8px !important; overflow: hidden; transition: all 0.4s ease; cursor: pointer; }}
         .tarjeta-expediente:hover {{ transform: scale(1.03) !important; border-color: var(--rojo-sangre) !important; box-shadow: 0 0 25px rgba(163, 0, 0, 0.65); }}
+        .tarjeta-imagen-wrapper {{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }}
         .tarjeta-imagen-wrapper img {{ width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); opacity: 0.6; transition: 0.5s; }}
         .tarjeta-expediente:hover img {{ filter: grayscale(0%); opacity: 1; }}
         
-        .enlace-tarjeta {{ display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 100%; padding: 15px; position: relative; z-index: 10; text-align: center; color: white; }}
+        .enlace-tarjeta {{ display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 100%; padding: 15px; position: relative; z-index: 10; text-align: center; box-sizing: border-box; }}
+        
+        /* AJUSTE 4: CONTROL DE DESBORDE DE TEXTO EN GRID */
         .tarjeta-expediente h3 {{ 
-            font-family: 'Bebas Neue', sans-serif !important; font-size: 1.6rem !important; margin: 0 0 6px 0; 
-            line-height: 1 !important; text-shadow: 2px 2px 4px #000; width: 100%; overflow: hidden; 
+            font-family: 'Bebas Neue', sans-serif !important; color: #fff !important; 
+            font-size: 1.6rem !important; margin: 0 0 6px 0; line-height: 1 !important; 
+            text-shadow: 2px 2px 4px #000; width: 100%; overflow: hidden; 
             text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; 
         }}
+        .tarjeta-expediente p {{ 
+            font-family: 'Inter', sans-serif; color: var(--fondo-hueso); font-size: 0.95rem; margin: 0; 
+            text-shadow: 1px 1px 3px #000; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 90%; 
+        }}
 
-        /* MODAL: ROJO SANGRE SECA */
         .modal-overlay {{ display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); justify-content: center; align-items: center; backdrop-filter: blur(5px); }}
         .modal-caja {{ position: relative; width: 90%; max-width: 450px; aspect-ratio: 2/3; border: 2px solid var(--rojo-sangre); border-radius: 8px; background-size: cover; background-position: center; overflow: hidden; }}
-        .modal-oscuridad {{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); display: flex; flex-direction: column; justify-content: center; padding: 30px; box-sizing: border-box; color: white; }}
-        .modal-titulo {{ font-family: 'Bebas Neue', sans-serif; font-size: 2.6rem; border-bottom: 1px solid var(--rojo-sangre); margin-bottom: 20px; padding-bottom: 10px; }}
-        .datos-expediente {{ font-size: 1.15rem; line-height: 1.8; text-align: left; }}
-        .datos-expediente strong {{ color: var(--rojo-sangre) !important; font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; }}
+        .modal-oscuridad {{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); display: flex; flex-direction: column; justify-content: center; padding: 30px; box-sizing: border-box; }}
+        .modal-titulo {{ font-family: 'Bebas Neue', sans-serif; font-size: 2.6rem; color: var(--blanco); margin: 0 0 20px 0; border-bottom: 1px solid var(--rojo-sangre); padding-bottom: 10px; line-height: 1.1; }}
         
+        /* AJUSTE 5: ROJO SANGRE SECA EN VARIABLES DEL MODAL */
+        .datos-expediente {{ color: var(--blanco); font-size: 1.15rem; line-height: 1.8; text-align: left; }}
+        .datos-expediente strong {{ color: var(--rojo-sangre) !important; font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 1px; }}
+        
+        .btn-copiar {{ margin-top: 25px; width: 100%; padding: 15px; background: var(--rojo-sangre); color: var(--blanco); border: none; font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; cursor: pointer; border-radius: 8px; transition: 0.3s; }}
+        .btn-copiar:hover {{ background: var(--negro); color: var(--rojo-sangre); border: 1px solid var(--rojo-sangre); }}
+
+        /* AJUSTE 6: HOVER DEL BOTÓN SUBIR */
         #btn-ascenso {{ 
             position: fixed; bottom: 30px; right: 30px; width: 55px; height: 55px; background: rgba(0, 0, 0, 0.8); 
-            color: var(--blanco); border: 2px solid var(--rojo-sangre); border-radius: 50%; display: none; 
-            justify-content: center; align-items: center; transition: 0.3s; z-index: 1000; 
+            color: var(--blanco); border: 2px solid var(--rojo-sangre); border-radius: 50%; font-size: 1.5rem; 
+            cursor: pointer; display: none; justify-content: center; align-items: center; z-index: 1000; 
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
         }}
         #btn-ascenso:hover {{ background: var(--rojo-sangre); transform: scale(1.1) translateY(-5px); box-shadow: 0 0 20px var(--rojo-sangre); }}
 
-        footer {{ margin-top: 60px; background-color: var(--negro); border-top: 4px solid var(--rojo-sangre); width: 100%; text-align: center; color: white; padding: 25px 0; }}
-        
+        footer {{ margin-top: 60px; background-color: var(--negro); border-top: 4px solid var(--rojo-sangre); width: 100%; }}
+
+        @media (max-width: 900px) {{ .grilla-tacuru {{ grid-template-columns: repeat(3, 1fr) !important; }} h1 {{ font-size: 3.5rem !important; }} }}
         @media (max-width: 600px) {{ 
-            .grilla-tacuru {{ grid-template-columns: repeat(2, 1fr) !important; }} 
-            .lista-indice {{ max-height: none !important; flex-direction: row !important; flex-wrap: wrap !important; }} 
-            .lista-indice li {{ width: 45%; }} 
             .header-superior {{ flex-direction: column; align-items: flex-start; gap: 15px; }}
+            .bloque-autor {{ width: 100%; justify-content: flex-start; }}
+            /* AJUSTE MOBILE: 2 COLUMNAS SIEMPRE */
+            .grilla-tacuru {{ grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }} 
+            /* AJUSTE ÍNDICE MOBILE: 2 COLUMNAS BALANCEADAS */
+            .lista-indice {{ max-height: none !important; flex-direction: row !important; flex-wrap: wrap !important; }}
+            .lista-indice li {{ width: 45%; margin-bottom: 5px; }}
         }}
     </style>
 </head>
@@ -117,18 +151,27 @@ HTML_TEMPLATE = """
     <div class="contenedor">
         <header>
             <div class="header-superior">
-                <div class="header-titulos"><h1>LIBROTECA</h1><h2>ESTANTE DE ABAJO</h2></div>
+                <div class="header-titulos">
+                    <h1>{titulo_pag}</h1>
+                    <h2>{sub_pag}</h2>
+                </div>
                 <div class="bloque-autor">
-                    <img src="https://hormigue.ar/media/website/marcef.webp" class="foto-autor">
+                    <img src="https://hormigue.ar/media/website/marcef.webp" class="foto-autor" alt="marce oliveira">
                     <span class="nombre-autor">marce oliveira</span>
                 </div>
             </div>
             <div class="bajada">{bajada_pag}</div>
         </header>
+
         <div class="caja-menu" id="menu-selector">
-            <div class="tabs-header">{tabs_botones}</div>
-            <div class="tabs-cuerpo">{tabs_contenido}</div>
+            <div class="tabs-header">
+                {tabs_botones}
+            </div>
+            <div class="tabs-cuerpo">
+                {tabs_contenido}
+            </div>
         </div>
+
         {secciones_html}
     </div>
 
@@ -136,7 +179,7 @@ HTML_TEMPLATE = """
         <div class="modal-caja" id="modalFondo">
             <span style="position:absolute; top:10px; right:20px; color:white; font-size:3rem; cursor:pointer;" onclick="cerrarModalFuerza()">&times;</span>
             <div class="modal-oscuridad">
-                <div id="modTit" class="modal-titulo"></div>
+                <div class="modal-titulo" id="modTit"></div>
                 <div class="datos-expediente">
                     <strong>AUTOR:</strong> <span id="modAut"></span><br>
                     <strong>EDITORIAL:</strong> <span id="modEdi"></span><br>
@@ -144,96 +187,150 @@ HTML_TEMPLATE = """
                     <strong>ESTADO:</strong> <span id="modEst"></span><br>
                     <strong>PRECIO:</strong> <span id="modPre"></span>
                 </div>
-                <button onclick="copiarAlPortapapeles()" style="margin-top:20px; width:100%; padding:15px; background:var(--rojo-sangre); color:white; border:none; font-family:'Bebas Neue'; font-size:1.6rem; cursor:pointer; border-radius:8px;">COPIAR</button>
+                <button class="btn-copiar" id="btnCopiar" onclick="copiarAlPortapapeles()">COPIAR</button>
             </div>
         </div>
     </div>
 
-    <div id="btn-ascenso" onclick="window.scrollTo({{top:0, behavior:'smooth'}})">&#9650;</div>
+    <div id="btn-ascenso" onclick="volverArriba()" title="Volver a arriba">&#9650;</div>
 
     <footer>
-        <p><strong style="font-family:'Almarai'; text-transform:uppercase;"><a href="https://hormigue.ar/" style="color:white;">HORMIGUE.AR</a></strong>
-        <a href="https://hormigue.ar/"><img src="https://pica.hormigue.ar/hormiMG/icono%20hormi.png" style="height:2rem; vertical-align:middle; margin: 0 5px;"></a>
-        <a href="https://hormigue.ar/" style="color:white;">Copyleft</a></p>
-        <p style="font-family:'Arial Narrow'; font-size:0.8rem; opacity:0.7;">un sitio creado con pocos recursos técnicos, económicos e intelectuales</p>
+        <div class="footer-bunker" style="text-align: center; color: #ffffff; padding: 25px 0;">
+            <p style="margin-bottom: 8px;">
+                <strong style="font-family: 'Almarai', sans-serif; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.8px;">
+                    <a href="https://hormigue.ar/" style="color: white !important;">HORMIGUE.AR</a>
+                </strong>
+                <a href="https://hormigue.ar/">
+                    <img style="height: 2rem; vertical-align: middle; margin: 0 5px;" src="https://pica.hormigue.ar/hormiMG/icono%20hormi.png" alt="H">
+                
+                <span><a href="https://hormigue.ar/" style="color: white !important;">Libroteca</a></span>
+                </a>
+            </p>
+            <p style="font-family: 'Arial Narrow', sans-serif; font-size: 0.8rem; opacity: 0.8;">conocé el sitio creado con pocos recursos técnicos, económicos e intelectuales</p>
+        </div>
     </footer>
 
     <script>
-        function abrirTab(id, el) {{ 
-            document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active')); 
-            document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active')); 
-            document.getElementById(id).classList.add('active'); el.classList.add('active'); 
+        function abrirTab(idTab, elemento) {{
+            var contenidos = document.querySelectorAll('.tab-content');
+            contenidos.forEach(c => c.classList.remove('active'));
+            var botones = document.querySelectorAll('.tab-btn');
+            botones.forEach(b => b.classList.remove('active'));
+            document.getElementById(idTab).classList.add('active');
+            elemento.classList.add('active');
         }}
-        function abrirExpediente(el) {{
-            document.getElementById('modTit').innerText = el.getAttribute('data-tit');
-            document.getElementById('modAut').innerText = el.getAttribute('data-aut');
-            document.getElementById('modEdi').innerText = el.getAttribute('data-edi');
-            document.getElementById('modAño').innerText = el.getAttribute('data-ano');
-            document.getElementById('modEst').innerText = el.getAttribute('data-est');
-            document.getElementById('modPre').innerText = el.getAttribute('data-pre');
-            document.getElementById('modalFondo').style.backgroundImage = `url('${{el.getAttribute('data-img')}}')`;
+
+        function abrirExpediente(elemento) {{
+            document.getElementById('modTit').innerText = elemento.getAttribute('data-tit');
+            document.getElementById('modAut').innerText = elemento.getAttribute('data-aut');
+            document.getElementById('modEdi').innerText = elemento.getAttribute('data-edi');
+            document.getElementById('modAño').innerText = elemento.getAttribute('data-ano');
+            document.getElementById('modEst').innerText = elemento.getAttribute('data-est');
+            document.getElementById('modPre').innerText = elemento.getAttribute('data-pre');
+            document.getElementById('modalFondo').style.backgroundImage = `url('${{elemento.getAttribute('data-img')}}')`;
             document.getElementById('modalLibro').style.display = 'flex';
         }}
-        function cerrarModal(e) {{ if(e.target.id==='modalLibro') e.target.style.display='none'; }}
-        function cerrarModalFuerza() {{ document.getElementById('modalLibro').style.display='none'; }}
+
+        function cerrarModal(e) {{ if (e.target.id === 'modalLibro') e.target.style.display = 'none'; }}
+        function cerrarModalFuerza() {{ document.getElementById('modalLibro').style.display = 'none'; }}
+
         function copiarAlPortapapeles() {{
-            const txt = `Quiero este libro: "${{document.getElementById('modTit').innerText}}" de ${{document.getElementById('modAut').innerText}}.`;
-            navigator.clipboard.writeText(txt).then(()=>alert('Copiado al portapapeles'));
+            const t = document.getElementById('modTit').innerText;
+            const a = document.getElementById('modAut').innerText;
+            const txt = `Quiero este libro: "${{t}}" de "${{a}}".`;
+            navigator.clipboard.writeText(txt).then(() => {{
+                document.getElementById('btnCopiar').innerText = '¡COPIADO!';
+                setTimeout(() => {{ document.getElementById('btnCopiar').innerText = 'COPIAR'; }}, 2000);
+            }});
         }}
-        window.onscroll = ()=>{{ document.getElementById("btn-ascenso").style.display = (window.scrollY>500)? "flex":"none"; }};
+
+        window.onscroll = function() {{
+            document.getElementById("btn-ascenso").style.display = (window.scrollY > 500) ? "flex" : "none";
+        }};
+
+        function volverArriba() {{ window.scrollTo({{top: 0, behavior: 'smooth'}}); }}
     </script>
 </body>
 </html>
 """
 
-def normalizar_categoria(c):
-    c = c.lower()
+def normalizar_categoria(cat_cruda):
+    c = cat_cruda.lower()
     if 'ensayo' in c: return 'Ensayo'
     if 'historia' in c: return 'Historia'
-    if 'polític' in c: return 'Política'
-    if 'literatura' in c or 'narrativa' in c or 'crónica' in c: return 'Literatura'
-    if 'sociolog' in c: return 'Sociología'
+    if 'polític' in c or 'politic' in c: return 'Política'
+    if 'comunicaci' in c: return 'Comunicación'
     if 'filosof' in c: return 'Filosofía'
-    if 'psico' in c: return 'Psico'
+    if 'narrativa' in c or 'literatura' in c or 'crónica' in c: return 'Literatura'
+    if 'sociolog' in c: return 'Sociología'
+    if 'psicolog' in c or 'psiquiatr' in c or 'psicoan' in c: return 'Psico'
     if 'ciencia' in c: return 'Divulgación Dura'
-    return c.split('/')[0].strip().title()
+    if 'derechos humanos' in c: return 'Varios'
+    return cat_cruda.split('/')[0].strip().title()
 
-def generar():
+def orden_mafioso(cat):
+    return 'ZZZZZZ' if cat.upper() == 'VARIOS' else cat
+
+def generar_catalogo():
     try:
-        with open(RUTA_JSON, 'r', encoding='utf-8') as f: data = json.load(f)
+        ruta_json = os.path.join(os.path.dirname(__file__), 'catalogo.json')
+        with open(ruta_json, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            
+        bajada_forzada = (
+            "Libros usados listos para seguir circulando.<br>"
+            "Esta es una venta pensada para lectoras y lectores de la zona. Las ofertas se hacen por tandas. Voy cargando títulos a medida que avanzo con el inventario de mi biblioteca, por estantes.<br>"
+            "Todos los libros están en muy buen estado; algunos, incluso, son nuevos. Fueron cuidados como corresponde, como mucho, alguna marca de lápiz. "
+            "Los pocos ejemplares deteriorados lo están por razones nobles: paso del tiempo, ferias, reventas. Los títulos descatalogados, la resistencia."
+        )
+        
+        pestañas_forzadas = [
+            {"id": "tab1", "titulo": "CONTENIDO", "texto": "Las categorías son orientativas. Algunos libros encajan en varias y otros en ninguna. Revisá todo, nunca confíes en las clasificaciones."},
+            {"id": "tab2", "titulo": "CÓMO", "texto": "Revisá, picá el libro que te interese y copiá los datos. Podés usarlos para enviármelos, comparar precios o buscar reseñas en la web. Si no podés contactarme, este sitio no es para vos.<br>Si podés contactarme, coordinamos detalles: estado del libro, forma de pago y entrega. El pago es en pesos argentinos, por transferencia o efectivo. No acepto trueques, monedas extranjeras ni pagos en especies (por más seductora que sea la oferta)."},
+            {"id": "tab3", "titulo": "QUIÉNES", "texto": "Este sitio está pensado para lectoras y lectores cercanos. Posadas y Candelaria funcionan como referencia, pero lo central es el contacto: si podés ubicarme (directa o indirectamente), podés comprar. Si no, este sitio no es para vos."},
+            {"id": "tab4", "titulo": "ENTREGA", "texto": "Las compras iguales o superiores a $25.000 tienen envío gratuito a domicilio dentro de Posadas y Candelaria. Cada entrega o retiro se coordina; fecha, lugar y horario se acuerdan entre ambas partes lectoras."}
+        ]
+        
         libros_agrupados = defaultdict(list)
-        for lib in data['libros']: libros_agrupados[normalizar_categoria(lib.get('categoria', 'Varios'))].append(lib)
-        cats = sorted(libros_agrupados.keys())
-        
-        indice = '<ul class="lista-indice">' + "".join([f'<li><a href="#{c.lower().replace(" ","-")}">{c.upper()}</a></li>' for c in cats]) + '</ul>'
-        
-        t_btns = '<button class="tab-btn active" onclick="abrirTab(\'tab1\', this)">CONTENIDO</button>'
-        t_btns += '<button class="tab-btn" onclick="abrirTab(\'tab2\', this)">CÓMO</button>'
-        t_btns += '<button class="tab-btn" onclick="abrirTab(\'tab3\', this)">ENTREGA</button>'
-        
-        t_cont = f'<div id="tab1" class="tab-content active"><p>Categorías orientativas. No confíes en las etiquetas.</p><div class="caja-indice-interna">{indice}</div></div>'
-        t_cont += '<div id="tab2" class="tab-content">Revisá, picá en el título y copiá los datos. Si podés ubicarme, podés comprar. Pago en pesos, transferencia o efectivo.</div>'
-        t_cont += '<div id="tab3" class="tab-content">Envío gratuito en Posadas y Candelaria en compras superiores a $25.000. Coordinamos lugar y horario.</div>'
-        
-        secciones = ""
-        for cat in cats:
-            c_id = cat.lower().replace(" ","-")
-            secciones += f'<h2 class="titulo-categoria" id="{c_id}">{cat.upper()}</h2><div class="grilla-tacuru">'
+        for lib in data.get('libros', []):
+            libros_agrupados[normalizar_categoria(lib.get('categoria', 'Varios'))].append(lib)
+            
+        cats_ordenadas = sorted(libros_agrupados.keys(), key=orden_mafioso)
+
+        indice_html = '<ul class="lista-indice">'
+        for cat in cats_ordenadas:
+            c_id = cat.lower().replace(' ', '-')
+            indice_html += f'<li><a href="#{c_id}">{cat.upper()}</a></li>'
+        indice_html += '</ul>'
+
+        t_btns, t_cont = "", ""
+        for i, tab in enumerate(pestañas_forzadas):
+            act = "active" if i == 0 else ""
+            txt = f'<div class="texto-pestaña">{tab["texto"]}</div><div class="caja-indice-interna">{indice_html}</div>' if tab["id"] == "tab1" else tab["texto"]
+            t_btns += f'<button class="tab-btn {act}" onclick="abrirTab(\'{tab["id"]}\', this)">{tab["titulo"]}</button>'
+            t_cont += f'<div id="{tab["id"]}" class="tab-content {act}">{txt}</div>'
+
+        secciones_html = ""
+        for cat in cats_ordenadas:
+            c_id = cat.lower().replace(' ', '-')
+            secciones_html += f'<h2 class="titulo-categoria" id="{c_id}">{cat.upper()}</h2><div class="grilla-tacuru">'
             for lib in libros_agrupados[cat]:
-                secciones += f"""
+                secciones_html += f"""
                 <div class="tarjeta-expediente" data-tit="{lib.get('titulo','')}" data-aut="{lib.get('autor','')}" data-edi="{lib.get('editorial','')}" data-ano="{lib.get('año','')}" data-est="{lib.get('estado','Muy bueno')}" data-pre="{lib.get('precio','Consultar')}" data-img="{lib.get('imagen','')}" onclick="abrirExpediente(this)">
                     <div class="tarjeta-imagen-wrapper"><img src="{lib.get('imagen','')}" onerror="this.style.display='none'"></div>
                     <div class="enlace-tarjeta"><h3>{lib.get('titulo','')}</h3><p>{lib.get('autor','')}</p></div>
                 </div>"""
-            secciones += '</div>'
-        
-        bajada = "Libros usados listos para seguir circulando. Tandas de ofertas para lectores cercanos. Cuidados como corresponde."
-        
-        with open(RUTA_HTML_DESTINO, 'w', encoding='utf-8') as f:
-            f.write(HTML_TEMPLATE.format(titulo_head="Libroteca", bajada_pag=bajada, tabs_botones=t_btns, tabs_contenido=t_cont, secciones_html=secciones))
-        
-        print(f">>> OPERACIÓN EXITOSA: {len(data['libros'])} libros procesados. HTML blindado en su destino.")
+            secciones_html += '</div>'
 
-    except Exception as e: print(f">>> ERROR EN LA MATRIZ: {e}")
+        html_final = HTML_TEMPLATE.format(
+            titulo_head="Libroteca", titulo_pag="LIBROTECA", sub_pag="ESTANTE DE ABAJO",
+            bajada_pag=bajada_forzada, tabs_botones=t_btns, tabs_contenido=t_cont, secciones_html=secciones_html
+        )
+        
+        with open(os.path.join(os.path.dirname(__file__), 'index.html'), 'w', encoding='utf-8') as f:
+            f.write(html_final)
+        print(">>> Catálogo sellado. Perfil de autor inyectado.")
+        
+    except Exception as e: print(f">>> ERROR EN LA MAQUINARIA: {e}")
 
-if __name__ == "__main__": generar()
+if __name__ == "__main__": generar_catalogo()
