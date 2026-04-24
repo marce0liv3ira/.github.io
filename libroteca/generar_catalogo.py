@@ -38,13 +38,13 @@ HTML_TEMPLATE = """
         
         .contenedor {{ max-width: 1200px; margin: 0 auto; display: flow-root; }}
         
-        /* CABECERA (Línea ultrafina y títulos enormes) */
+        /* CABECERA */
         header {{ 
             text-align: center; 
             border-bottom: 1px solid var(--rojo-sangre); 
             padding-bottom: 20px; 
             margin-bottom: 30px; 
-            box-shadow: 0 4px 6px -6px rgba(163, 0, 0, 0.8); /* Resplandor inferior de la línea */
+            box-shadow: 0 4px 6px -6px rgba(163, 0, 0, 0.8);
         }}
         h1 {{ 
             font-family: 'Bebas Neue', sans-serif !important; 
@@ -64,7 +64,7 @@ HTML_TEMPLATE = """
         }}
         .bajada {{ font-size: 1.2rem; font-weight: bold; color: var(--gris-ceniza); font-family: 'Inter', sans-serif; }}
 
-        /* CAJA DE MENÚ (Redondeada con neón sutil) */
+        /* CAJA DE MENÚ */
         .caja-menu {{ 
             border: 1px solid var(--rojo-sangre); 
             margin-bottom: 40px; 
@@ -86,19 +86,32 @@ HTML_TEMPLATE = """
         .tab-content {{ padding: 20px; display: none; font-size: 1.1rem; font-family: 'Inter', sans-serif; }}
         .tab-content.active {{ display: block; }}
 
-        /* ÍNDICE DE CATEGORÍAS (Sin cubo, puro resplandor) */
-        .caja-indice {{ 
-            border: 1px solid var(--rojo-sangre); 
-            padding: 20px; 
-            margin-bottom: 40px; 
-            background: var(--blanco); 
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(163, 0, 0, 0.25);
+        /* ÍNDICE INTERNO (Dentro de la pestaña) */
+        .caja-indice-interna {{
+            margin-top: 25px;
+            padding-top: 15px;
+            border-top: 1px dashed var(--rojo-sangre);
         }}
-        .caja-indice h3 {{ font-family: 'Bebas Neue', sans-serif !important; font-size: 2.2rem !important; margin-top: 0; color: var(--negro) !important; }}
-        .lista-indice {{ list-style-type: square; color: var(--rojo-base); font-size: 1.2rem; font-weight: bold; font-family: 'Inter', sans-serif; }}
-        .lista-indice li {{ margin-bottom: 8px; }}
-        
+        .lista-indice {{ 
+            list-style-type: none; 
+            padding: 0; 
+            margin: 0;
+            max-height: 180px; 
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            gap: 8px 30px;
+            overflow-x: auto;
+        }}
+        .lista-indice li {{ 
+            font-family: 'Bebas Neue', sans-serif; 
+            font-size: 1.5rem; 
+            letter-spacing: 1px; 
+        }}
+        .lista-indice li a {{ color: var(--rojo-oscuro) !important; transition: color 0.2s; }}
+        .lista-indice li a:hover {{ color: var(--rojo-sangre) !important; }}
+
         .titulo-categoria {{ 
             font-family: 'Bebas Neue', sans-serif !important; font-size: 3rem !important; color: var(--blanco) !important; 
             background: var(--negro) !important; padding: 5px 15px !important; border-left: 5px solid var(--rojo-sangre) !important; 
@@ -107,15 +120,15 @@ HTML_TEMPLATE = """
             box-shadow: 0 0 10px rgba(163, 0, 0, 0.3);
         }}
 
+        /* GRILLA: 4 COLUMNAS y MÁS COMPACTA */
         .grilla-tacuru {{
             display: grid !important;
-            grid-template-columns: repeat(3, 1fr) !important;
-            gap: 25px !important;
+            grid-template-columns: repeat(4, 1fr) !important;
+            gap: 15px !important;
             margin: 2rem 0 !important;
             background-color: transparent !important;
         }}
 
-        /* TARJETAS (Redondeadas y radiactivas) */
         .tarjeta-expediente {{
             position: relative !important;
             aspect-ratio: 1 / 1 !important;
@@ -136,7 +149,7 @@ HTML_TEMPLATE = """
             align-items: center !important;
             width: 100% !important;
             height: 100% !important;
-            padding: 25px !important;
+            padding: 15px !important;
             text-decoration: none !important;
             position: relative !important;
             z-index: 10 !important; 
@@ -170,26 +183,27 @@ HTML_TEMPLATE = """
             content: "" !important;
             position: absolute !important;
             top: 0; left: 0; width: 100%; height: 100%;
-            background-color: rgba(0, 0, 0, 0.6) !important;
+            background-color: rgba(0, 0, 0, 0.65) !important;
             z-index: 2 !important;
             transition: background-color 0.4s ease !important;
         }}
 
+        /* EL HOVER: Vitalidad radiactiva */
         .tarjeta-expediente:hover .tarjeta-imagen-wrapper::after {{
-            background-color: rgba(0, 0, 0, 0.3) !important;
+            background-color: rgba(0, 0, 0, 0.15) !important;
         }}
 
         .tarjeta-expediente:hover img {{
-            filter: grayscale(0%) contrast(1.1) !important;
-            opacity: 0.8 !important;
+            filter: grayscale(0%) contrast(1.2) saturate(1.8) brightness(1.1) !important;
+            opacity: 1 !important;
         }}
 
         .tarjeta-expediente h3 {{
             font-family: 'Bebas Neue', sans-serif !important;
             color: #ffffff !important;
-            font-size: 2.2rem !important;
+            font-size: 1.8rem !important;
             font-weight: 700 !important;
-            margin: 0 0 12px 0 !important;
+            margin: 0 0 8px 0 !important;
             text-transform: uppercase !important;
             line-height: 1.1 !important;
             text-shadow: 0 0 8px #000, 2px 2px 4px #000 !important;
@@ -199,26 +213,12 @@ HTML_TEMPLATE = """
         .tarjeta-expediente p {{
             font-family: 'Inter', sans-serif !important;
             color: var(--fondo-hueso) !important;
-            font-size: 1.1rem !important;
+            font-size: 0.95rem !important;
             line-height: 1.2 !important;
             margin: 0 !important;
             text-shadow: 0 0 5px #000, 1px 1px 3px #000 !important;
             z-index: 11 !important;
             font-weight: 500;
-        }}
-
-        .precio-tacuru {{
-            background: var(--rojo-sangre);
-            color: var(--blanco);
-            padding: 4px 12px;
-            margin-top: 10px;
-            display: inline-block;
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.4rem;
-            letter-spacing: 1px;
-            border: 1px solid var(--rojo-oscuro);
-            border-radius: 4px;
-            box-shadow: 0 0 8px rgba(163, 0, 0, 0.5);
         }}
 
         /* MODAL VISOR */
@@ -249,8 +249,8 @@ HTML_TEMPLATE = """
         }}
         .cerrar-modal:hover {{ color: var(--blanco); transform: scale(1.1); text-shadow: 0 0 10px rgba(163,0,0,0.8); }}
         
-        .datos-expediente {{ color: var(--blanco); font-size: 1.1rem; line-height: 1.6; text-align: left; -webkit-user-select: text; user-select: text; font-family: 'Inter', sans-serif; }}
-        .datos-expediente strong {{ color: var(--rojo-base); font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 1px; }}
+        .datos-expediente {{ color: var(--blanco); font-size: 1.2rem; line-height: 1.8; text-align: left; -webkit-user-select: text; user-select: text; font-family: 'Inter', sans-serif; }}
+        .datos-expediente strong {{ color: var(--rojo-base); font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 1px; }}
         .modal-titulo {{ font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; color: var(--blanco); margin: 0 0 20px 0; border-bottom: 1px solid var(--rojo-sangre); line-height: 1.1; padding-bottom: 10px; box-shadow: 0 4px 6px -6px rgba(163, 0, 0, 0.8); }}
         
         .btn-copiar {{
@@ -268,12 +268,13 @@ HTML_TEMPLATE = """
         }}
 
         @media (max-width: 900px) {{
-            .grilla-tacuru {{ grid-template-columns: repeat(2, 1fr) !important; }}
+            .grilla-tacuru {{ grid-template-columns: repeat(3, 1fr) !important; }}
             h1 {{ font-size: 4rem !important; }}
             h2 {{ font-size: 2.2rem !important; }}
         }}
         @media (max-width: 600px) {{
-            .grilla-tacuru {{ grid-template-columns: 1fr !important; }}
+            /* CELULAR: 2 COLUMNAS */
+            .grilla-tacuru {{ grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }}
             h1 {{ font-size: 3.5rem !important; }}
             h2 {{ font-size: 1.8rem !important; }}
             .modal-caja {{ width: 95%; aspect-ratio: auto; min-height: 75vh; }}
@@ -299,13 +300,6 @@ HTML_TEMPLATE = """
             </div>
         </div>
 
-        <div class="caja-indice">
-            <h3>ÍNDICE DE EXPEDIENTES</h3>
-            <ul class="lista-indice">
-                {indice_html}
-            </ul>
-        </div>
-
         {secciones_html}
     </div>
 
@@ -317,18 +311,14 @@ HTML_TEMPLATE = """
                 <div class="datos-expediente" id="datosCopiar">
                     <strong>AUTOR:</strong> <span id="modAut"></span><br>
                     <strong>EDITORIAL:</strong> <span id="modEdi"></span><br>
-                    <strong>CATEGORÍA:</strong> <span id="modCat"></span><br>
-                    <strong>COLECCIÓN:</strong> <span id="modCol"></span><br>
-                    <strong>AÑO:</strong> <span id="modAño"></span><br>
-                    <strong>PRECIO:</strong> <span id="modPre"></span>
+                    <strong>AÑO:</strong> <span id="modAño"></span>
                 </div>
-                <button class="btn-copiar" id="btnCopiar" onclick="copiarAlPortapapeles()">COPIAR EXPEDIENTE AL PORTAPAPELES</button>
+                <button class="btn-copiar" id="btnCopiar" onclick="copiarAlPortapapeles()">COPIAR DATOS AL PORTAPAPELES</button>
             </div>
         </div>
     </div>
 
     <script>
-        // JS BLINDADO PARA PESTAÑAS
         function abrirTab(idTab, elemento) {{
             try {{
                 var contenidos = document.querySelectorAll('.tab-content');
@@ -351,9 +341,6 @@ HTML_TEMPLATE = """
             document.getElementById('modTit').innerText = elemento.getAttribute('data-tit');
             document.getElementById('modAut').innerText = elemento.getAttribute('data-aut');
             document.getElementById('modEdi').innerText = elemento.getAttribute('data-edi');
-            document.getElementById('modCat').innerText = elemento.getAttribute('data-cat');
-            document.getElementById('modCol').innerText = elemento.getAttribute('data-col');
-            document.getElementById('modPre').innerText = elemento.getAttribute('data-pre');
             document.getElementById('modAño').innerText = elemento.getAttribute('data-ano');
             
             const imgUrl = elemento.getAttribute('data-img');
@@ -375,7 +362,7 @@ HTML_TEMPLATE = """
             navigator.clipboard.writeText(textoFinal).then(() => {{
                 const btn = document.getElementById('btnCopiar');
                 const textoOriginal = btn.innerText;
-                btn.innerText = '¡EXPEDIENTE COPIADO!';
+                btn.innerText = '¡DATOS COPIADOS!';
                 btn.style.background = 'var(--negro)';
                 btn.style.color = 'var(--blanco)';
                 setTimeout(() => {{
@@ -400,7 +387,22 @@ def generar_catalogo():
             
         conf = data.get('config', {})
         
-        # 1. Armar Pestañas
+        # 1. Agrupar libros por categoría MAESTRA (cortando en la primera barra)
+        libros_agrupados = defaultdict(list)
+        for lib in data.get('libros', []):
+            cat_cruda = lib.get('categoria', 'Sin Categoría')
+            # Extrae solo la primera palabra clave antes de cualquier barra "/" y la capitaliza
+            cat_maestra = cat_cruda.split('/')[0].strip().title()
+            libros_agrupados[cat_maestra].append(lib)
+            
+        # 2. Construir el Índice HTML (lista de columnas)
+        indice_html = '<ul class="lista-indice">'
+        for cat in sorted(libros_agrupados.keys()):
+            cat_id = cat.lower().replace(' ', '-').replace('ñ', 'n').replace('ó','o').replace('í','i').replace('á','a')
+            indice_html += f'<li><a href="#{cat_id}">{cat.upper()}</a></li>'
+        indice_html += '</ul>'
+
+        # 3. Armar Pestañas (Inyectando el índice en la de CONTENIDO)
         t_btns = ""
         t_cont = ""
         pestañas = data.get('pestañas', [])
@@ -411,45 +413,34 @@ def generar_catalogo():
             t_tit = tab.get("titulo", f"SECCIÓN {i+1}")
             t_txt = tab.get("texto", "")
             
+            # Si es la pestaña de contenido, le incrustamos la caja del índice abajo del texto
+            if t_tit.upper() == "CONTENIDO" or t_id == "tab1":
+                t_txt = f'<div class="texto-pestaña">{t_txt}</div><div class="caja-indice-interna">{indice_html}</div>'
+            
             t_btns += f'<button class="tab-btn {act}" onclick="abrirTab(\'{t_id}\', this)">{t_tit}</button>'
             t_cont += f'<div id="{t_id}" class="tab-content {act}">{t_txt}</div>'
 
-        # 2. Agrupar libros por categoría
-        libros_agrupados = defaultdict(list)
-        for lib in data.get('libros', []):
-            cat = lib.get('categoria', 'Sin Categoría')
-            libros_agrupados[cat].append(lib)
-            
-        # 3. Construir Índice y Secciones
-        indice_html = ""
+        # 4. Construir la Grilla de Expedientes
         secciones_html = ""
-        
         for cat in sorted(libros_agrupados.keys()):
-            cat_id = cat.lower().replace(' ', '-').replace('ñ', 'n')
+            cat_id = cat.lower().replace(' ', '-').replace('ñ', 'n').replace('ó','o').replace('í','i').replace('á','a')
             
-            indice_html += f'<li><a href="#{cat_id}">{cat}</a></li>'
-            
-            secciones_html += f'<h2 class="titulo-categoria" id="{cat_id}">{cat}</h2>'
+            secciones_html += f'<h2 class="titulo-categoria" id="{cat_id}">{cat.upper()}</h2>'
             secciones_html += '<div class="grilla-tacuru">'
             
             for lib in libros_agrupados[cat]:
                 tit = lib.get('titulo', 'Sin Título').replace('"', '&quot;')
                 aut = lib.get('autor', 'Desconocido').replace('"', '&quot;')
                 edi = lib.get('editorial', '-').replace('"', '&quot;')
-                cat_txt = lib.get('categoria', '-').replace('"', '&quot;')
-                col = lib.get('coleccion', '-').replace('"', '&quot;')
-                pre = lib.get('precio', '-').replace('"', '&quot;')
                 ano = lib.get('año', '-').replace('"', '&quot;')
                 img = lib.get('imagen', '').replace('"', '&quot;')
                 
+                # Pasamos datos limpios al JS ocultos en data-attributes
                 secciones_html += f"""
                 <div class="tarjeta-expediente" 
                      data-tit="{tit}" 
                      data-aut="{aut}" 
                      data-edi="{edi}" 
-                     data-cat="{cat_txt}" 
-                     data-col="{col}" 
-                     data-pre="{pre}" 
                      data-ano="{ano}" 
                      data-img="{img}" 
                      onclick="abrirExpediente(this)">
@@ -460,7 +451,6 @@ def generar_catalogo():
                     <div class="enlace-tarjeta">
                         <h3>{tit}</h3>
                         <p>{aut}</p>
-                        <span class="precio-tacuru">{pre}</span>
                     </div>
                 </div>
                 """
@@ -474,14 +464,13 @@ def generar_catalogo():
             bajada_pag=conf.get('bajada', ''),
             tabs_botones=t_btns,
             tabs_contenido=t_cont,
-            indice_html=indice_html,
             secciones_html=secciones_html
         )
         
         with open(os.path.join(base_path, 'index.html'), 'w', encoding='utf-8') as f:
             f.write(html_final)
             
-        print(">>> Catálogo blindado. Ajustes finos de cartelería y luces neón aplicados.")
+        print(">>> Catálogo reestructurado. Índice encapsulado y grilla compacta operativa.")
         
     except Exception as e:
         print(f">>> ERROR TÉCNICO EN EL TACURÚ (Catálogo): {e}")
