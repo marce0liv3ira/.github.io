@@ -1,9 +1,12 @@
-name: Autogenerar Agenda de Lucha CLU
+name: Motor del Tacurú (Agenda y Libroteca)
 
 on:
   push:
     paths:
       - 'agenda/agendaCLU.json'
+      - 'agenda/generar_agenda_CLU.py'
+      - 'libroteca/catalogo.json'
+      - 'libroteca/generar_catalogo.py'
 
 permissions:
   contents: write
@@ -20,13 +23,15 @@ jobs:
         with:
           python-version: '3.9'
 
-      - name: Ejecutar Generador CLU
-        run: python agenda/generar_agenda_CLU.py
+      - name: Ejecutar Motores de Renderizado
+        run: |
+          if [ -f "agenda/generar_agenda_CLU.py" ]; then python agenda/generar_agenda_CLU.py; fi
+          if [ -f "libroteca/generar_catalogo.py" ]; then python libroteca/generar_catalogo.py; fi
 
       - name: Publicar cambios en la web
         run: |
           git config --global user.name "Hormigueo Bot"
           git config --global user.email "bot@hormigue.ar"
-          git add agenda/index.html
-          git commit -m "Actualización automática: Nueva acción CLU" || exit 0
+          git add agenda/index.html libroteca/index.html
+          git commit -m "Actualización automática: Agenda CLU / Libroteca" || exit 0
           git push
