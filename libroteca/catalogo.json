@@ -1,0 +1,45 @@
+{
+  "config": {
+    "titulo": "ESTANTE DE ABAJO",
+    "subtitulo": "DE MI LIBROTECA",
+    "bajada": "Aquí va la breve explicación de la página. El manual de operaciones de esta trinchera literaria."
+  },
+  "pestañas": [
+    {"id": "tab1", "titulo": "CONTENIDO", "texto": "Explicación de qué tipo de expedientes y materiales se encuentran en esta colección."},
+    {"id": "tab2", "titulo": "CÓMO", "texto": "Instrucciones tácticas: Elegí el libro, copiá los datos en el portapapeles con el botón de la ficha y contactanos."},
+    {"id": "tab3", "titulo": "QUIÉNES", "texto": "Somos el personal nodocente de la UNaM, administrando la resistencia desde las sombras."},
+    {"id": "tab4", "titulo": "ENTREGA", "texto": "Punto de encuentro y protocolos de entrega de los libros solicitados."}
+  ],
+  "libros": [
+    {
+      "titulo": "Realismo Capitalista",
+      "autor": "Mark Fisher",
+      "editorial": "Caja Negra",
+      "categoria": "Ensayo Político",
+      "coleccion": "Futuros Próximos",
+      "precio": "$15.000",
+      "año": "2016",
+      "imagen": "fisher.jpg"
+    },
+    {
+      "titulo": "El Juguete Rabioso",
+      "autor": "Roberto Arlt",
+      "editorial": "Losada",
+      "categoria": "Ficción Nacional",
+      "coleccion": "Clásicos",
+      "precio": "$12.000",
+      "año": "1926",
+      "imagen": "arlt.jpg"
+    },
+    {
+      "titulo": "Los pichiciegos",
+      "autor": "Fogwill",
+      "editorial": "Interzona",
+      "categoria": "Ficción Nacional",
+      "coleccion": "Narrativa",
+      "precio": "$14.500",
+      "año": "1983",
+      "imagen": "fogwill.jpg"
+    }
+  ]
+}
