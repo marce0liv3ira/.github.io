@@ -5,10 +5,10 @@
     "bajada": "El manual de operaciones de esta trinchera literaria. Seleccioná una obra para abrir el expediente."
   },
   "pestañas": [
-    {"id": "tab1", "titulo": "CONTENIDO", "texto": "Explicación de qué tipo de expedientes y materiales se encuentran en esta colección."},
+    {"id": "tab1", "titulo": "CONTENIDO", "texto": "Material de lectura para tiempos de ajuste. Filosofía, sociología, literatura y resistencia."},
     {"id": "tab2", "titulo": "CÓMO", "texto": "Instrucciones tácticas: Elegí el libro, copiá los datos en el portapapeles con el botón de la ficha y contactanos."},
-    {"id": "tab3", "titulo": "QUIÉNES", "texto": "Somos el personal nodocente de la UNaM, administrando la resistencia desde las sombras."},
-    {"id": "tab4", "titulo": "ENTREGA", "texto": "Punto de encuentro y protocolos de entrega de los libros solicitados."}
+    {"id": "tab3", "titulo": "QUIÉNES", "texto": "Somos el personal nodocente de la UNaM, administrando la circulación de saberes desde las sombras."},
+    {"id": "tab4", "titulo": "ENTREGA", "texto": "Punto de encuentro y protocolos de entrega de los libros solicitados presencialmente."}
   ],
   "libros": [
     {
@@ -25,7 +25,7 @@
       "titulo": "¿Y si el otro no estuviera ahí? Notas para una pedagogía (improbable) de la diferencia",
       "autor": "Carlos Skliar",
       "editorial": "Miño y Dávila / CTERA",
-      "categoria": "Educación/Pedagogía",
+      "categoria": "Educación / Pedagogía",
       "coleccion": "",
       "precio": "$14.000",
       "año": "2003",
@@ -42,7 +42,7 @@
       "imagen": "img/4manos (Mediana).jpg"
     },
     {
-      "titulo": "Alfabetización semiótica en las fronteras",
+      "titulo": "Alfabetización semiótica en las fronteras. Volumen I.",
       "autor": "Ana Camblong; Froilán Fernández",
       "editorial": "Editorial Universitaria de Misiones",
       "categoria": "Comunicación / Semiótica",
@@ -50,6 +50,1296 @@
       "precio": "$8.000 - $16.000",
       "año": "2010",
       "imagen": "img/alfabetsemio (Mediana).jpg"
+    },
+    {
+      "titulo": "Antropología ahora. Debates sobre la alteridad",
+      "autor": "Alejandro Grimson; Silvina Merenson; Gabriel Noel",
+      "editorial": "Siglo XXI Editores",
+      "categoria": "Antropología",
+      "coleccion": "",
+      "precio": "$9.000 - $22.000",
+      "año": "2011",
+      "imagen": "img/antropoahora (Mediana).jpg"
+    },
+    {
+      "titulo": "Argentina: cuatro años con tipo de cambio fijo",
+      "autor": "Fernando Porta",
+      "editorial": "Universidad Nacional del Litoral",
+      "categoria": "Economía",
+      "coleccion": "Revista de ciencias sociales",
+      "precio": "$7.000 - $18.000",
+      "año": "s/d",
+      "imagen": "img/default.jpg"
+    },
+    {
+      "titulo": "ArqueTipas",
+      "autor": "Sandra Russo",
+      "editorial": "Página/12",
+      "categoria": "Crónica / Humor",
+      "coleccion": "",
+      "precio": "$5.000 - $16.000",
+      "año": "s/d",
+      "imagen": "img/arquetipas (Mediana).jpg"
+    },
+    {
+      "titulo": "Arte del buen vivir",
+      "autor": "Arthur Schopenhauer",
+      "editorial": "Losada / Aguilar",
+      "categoria": "Filosofía",
+      "coleccion": "Clásicos de siempre",
+      "precio": "$7.000 - $18.000",
+      "año": "s/d",
+      "imagen": "img/schopen2 (Mediana).jpg"
+    },
+    {
+      "titulo": "Bordes",
+      "autor": "Jacques Rancière",
+      "editorial": "Del Estante",
+      "categoria": "Filosofía / Política",
+      "coleccion": "",
+      "precio": "$11.000 - $19.000",
+      "año": "2004",
+      "imagen": "img/default.jpg"
+    },
+    {
+      "titulo": "Breve historia de la psiquiatría",
+      "autor": "E. H. Ackernecht",
+      "editorial": "Losada",
+      "categoria": "Historia de la ciencia",
+      "coleccion": "",
+      "precio": "$6.000 - $15.000",
+      "año": "s/d",
+      "imagen": "img/historiapsiqui (Mediana).jpg"
+    },
+    {
+      "titulo": "Campo e industria. Una relación difícil",
+      "autor": "Aldo Ferrer",
+      "editorial": "Capital Intelectual",
+      "categoria": "Economía",
+      "coleccion": "Claves para Todos",
+      "precio": "$4.000 - $9.000",
+      "año": "s/d",
+      "imagen": "img/campoargen (Mediana).jpg"
+    },
+    {
+      "titulo": "Capital cultural, escuela y espacio social",
+      "autor": "Pierre Bourdieu",
+      "editorial": "Siglo XXI Editores",
+      "categoria": "Sociología",
+      "coleccion": "Biblioteca esencial",
+      "precio": "$9.000 - $22.000",
+      "año": "s/d",
+      "imagen": "img/capitalcultu (Mediana).jpg"
+    },
+    {
+      "titulo": "Cartoneros. Recuperadores de desechos y causas perdidas",
+      "autor": "Eduardo Anguita",
+      "editorial": "Página/12 / Sudamericana",
+      "categoria": "Sociedad / Periodismo",
+      "coleccion": "",
+      "precio": "$6.000 - $15.000",
+      "año": "s/d",
+      "imagen": "img/cartonero (Mediana).jpg"
+    },
+    {
+      "titulo": "Colonos y ocupantes en la frontera agraria de Misiones",
+      "autor": "Gabriela Schiavoni",
+      "editorial": "Editorial Universitaria de Misiones",
+      "categoria": "Antropología",
+      "coleccion": "Libros Arribeños",
+      "precio": "$9.000 - $22.000",
+      "año": "s/d",
+      "imagen": "img/colonosocupan (Mediana).jpg"
+    },
+    {
+      "titulo": "Combates por la memoria",
+      "autor": "Federico Lorenz",
+      "editorial": "Capital Intelectual",
+      "categoria": "Historia / Memoria / Política",
+      "coleccion": "Claves para Todos",
+      "precio": "$13.000",
+      "año": "2007",
+      "imagen": "img/combatemem (Mediana).jpg"
+    },
+    {
+      "titulo": "Conferencia sobre ética",
+      "autor": "Ludwig Wittgenstein",
+      "editorial": "Folio",
+      "categoria": "Filosofía",
+      "coleccion": "Grandes Ideas",
+      "precio": "$8.000 - $9.500",
+      "año": "2007",
+      "imagen": "img/confeetica (Mediana).jpg"
+    },
+    {
+      "titulo": "Conocimiento y sociedad en Durkheim",
+      "autor": "Ernesto López",
+      "editorial": "Universidad Nacional de Quilmes",
+      "categoria": "Sociología",
+      "coleccion": "",
+      "precio": "$9.000 - $22.000",
+      "año": "s/d",
+      "imagen": "img/default.jpg"
+    },
+    {
+      "titulo": "Crimen y castigo",
+      "autor": "Fiódor Dostoievski",
+      "editorial": "Debolsillo",
+      "categoria": "Literatura",
+      "coleccion": "",
+      "precio": "$5.000 - $16.000",
+      "año": "1866",
+      "imagen": "img/crimencast (Mediana).jpg"
+    },
+    {
+      "titulo": "Crisis y reforma económica. Noticias del país real",
+      "autor": "H. Valle; M. Marcó del Pont",
+      "editorial": "Capital Intelectual",
+      "categoria": "Economía",
+      "coleccion": "Claves para Todos",
+      "precio": "$4.000 - $9.000",
+      "año": "s/d",
+      "imagen": "img/crisisreforma (Mediana).jpg"
+    },
+    {
+      "titulo": "Crónica de una muerte anunciada",
+      "autor": "Gabriel García Márquez",
+      "editorial": "Sudamericana",
+      "categoria": "Literatura",
+      "coleccion": "Biblioteca García Márquez",
+      "precio": "$5.000 - $16.000",
+      "año": "1981",
+      "imagen": "img/cronicamuert (Mediana).jpg"
+    },
+    {
+      "titulo": "Cuerpos del tabaco",
+      "autor": "Liliana Sero",
+      "editorial": "Editorial Universitaria de Misiones",
+      "categoria": "Antropología / Trabajo",
+      "coleccion": "",
+      "precio": "$6.000 - $15.000",
+      "año": "s/d",
+      "imagen": "img/cuerpostabac (Mediana).jpg"
+    },
+    {
+      "titulo": "Cumbia: nación, etnia y género en Latinoamérica",
+      "autor": "Pablo Semán; Pablo Vila",
+      "editorial": "Gorla",
+      "categoria": "Comunicación / Cultura",
+      "coleccion": "",
+      "precio": "$17.000",
+      "año": "2011",
+      "imagen": "img/cumbia (Mediana).jpg"
+    },
+    {
+      "titulo": "Curso de lingüística general",
+      "autor": "Ferdinand de Saussure",
+      "editorial": "Losada",
+      "categoria": "Lingüística",
+      "coleccion": "Obras maestras del pensamiento",
+      "precio": "$6.000 - $15.000",
+      "año": "1916",
+      "imagen": "img/corsuling (Mediana).jpg"
+    },
+    {
+      "titulo": "De Dios (Ética)",
+      "autor": "Baruch Spinoza",
+      "editorial": "Folio",
+      "categoria": "Filosofía",
+      "coleccion": "Grandes Ideas",
+      "precio": "$10.000",
+      "año": "2007",
+      "imagen": "img/dedios (Mediana).jpg"
+    },
+    {
+      "titulo": "Déjame que te cuente: ensayos sobre narrativa y educación",
+      "autor": "Jorge Larrosa",
+      "editorial": "Laertes",
+      "categoria": "Educación / Pedagogía",
+      "coleccion": "",
+      "precio": "$16.000",
+      "año": "1995",
+      "imagen": "img/dejame que (Mediana).jpg"
+    },
+    {
+      "titulo": "Del amor y otros demonios",
+      "autor": "Gabriel García Márquez",
+      "editorial": "Sudamericana",
+      "categoria": "Literatura",
+      "coleccion": "Biblioteca García Márquez",
+      "precio": "$5.000 - $16.000",
+      "año": "1994",
+      "imagen": "img/amoryotro (Mediana).jpg"
+    },
+    {
+      "titulo": "Deleuze: los movimientos aberrantes",
+      "autor": "David Lapoujade",
+      "editorial": "Cactus",
+      "categoria": "Filosofía",
+      "coleccion": "",
+      "precio": "$20.900",
+      "año": "2016",
+      "imagen": "img/deleuzemovi (Mediana).jpg"
+    },
+    {
+      "titulo": "Democracia y educación",
+      "autor": "John Dewey",
+      "editorial": "Losada",
+      "categoria": "Educación / Pedagogía",
+      "coleccion": "Biblioteca Pedagógica",
+      "precio": "$8.000 - $18.000",
+      "año": "1995",
+      "imagen": "img/democrayeduca (Mediana).jpg"
+    },
+    {
+      "titulo": "Derechos humanos en Argentina. Informe 2004",
+      "autor": "CELS",
+      "editorial": "Siglo XXI / CELS",
+      "categoria": "Derechos humanos",
+      "coleccion": "",
+      "precio": "$6.000 - $14.000",
+      "año": "2004",
+      "imagen": "img/ddhhinfo (Mediana).jpg"
+    },
+    {
+      "titulo": "Descentralización y reforma estatal en América Latina",
+      "autor": "Carlos González Villar",
+      "editorial": "Edunam",
+      "categoria": "Política / Estado / Sociedad",
+      "coleccion": "",
+      "precio": "$8.000 - $15.000",
+      "año": "2000",
+      "imagen": "img/descentra (Mediana).jpg"
+    },
+    {
+      "titulo": "Días y noches de amor y de guerra",
+      "autor": "Eduardo Galeano",
+      "editorial": "Siglo XXI Editores",
+      "categoria": "Ensayo / Literatura",
+      "coleccion": "",
+      "precio": "$6.000 - $15.000",
+      "año": "1978",
+      "imagen": "img/diasnoches (Mediana).jpg"
+    },
+    {
+      "titulo": "Ecce homo",
+      "autor": "Friedrich Nietzsche",
+      "editorial": "Losada",
+      "categoria": "Filosofía",
+      "coleccion": "",
+      "precio": "$7.000 - $18.000",
+      "año": "1908",
+      "imagen": "img/eccehomo (Mediana).jpg"
+    },
+    {
+      "titulo": "Educar la mirada: políticas y pedagogías de la imagen",
+      "autor": "Inés Dussel; Daniela Gutiérrez",
+      "editorial": "Manantial / FLACSO",
+      "categoria": "Educación / Pedagogía",
+      "coleccion": "",
+      "precio": "$18.000",
+      "año": "2006",
+      "imagen": "img/educarmira (Mediana).jpg"
+    },
+    {
+      "titulo": "Educar: figuras y efectos del amor",
+      "autor": "Graciela Frigerio; Gabriela Diker",
+      "editorial": "Noveduc",
+      "categoria": "Educación / Pedagogía",
+      "coleccion": "",
+      "precio": "$8.000 - $16.000",
+      "año": "2003",
+      "imagen": "img/educarfigura (Mediana).jpg"
+    },
+    {
+      "titulo": "El campo argentino. Crecimiento con exclusión",
+      "autor": "Mario Lattuada; Guillermo Neiman",
+      "editorial": "Capital Intelectual",
+      "categoria": "Economía / Ruralidad",
+      "coleccion": "Claves para Todos",
+      "precio": "$4.000 - $9.000",
+      "año": "s/d",
+      "imagen": "img/campoargen (Mediana).jpg"
+    },
+    {
+      "titulo": "El ciudadano sheriff",
+      "autor": "Darío Kosovsky",
+      "editorial": "Capital Intelectual",
+      "categoria": "Política",
+      "coleccion": "Claves para Todos",
+      "precio": "$8.000",
+      "año": "2005",
+      "imagen": "img/ciudadano (Mediana).jpg"
+    },
+    {
+      "titulo": "El coronel no tiene quien le escriba",
+      "autor": "Gabriel García Márquez",
+      "editorial": "Sudamericana",
+      "categoria": "Literatura",
+      "coleccion": "Contemporánea",
+      "precio": "$5.000 - $16.000",
+      "año": "1961",
+      "imagen": "img/coronelno (Mediana).jpg"
+    },
+    {
+      "titulo": "El costo de la democracia",
+      "autor": "Christian Gruenberg",
+      "editorial": "Capital Intelectual",
+      "categoria": "Política",
+      "coleccion": "Claves para Todos",
+      "precio": "$4.000 - $9.000",
+      "año": "s/d",
+      "imagen": "img/costodemoc (Mediana).jpg"
+    },
+    {
+      "titulo": "El crepúsculo de los ídolos",
+      "autor": "Friedrich Nietzsche",
+      "editorial": "Losada",
+      "categoria": "Filosofía",
+      "coleccion": "Grandes Ideas",
+      "precio": "$3.000 - $8.000",
+      "año": "s/d",
+      "imagen": "img/crepusculo (Mediana).jpg"
+    },
+    {
+      "titulo": "El deseo de Lacan",
+      "autor": "Jacques-Alain Miller",
+      "editorial": "Atuel-Anáfora",
+      "categoria": "Psicoanálisis",
+      "coleccion": "Seminario",
+      "precio": "$8.000 - $18.000",
+      "año": "s/d",
+      "imagen": "img/deseolacan (Mediana).jpg"
+    },
+    {
+      "titulo": "El dilema Mercosur. ¿Avanzar o retroceder?",
+      "autor": "Jorge Carrera",
+      "editorial": "Capital Intelectual",
+      "categoria": "Economía",
+      "coleccion": "Claves para Todos",
+      "precio": "$4.000 - $9.000",
+      "año": "s/d",
+      "imagen": "img/dilemamerco (Mediana).jpg"
+    },
+    {
+      "titulo": "El espectador emancipado",
+      "autor": "Jacques Rancière",
+      "editorial": "Manantial",
+      "categoria": "Filosofía / Estética",
+      "coleccion": "BORDES",
+      "precio": "$7.000 - $18.000",
+      "año": "2013",
+      "imagen": "img/espectaeman (Mediana).jpg"
+    },
+    {
+      "titulo": "El existencialismo es un humanismo",
+      "autor": "Jean-Paul Sartre",
+      "editorial": "Folio",
+      "categoria": "Filosofía",
+      "coleccion": "Grandes Ideas",
+      "precio": "$3.000 - $8.000",
+      "año": "s/d",
+      "imagen": "img/existenciahumanis (Mediana).jpg"
+    },
+    {
+      "titulo": "El exorcista",
+      "autor": "William Peter Blatty",
+      "editorial": "Agata",
+      "categoria": "Literatura",
+      "coleccion": "Grandes novelistas",
+      "precio": "$5.000 - $16.000",
+      "año": "1971",
+      "imagen": "img/elexorcis (Mediana).jpg"
+    },
+    {
+      "titulo": "El hombre sin Dios (Pensamientos)",
+      "autor": "Blaise Pascal",
+      "editorial": "Folio",
+      "categoria": "Filosofía",
+      "coleccion": "Grandes Ideas",
+      "precio": "$3.000 - $8.000",
+      "año": "1670",
+      "imagen": "img/hombresin (Mediana).jpg"
+    },
+    {
+      "titulo": "El inconsciente estético",
+      "autor": "Jacques Rancière",
+      "editorial": "Prometeo / Bordes",
+      "categoria": "Filosofía / Estética",
+      "coleccion": "Pensamiento contemporáneo",
+      "precio": "$7.000 - $18.000",
+      "año": "s/d",
+      "imagen": "img/inconcienteeste (Mediana).jpg"
+    },
+    {
+      "titulo": "El lenguaje y el entendimiento",
+      "autor": "Noam Chomsky",
+      "editorial": "Planeta / Agostini",
+      "categoria": "Lingüística",
+      "coleccion": "Obras maestras",
+      "precio": "$6.000 - $15.000",
+      "año": "s/d",
+      "imagen": "img/chomsky (Mediana).jpg"
+    },
+    {
+      "titulo": "El oficio de ver",
+      "autor": "Enrique Lacolla",
+      "editorial": "Universidad Nacional de Córdoba",
+      "categoria": "Cine / Comunicación",
+      "coleccion": "",
+      "precio": "$6.000 - $12.000",
+      "año": "2005",
+      "imagen": "img/oficiover (Mediana).jpg"
+    },
+    {
+      "titulo": "El péndulo de Foucault",
+      "autor": "Umberto Eco",
+      "editorial": "Lumen / Sudamericana",
+      "categoria": "Literatura",
+      "coleccion": "Narrativa",
+      "precio": "$14.000",
+      "año": "1989",
+      "imagen": "img/péndulo1 (Mediana).jpg"
+    },
+    {
+      "titulo": "El perfume. Historia de un asesino",
+      "autor": "Patrick Süskind",
+      "editorial": "Booket",
+      "categoria": "Literatura",
+      "coleccion": "",
+      "precio": "$5.000 - $16.000",
+      "año": "1985",
+      "imagen": "img/perfume (Mediana).jpg"
+    },
+    {
+      "titulo": "El pudor del pornógrafo",
+      "autor": "Alan Pauls",
+      "editorial": "Sudamericana",
+      "categoria": "Literatura",
+      "coleccion": "",
+      "precio": "$5.000 - $16.000",
+      "año": "1984",
+      "imagen": "img/pudoerdel (Mediana).jpg"
+    },
+    {
+      "titulo": "El sentido práctico",
+      "autor": "Pierre Bourdieu",
+      "editorial": "Siglo XXI Editores",
+      "categoria": "Sociología",
+      "coleccion": "Biblioteca esencial",
+      "precio": "$9.000 - $22.000",
+      "año": "s/d",
+      "imagen": "img/sentidoprac (Mediana).jpg"
+    },
+    {
+      "titulo": "El sentido social del gusto",
+      "autor": "Pierre Bourdieu",
+      "editorial": "Siglo XXI Editores",
+      "categoria": "Sociología",
+      "coleccion": "Biblioteca esencial",
+      "precio": "$9.000 - $22.000",
+      "año": "s/d",
+      "imagen": "img/sentidosocial (Mediana).jpg"
+    },
+    {
+      "titulo": "El silencio. De Paulo VI a Bergoglio",
+      "autor": "Horacio Verbitsky",
+      "editorial": "Sudamericana",
+      "categoria": "Periodismo / Historia",
+      "coleccion": "",
+      "precio": "$6.000 - $15.000",
+      "año": "s/d",
+      "imagen": "img/silencio (Mediana).jpg"
+    },
+    {
+      "titulo": "El terror como política exterior de Estados Unidos",
+      "autor": "Noam Chomsky",
+      "editorial": "Libros del Zorzal",
+      "categoria": "Política / Estado / Sociedad",
+      "coleccion": "",
+      "precio": "$20.000",
+      "año": "2001",
+      "imagen": "img/terrorchomsk (Mediana).jpg"
+    },
+    {
+      "titulo": "Elogio de la locura",
+      "autor": "Erasmo de Rotterdam",
+      "editorial": "Folio",
+      "categoria": "Filosofía / Sátira",
+      "coleccion": "Grandes Ideas",
+      "precio": "$3.000 - $8.000",
+      "año": "1511",
+      "imagen": "img/elogiolocu (Mediana).jpg"
+    },
+    {
+      "titulo": "En tiempos de guerra y otros ensayos",
+      "autor": "Howard Zinn",
+      "editorial": "Prometeo",
+      "categoria": "Ensayo político",
+      "coleccion": "",
+      "precio": "$6.000 - $15.000",
+      "año": "s/d",
+      "imagen": "img/guerrapaz (Mediana).jpg"
+    },
+    {
+      "titulo": "Enciclopedia de la educación moderna",
+      "autor": "Harry N. Rivlin; Herbert Schueler",
+      "editorial": "Aguilar / Losada",
+      "categoria": "Enciclopedia",
+      "coleccion": "",
+      "precio": "$60.000 - $180.000",
+      "año": "s/d",
+      "imagen": "img/encicloeduca (Mediana).jpg"
+    },
+    {
+      "titulo": "Epistemología, ética y ciencias de la educación",
+      "autor": "Jean-Claude Filloux",
+      "editorial": "Ediciones del Estante",
+      "categoria": "Educación / Pedagogía",
+      "coleccion": "Serie Estudios Sociales",
+      "precio": "$16.000",
+      "año": "2006",
+      "imagen": "img/episteetica (Mediana).jpg"
+    },
+    {
+      "titulo": "Estado y sociedad en el pensamiento clásico",
+      "autor": "Juan Carlos Portantiero; Emilio de Ipola",
+      "editorial": "Cántaro",
+      "categoria": "Política / Estado / Sociedad",
+      "coleccion": "",
+      "precio": "$14.000",
+      "año": "1987",
+      "imagen": "img/estadosocied (Mediana).jpg"
+    },
+    {
+      "titulo": "Freud en Buenos Aires",
+      "autor": "Hugo Vezzetti",
+      "editorial": "Universidad Nacional de Quilmes",
+      "categoria": "Psicoanálisis / Historia",
+      "coleccion": "",
+      "precio": "$8.000 - $18.000",
+      "año": "s/d",
+      "imagen": "img/freudbaires (Mediana).jpg"
+    },
+    {
+      "titulo": "Fundamentación de la metafísica de las costumbres",
+      "autor": "Immanuel Kant",
+      "editorial": "Folio",
+      "categoria": "Filosofía / Ética",
+      "coleccion": "Grandes Ideas",
+      "precio": "$12.000",
+      "año": "2004",
+      "imagen": "img/fundamekant (Mediana).jpg"
+    },
+    {
+      "titulo": "Gilles Deleuze y su herencia filosófica",
+      "autor": "Alain Beaulieu",
+      "editorial": "Intelectuales",
+      "categoria": "Filosofía",
+      "coleccion": "",
+      "precio": "$14.000 - $25.000",
+      "año": "2004",
+      "imagen": "img/gillesherenc (Mediana).jpg"
+    },
+    {
+      "titulo": "Gobernar el imperio. Los tiempos de Bush",
+      "autor": "Oscar Oszlak",
+      "editorial": "Capital Intelectual",
+      "categoria": "Política internacional",
+      "coleccion": "Claves para Todos",
+      "precio": "$4.000 - $9.000",
+      "año": "s/d",
+      "imagen": "img/gobernarimper (Mediana).jpg"
+    },
+    {
+      "titulo": "Guerra y paz en el siglo XXI",
+      "autor": "Eric Hobsbawm",
+      "editorial": "Crítica",
+      "categoria": "Historia",
+      "coleccion": "Temas de Historia",
+      "precio": "$19.000",
+      "año": "2007",
+      "imagen": "img/guerrapaz (Mediana).jpg"
+    },
+    {
+      "titulo": "Historia de la pedagogía",
+      "autor": "Guillermo Dilthey",
+      "editorial": "Losada",
+      "categoria": "Educación / Historia",
+      "coleccion": "Biblioteca pedagógica",
+      "precio": "$8.000 - $18.000",
+      "año": "s/d",
+      "imagen": "img/historiaedupeda (Mediana).jpg"
+    },
+    {
+      "titulo": "Homo academicus",
+      "autor": "Pierre Bourdieu",
+      "editorial": "Siglo XXI Editores",
+      "categoria": "Sociología",
+      "coleccion": "Biblioteca esencial",
+      "precio": "$9.000 - $22.000",
+      "año": "s/d",
+      "imagen": "img/homoacade (Mediana).jpg"
+    },
+    {
+      "titulo": "Jóvenes, crisis y saberes",
+      "autor": "Alicia Susana Cibeira; Mario Betteo Barberis",
+      "editorial": "Noveduc",
+      "categoria": "Educación / Pedagogía",
+      "coleccion": "Conjunciones",
+      "precio": "$13.000",
+      "año": "2009",
+      "imagen": "img/jovenescri (Mediana).jpg"
+    },
+    {
+      "titulo": "Jóvenes, territorios y complicidades",
+      "autor": "Varios",
+      "editorial": "Espacio",
+      "categoria": "Antropología",
+      "coleccion": "",
+      "precio": "$9.000 - $22.000",
+      "año": "s/d",
+      "imagen": "img/jovenesterri (Mediana).jpg"
+    },
+    {
+      "titulo": "La antropología brasileña contemporánea",
+      "autor": "Alejandro Grimson; Gustavo Lins Ribeiro",
+      "editorial": "Prometeo",
+      "categoria": "Antropología",
+      "coleccion": "",
+      "precio": "$9.000 - $22.000",
+      "año": "s/d",
+      "imagen": "img/antropobrasil (Mediana).jpg"
+    },
+    {
+      "titulo": "La articulación etnográfica",
+      "autor": "Rosana Guber",
+      "editorial": "Editorial Biblos",
+      "categoria": "Antropología",
+      "coleccion": "",
+      "precio": "$9.000 - $22.000",
+      "año": "s/d",
+      "imagen": "img/articulaetno (Mediana).jpg"
+    },
+    {
+      "titulo": "La brecha urbana. Countries y barrios privados",
+      "autor": "Maristella Svampa",
+      "editorial": "Capital Intelectual",
+      "categoria": "Sociología urbana",
+      "coleccion": "Claves para Todos",
+      "precio": "$4.000 - $9.000",
+      "año": "s/d",
+      "imagen": "img/brechaurbana (Mediana).jpg"
+    },
+    {
+      "titulo": "La burguesía terrateniente argentina 1810-1945",
+      "autor": "Roy Hora",
+      "editorial": "Capital Intelectual",
+      "categoria": "Historia económica",
+      "coleccion": "Claves para Todos",
+      "precio": "$4.000 - $9.000",
+      "año": "s/d",
+      "imagen": "img/burgueterra (Mediana).jpg"
+    },
+    {
+      "titulo": "La ciencia, su método y su filosofía",
+      "autor": "Mario Bunge",
+      "editorial": "Siglo Veinte",
+      "categoria": "Filosofía de la ciencia",
+      "coleccion": "",
+      "precio": "$7.000 - $18.000",
+      "año": "s/d",
+      "imagen": "img/cienciametobunge (Mediana).jpg"
+    },
+    {
+      "titulo": "La conexión cósmica",
+      "autor": "Carl Sagan",
+      "editorial": "Muy Interesante",
+      "categoria": "Ciencia",
+      "coleccion": "Divulgación",
+      "precio": "$7.000 - $18.000",
+      "año": "s/d",
+      "imagen": "img/conexcosmica (Mediana).jpg"
+    },
+    {
+      "titulo": "La crisis mundial y el conflicto del agro",
+      "autor": "Enrique Arceo; Eduardo Basualdo",
+      "editorial": "Capital Intelectual",
+      "categoria": "Economía",
+      "coleccion": "Claves para Todos",
+      "precio": "$5.000 - $8.500",
+      "año": "2006",
+      "imagen": "img/crisisconficto (Mediana).jpg"
+    },
+    {
+      "titulo": "La densidad nacional. El caso argentino",
+      "autor": "Aldo Ferrer",
+      "editorial": "Capital Intelectual",
+      "categoria": "Economía",
+      "coleccion": "Claves para Todos",
+      "precio": "$4.000 - $9.000",
+      "año": "s/d",
+      "imagen": "img/densidadnaci (Mediana).jpg"
+    },
+    {
+      "titulo": "La escritura en manos de todos",
+      "autor": "Carvallo; Andruskevicz",
+      "editorial": "Editorial Universitaria de Misiones",
+      "categoria": "Educación / Escritura",
+      "coleccion": "",
+      "precio": "$8.000 - $18.000",
+      "año": "s/d",
+      "imagen": "img/escritura (Mediana).jpg"
+    },
+    {
+      "titulo": "La escuela como un performance ritual",
+      "autor": "Peter McLaren",
+      "editorial": "Siglo XXI Editores",
+      "categoria": "Educación / Pedagogía",
+      "coleccion": "",
+      "precio": "$14.000",
+      "año": "2003",
+      "imagen": "img/escuelaperfor (Mediana).jpg"
+    },
+    {
+      "titulo": "La física, aventura del pensamiento",
+      "autor": "Albert Einstein; Leopold Infeld",
+      "editorial": "Losada",
+      "categoria": "Ciencia",
+      "coleccion": "Grandes pensadores",
+      "precio": "$7.000 - $18.000",
+      "año": "1938",
+      "imagen": "img/fisicaaventura (Mediana).jpg"
+    },
+    {
+      "titulo": "La hojarasca",
+      "autor": "Gabriel García Márquez",
+      "editorial": "Sudamericana",
+      "categoria": "Literatura",
+      "coleccion": "Biblioteca García Márquez",
+      "precio": "$5.000 - $16.000",
+      "año": "1955",
+      "imagen": "img/hojarasca (Mediana).jpg"
+    },
+    {
+      "titulo": "La marca de la gorra",
+      "autor": "Mariana Galvani",
+      "editorial": "Capital Intelectual",
+      "categoria": "Política / Seguridad",
+      "coleccion": "Claves para Todos",
+      "precio": "$4.000 - $9.000",
+      "año": "s/d",
+      "imagen": "img/marcagorra (Mediana).jpg"
+    },
+    {
+      "titulo": "La masacre de Oberá, 1936",
+      "autor": "Silvia Andrea Waskiewicz",
+      "editorial": "Edunam",
+      "categoria": "Historia / Memoria",
+      "coleccion": "",
+      "precio": "$13.500",
+      "año": "2010",
+      "imagen": "img/masacreober (Mediana).jpg"
+    },
+    {
+      "titulo": "La metamorfosis",
+      "autor": "Franz Kafka",
+      "editorial": "Página/12",
+      "categoria": "Literatura",
+      "coleccion": "Colección Nogal",
+      "precio": "$5.000 - $16.000",
+      "año": "1915",
+      "imagen": "img/metamorfo (Mediana).jpg"
+    },
+    {
+      "titulo": "La mujer ducha",
+      "autor": "Juan Sasturain",
+      "editorial": "Sudamericana",
+      "categoria": "Literatura",
+      "coleccion": "",
+      "precio": "$12.200",
+      "año": "2003",
+      "imagen": "img/mujerducha (Mediana).jpg"
+    },
+    {
+      "titulo": "La nobleza de Estado: educación de elite",
+      "autor": "Pierre Bourdieu",
+      "editorial": "Siglo XXI Editores",
+      "categoria": "Sociología",
+      "coleccion": "Biblioteca Clásica",
+      "precio": "$22.450",
+      "año": "2013",
+      "imagen": "img/nobleaestado (Mediana).jpg"
+    },
+    {
+      "titulo": "La poética del espacio",
+      "autor": "Gaston Bachelard",
+      "editorial": "Planeta",
+      "categoria": "Filosofía / Estética",
+      "coleccion": "Obras maestras",
+      "precio": "$7.000 - $18.000",
+      "año": "1957",
+      "imagen": "img/poeticaespa (Mediana).jpg"
+    },
+    {
+      "titulo": "La política y el Estado moderno",
+      "autor": "Antonio Gramsci",
+      "editorial": "Planeta-Agostini",
+      "categoria": "Política",
+      "coleccion": "Obras Maestras",
+      "precio": "$12.000",
+      "año": "1993",
+      "imagen": "img/gramsci (Mediana).jpg"
+    },
+    {
+      "titulo": "La psicología social en la industria",
+      "autor": "J.A.C. Brown",
+      "editorial": "Fondo de Cultura Económica",
+      "categoria": "Psicología",
+      "coleccion": "Breviarios",
+      "precio": "$22.000",
+      "año": "1992",
+      "imagen": "img/psicoindustri (Mediana).jpg"
+    },
+    {
+      "titulo": "La razón humanitaria",
+      "autor": "Didier Fassin",
+      "editorial": "Prometeo",
+      "categoria": "Ensayo / Sociología",
+      "coleccion": "",
+      "precio": "$6.000 - $15.000",
+      "año": "s/d",
+      "imagen": "img/razonhumanita (Mediana).jpg"
+    },
+    {
+      "titulo": "La recepción de la narrativa",
+      "autor": "María Teresa Martínez",
+      "editorial": "Edunam",
+      "categoria": "Literatura / Crítica",
+      "coleccion": "",
+      "precio": "$8.000 - $15.000",
+      "año": "1998",
+      "imagen": "img/recepcinarrati (Mediana).jpg"
+    },
+    {
+      "titulo": "La religiosidad popular",
+      "autor": "Pablo Semán",
+      "editorial": "Capital Intelectual",
+      "categoria": "Sociología / Religión",
+      "coleccion": "Claves para Todos",
+      "precio": "$4.000 - $9.000",
+      "año": "s/d",
+      "imagen": "img/religiosipopular (Mediana).jpg"
+    },
+    {
+      "titulo": "La revolución de Evo Morales",
+      "autor": "Pablo Stefanoni",
+      "editorial": "Capital Intelectual",
+      "categoria": "Política",
+      "coleccion": "Claves para Todos",
+      "precio": "$4.000 - $9.000",
+      "año": "s/d",
+      "imagen": "img/revolucevo (Mediana).jpg"
+    },
+    {
+      "titulo": "La sociología clásica: Durkheim y Weber",
+      "autor": "Juan Carlos Portantiero",
+      "editorial": "CEAL",
+      "categoria": "Sociología",
+      "coleccion": "",
+      "precio": "$9.000 - $22.000",
+      "año": "s/d",
+      "imagen": "img/sociolocla (Mediana).jpg"
+    },
+    {
+      "titulo": "La tercera ola",
+      "autor": "Alvin Toffler",
+      "editorial": "Muy Interesante",
+      "categoria": "Sociología",
+      "coleccion": "Divulgación Científica",
+      "precio": "$7.000",
+      "año": "1980",
+      "imagen": "img/tercerola (Mediana).jpg"
+    },
+    {
+      "titulo": "La Voluntad. Historia de la militancia (1966-1973)",
+      "autor": "Eduardo Anguita; Martín Caparrós",
+      "editorial": "Grupo Editorial Norma",
+      "categoria": "Historia / Política",
+      "coleccion": "",
+      "precio": "$6.000 - $15.000",
+      "año": "1997",
+      "imagen": "img/voluntad (Mediana).jpg"
+    },
+    {
+      "titulo": "Las cárceles de la miseria",
+      "autor": "Loïc Wacquant",
+      "editorial": "Manantial",
+      "categoria": "Sociología",
+      "coleccion": "Bordes",
+      "precio": "$14.000",
+      "año": "2000",
+      "imagen": "img/carceles (Mediana).jpg"
+    },
+    {
+      "titulo": "Las privatizadas I. Ayer, hoy y mañana",
+      "autor": "Daniel Azpiazu",
+      "editorial": "Capital Intelectual",
+      "categoria": "Economía",
+      "coleccion": "Claves para Todos",
+      "precio": "$4.000 - $9.000",
+      "año": "s/d",
+      "imagen": "img/pivatiza1 (Mediana).jpg"
+    },
+    {
+      "titulo": "Las privatizadas II. Ayer, hoy y mañana",
+      "autor": "Daniel Azpiazu",
+      "editorial": "Capital Intelectual",
+      "categoria": "Economía",
+      "coleccion": "Claves para Todos",
+      "precio": "$4.000 - $9.000",
+      "año": "s/d",
+      "imagen": "img/privatiz2 (Mediana).jpg"
+    },
+    {
+      "titulo": "Lecturas de Infancia",
+      "autor": "J.-F. Lyotard y otros",
+      "editorial": "EUDEBA",
+      "categoria": "Filosofía / Literatura",
+      "coleccion": "",
+      "precio": "$6.000 - $15.000",
+      "año": "s/d",
+      "imagen": "img/lecturasinfanc (Mediana).jpg"
+    },
+    {
+      "titulo": "Leviatán, Tomo II",
+      "autor": "Thomas Hobbes",
+      "editorial": "Losada",
+      "categoria": "Filosofía política",
+      "coleccion": "Grandes Obras",
+      "precio": "$7.000 - $18.000",
+      "año": "1651",
+      "imagen": "img/leviatan (Mediana).jpg"
+    },
+    {
+      "titulo": "Los condenados de la ciudad",
+      "autor": "Loïc Wacquant",
+      "editorial": "Siglo XXI Editores",
+      "categoria": "Sociología",
+      "coleccion": "",
+      "precio": "$27.390",
+      "año": "2013",
+      "imagen": "img/condenados (Mediana).jpg"
+    },
+    {
+      "titulo": "Los desafíos del desarrollo",
+      "autor": "Eduardo Hecker; Matías Kulfas",
+      "editorial": "Capital Intelectual",
+      "categoria": "Economía",
+      "coleccion": "Claves para Todos",
+      "precio": "$4.000 - $9.000",
+      "año": "s/d",
+      "imagen": "img/desafíosdesa (Mediana).jpg"
+    },
+    {
+      "titulo": "Los gobiernos locales y los procesos de descentralización",
+      "autor": "Carlos González Villar",
+      "editorial": "Edunam",
+      "categoria": "Política / Administración",
+      "coleccion": "",
+      "precio": "$6.000 - $15.000",
+      "año": "s/d",
+      "imagen": "img/goblocales (Mediana).jpg"
+    },
+    {
+      "titulo": "Los herederos",
+      "autor": "Bourdieu y Passeron",
+      "editorial": "Siglo XXI",
+      "categoria": "Sociología",
+      "coleccion": "Educación",
+      "precio": "$13.000",
+      "año": "2003",
+      "imagen": "img/herederos (Mediana).jpg"
+    },
+    {
+      "titulo": "Manifiesto comunista",
+      "autor": "Karl Marx; Friedrich Engels",
+      "editorial": "Folio",
+      "categoria": "Política",
+      "coleccion": "Grandes Ideas",
+      "precio": "$7.800 - $10.000",
+      "año": "2007",
+      "imagen": "img/manifiesto (Mediana).jpg"
+    },
+    {
+      "titulo": "Memoria de mis putas tristes",
+      "autor": "Gabriel García Márquez",
+      "editorial": "Sudamericana",
+      "categoria": "Literatura",
+      "coleccion": "Biblioteca García Márquez",
+      "precio": "$5.000 - $16.000",
+      "año": "2004",
+      "imagen": "img/memiriasputas (Mediana).jpg"
+    },
+    {
+      "titulo": "Mercosur, un modelo de integración",
+      "autor": "Roberto C. Abinzano",
+      "editorial": "Editorial Universitaria de Misiones",
+      "categoria": "Política",
+      "coleccion": "Contemporánea",
+      "precio": "$7.000 - $16.000",
+      "año": "s/d",
+      "imagen": "img/mercosur (Mediana).jpg"
+    },
+    {
+      "titulo": "Metafísica del amor / Metafísica de la muerte",
+      "autor": "Arthur Schopenhauer",
+      "editorial": "Folio",
+      "categoria": "Filosofía",
+      "coleccion": "Grandes Ideas",
+      "precio": "$7.800 - $9.000",
+      "año": "2007",
+      "imagen": "img/metafiamor (Mediana).jpg"
+    },
+    {
+      "titulo": "Mirada de los viajeros a Misiones",
+      "autor": "Rodolfo Nicolás Capaccio",
+      "editorial": "Editorial Universitaria de Misiones",
+      "categoria": "Historia / Viajes",
+      "coleccion": "",
+      "precio": "$6.000 - $15.000",
+      "año": "s/d",
+      "imagen": "img/miradaviajer (Mediana).jpg"
+    },
+    {
+      "titulo": "No sabés lo que me hizo",
+      "autor": "Sandra Russo",
+      "editorial": "Página/12",
+      "categoria": "Ensayo",
+      "coleccion": "",
+      "precio": "$12.000",
+      "año": "2003",
+      "imagen": "img/nosabelosq (Mediana).jpg"
+    },
+    {
+      "titulo": "Nosotros decimos no. Crónicas 1963-1988",
+      "autor": "Eduardo Galeano",
+      "editorial": "Siglo XXI Editores",
+      "categoria": "Ensayo / Política",
+      "coleccion": "",
+      "precio": "$6.000 - $15.000",
+      "año": "1988",
+      "imagen": "img/nopsdecimos (Mediana).jpg"
+    },
+    {
+      "titulo": "Ojos de perro azul",
+      "autor": "Gabriel García Márquez",
+      "editorial": "Sudamericana",
+      "categoria": "Literatura",
+      "coleccion": "",
+      "precio": "$8.000 - $15.000",
+      "año": "1990",
+      "imagen": "img/ojoperro (Mediana).jpg"
+    },
+    {
+      "titulo": "Palitos cruzados",
+      "autor": "Raúl Novau",
+      "editorial": "Editorial Universitaria de Misiones",
+      "categoria": "Literatura",
+      "coleccion": "",
+      "precio": "$5.000 - $16.000",
+      "año": "s/d",
+      "imagen": "img/palitos (Mediana).jpg"
+    },
+    {
+      "titulo": "Para leer el Facundo: civilización y barbarie",
+      "autor": "Oscar Terán",
+      "editorial": "Capital Intelectual",
+      "categoria": "Historia / Memoria / Literatura",
+      "coleccion": "Claves para Todos",
+      "precio": "$12.000",
+      "año": "2007",
+      "imagen": "img/leerfacu (Mediana).jpg"
+    },
+    {
+      "titulo": "Parias urbanos: marginalidad en la ciudad",
+      "autor": "Loïc Wacquant",
+      "editorial": "Manantial",
+      "categoria": "Sociología",
+      "coleccion": "",
+      "precio": "$16.000",
+      "año": "2001",
+      "imagen": "img/parias (Mediana).jpg"
+    },
+    {
+      "titulo": "Pobres, ausentes y reciénvenidos",
+      "autor": "Rodolfo Nicolás Capaccio",
+      "editorial": "Editorial Universitaria de Misiones",
+      "categoria": "Literatura",
+      "coleccion": "Libros Arribeños",
+      "precio": "$5.000 - $16.000",
+      "año": "s/d",
+      "imagen": "img/pobresausentes (Mediana).jpg"
+    },
+    {
+      "titulo": "Poder y terror",
+      "autor": "Noam Chomsky",
+      "editorial": "Zarzal",
+      "categoria": "Política",
+      "coleccion": "",
+      "precio": "$7.000 - $14.000",
+      "año": "2003",
+      "imagen": "img/poderterror (Mediana).jpg"
+    },
+    {
+      "titulo": "Política exterior argentina",
+      "autor": "Mario Rapoport; Claudio Spiguel",
+      "editorial": "Capital Intelectual",
+      "categoria": "Política / Historia",
+      "coleccion": "Claves para Todos",
+      "precio": "$4.000 - $9.000",
+      "año": "s/d",
+      "imagen": "img/políticaexterior (Mediana).jpg"
+    },
+    {
+      "titulo": "Pueblo y política. La construcción de la república",
+      "autor": "Hilda Sabato",
+      "editorial": "Capital Intelectual",
+      "categoria": "Historia / Política",
+      "coleccion": "Claves para Todos",
+      "precio": "$4.000 - $9.000",
+      "año": "s/d",
+      "imagen": "img/pueblopoli (Mediana).jpg"
+    },
+    {
+      "titulo": "Que se vayan todos. Enigmas de la representación política",
+      "autor": "Inés M. Pousadela",
+      "editorial": "Capital Intelectual",
+      "categoria": "Política",
+      "coleccion": "Claves para Todos",
+      "precio": "$4.000 - $9.000",
+      "año": "s/d",
+      "imagen": "img/quesevayan (Mediana).jpg"
+    },
+    {
+      "titulo": "Raza y cultura",
+      "autor": "Claude Lévi-Strauss",
+      "editorial": "Losada",
+      "categoria": "Antropología",
+      "coleccion": "Grandes obras",
+      "precio": "$9.000 - $22.000",
+      "año": "s/d",
+      "imagen": "img/razaycultu (Mediana).jpg"
+    },
+    {
+      "titulo": "San La Muerte. Culto y representación mágico religiosa",
+      "autor": "Elena María Krautstofl",
+      "editorial": "Edunam",
+      "categoria": "Antropología / Religión",
+      "coleccion": "Libros de la memoria",
+      "precio": "$6.000 - $15.000",
+      "año": "s/d",
+      "imagen": "img/sanlamu (Mediana).jpg"
+    },
+    {
+      "titulo": "Sarmiento, más allá de la educación",
+      "autor": "Mauricio Lebedinsky",
+      "editorial": "Capital Intelectual",
+      "categoria": "Historia / Memoria",
+      "coleccion": "Claves para Todos",
+      "precio": "$10.000",
+      "año": "2009",
+      "imagen": "img/sarmiento (Mediana).jpg"
+    },
+    {
+      "titulo": "Ser como ellos y otros artículos",
+      "autor": "Eduardo Galeano",
+      "editorial": "Siglo XXI Editores",
+      "categoria": "Comunicación / Cultura",
+      "coleccion": "",
+      "precio": "$11.871",
+      "año": "2010",
+      "imagen": "img/sercomo (Mediana).jpg"
+    },
+    {
+      "titulo": "Sexualidad y poder",
+      "autor": "Michel Foucault",
+      "editorial": "Folio",
+      "categoria": "Filosofía / Sociología",
+      "coleccion": "Grandes Ideas",
+      "precio": "$12.000",
+      "año": "2004",
+      "imagen": "img/sexypoder (Mediana).jpg"
+    },
+    {
+      "titulo": "Sobre la teoría de la relatividad",
+      "autor": "Albert Einstein",
+      "editorial": "Muy Interesante",
+      "categoria": "Ciencia",
+      "coleccion": "Divulgación científica",
+      "precio": "$7.000 - $18.000",
+      "año": "s/d",
+      "imagen": "img/teorelatividad (Mediana).jpg"
+    },
+    {
+      "titulo": "Sociología contra psicoanálisis",
+      "autor": "Umberto Eco",
+      "editorial": "Altaya",
+      "categoria": "Sociología / Psicoanálisis",
+      "coleccion": "Obras maestras",
+      "precio": "$6.000 - $15.000",
+      "año": "s/d",
+      "imagen": "img/sociovspsico (Mediana).jpg"
+    },
+    {
+      "titulo": "Sumido en verde temblor",
+      "autor": "Rodolfo Nicolás Capaccio",
+      "editorial": "Edunam",
+      "categoria": "Narrativa Regional",
+      "coleccion": "Libros Arribeños",
+      "precio": "$8.000 - $15.000",
+      "año": "s/d",
+      "imagen": "img/sumidos (Mediana).jpg"
+    },
+    {
+      "titulo": "Temor y control: la gestión de la inseguridad",
+      "autor": "Esteban Rodríguez Alzueta",
+      "editorial": "Futuro Anterior",
+      "categoria": "Política / Sociedad",
+      "coleccion": "",
+      "precio": "$15.000",
+      "año": "2014",
+      "imagen": "img/temorcontro (Mediana).jpg"
+    },
+    {
+      "titulo": "Temor y temblor",
+      "autor": "Søren Kierkegaard",
+      "editorial": "Folio",
+      "categoria": "Filosofía",
+      "coleccion": "Grandes Ideas",
+      "precio": "$8.000 - $11.000",
+      "año": "2007",
+      "imagen": "img/temortemblor (Mediana).jpg"
+    },
+    {
+      "titulo": "Teorías débiles: una crítica de la deconstrucción",
+      "autor": "Roberto Follari",
+      "editorial": "Homo Sapiens / Noveduc",
+      "categoria": "Filosofía",
+      "coleccion": "Serie Estudios Sociales",
+      "precio": "$8.000 - $15.000",
+      "año": "2002",
+      "imagen": "img/teodebiles (Mediana).jpg"
+    },
+    {
+      "titulo": "Trago de nada",
+      "autor": "Javier Chemes",
+      "editorial": "Editorial Universitaria de Misiones",
+      "categoria": "Literatura",
+      "coleccion": "",
+      "precio": "$5.000 - $16.000",
+      "año": "s/d",
+      "imagen": "img/tragonada (Mediana).jpg"
     },
     {
       "titulo": "Un médico rural",
@@ -62,16 +1352,6 @@
       "imagen": "img/medicorural (Mediana).jpg"
     },
     {
-      "titulo": "La Voluntad. Una historia de la militancia revolucionaria en la Argentina 1966-1973",
-      "autor": "Eduardo Anguita; Martín Caparrós",
-      "editorial": "Grupo Editorial Norma",
-      "categoria": "Historia / Política",
-      "coleccion": "",
-      "precio": "$6.000 - $15.000",
-      "año": "1997",
-      "imagen": "img/voluntad (Mediana).jpg"
-    },
-    {
       "titulo": "Wing de metegol",
       "autor": "Juan Sasturain",
       "editorial": "Página/12",
@@ -80,6 +1360,16 @@
       "precio": "$6.000 - $12.000",
       "año": "2003",
       "imagen": "img/wing (Mediana).jpg"
+    },
+    {
+      "titulo": "Zonceras Argentinas y otras yerbas",
+      "autor": "Aníbal Fernández",
+      "editorial": "Planeta",
+      "categoria": "Ensayo / Política",
+      "coleccion": "Ensayo",
+      "precio": "$9.000",
+      "año": "2011",
+      "imagen": "img/zonceras (Mediana).jpg"
     }
   ]
 }
