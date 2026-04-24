@@ -43,7 +43,6 @@
         
         .contenedor { flex: 1; max-width: 1200px; margin: 0 auto; width: 100%; display: flow-root; }
         
-        /* CABECERA CON LOGO COMPLETO Y VELADURA */
         header { 
             text-align: center; 
             border-bottom: 1px solid var(--rojo-sangre); 
@@ -52,7 +51,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px -6px rgba(163, 0, 0, 0.8);
             background-image: linear-gradient(rgba(250, 246, 237, 0.85), rgba(250, 246, 237, 0.92)), url('img/logolibro.png');
-            background-size: contain; /* Para que el logo se vea entero */
+            background-size: contain; 
             background-position: center;
             background-repeat: no-repeat;
         }
@@ -77,13 +76,14 @@
             z-index: 2;
         }
         .bajada { 
-            font-size: 1.2rem; font-weight: bold; color: var(--negro); 
+            font-size: 1.1rem; font-weight: bold; color: var(--negro); 
             font-family: 'Inter', sans-serif; position: relative; z-index: 2; 
-            background: rgba(250, 246, 237, 0.7);
-            display: inline-block; padding: 5px 15px; border-radius: 4px;
+            background: rgba(250, 246, 237, 0.85);
+            display: inline-block; padding: 15px 25px; border-radius: 4px;
+            text-align: left; max-width: 800px; margin: 0 auto; line-height: 1.5;
+            border: 1px solid var(--rojo-sangre);
         }
 
-        /* CAJA DE MENÚ */
         .caja-menu { 
             border: 1px solid var(--rojo-sangre); 
             margin-bottom: 40px; 
@@ -102,10 +102,9 @@
             background: var(--rojo-sangre); 
             box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
         }
-        .tab-content { padding: 20px; display: none; font-size: 1.1rem; font-family: 'Inter', sans-serif; }
+        .tab-content { padding: 20px; display: none; font-size: 1.1rem; font-family: 'Inter', sans-serif; line-height: 1.5; }
         .tab-content.active { display: block; }
 
-        /* ÍNDICE INTERNO (COMPRIMIDO) */
         .caja-indice-interna {
             margin-top: 25px;
             padding-top: 15px;
@@ -140,7 +139,6 @@
             box-shadow: 0 0 10px rgba(163, 0, 0, 0.3);
         }
 
-        /* GRILLA */
         .grilla-tacuru {
             display: grid !important;
             grid-template-columns: repeat(4, 1fr) !important;
@@ -250,7 +248,6 @@
             text-overflow: ellipsis !important;
         }
 
-        /* MODAL VISOR */
         .modal-overlay {
             display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0, 0, 0, 0.9); justify-content: center; align-items: center; backdrop-filter: blur(5px);
@@ -280,14 +277,14 @@
         .cerrar-modal:hover { color: var(--blanco); transform: scale(1.1); text-shadow: 0 0 10px rgba(163,0,0,0.8); }
         
         .datos-expediente { 
-            color: var(--blanco); font-size: 1.2rem; line-height: 1.8; text-align: left; 
+            color: var(--blanco); font-size: 1.15rem; line-height: 1.8; text-align: left; 
             -webkit-user-select: text; user-select: text; font-family: 'Inter', sans-serif;
             text-shadow: 0 0 8px #000, 0 0 15px #000; 
         }
-        .datos-expediente strong { color: var(--rojo-base); font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 1px; }
+        .datos-expediente strong { color: var(--rojo-base); font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 1px; }
         
         .modal-titulo { 
-            font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; color: var(--blanco); 
+            font-family: 'Bebas Neue', sans-serif; font-size: 2.6rem; color: var(--blanco); 
             margin: 0 0 20px 0; border-bottom: 1px solid var(--rojo-sangre); line-height: 1.1; 
             padding-bottom: 10px; box-shadow: 0 4px 6px -6px rgba(163, 0, 0, 0.8); 
             text-shadow: 0 0 8px #000, 0 0 15px #000; 
@@ -307,7 +304,6 @@
             box-shadow: 0 0 20px rgba(158, 40, 19, 0.8), inset 0 0 8px rgba(158, 40, 19, 0.4) !important;
         }
 
-        /* BOTÓN ASCENSOR */
         #btn-ascenso {
             position: fixed;
             bottom: 30px;
@@ -336,7 +332,6 @@
             box-shadow: 0 0 25px rgba(163, 0, 0, 0.8);
         }
 
-        /* FOOTER HORMIGUEAR (Contenedor maestro) */
         footer {
             margin-top: 60px;
             background-color: var(--negro);
@@ -361,6 +356,7 @@
             .enlace-tarjeta { padding: 10px !important; }
             .tarjeta-expediente h3 { font-size: 1.15rem !important; margin-bottom: 4px !important; }
             .tarjeta-expediente p { font-size: 0.85rem !important; }
+            .bajada { font-size: 1rem; padding: 10px 15px; }
         }
     </style>
 </head>
@@ -369,7 +365,7 @@
         <header>
             <h1>LIBROTECA</h1>
             <h2>ESTANTE DE ABAJO</h2>
-            <div class="bajada">El manual de operaciones de esta trinchera literaria. Seleccioná una obra para abrir el expediente.</div>
+            <div class="bajada">Libros usados listos para seguir circulando.<br>Esta es una venta pensada para lectoras y lectores de la zona. Las ofertas se hacen por tandas. Voy cargando títulos a medida que avanzo con el inventario de mi biblioteca, por estantes.<br>Todos los libros están en muy buen estado; algunos, incluso, son nuevos. Fueron cuidados como corresponde, como mucho, alguna marca de lápiz. Los pocos ejemplares deteriorados lo están por razones nobles: paso del tiempo, ferias, reventas. Los títulos descatalogados, la resistencia.</div>
         </header>
 
         <div class="caja-menu" id="menu-selector">
@@ -377,7 +373,7 @@
                 <button class="tab-btn active" onclick="abrirTab('tab1', this)">CONTENIDO</button><button class="tab-btn " onclick="abrirTab('tab2', this)">CÓMO</button><button class="tab-btn " onclick="abrirTab('tab3', this)">QUIÉNES</button><button class="tab-btn " onclick="abrirTab('tab4', this)">ENTREGA</button>
             </div>
             <div class="tabs-cuerpo">
-                <div id="tab1" class="tab-content active"><div class="texto-pestaña">.</div><div class="caja-indice-interna"><ul class="lista-indice"><li><a href="#antropologia">ANTROPOLOGÍA</a></li><li><a href="#comunicacion">COMUNICACIÓN</a></li><li><a href="#cronica">CRÓNICA</a></li><li><a href="#divulgacion-dura">DIVULGACIÓN DURA</a></li><li><a href="#economia">ECONOMÍA</a></li><li><a href="#educacion">EDUCACIÓN</a></li><li><a href="#enciclopedia">ENCICLOPEDIA</a></li><li><a href="#ensayo">ENSAYO</a></li><li><a href="#filosofia">FILOSOFÍA</a></li><li><a href="#historia">HISTORIA</a></li><li><a href="#lingüistica">LINGÜÍSTICA</a></li><li><a href="#literatura">LITERATURA</a></li><li><a href="#politica">POLÍTICA</a></li><li><a href="#psico">PSICO</a></li><li><a href="#sociedad">SOCIEDAD</a></li><li><a href="#sociologia">SOCIOLOGÍA</a></li><li><a href="#varios">VARIOS</a></li></ul></div></div><div id="tab2" class="tab-content ">Instrucciones tácticas: Elegí el libro, copiá los datos en el portapapeles con el botón de la ficha y contactanos.</div><div id="tab3" class="tab-content ">Somos el personal nodocente de la UNaM, administrando la circulación de saberes desde las sombras.</div><div id="tab4" class="tab-content ">Punto de encuentro y protocolos de entrega de los libros solicitados presencialmente.</div>
+                <div id="tab1" class="tab-content active"><div class="texto-pestaña">Las categorías son orientativas. Algunos libros encajan en varias y otros en ninguna. Revisá todo, nunca confíes en las clasificaciones.</div><div class="caja-indice-interna"><ul class="lista-indice"><li><a href="#antropologia">ANTROPOLOGÍA</a></li><li><a href="#comunicacion">COMUNICACIÓN</a></li><li><a href="#divulgacion-dura">DIVULGACIÓN DURA</a></li><li><a href="#economia">ECONOMÍA</a></li><li><a href="#educacion">EDUCACIÓN</a></li><li><a href="#enciclopedia">ENCICLOPEDIA</a></li><li><a href="#ensayo">ENSAYO</a></li><li><a href="#filosofia">FILOSOFÍA</a></li><li><a href="#historia">HISTORIA</a></li><li><a href="#lingüistica">LINGÜÍSTICA</a></li><li><a href="#literatura">LITERATURA</a></li><li><a href="#politica">POLÍTICA</a></li><li><a href="#psico">PSICO</a></li><li><a href="#sociedad">SOCIEDAD</a></li><li><a href="#sociologia">SOCIOLOGÍA</a></li><li><a href="#varios">VARIOS</a></li></ul></div></div><div id="tab2" class="tab-content ">Revisá, hacé picá en el título y copiá los datos del libro. Podés usarlos para escribirme, comparar precios o buscar reseñas en la web. Si no podés contactarme, este sitio no es para vos.<br>Si podés contactarme, coordinamos detalles: estado del libro, forma de pago y entrega. El pago es en pesos argentinos, por transferencia o efectivo. No acepto trueques, monedas extranjeras ni pagos en especies (por más seductora que sea la oferta).</div><div id="tab3" class="tab-content ">Este sitio está pensado para lectoras y lectores cercanos. Posadas y Candelaria funcionan como referencia, pero lo central es el contacto: si podés ubicarme (directa o indirectamente), podés comprar. Si no, este sitio no es para vos.</div><div id="tab4" class="tab-content ">Las compras iguales o superiores a $25.000 tienen envío gratuito a domicilio dentro de Posadas y Candelaria. Cada entrega o retiro se coordina; fecha, lugar y horario se acuerdan entre ambas partes lectoras.</div>
             </div>
         </div>
 
@@ -387,6 +383,7 @@
                      data-aut="Alejandro Grimson; Silvina Merenson; Gabriel Noel" 
                      data-edi="Siglo XXI Editores" 
                      data-ano="2011" 
+                     data-est="Muy bueno"
                      data-img="img/antropoahora (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -404,6 +401,7 @@
                      data-aut="Gabriela Schiavoni" 
                      data-edi="Editorial Universitaria de Misiones" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/colonosocupan (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -421,6 +419,7 @@
                      data-aut="Liliana Sero" 
                      data-edi="Editorial Universitaria de Misiones" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/cuerpostabac (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -438,6 +437,7 @@
                      data-aut="Varios" 
                      data-edi="Espacio" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/jovenesterri (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -455,6 +455,7 @@
                      data-aut="Alejandro Grimson; Gustavo Lins Ribeiro" 
                      data-edi="Prometeo" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/antropobrasil (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -472,6 +473,7 @@
                      data-aut="Rosana Guber" 
                      data-edi="Editorial Biblos" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/articulaetno (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -489,6 +491,7 @@
                      data-aut="Claude Lévi-Strauss" 
                      data-edi="Losada" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/razaycultu (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -506,6 +509,7 @@
                      data-aut="Elena María Krautstofl" 
                      data-edi="Edunam" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/sanlamu (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -523,6 +527,7 @@
                      data-aut="Ana Camblong; Froilán Fernández" 
                      data-edi="Editorial Universitaria de Misiones" 
                      data-ano="2010" 
+                     data-est="Muy bueno"
                      data-img="img/alfabetsemio (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -540,6 +545,7 @@
                      data-aut="Pablo Semán; Pablo Vila" 
                      data-edi="Gorla" 
                      data-ano="2011" 
+                     data-est="Muy bueno"
                      data-img="img/cumbia (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -557,6 +563,7 @@
                      data-aut="Enrique Lacolla" 
                      data-edi="Universidad Nacional de Córdoba" 
                      data-ano="2005" 
+                     data-est="Muy bueno"
                      data-img="img/oficiover (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -574,6 +581,7 @@
                      data-aut="Eduardo Galeano" 
                      data-edi="Siglo XXI Editores" 
                      data-ano="2010" 
+                     data-est="Muy bueno"
                      data-img="img/sercomo (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -585,29 +593,13 @@
                         <p>Eduardo Galeano</p>
                     </div>
                 </div>
-                </div><h2 class="titulo-categoria" id="cronica">CRÓNICA</h2><div class="grilla-tacuru">
-                <div class="tarjeta-expediente" 
-                     data-tit="ArqueTipas" 
-                     data-aut="Sandra Russo" 
-                     data-edi="Página/12" 
-                     data-ano="s/d" 
-                     data-img="img/arquetipas (Mediana).jpg" 
-                     onclick="abrirExpediente(this)">
-                     
-                    <div class="tarjeta-imagen-wrapper">
-                        <img src="img/arquetipas (Mediana).jpg" alt="ArqueTipas" onerror="this.style.display='none'">
-                    </div>
-                    <div class="enlace-tarjeta">
-                        <h3>ArqueTipas</h3>
-                        <p>Sandra Russo</p>
-                    </div>
-                </div>
                 </div><h2 class="titulo-categoria" id="divulgacion-dura">DIVULGACIÓN DURA</h2><div class="grilla-tacuru">
                 <div class="tarjeta-expediente" 
                      data-tit="La conexión cósmica" 
                      data-aut="Carl Sagan" 
                      data-edi="Muy Interesante" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/conexcosmica (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -625,6 +617,7 @@
                      data-aut="Albert Einstein; Leopold Infeld" 
                      data-edi="Losada" 
                      data-ano="1938" 
+                     data-est="Muy bueno"
                      data-img="img/fisicaaventura (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -642,6 +635,7 @@
                      data-aut="Albert Einstein" 
                      data-edi="Muy Interesante" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/teorelatividad (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -659,6 +653,7 @@
                      data-aut="Fernando Porta" 
                      data-edi="Universidad Nacional del Litoral" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/default.jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -676,6 +671,7 @@
                      data-aut="Aldo Ferrer" 
                      data-edi="Capital Intelectual" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/campoargen (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -693,6 +689,7 @@
                      data-aut="H. Valle; M. Marcó del Pont" 
                      data-edi="Capital Intelectual" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/crisisreforma (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -710,6 +707,7 @@
                      data-aut="Mario Lattuada; Guillermo Neiman" 
                      data-edi="Capital Intelectual" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/campoargen (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -727,6 +725,7 @@
                      data-aut="Jorge Carrera" 
                      data-edi="Capital Intelectual" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/dilemamerco (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -744,6 +743,7 @@
                      data-aut="Enrique Arceo; Eduardo Basualdo" 
                      data-edi="Capital Intelectual" 
                      data-ano="2006" 
+                     data-est="Muy bueno"
                      data-img="img/crisisconficto (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -761,6 +761,7 @@
                      data-aut="Aldo Ferrer" 
                      data-edi="Capital Intelectual" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/densidadnaci (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -778,6 +779,7 @@
                      data-aut="Daniel Azpiazu" 
                      data-edi="Capital Intelectual" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/pivatiza1 (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -795,6 +797,7 @@
                      data-aut="Daniel Azpiazu" 
                      data-edi="Capital Intelectual" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/privatiz2 (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -812,6 +815,7 @@
                      data-aut="Eduardo Hecker; Matías Kulfas" 
                      data-edi="Capital Intelectual" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/desafíosdesa (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -829,6 +833,7 @@
                      data-aut="Carlos Skliar" 
                      data-edi="Miño y Dávila / CTERA" 
                      data-ano="2003" 
+                     data-est="Muy bueno"
                      data-img="img/sielotro (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -846,6 +851,7 @@
                      data-aut="Jorge Larrosa" 
                      data-edi="Laertes" 
                      data-ano="1995" 
+                     data-est="Muy bueno"
                      data-img="img/dejame que (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -863,6 +869,7 @@
                      data-aut="John Dewey" 
                      data-edi="Losada" 
                      data-ano="1995" 
+                     data-est="Muy bueno"
                      data-img="img/democrayeduca (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -880,6 +887,7 @@
                      data-aut="Inés Dussel; Daniela Gutiérrez" 
                      data-edi="Manantial / FLACSO" 
                      data-ano="2006" 
+                     data-est="Muy bueno"
                      data-img="img/educarmira (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -897,6 +905,7 @@
                      data-aut="Graciela Frigerio; Gabriela Diker" 
                      data-edi="Noveduc" 
                      data-ano="2003" 
+                     data-est="Muy bueno"
                      data-img="img/educarfigura (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -914,6 +923,7 @@
                      data-aut="Jean-Claude Filloux" 
                      data-edi="Ediciones del Estante" 
                      data-ano="2006" 
+                     data-est="Muy bueno"
                      data-img="img/episteetica (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -931,6 +941,7 @@
                      data-aut="Alicia Susana Cibeira; Mario Betteo Barberis" 
                      data-edi="Noveduc" 
                      data-ano="2009" 
+                     data-est="Muy bueno"
                      data-img="img/jovenescri (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -948,6 +959,7 @@
                      data-aut="Carvallo; Andruskevicz" 
                      data-edi="Editorial Universitaria de Misiones" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/escritura (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -965,6 +977,7 @@
                      data-aut="Peter McLaren" 
                      data-edi="Siglo XXI Editores" 
                      data-ano="2003" 
+                     data-est="Muy bueno"
                      data-img="img/escuelaperfor (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -982,6 +995,7 @@
                      data-aut="Harry N. Rivlin; Herbert Schueler" 
                      data-edi="Aguilar / Losada" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/encicloeduca (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -999,6 +1013,7 @@
                      data-aut="Eduardo Galeano" 
                      data-edi="Siglo XXI Editores" 
                      data-ano="1978" 
+                     data-est="Muy bueno"
                      data-img="img/diasnoches (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1016,6 +1031,7 @@
                      data-aut="Howard Zinn" 
                      data-edi="Prometeo" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/guerrapaz (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1033,6 +1049,7 @@
                      data-aut="Didier Fassin" 
                      data-edi="Prometeo" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/razonhumanita (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1050,6 +1067,7 @@
                      data-aut="Sandra Russo" 
                      data-edi="Página/12" 
                      data-ano="2003" 
+                     data-est="Muy bueno"
                      data-img="img/nosabelosq (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1067,6 +1085,7 @@
                      data-aut="Eduardo Galeano" 
                      data-edi="Siglo XXI Editores" 
                      data-ano="1988" 
+                     data-est="Muy bueno"
                      data-img="img/nopsdecimos (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1084,6 +1103,7 @@
                      data-aut="Aníbal Fernández" 
                      data-edi="Planeta" 
                      data-ano="2011" 
+                     data-est="Muy bueno"
                      data-img="img/zonceras (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1101,6 +1121,7 @@
                      data-aut="Arthur Schopenhauer" 
                      data-edi="Losada / Aguilar" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/schopen2 (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1118,6 +1139,7 @@
                      data-aut="Ludwig Wittgenstein" 
                      data-edi="Folio" 
                      data-ano="2007" 
+                     data-est="Muy bueno"
                      data-img="img/confeetica (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1135,6 +1157,7 @@
                      data-aut="Baruch Spinoza" 
                      data-edi="Folio" 
                      data-ano="2007" 
+                     data-est="Muy bueno"
                      data-img="img/dedios (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1152,6 +1175,7 @@
                      data-aut="David Lapoujade" 
                      data-edi="Cactus" 
                      data-ano="2016" 
+                     data-est="Muy bueno"
                      data-img="img/deleuzemovi (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1169,6 +1193,7 @@
                      data-aut="Friedrich Nietzsche" 
                      data-edi="Losada" 
                      data-ano="1908" 
+                     data-est="Muy bueno"
                      data-img="img/eccehomo (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1186,6 +1211,7 @@
                      data-aut="Friedrich Nietzsche" 
                      data-edi="Losada" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/crepusculo (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1203,6 +1229,7 @@
                      data-aut="Jacques Rancière" 
                      data-edi="Manantial" 
                      data-ano="2013" 
+                     data-est="Muy bueno"
                      data-img="img/espectaeman (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1220,6 +1247,7 @@
                      data-aut="Jean-Paul Sartre" 
                      data-edi="Folio" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/existenciahumanis (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1237,6 +1265,7 @@
                      data-aut="Blaise Pascal" 
                      data-edi="Folio" 
                      data-ano="1670" 
+                     data-est="Muy bueno"
                      data-img="img/hombresin (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1254,6 +1283,7 @@
                      data-aut="Jacques Rancière" 
                      data-edi="Prometeo / Bordes" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/inconcienteeste (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1271,6 +1301,7 @@
                      data-aut="Erasmo de Rotterdam" 
                      data-edi="Folio" 
                      data-ano="1511" 
+                     data-est="Muy bueno"
                      data-img="img/elogiolocu (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1288,6 +1319,7 @@
                      data-aut="Immanuel Kant" 
                      data-edi="Folio" 
                      data-ano="2004" 
+                     data-est="Muy bueno"
                      data-img="img/fundamekant (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1305,6 +1337,7 @@
                      data-aut="Alain Beaulieu" 
                      data-edi="Intelectuales" 
                      data-ano="2004" 
+                     data-est="Muy bueno"
                      data-img="img/gillesherenc (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1322,6 +1355,7 @@
                      data-aut="Mario Bunge" 
                      data-edi="Siglo Veinte" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/cienciametobunge (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1339,6 +1373,7 @@
                      data-aut="Gaston Bachelard" 
                      data-edi="Planeta" 
                      data-ano="1957" 
+                     data-est="Muy bueno"
                      data-img="img/poeticaespa (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1356,6 +1391,7 @@
                      data-aut="J.-F. Lyotard y otros" 
                      data-edi="EUDEBA" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/lecturasinfanc (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1373,6 +1409,7 @@
                      data-aut="Arthur Schopenhauer" 
                      data-edi="Folio" 
                      data-ano="2007" 
+                     data-est="Muy bueno"
                      data-img="img/metafiamor (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1390,6 +1427,7 @@
                      data-aut="Michel Foucault" 
                      data-edi="Folio" 
                      data-ano="2004" 
+                     data-est="Muy bueno"
                      data-img="img/sexypoder (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1407,6 +1445,7 @@
                      data-aut="Søren Kierkegaard" 
                      data-edi="Folio" 
                      data-ano="2007" 
+                     data-est="Muy bueno"
                      data-img="img/temortemblor (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1424,6 +1463,7 @@
                      data-aut="Roberto Follari" 
                      data-edi="Homo Sapiens / Noveduc" 
                      data-ano="2002" 
+                     data-est="Muy bueno"
                      data-img="img/teodebiles (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1441,6 +1481,7 @@
                      data-aut="Mirta Zaida Lobato" 
                      data-edi="Capital Intelectual" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/derechomujer (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1458,6 +1499,7 @@
                      data-aut="E. H. Ackernecht" 
                      data-edi="Losada" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/historiapsiqui (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1475,6 +1517,7 @@
                      data-aut="Federico Lorenz" 
                      data-edi="Capital Intelectual" 
                      data-ano="2007" 
+                     data-est="Muy bueno"
                      data-img="img/combatemem (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1492,6 +1535,7 @@
                      data-aut="Horacio Verbitsky" 
                      data-edi="Sudamericana" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/silencio (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1509,6 +1553,7 @@
                      data-aut="Hugo Vezzetti" 
                      data-edi="Universidad Nacional de Quilmes" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/freudbaires (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1526,6 +1571,7 @@
                      data-aut="Eric Hobsbawm" 
                      data-edi="Crítica" 
                      data-ano="2007" 
+                     data-est="Muy bueno"
                      data-img="img/guerrapaz (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1543,6 +1589,7 @@
                      data-aut="Guillermo Dilthey" 
                      data-edi="Losada" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/historiaedupeda (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1560,6 +1607,7 @@
                      data-aut="Roy Hora" 
                      data-edi="Capital Intelectual" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/burgueterra (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1577,6 +1625,7 @@
                      data-aut="Silvia Andrea Waskiewicz" 
                      data-edi="Edunam" 
                      data-ano="2010" 
+                     data-est="Muy bueno"
                      data-img="img/masacreober (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1594,6 +1643,7 @@
                      data-aut="Eduardo Anguita; Martín Caparrós" 
                      data-edi="Grupo Editorial Norma" 
                      data-ano="1997" 
+                     data-est="Muy bueno"
                      data-img="img/voluntad (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1611,6 +1661,7 @@
                      data-aut="Rodolfo Nicolás Capaccio" 
                      data-edi="Editorial Universitaria de Misiones" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/miradaviajer (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1628,6 +1679,7 @@
                      data-aut="Oscar Terán" 
                      data-edi="Capital Intelectual" 
                      data-ano="2007" 
+                     data-est="Muy bueno"
                      data-img="img/leerfacu (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1645,6 +1697,7 @@
                      data-aut="Mario Rapoport; Claudio Spiguel" 
                      data-edi="Capital Intelectual" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/políticaexterior (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1662,6 +1715,7 @@
                      data-aut="Hilda Sabato" 
                      data-edi="Capital Intelectual" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/pueblopoli (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1679,6 +1733,7 @@
                      data-aut="Mauricio Lebedinsky" 
                      data-edi="Capital Intelectual" 
                      data-ano="2009" 
+                     data-est="Muy bueno"
                      data-img="img/sarmiento (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1696,6 +1751,7 @@
                      data-aut="Ferdinand de Saussure" 
                      data-edi="Losada" 
                      data-ano="1916" 
+                     data-est="Muy bueno"
                      data-img="img/corsuling (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1713,6 +1769,7 @@
                      data-aut="Noam Chomsky" 
                      data-edi="Planeta / Agostini" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/chomsky (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1730,6 +1787,7 @@
                      data-aut="Inés Sarri" 
                      data-edi="Editorial Universitaria de Misiones" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/4manos (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1743,10 +1801,29 @@
                 </div>
                 
                 <div class="tarjeta-expediente" 
+                     data-tit="ArqueTipas" 
+                     data-aut="Sandra Russo" 
+                     data-edi="Página/12" 
+                     data-ano="s/d" 
+                     data-est="Muy bueno"
+                     data-img="img/arquetipas (Mediana).jpg" 
+                     onclick="abrirExpediente(this)">
+                     
+                    <div class="tarjeta-imagen-wrapper">
+                        <img src="img/arquetipas (Mediana).jpg" alt="ArqueTipas" onerror="this.style.display='none'">
+                    </div>
+                    <div class="enlace-tarjeta">
+                        <h3>ArqueTipas</h3>
+                        <p>Sandra Russo</p>
+                    </div>
+                </div>
+                
+                <div class="tarjeta-expediente" 
                      data-tit="Crimen y castigo" 
                      data-aut="Fiódor Dostoievski" 
                      data-edi="Debolsillo" 
                      data-ano="1866" 
+                     data-est="Muy bueno"
                      data-img="img/crimencast (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1764,6 +1841,7 @@
                      data-aut="Gabriel García Márquez" 
                      data-edi="Sudamericana" 
                      data-ano="1981" 
+                     data-est="Muy bueno"
                      data-img="img/cronicamuert (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1781,6 +1859,7 @@
                      data-aut="Gabriel García Márquez" 
                      data-edi="Sudamericana" 
                      data-ano="1994" 
+                     data-est="Muy bueno"
                      data-img="img/amoryotro (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1798,6 +1877,7 @@
                      data-aut="Gabriel García Márquez" 
                      data-edi="Sudamericana" 
                      data-ano="1961" 
+                     data-est="Muy bueno"
                      data-img="img/coronelno (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1815,6 +1895,7 @@
                      data-aut="William Peter Blatty" 
                      data-edi="Agata" 
                      data-ano="1971" 
+                     data-est="Muy bueno"
                      data-img="img/elexorcis (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1832,6 +1913,7 @@
                      data-aut="Umberto Eco" 
                      data-edi="Lumen / Sudamericana" 
                      data-ano="1989" 
+                     data-est="Muy bueno"
                      data-img="img/péndulo1 (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1849,6 +1931,7 @@
                      data-aut="Patrick Süskind" 
                      data-edi="Booket" 
                      data-ano="1985" 
+                     data-est="Muy bueno"
                      data-img="img/perfume (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1866,6 +1949,7 @@
                      data-aut="Alan Pauls" 
                      data-edi="Sudamericana" 
                      data-ano="1984" 
+                     data-est="Muy bueno"
                      data-img="img/pudoerdel (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1883,6 +1967,7 @@
                      data-aut="Gabriel García Márquez" 
                      data-edi="Sudamericana" 
                      data-ano="1955" 
+                     data-est="Muy bueno"
                      data-img="img/hojarasca (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1900,6 +1985,7 @@
                      data-aut="Franz Kafka" 
                      data-edi="Página/12" 
                      data-ano="1915" 
+                     data-est="Muy bueno"
                      data-img="img/metamorfo (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1917,6 +2003,7 @@
                      data-aut="Juan Sasturain" 
                      data-edi="Sudamericana" 
                      data-ano="2003" 
+                     data-est="Muy bueno"
                      data-img="img/mujerducha (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1934,6 +2021,7 @@
                      data-aut="María Teresa Martínez" 
                      data-edi="Edunam" 
                      data-ano="1998" 
+                     data-est="Muy bueno"
                      data-img="img/recepcinarrati (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1951,6 +2039,7 @@
                      data-aut="Gabriel García Márquez" 
                      data-edi="Sudamericana" 
                      data-ano="2004" 
+                     data-est="Muy bueno"
                      data-img="img/memiriasputas (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1968,6 +2057,7 @@
                      data-aut="Gabriel García Márquez" 
                      data-edi="Sudamericana" 
                      data-ano="1990" 
+                     data-est="Muy bueno"
                      data-img="img/ojoperro (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -1985,6 +2075,7 @@
                      data-aut="Raúl Novau" 
                      data-edi="Editorial Universitaria de Misiones" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/palitos (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2002,6 +2093,7 @@
                      data-aut="Rodolfo Nicolás Capaccio" 
                      data-edi="Editorial Universitaria de Misiones" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/pobresausentes (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2019,6 +2111,7 @@
                      data-aut="Rodolfo Nicolás Capaccio" 
                      data-edi="Edunam" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/sumidos (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2036,6 +2129,7 @@
                      data-aut="Javier Chemes" 
                      data-edi="Editorial Universitaria de Misiones" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/tragonada (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2053,6 +2147,7 @@
                      data-aut="Franz Kafka" 
                      data-edi="Página/12" 
                      data-ano="1919" 
+                     data-est="Muy bueno"
                      data-img="img/medicorural (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2070,6 +2165,7 @@
                      data-aut="Juan Sasturain" 
                      data-edi="Página/12" 
                      data-ano="2003" 
+                     data-est="Muy bueno"
                      data-img="img/wing (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2087,6 +2183,7 @@
                      data-aut="Jacques Rancière" 
                      data-edi="Del Estante" 
                      data-ano="2004" 
+                     data-est="Muy bueno"
                      data-img="img/default.jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2104,6 +2201,7 @@
                      data-aut="Carlos González Villar" 
                      data-edi="Edunam" 
                      data-ano="2000" 
+                     data-est="Muy bueno"
                      data-img="img/descentra (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2121,6 +2219,7 @@
                      data-aut="Darío Kosovsky" 
                      data-edi="Capital Intelectual" 
                      data-ano="2005" 
+                     data-est="Muy bueno"
                      data-img="img/ciudadano (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2138,6 +2237,7 @@
                      data-aut="Christian Gruenberg" 
                      data-edi="Capital Intelectual" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/costodemoc (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2155,6 +2255,7 @@
                      data-aut="Noam Chomsky" 
                      data-edi="Libros del Zorzal" 
                      data-ano="2001" 
+                     data-est="Muy bueno"
                      data-img="img/terrorchomsk (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2172,6 +2273,7 @@
                      data-aut="Juan Carlos Portantiero; Emilio de Ipola" 
                      data-edi="Cántaro" 
                      data-ano="1987" 
+                     data-est="Muy bueno"
                      data-img="img/estadosocied (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2189,6 +2291,7 @@
                      data-aut="Oscar Oszlak" 
                      data-edi="Capital Intelectual" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/gobernarimper (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2206,6 +2309,7 @@
                      data-aut="Mariana Galvani" 
                      data-edi="Capital Intelectual" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/marcagorra (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2223,6 +2327,7 @@
                      data-aut="Antonio Gramsci" 
                      data-edi="Planeta-Agostini" 
                      data-ano="1993" 
+                     data-est="Muy bueno"
                      data-img="img/gramsci (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2240,6 +2345,7 @@
                      data-aut="Pablo Stefanoni" 
                      data-edi="Capital Intelectual" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/revolucevo (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2257,6 +2363,7 @@
                      data-aut="Thomas Hobbes" 
                      data-edi="Losada" 
                      data-ano="1651" 
+                     data-est="Muy bueno"
                      data-img="img/leviatan (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2274,6 +2381,7 @@
                      data-aut="Carlos González Villar" 
                      data-edi="Edunam" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/goblocales (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2291,6 +2399,7 @@
                      data-aut="Karl Marx; Friedrich Engels" 
                      data-edi="Folio" 
                      data-ano="2007" 
+                     data-est="Muy bueno"
                      data-img="img/manifiesto (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2308,6 +2417,7 @@
                      data-aut="Roberto C. Abinzano" 
                      data-edi="Editorial Universitaria de Misiones" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/mercosur (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2325,6 +2435,7 @@
                      data-aut="Noam Chomsky" 
                      data-edi="Zarzal" 
                      data-ano="2003" 
+                     data-est="Muy bueno"
                      data-img="img/poderterror (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2342,6 +2453,7 @@
                      data-aut="Inés M. Pousadela" 
                      data-edi="Capital Intelectual" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/quesevayan (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2359,6 +2471,7 @@
                      data-aut="Esteban Rodríguez Alzueta" 
                      data-edi="Futuro Anterior" 
                      data-ano="2014" 
+                     data-est="Muy bueno"
                      data-img="img/temorcontro (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2376,6 +2489,7 @@
                      data-aut="Jacques-Alain Miller" 
                      data-edi="Atuel-Anáfora" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/deseolacan (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2393,6 +2507,7 @@
                      data-aut="J.A.C. Brown" 
                      data-edi="Fondo de Cultura Económica" 
                      data-ano="1992" 
+                     data-est="Muy bueno"
                      data-img="img/psicoindustri (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2410,6 +2525,7 @@
                      data-aut="Eduardo Anguita" 
                      data-edi="Página/12 / Sudamericana" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/cartonero (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2427,6 +2543,7 @@
                      data-aut="Pierre Bourdieu" 
                      data-edi="Siglo XXI Editores" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/capitalcultu (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2444,6 +2561,7 @@
                      data-aut="Ernesto López" 
                      data-edi="Universidad Nacional de Quilmes" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/default.jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2461,6 +2579,7 @@
                      data-aut="Pierre Bourdieu" 
                      data-edi="Siglo XXI Editores" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/sentidoprac (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2478,6 +2597,7 @@
                      data-aut="Pierre Bourdieu" 
                      data-edi="Siglo XXI Editores" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/sentidosocial (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2495,6 +2615,7 @@
                      data-aut="Pierre Bourdieu" 
                      data-edi="Siglo XXI Editores" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/homoacade (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2512,6 +2633,7 @@
                      data-aut="Maristella Svampa" 
                      data-edi="Capital Intelectual" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/brechaurbana (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2529,6 +2651,7 @@
                      data-aut="Pierre Bourdieu" 
                      data-edi="Siglo XXI Editores" 
                      data-ano="2013" 
+                     data-est="Muy bueno"
                      data-img="img/nobleaestado (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2546,6 +2669,7 @@
                      data-aut="Pablo Semán" 
                      data-edi="Capital Intelectual" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/religiosipopular (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2563,6 +2687,7 @@
                      data-aut="Juan Carlos Portantiero" 
                      data-edi="CEAL" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/sociolocla (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2580,6 +2705,7 @@
                      data-aut="Alvin Toffler" 
                      data-edi="Muy Interesante" 
                      data-ano="1980" 
+                     data-est="Muy bueno"
                      data-img="img/tercerola (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2597,6 +2723,7 @@
                      data-aut="Loïc Wacquant" 
                      data-edi="Manantial" 
                      data-ano="2000" 
+                     data-est="Muy bueno"
                      data-img="img/carceles (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2614,6 +2741,7 @@
                      data-aut="Loïc Wacquant" 
                      data-edi="Siglo XXI Editores" 
                      data-ano="2013" 
+                     data-est="Muy bueno"
                      data-img="img/condenados (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2631,6 +2759,7 @@
                      data-aut="Bourdieu y Passeron" 
                      data-edi="Siglo XXI" 
                      data-ano="2003" 
+                     data-est="Muy bueno"
                      data-img="img/herederos (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2648,6 +2777,7 @@
                      data-aut="Loïc Wacquant" 
                      data-edi="Manantial" 
                      data-ano="2001" 
+                     data-est="Muy bueno"
                      data-img="img/parias (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2665,6 +2795,7 @@
                      data-aut="Umberto Eco" 
                      data-edi="Altaya" 
                      data-ano="s/d" 
+                     data-est="Muy bueno"
                      data-img="img/sociovspsico (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2682,6 +2813,7 @@
                      data-aut="CELS" 
                      data-edi="Siglo XXI / CELS" 
                      data-ano="2004" 
+                     data-est="Muy bueno"
                      data-img="img/ddhhinfo (Mediana).jpg" 
                      onclick="abrirExpediente(this)">
                      
@@ -2704,7 +2836,8 @@
                 <div class="datos-expediente" id="datosCopiar">
                     <strong>AUTOR:</strong> <span id="modAut"></span><br>
                     <strong>EDITORIAL:</strong> <span id="modEdi"></span><br>
-                    <strong>AÑO:</strong> <span id="modAño"></span>
+                    <strong>AÑO:</strong> <span id="modAño"></span><br>
+                    <strong>ESTADO:</strong> <span id="modEst"></span>
                 </div>
                 <button class="btn-copiar" id="btnCopiar" onclick="copiarAlPortapapeles()">COPIAR</button>
             </div>
@@ -2713,7 +2846,7 @@
 
     <div id="btn-ascenso" onclick="volverArriba()" title="Volver a arriba">&#9650;</div>
 
-    <footer>
+     <footer>
         <div class="footer-bunker" style="text-align: center; vertical-align: middle; width: 100%; color: #ffffff; line-height: 1.6; padding: 25px 0; display: block;">
             <p style="margin-bottom: 8px; text-align: center !important; vertical-align: middle;">
                 <strong class="title-site-m" style="font-family: 'Almarai', sans-serif; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.8px; text-shadow: 0 0 4px #000, 0 0 8px #000, 0 0 12px #000, 0 0 16px #000, 0 0 20px #000 !important;"> 
@@ -2758,6 +2891,7 @@
             document.getElementById('modAut').innerText = elemento.getAttribute('data-aut');
             document.getElementById('modEdi').innerText = elemento.getAttribute('data-edi');
             document.getElementById('modAño').innerText = elemento.getAttribute('data-ano');
+            document.getElementById('modEst').innerText = elemento.getAttribute('data-est');
             
             const imgUrl = elemento.getAttribute('data-img');
             document.getElementById('modalFondo').style.backgroundImage = `url('${imgUrl}')`;
