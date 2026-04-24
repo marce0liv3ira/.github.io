@@ -2,7 +2,7 @@
   "config": {
     "titulo": "ESTANTE DE ABAJO",
     "subtitulo": "DE MI LIBROTECA",
-    "bajada": "Aquí va la breve explicación de la página. El manual de operaciones de esta trinchera literaria."
+    "bajada": "Aquí va la breve explicación de la página, breve. El manual de operaciones de esta trinchera literaria."
   },
   "pestañas": [
     {"id": "tab1", "titulo": "CONTENIDO", "texto": "Explicación de qué tipo de expedientes y materiales se encuentran en esta colección."},
