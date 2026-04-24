@@ -666,12 +666,12 @@
     },
     {
       "titulo": "Gilles Deleuze y su herencia filosófica",
-      "autor": "Alain Beaulieu",
-      "editorial": "Intelectuales",
+      "autor": "Alain Beaulieu (Coord.)",
+      "editorial": " Campo De Ideas S.L.",
       "categoria": "Filosofía",
-      "coleccion": "",
+      "coleccion": "Intelectuales",
       "precio": "$14.000 - $25.000",
-      "año": "2004",
+      "año": "2013",
       "estado": "Muy bueno",
       "imagen": "img/gillesherenc (Mediana).jpg"
     },
@@ -729,17 +729,6 @@
       "año": "s/d",
       "estado": "Muy bueno",
       "imagen": "img/homoacade (Mediana).jpg"
-    },
-    {
-      "titulo": "Intelectuales. Gilles Deleuze y su herencia filosófica",
-      "autor": "Alain Beaulieu (coord.)",
-      "editorial": "Mañantial /? OCR parcialmente ilegible",
-      "categoria": "Filosofía",
-      "coleccion": "",
-      "precio": "17000",
-      "año": "2010",
-      "estado": "Muy bueno",
-      "imagen": "img/gillesherenc (Mediana).jpg"
     },
     {
       "titulo": "Jóvenes, crisis y saberes",
@@ -1053,7 +1042,7 @@
       "titulo": "La tercera ola",
       "autor": "Alvin Toffler",
       "editorial": "Muy Interesante",
-      "categoria": "Sociología",
+      "categoria": "Sociedad",
       "coleccion": "Divulgación Científica",
       "precio": "$7.000",
       "año": "1980",
