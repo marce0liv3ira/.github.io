@@ -9,9 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
     
     <style>
-        /* ============================================================
-           VARIABLES Y ESTÉTICA GENERAL
-           ============================================================ */
         :root { 
             --rojo-base: #991A1A; 
             --rojo-sangre: #A30000; 
@@ -20,7 +17,6 @@
             --fondo-hueso: #FAF6ED;
             --blanco: #FFFFFF; 
             --negro: #000000;
-            --azul-enlace: #0000EE; 
         }
         
         body { 
@@ -34,46 +30,79 @@
         }
         
         a { color: var(--rojo-sangre) !important; text-decoration: none; transition: color 0.2s ease !important; }
-        a:hover { color: #D62828 !important; }
+        a:hover { color: #D62828 !important; text-shadow: 0 0 5px rgba(163, 0, 0, 0.4); }
         
         .contenedor { max-width: 1200px; margin: 0 auto; display: flow-root; }
         
-        /* CABECERA */
-        header { text-align: center; border-bottom: 6px double var(--rojo-sangre); padding-bottom: 20px; margin-bottom: 30px; }
-        h1 { font-family: 'Bebas Neue', sans-serif !important; font-size: 4rem !important; color: var(--rojo-sangre) !important; margin: 0; letter-spacing: -0.05em !important; line-height: 1.1 !important; }
-        h2 { font-family: 'Bebas Neue', sans-serif !important; font-size: 2rem !important; color: var(--negro) !important; margin: 5px 0; }
+        /* CABECERA (Línea ultrafina y títulos enormes) */
+        header { 
+            text-align: center; 
+            border-bottom: 1px solid var(--rojo-sangre); 
+            padding-bottom: 20px; 
+            margin-bottom: 30px; 
+            box-shadow: 0 4px 6px -6px rgba(163, 0, 0, 0.8); /* Resplandor inferior de la línea */
+        }
+        h1 { 
+            font-family: 'Bebas Neue', sans-serif !important; 
+            font-size: 5.5rem !important; 
+            color: var(--rojo-sangre) !important; 
+            margin: 0; 
+            letter-spacing: -0.02em !important; 
+            line-height: 1.1 !important; 
+            text-shadow: 0 0 10px rgba(163, 0, 0, 0.2);
+        }
+        h2 { 
+            font-family: 'Bebas Neue', sans-serif !important; 
+            font-size: 2.8rem !important; 
+            color: var(--negro) !important; 
+            margin: 5px 0 15px 0; 
+            line-height: 1.1;
+        }
         .bajada { font-size: 1.2rem; font-weight: bold; color: var(--gris-ceniza); font-family: 'Inter', sans-serif; }
 
-        /* CAJA DE PESTAÑAS */
-        .caja-menu { border: 3px solid var(--negro); margin-bottom: 40px; background: #fff; }
-        .tabs-header { display: flex; border-bottom: 3px solid var(--negro); background: var(--negro); }
+        /* CAJA DE MENÚ (Redondeada con neón sutil) */
+        .caja-menu { 
+            border: 1px solid var(--rojo-sangre); 
+            margin-bottom: 40px; 
+            background: #fff; 
+            border-radius: 8px; 
+            overflow: hidden;
+            box-shadow: 0 0 12px rgba(163, 0, 0, 0.25);
+        }
+        .tabs-header { display: flex; border-bottom: 1px solid var(--rojo-sangre); background: var(--negro); }
         .tab-btn { 
             flex: 1; padding: 12px; cursor: pointer; font-family: 'Bebas Neue', sans-serif; 
             font-size: 1.5rem; color: var(--blanco); background: transparent; border: none; 
-            transition: background 0.3s; letter-spacing: 1px;
+            transition: all 0.3s ease; letter-spacing: 1px;
         }
-        .tab-btn.active, .tab-btn:hover { background: var(--rojo-sangre); }
-        .tab-content { padding: 20px; display: none; font-size: 1.1rem; border-left: 6px solid var(--rojo-base); font-family: 'Inter', sans-serif; }
+        .tab-btn.active, .tab-btn:hover { 
+            background: var(--rojo-sangre); 
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .tab-content { padding: 20px; display: none; font-size: 1.1rem; font-family: 'Inter', sans-serif; }
         .tab-content.active { display: block; }
 
-        /* ÍNDICE DE CATEGORÍAS */
+        /* ÍNDICE DE CATEGORÍAS (Sin cubo, puro resplandor) */
         .caja-indice { 
-            border: 4px solid var(--rojo-sangre); padding: 20px; margin-bottom: 40px; 
-            background: var(--blanco); box-shadow: 4px 4px 0px var(--negro);
+            border: 1px solid var(--rojo-sangre); 
+            padding: 20px; 
+            margin-bottom: 40px; 
+            background: var(--blanco); 
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(163, 0, 0, 0.25);
         }
-        .caja-indice h3 { font-family: 'Bebas Neue', sans-serif !important; font-size: 2rem !important; margin-top: 0; color: var(--negro) !important; }
+        .caja-indice h3 { font-family: 'Bebas Neue', sans-serif !important; font-size: 2.2rem !important; margin-top: 0; color: var(--negro) !important; }
         .lista-indice { list-style-type: square; color: var(--rojo-base); font-size: 1.2rem; font-weight: bold; font-family: 'Inter', sans-serif; }
         .lista-indice li { margin-bottom: 8px; }
         
         .titulo-categoria { 
             font-family: 'Bebas Neue', sans-serif !important; font-size: 3rem !important; color: var(--blanco) !important; 
-            background: var(--negro) !important; padding: 5px 15px !important; border-left: 8px solid var(--rojo-sangre) !important; 
+            background: var(--negro) !important; padding: 5px 15px !important; border-left: 5px solid var(--rojo-sangre) !important; 
             margin: 50px 0 20px 0 !important; text-transform: uppercase !important;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(163, 0, 0, 0.3);
         }
 
-        /* =========================================
-           GRILLA TACURÚ Y TARJETAS DE EXPEDIENTE
-        ========================================= */
         .grilla-tacuru {
             display: grid !important;
             grid-template-columns: repeat(3, 1fr) !important;
@@ -82,15 +111,18 @@
             background-color: transparent !important;
         }
 
+        /* TARJETAS (Redondeadas y radiactivas) */
         .tarjeta-expediente {
             position: relative !important;
             aspect-ratio: 1 / 1 !important;
             background-color: #000 !important;
-            border: 2px solid var(--rojo-oscuro) !important;
+            border: 1px solid var(--rojo-oscuro) !important;
+            border-radius: 8px !important;
             overflow: hidden !important;
             padding: 0 !important;
             transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
             cursor: pointer;
+            box-shadow: 0 0 10px rgba(163, 0, 0, 0.2) !important;
         }
 
         .enlace-tarjeta {
@@ -110,8 +142,8 @@
 
         .tarjeta-expediente:hover {
             transform: scale(1.03) !important;
-            border-color: #8b0000 !important;
-            box-shadow: 0 0 25px rgba(139, 0, 0, 0.6), inset 0 0 12px rgba(139, 0, 0, 0.5) !important;
+            border-color: var(--rojo-sangre) !important;
+            box-shadow: 0 0 25px rgba(163, 0, 0, 0.65), inset 0 0 12px rgba(163, 0, 0, 0.4) !important;
         }
 
         .tarjeta-imagen-wrapper {
@@ -140,7 +172,7 @@
         }
 
         .tarjeta-expediente:hover .tarjeta-imagen-wrapper::after {
-            background-color: rgba(0, 0, 0, 0.4) !important;
+            background-color: rgba(0, 0, 0, 0.3) !important;
         }
 
         .tarjeta-expediente:hover img {
@@ -163,7 +195,7 @@
         .tarjeta-expediente p {
             font-family: 'Inter', sans-serif !important;
             color: var(--fondo-hueso) !important;
-            font-size: 1rem !important;
+            font-size: 1.1rem !important;
             line-height: 1.2 !important;
             margin: 0 !important;
             text-shadow: 0 0 5px #000, 1px 1px 3px #000 !important;
@@ -174,16 +206,18 @@
         .precio-tacuru {
             background: var(--rojo-sangre);
             color: var(--blanco);
-            padding: 4px 10px;
+            padding: 4px 12px;
             margin-top: 10px;
             display: inline-block;
             font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             letter-spacing: 1px;
-            border: 1px solid var(--negro);
+            border: 1px solid var(--rojo-oscuro);
+            border-radius: 4px;
+            box-shadow: 0 0 8px rgba(163, 0, 0, 0.5);
         }
 
-        /* MODAL (VISOR DE EXPEDIENTE) */
+        /* MODAL VISOR */
         .modal-overlay {
             display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0, 0, 0, 0.9); justify-content: center; align-items: center; backdrop-filter: blur(5px);
@@ -191,8 +225,11 @@
         
         .modal-caja {
             position: relative; width: 90%; max-width: 450px; aspect-ratio: 2/3; 
-            border: 4px solid var(--rojo-sangre); box-shadow: 0 0 30px rgba(163, 0, 0, 0.6);
+            border: 2px solid var(--rojo-sangre); 
+            border-radius: 8px;
+            box-shadow: 0 0 35px rgba(163, 0, 0, 0.7);
             background-size: cover; background-position: center;
+            overflow: hidden;
         }
         
         .modal-oscuridad {
@@ -202,39 +239,42 @@
         }
         
         .cerrar-modal {
-            position: absolute; top: 5px; right: 15px; color: var(--rojo-sangre); font-size: 2.5rem; 
-            font-weight: bold; cursor: pointer; z-index: 10; font-family: sans-serif; transition: color 0.2s;
+            position: absolute; top: 5px; right: 15px; color: var(--rojo-sangre); font-size: 3rem; 
+            font-weight: bold; cursor: pointer; z-index: 10; font-family: sans-serif; transition: all 0.2s;
+            text-shadow: 0 0 10px rgba(0,0,0,0.8);
         }
-        .cerrar-modal:hover { color: var(--blanco); }
+        .cerrar-modal:hover { color: var(--blanco); transform: scale(1.1); text-shadow: 0 0 10px rgba(163,0,0,0.8); }
         
         .datos-expediente { color: var(--blanco); font-size: 1.1rem; line-height: 1.6; text-align: left; -webkit-user-select: text; user-select: text; font-family: 'Inter', sans-serif; }
         .datos-expediente strong { color: var(--rojo-base); font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 1px; }
-        .modal-titulo { font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; color: var(--blanco); margin: 0 0 20px 0; border-bottom: 2px solid var(--rojo-sangre); line-height: 1.1; }
+        .modal-titulo { font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; color: var(--blanco); margin: 0 0 20px 0; border-bottom: 1px solid var(--rojo-sangre); line-height: 1.1; padding-bottom: 10px; box-shadow: 0 4px 6px -6px rgba(163, 0, 0, 0.8); }
         
-        /* BOTÓN DE COPIAR CON EFECTO NEÓN HORMI */
         .btn-copiar {
             margin-top: 25px; width: 100%; padding: 15px; background: var(--rojo-sangre); 
-            color: var(--blanco); border: 2px solid var(--negro); font-family: 'Bebas Neue', sans-serif; 
-            font-size: 1.6rem; cursor: pointer; 
+            color: var(--blanco); border: 1px solid var(--rojo-oscuro); font-family: 'Bebas Neue', sans-serif; 
+            font-size: 1.6rem; cursor: pointer; border-radius: 8px;
+            box-shadow: 0 0 10px rgba(163, 0, 0, 0.4);
             transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), filter 0.3s ease, box-shadow 0.3s ease !important;
         }
         .btn-copiar:hover { 
             transform: scale(1.02) !important;
             background: var(--rojo-sangre); 
             color: var(--blanco); 
-            box-shadow: 0 0 15px rgba(158, 40, 19, 0.8), inset 0 0 8px rgba(158, 40, 19, 0.4) !important;
+            box-shadow: 0 0 20px rgba(158, 40, 19, 0.8), inset 0 0 8px rgba(158, 40, 19, 0.4) !important;
         }
 
-        /* RESPONSIVE */
         @media (max-width: 900px) {
             .grilla-tacuru { grid-template-columns: repeat(2, 1fr) !important; }
+            h1 { font-size: 4rem !important; }
+            h2 { font-size: 2.2rem !important; }
         }
         @media (max-width: 600px) {
             .grilla-tacuru { grid-template-columns: 1fr !important; }
-            h1 { font-size: 3rem !important; }
+            h1 { font-size: 3.5rem !important; }
+            h2 { font-size: 1.8rem !important; }
             .modal-caja { width: 95%; aspect-ratio: auto; min-height: 75vh; }
             .tabs-header { flex-direction: column; }
-            .tab-btn { border-bottom: 1px solid var(--blanco); }
+            .tab-btn { border-bottom: 1px solid var(--negro); }
         }
     </style>
 </head>
@@ -243,7 +283,7 @@
         <header>
             <h1>ESTANTE DE ABAJO</h1>
             <h2>DE MI LIBROTECA</h2>
-            <div class="bajada">Aquí va la breve explicación de la página, breve pero... El manual de operaciones de esta trinchera literaria.</div>
+            <div class="bajada">El manual de operaciones de esta trinchera literaria. Seleccioná una obra para abrir el expediente.</div>
         </header>
 
         <div class="caja-menu">
@@ -258,41 +298,155 @@
         <div class="caja-indice">
             <h3>ÍNDICE DE EXPEDIENTES</h3>
             <ul class="lista-indice">
-                <li><a href="#ensayo-político">Ensayo Político</a></li><li><a href="#ficción-nacional">Ficción Nacional</a></li>
+                <li><a href="#comunicación-/-semiótica">Comunicación / Semiótica</a></li><li><a href="#educación/pedagogía">Educación/Pedagogía</a></li><li><a href="#género-/-historia">Género / Historia</a></li><li><a href="#historia-/-política">Historia / Política</a></li><li><a href="#literatura">Literatura</a></li>
             </ul>
         </div>
 
-        <h2 class="titulo-categoria" id="ensayo-político">Ensayo Político</h2><div class="grilla-tacuru">
-                <div class="tarjeta-expediente" onclick="verExpediente('Realismo Capitalista', 'Mark Fisher', 'Caja Negra', 'Ensayo Político', 'Futuros Próximos', '$15.000', '2016', 'fisher.jpg')">
+        <h2 class="titulo-categoria" id="comunicación-/-semiótica">Comunicación / Semiótica</h2><div class="grilla-tacuru">
+                <div class="tarjeta-expediente" 
+                     data-tit="Alfabetización semiótica en las fronteras" 
+                     data-aut="Ana Camblong; Froilán Fernández" 
+                     data-edi="Editorial Universitaria de Misiones" 
+                     data-cat="Comunicación / Semiótica" 
+                     data-col="" 
+                     data-pre="$8.000 - $16.000" 
+                     data-ano="2010" 
+                     data-img="img/alfabetsemio (Mediana).jpg" 
+                     onclick="abrirExpediente(this)">
+                     
                     <div class="tarjeta-imagen-wrapper">
-                        <img src="fisher.jpg" alt="Realismo Capitalista" onerror="this.style.display='none'">
+                        <img src="img/alfabetsemio (Mediana).jpg" alt="Alfabetización semiótica en las fronteras" onerror="this.style.display='none'">
                     </div>
                     <div class="enlace-tarjeta">
-                        <h3>Realismo Capitalista</h3>
-                        <p>Mark Fisher</p>
-                        <span class="precio-tacuru">$15.000</span>
+                        <h3>Alfabetización semiótica en las fronteras</h3>
+                        <p>Ana Camblong; Froilán Fernández</p>
+                        <span class="precio-tacuru">$8.000 - $16.000</span>
                     </div>
                 </div>
-                </div><h2 class="titulo-categoria" id="ficción-nacional">Ficción Nacional</h2><div class="grilla-tacuru">
-                <div class="tarjeta-expediente" onclick="verExpediente('El Juguete Rabioso', 'Roberto Arlt', 'Losada', 'Ficción Nacional', 'Clásicos', '$12.000', '1926', 'arlt.jpg')">
+                </div><h2 class="titulo-categoria" id="educación/pedagogía">Educación/Pedagogía</h2><div class="grilla-tacuru">
+                <div class="tarjeta-expediente" 
+                     data-tit="¿Y si el otro no estuviera ahí? Notas para una pedagogía (improbable) de la diferencia" 
+                     data-aut="Carlos Skliar" 
+                     data-edi="Miño y Dávila / CTERA" 
+                     data-cat="Educación/Pedagogía" 
+                     data-col="" 
+                     data-pre="$14.000" 
+                     data-ano="2003" 
+                     data-img="img/sielotro (Mediana).jpg" 
+                     onclick="abrirExpediente(this)">
+                     
                     <div class="tarjeta-imagen-wrapper">
-                        <img src="arlt.jpg" alt="El Juguete Rabioso" onerror="this.style.display='none'">
+                        <img src="img/sielotro (Mediana).jpg" alt="¿Y si el otro no estuviera ahí? Notas para una pedagogía (improbable) de la diferencia" onerror="this.style.display='none'">
                     </div>
                     <div class="enlace-tarjeta">
-                        <h3>El Juguete Rabioso</h3>
-                        <p>Roberto Arlt</p>
-                        <span class="precio-tacuru">$12.000</span>
+                        <h3>¿Y si el otro no estuviera ahí? Notas para una pedagogía (improbable) de la diferencia</h3>
+                        <p>Carlos Skliar</p>
+                        <span class="precio-tacuru">$14.000</span>
+                    </div>
+                </div>
+                </div><h2 class="titulo-categoria" id="género-/-historia">Género / Historia</h2><div class="grilla-tacuru">
+                <div class="tarjeta-expediente" 
+                     data-tit="¿Tienen derechos las mujeres? Política y ciudadanía en la Argentina del siglo XX" 
+                     data-aut="Mirta Zaida Lobato" 
+                     data-edi="Capital Intelectual" 
+                     data-cat="Género / Historia" 
+                     data-col="Claves para Todos" 
+                     data-pre="$4.000 - $9.000" 
+                     data-ano="s/d" 
+                     data-img="img/derechomujer (Mediana).jpg" 
+                     onclick="abrirExpediente(this)">
+                     
+                    <div class="tarjeta-imagen-wrapper">
+                        <img src="img/derechomujer (Mediana).jpg" alt="¿Tienen derechos las mujeres? Política y ciudadanía en la Argentina del siglo XX" onerror="this.style.display='none'">
+                    </div>
+                    <div class="enlace-tarjeta">
+                        <h3>¿Tienen derechos las mujeres? Política y ciudadanía en la Argentina del siglo XX</h3>
+                        <p>Mirta Zaida Lobato</p>
+                        <span class="precio-tacuru">$4.000 - $9.000</span>
+                    </div>
+                </div>
+                </div><h2 class="titulo-categoria" id="historia-/-política">Historia / Política</h2><div class="grilla-tacuru">
+                <div class="tarjeta-expediente" 
+                     data-tit="La Voluntad. Una historia de la militancia revolucionaria en la Argentina 1966-1973" 
+                     data-aut="Eduardo Anguita; Martín Caparrós" 
+                     data-edi="Grupo Editorial Norma" 
+                     data-cat="Historia / Política" 
+                     data-col="" 
+                     data-pre="$6.000 - $15.000" 
+                     data-ano="1997" 
+                     data-img="img/voluntad (Mediana).jpg" 
+                     onclick="abrirExpediente(this)">
+                     
+                    <div class="tarjeta-imagen-wrapper">
+                        <img src="img/voluntad (Mediana).jpg" alt="La Voluntad. Una historia de la militancia revolucionaria en la Argentina 1966-1973" onerror="this.style.display='none'">
+                    </div>
+                    <div class="enlace-tarjeta">
+                        <h3>La Voluntad. Una historia de la militancia revolucionaria en la Argentina 1966-1973</h3>
+                        <p>Eduardo Anguita; Martín Caparrós</p>
+                        <span class="precio-tacuru">$6.000 - $15.000</span>
+                    </div>
+                </div>
+                </div><h2 class="titulo-categoria" id="literatura">Literatura</h2><div class="grilla-tacuru">
+                <div class="tarjeta-expediente" 
+                     data-tit="4 manos poesías" 
+                     data-aut="Inés Sarri" 
+                     data-edi="Editorial Universitaria de Misiones" 
+                     data-cat="Literatura" 
+                     data-col="" 
+                     data-pre="$5.000 - $16.000" 
+                     data-ano="s/d" 
+                     data-img="img/4manos (Mediana).jpg" 
+                     onclick="abrirExpediente(this)">
+                     
+                    <div class="tarjeta-imagen-wrapper">
+                        <img src="img/4manos (Mediana).jpg" alt="4 manos poesías" onerror="this.style.display='none'">
+                    </div>
+                    <div class="enlace-tarjeta">
+                        <h3>4 manos poesías</h3>
+                        <p>Inés Sarri</p>
+                        <span class="precio-tacuru">$5.000 - $16.000</span>
                     </div>
                 </div>
                 
-                <div class="tarjeta-expediente" onclick="verExpediente('Los pichiciegos', 'Fogwill', 'Interzona', 'Ficción Nacional', 'Narrativa', '$14.500', '1983', 'fogwill.jpg')">
+                <div class="tarjeta-expediente" 
+                     data-tit="Un médico rural" 
+                     data-aut="Franz Kafka" 
+                     data-edi="Página/12" 
+                     data-cat="Literatura" 
+                     data-col="" 
+                     data-pre="$5.000 - $16.000" 
+                     data-ano="1919" 
+                     data-img="img/medicorural (Mediana).jpg" 
+                     onclick="abrirExpediente(this)">
+                     
                     <div class="tarjeta-imagen-wrapper">
-                        <img src="fogwill.jpg" alt="Los pichiciegos" onerror="this.style.display='none'">
+                        <img src="img/medicorural (Mediana).jpg" alt="Un médico rural" onerror="this.style.display='none'">
                     </div>
                     <div class="enlace-tarjeta">
-                        <h3>Los pichiciegos</h3>
-                        <p>Fogwill</p>
-                        <span class="precio-tacuru">$14.500</span>
+                        <h3>Un médico rural</h3>
+                        <p>Franz Kafka</p>
+                        <span class="precio-tacuru">$5.000 - $16.000</span>
+                    </div>
+                </div>
+                
+                <div class="tarjeta-expediente" 
+                     data-tit="Wing de metegol" 
+                     data-aut="Juan Sasturain" 
+                     data-edi="Página/12" 
+                     data-cat="Literatura" 
+                     data-col="" 
+                     data-pre="$6.000 - $12.000" 
+                     data-ano="2003" 
+                     data-img="img/wing (Mediana).jpg" 
+                     onclick="abrirExpediente(this)">
+                     
+                    <div class="tarjeta-imagen-wrapper">
+                        <img src="img/wing (Mediana).jpg" alt="Wing de metegol" onerror="this.style.display='none'">
+                    </div>
+                    <div class="enlace-tarjeta">
+                        <h3>Wing de metegol</h3>
+                        <p>Juan Sasturain</p>
+                        <span class="precio-tacuru">$6.000 - $12.000</span>
                     </div>
                 </div>
                 </div>
@@ -317,24 +471,37 @@
     </div>
 
     <script>
+        // JS BLINDADO PARA PESTAÑAS
         function abrirTab(idTab, elemento) {
-            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
-            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
-            document.getElementById(idTab).classList.add('active');
-            elemento.classList.add('active');
+            try {
+                var contenidos = document.querySelectorAll('.tab-content');
+                for(var i = 0; i < contenidos.length; i++) { contenidos[i].classList.remove('active'); }
+                
+                var botones = document.querySelectorAll('.tab-btn');
+                for(var j = 0; j < botones.length; j++) { botones[j].classList.remove('active'); }
+                
+                var panelDestino = document.getElementById(idTab);
+                if (panelDestino) { panelDestino.classList.add('active'); }
+                if (elemento) { elemento.classList.add('active'); }
+            } catch(error) {
+                console.error("Error táctico en pestañas:", error);
+            }
         }
 
         const modal = document.getElementById('modalLibro');
         
-        function verExpediente(tit, aut, edi, cat, col, pre, año, img) {
-            document.getElementById('modTit').innerText = tit;
-            document.getElementById('modAut').innerText = aut;
-            document.getElementById('modEdi').innerText = edi;
-            document.getElementById('modCat').innerText = cat;
-            document.getElementById('modCol').innerText = col;
-            document.getElementById('modPre').innerText = pre;
-            document.getElementById('modAño').innerText = año;
-            document.getElementById('modalFondo').style.backgroundImage = `url('${img}')`;
+        function abrirExpediente(elemento) {
+            document.getElementById('modTit').innerText = elemento.getAttribute('data-tit');
+            document.getElementById('modAut').innerText = elemento.getAttribute('data-aut');
+            document.getElementById('modEdi').innerText = elemento.getAttribute('data-edi');
+            document.getElementById('modCat').innerText = elemento.getAttribute('data-cat');
+            document.getElementById('modCol').innerText = elemento.getAttribute('data-col');
+            document.getElementById('modPre').innerText = elemento.getAttribute('data-pre');
+            document.getElementById('modAño').innerText = elemento.getAttribute('data-ano');
+            
+            const imgUrl = elemento.getAttribute('data-img');
+            document.getElementById('modalFondo').style.backgroundImage = `url('${imgUrl}')`;
+            
             modal.style.display = 'flex';
         }
 
