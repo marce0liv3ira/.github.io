@@ -415,11 +415,11 @@ HTML_TEMPLATE = """
                     </a>
                 </span> 
                 <span style="text-shadow: 0 0 4px #000, 0 0 8px #000, 0 0 12px #000, 0 0 16px #000, 0 0 20px #000 !important;"> 
-                    <span style="display: inline-block; transform: scaleX(-1);">C</span>onfianza 
+                    <span style="display: inline-block; transform: scaleX(-1);">C</span>opyleft 
                 </span>
             </p>
             <p class="sub-text-m" style="font-family: 'Arial Narrow', Arial, sans-serif; font-weight: 500; font-size: 0.8rem; color: #ffffff; margin: 0 auto; max-width: 90%; text-shadow: 0 0 5px #000, 0 0 9px #000; text-align: center; vertical-align: middle;">
-                conocé el sitio creado con pocos recursos técnicos,<br>económicos e intelectuales
+                un sitio creado con pocos recursos técnicos,<br>económicos e intelectuales
             </p>
         </div>
     </footer>
@@ -489,4 +489,160 @@ HTML_TEMPLATE = """
 
         window.onscroll = function() {{
             var btn = document.getElementById("btn-ascenso");
-            if (document.body.scrollTop > 500 || document.documentElement.scrollTop >
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {{
+                btn.style.display = "flex";
+            }} else {{
+                btn.style.display = "none";
+            }}
+        }};
+
+        function volverArriba() {{
+            document.getElementById('menu-selector').scrollIntoView({{ behavior: 'smooth' }});
+        }}
+    </script>
+</body>
+</html>
+"""
+
+def normalizar_categoria(cat_cruda):
+    c = cat_cruda.lower()
+    
+    if 'ensayo' in c:
+        return 'Ensayo'
+    if 'historia' in c:
+        return 'Historia'
+    if 'polític' in c or 'politic' in c:
+        return 'Política'
+    if 'comunicaci' in c:
+        return 'Comunicación'
+    if 'filosof' in c:
+        return 'Filosofía'
+    if 'narrativa' in c or 'literatura' in c or 'crónica' in c or 'cronica' in c:
+        return 'Literatura'
+    if 'sociolog' in c:
+        return 'Sociología'
+    if 'psicolog' in c or 'psiquiatr' in c or 'psicoan' in c:
+        return 'Psico'
+    if 'ciencia' in c:
+        return 'Divulgación Dura'
+    if 'derechos humanos' in c:
+        return 'Varios'
+        
+    return cat_cruda.split('/')[0].strip().title()
+
+def orden_mafioso(cat):
+    if cat.upper() == 'VARIOS':
+        return 'ZZZZZZ'
+    return cat
+
+def generar_catalogo():
+    try:
+        base_path = os.path.dirname(__file__)
+        ruta_json = os.path.join(base_path, 'catalogo.json')
+        
+        with open(ruta_json, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            
+        bajada_forzada = (
+            "Libros usados listos para seguir circulando.<br>"
+            "Esta es una venta pensada para lectoras y lectores de la zona. Las ofertas se hacen por tandas. Voy cargando títulos a medida que avanzo con el inventario de mi biblioteca, por estantes.<br>"
+            "Todos los libros están en muy buen estado; algunos, incluso, son nuevos. Fueron cuidados como corresponde, como mucho, alguna marca de lápiz. "
+            "Los pocos ejemplares deteriorados lo están por razones nobles: paso del tiempo, ferias, reventas. Los títulos descatalogados, la resistencia."
+        )
+        
+        pestañas_forzadas = [
+            {"id": "tab1", "titulo": "CONTENIDO", "texto": "Las categorías son orientativas. Algunos libros encajan en varias y otros en ninguna. Revisá todo, nunca confíes en las clasificaciones."},
+            {"id": "tab2", "titulo": "CÓMO", "texto": "Revisá, hacé picá en el título y copiá los datos del libro. Podés usarlos para escribirme, comparar precios o buscar reseñas en la web. Si no podés contactarme, este sitio no es para vos.<br>Si podés contactarme, coordinamos detalles: estado del libro, forma de pago y entrega. El pago es en pesos argentinos, por transferencia o efectivo. No acepto trueques, monedas extranjeras ni pagos en especies (por más seductora que sea la oferta)."},
+            {"id": "tab3", "titulo": "QUIÉNES", "texto": "Este sitio está pensado para lectoras y lectores cercanos. Posadas y Candelaria funcionan como referencia, pero lo central es el contacto: si podés ubicarme (directa o indirectamente), podés comprar. Si no, este sitio no es para vos."},
+            {"id": "tab4", "titulo": "ENTREGA", "texto": "Las compras iguales o superiores a $25.000 tienen envío gratuito a domicilio dentro de Posadas y Candelaria. Cada entrega o retiro se coordina; fecha, lugar y horario se acuerdan entre ambas partes lectoras."}
+        ]
+        
+        libros_agrupados = defaultdict(list)
+        for lib in data.get('libros', []):
+            cat_cruda = lib.get('categoria', 'Sin Categoría')
+            cat_maestra = normalizar_categoria(cat_cruda)
+            libros_agrupados[cat_maestra].append(lib)
+            
+        categorias_ordenadas = sorted(libros_agrupados.keys(), key=orden_mafioso)
+
+        indice_html = '<ul class="lista-indice">'
+        for cat in categorias_ordenadas:
+            cat_id = cat.lower().replace(' ', '-').replace('ñ', 'n').replace('ó','o').replace('í','i').replace('á','a')
+            indice_html += f'<li><a href="#{cat_id}">{cat.upper()}</a></li>'
+        indice_html += '</ul>'
+
+        t_btns = ""
+        t_cont = ""
+        
+        for i, tab in enumerate(pestañas_forzadas):
+            act = "active" if i == 0 else ""
+            t_id = tab.get("id")
+            t_tit = tab.get("titulo")
+            t_txt = tab.get("texto")
+            
+            if t_tit.upper() == "CONTENIDO" or t_id == "tab1":
+                t_txt = f'<div class="texto-pestaña">{t_txt}</div><div class="caja-indice-interna">{indice_html}</div>'
+            
+            t_btns += f'<button class="tab-btn {act}" onclick="abrirTab(\'{t_id}\', this)">{t_tit}</button>'
+            t_cont += f'<div id="{t_id}" class="tab-content {act}">{t_txt}</div>'
+
+        secciones_html = ""
+        for cat in categorias_ordenadas:
+            cat_id = cat.lower().replace(' ', '-').replace('ñ', 'n').replace('ó','o').replace('í','i').replace('á','a')
+            
+            secciones_html += f'<h2 class="titulo-categoria" id="{cat_id}">{cat.upper()}</h2>'
+            secciones_html += '<div class="grilla-tacuru">'
+            
+            for lib in libros_agrupados[cat]:
+                tit = lib.get('titulo', 'Sin Título').replace('"', '&quot;')
+                aut = lib.get('autor', 'Desconocido').replace('"', '&quot;')
+                edi = lib.get('editorial', '-').replace('"', '&quot;')
+                ano = lib.get('año', '-').replace('"', '&quot;')
+                img = lib.get('imagen', '').replace('"', '&quot;')
+                est = lib.get('estado', 'Muy bueno').replace('"', '&quot;')
+                
+                # ACÁ EXTRAEMOS DE NUEVO EL PRECIO
+                pre = lib.get('precio', 'Consultar').replace('"', '&quot;')
+                
+                secciones_html += f"""
+                <div class="tarjeta-expediente" 
+                     data-tit="{tit}" 
+                     data-aut="{aut}" 
+                     data-edi="{edi}" 
+                     data-ano="{ano}" 
+                     data-est="{est}"
+                     data-pre="{pre}"
+                     data-img="{img}" 
+                     onclick="abrirExpediente(this)">
+                     
+                    <div class="tarjeta-imagen-wrapper">
+                        <img src="{img}" alt="{tit}" onerror="this.style.display='none'">
+                    </div>
+                    <div class="enlace-tarjeta">
+                        <h3>{tit}</h3>
+                        <p>{aut}</p>
+                    </div>
+                </div>
+                """
+            secciones_html += '</div>'
+
+        html_final = HTML_TEMPLATE.format(
+            titulo_head="Libroteca",
+            titulo_pag="LIBROTECA",
+            sub_pag="ESTANTE DE ABAJO",
+            bajada_pag=bajada_forzada,
+            tabs_botones=t_btns,
+            tabs_contenido=t_cont,
+            secciones_html=secciones_html
+        )
+        
+        with open(os.path.join(base_path, 'index.html'), 'w', encoding='utf-8') as f:
+            f.write(html_final)
+            
+        print(">>> Catálogo sellado. Textos puenteados y etiqueta de precio restaurada en el visor.")
+        
+    except Exception as e:
+        print(f">>> ERROR TÉCNICO EN EL TACURÚ (Catálogo): {e}")
+
+if __name__ == "__main__":
+    generar_catalogo()
