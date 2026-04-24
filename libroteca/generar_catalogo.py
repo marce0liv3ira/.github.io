@@ -415,11 +415,11 @@ HTML_TEMPLATE = """
                     </a>
                 </span> 
                 <span style="text-shadow: 0 0 4px #000, 0 0 8px #000, 0 0 12px #000, 0 0 16px #000, 0 0 20px #000 !important;"> 
-                    <span style="display: inline-block; transform: scaleX(-1);">C</span>opyleft 
+                    <span style="display: inline-block; transform: scaleX(-1);">C</span>onfianza 
                 </span>
             </p>
             <p class="sub-text-m" style="font-family: 'Arial Narrow', Arial, sans-serif; font-weight: 500; font-size: 0.8rem; color: #ffffff; margin: 0 auto; max-width: 90%; text-shadow: 0 0 5px #000, 0 0 9px #000; text-align: center; vertical-align: middle;">
-                un sitio creado con pocos recursos técnicos,<br>económicos e intelectuales
+                conocé el sitio creado con pocos recursos técnicos,<br>económicos e intelectuales
             </p>
         </div>
     </footer>
