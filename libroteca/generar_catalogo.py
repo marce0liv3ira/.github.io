@@ -86,7 +86,7 @@ HTML_TEMPLATE = """
         .tab-content {{ padding: 20px; display: none; font-size: 1.1rem; font-family: 'Inter', sans-serif; }}
         .tab-content.active {{ display: block; }}
 
-        /* ÍNDICE INTERNO (Dentro de la pestaña) */
+        /* ÍNDICE INTERNO (COMPRIMIDO) */
         .caja-indice-interna {{
             margin-top: 25px;
             padding-top: 15px;
@@ -96,18 +96,19 @@ HTML_TEMPLATE = """
             list-style-type: none; 
             padding: 0; 
             margin: 0;
-            max-height: 180px; 
+            max-height: 160px; 
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
             align-content: flex-start;
-            gap: 8px 30px;
+            gap: 4px 15px; 
             overflow-x: auto;
         }}
         .lista-indice li {{ 
             font-family: 'Bebas Neue', sans-serif; 
-            font-size: 1.5rem; 
+            font-size: 1.25rem; 
             letter-spacing: 1px; 
+            line-height: 1.1; 
         }}
         .lista-indice li a {{ color: var(--rojo-oscuro) !important; transition: color 0.2s; }}
         .lista-indice li a:hover {{ color: var(--rojo-sangre) !important; }}
@@ -120,7 +121,7 @@ HTML_TEMPLATE = """
             box-shadow: 0 0 10px rgba(163, 0, 0, 0.3);
         }}
 
-        /* GRILLA: 4 COLUMNAS y MÁS COMPACTA */
+        /* GRILLA: 4 COLUMNAS */
         .grilla-tacuru {{
             display: grid !important;
             grid-template-columns: repeat(4, 1fr) !important;
@@ -188,7 +189,6 @@ HTML_TEMPLATE = """
             transition: background-color 0.4s ease !important;
         }}
 
-        /* EL HOVER: Vitalidad radiactiva */
         .tarjeta-expediente:hover .tarjeta-imagen-wrapper::after {{
             background-color: rgba(0, 0, 0, 0.15) !important;
         }}
@@ -198,16 +198,24 @@ HTML_TEMPLATE = """
             opacity: 1 !important;
         }}
 
+        /* TEXTOS CONTRACCIÓN DE DESBORDE */
         .tarjeta-expediente h3 {{
             font-family: 'Bebas Neue', sans-serif !important;
             color: #ffffff !important;
             font-size: 1.8rem !important;
             font-weight: 700 !important;
-            margin: 0 0 8px 0 !important;
+            margin: 0 0 6px 0 !important;
             text-transform: uppercase !important;
             line-height: 1.1 !important;
             text-shadow: 0 0 8px #000, 2px 2px 4px #000 !important;
             z-index: 11 !important;
+            
+            /* Amputación de texto excedente para no romper la caja */
+            display: -webkit-box !important;
+            -webkit-line-clamp: 4 !important;
+            -webkit-box-orient: vertical !important;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
         }}
 
         .tarjeta-expediente p {{
@@ -219,6 +227,12 @@ HTML_TEMPLATE = """
             text-shadow: 0 0 5px #000, 1px 1px 3px #000 !important;
             z-index: 11 !important;
             font-weight: 500;
+            
+            display: -webkit-box !important;
+            -webkit-line-clamp: 2 !important;
+            -webkit-box-orient: vertical !important;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
         }}
 
         /* MODAL VISOR */
@@ -238,7 +252,9 @@ HTML_TEMPLATE = """
         
         .modal-oscuridad {{
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.85); display: flex; flex-direction: column; 
+            /* OPACIDAD MÁS CLARA PARA QUE SE VEA LA PORTADA EN MÓVILES */
+            background: rgba(0, 0, 0, 0.65); 
+            display: flex; flex-direction: column; 
             justify-content: center; padding: 30px; box-sizing: border-box;
         }}
         
@@ -249,9 +265,19 @@ HTML_TEMPLATE = """
         }}
         .cerrar-modal:hover {{ color: var(--blanco); transform: scale(1.1); text-shadow: 0 0 10px rgba(163,0,0,0.8); }}
         
-        .datos-expediente {{ color: var(--blanco); font-size: 1.2rem; line-height: 1.8; text-align: left; -webkit-user-select: text; user-select: text; font-family: 'Inter', sans-serif; }}
+        .datos-expediente {{ 
+            color: var(--blanco); font-size: 1.2rem; line-height: 1.8; text-align: left; 
+            -webkit-user-select: text; user-select: text; font-family: 'Inter', sans-serif;
+            text-shadow: 0 0 8px #000, 0 0 15px #000; /* Blindaje visual contra fondo claro */
+        }}
         .datos-expediente strong {{ color: var(--rojo-base); font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 1px; }}
-        .modal-titulo {{ font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; color: var(--blanco); margin: 0 0 20px 0; border-bottom: 1px solid var(--rojo-sangre); line-height: 1.1; padding-bottom: 10px; box-shadow: 0 4px 6px -6px rgba(163, 0, 0, 0.8); }}
+        
+        .modal-titulo {{ 
+            font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; color: var(--blanco); 
+            margin: 0 0 20px 0; border-bottom: 1px solid var(--rojo-sangre); line-height: 1.1; 
+            padding-bottom: 10px; box-shadow: 0 4px 6px -6px rgba(163, 0, 0, 0.8); 
+            text-shadow: 0 0 8px #000, 0 0 15px #000; /* Blindaje visual */
+        }}
         
         .btn-copiar {{
             margin-top: 25px; width: 100%; padding: 15px; background: var(--rojo-sangre); 
@@ -267,19 +293,54 @@ HTML_TEMPLATE = """
             box-shadow: 0 0 20px rgba(158, 40, 19, 0.8), inset 0 0 8px rgba(158, 40, 19, 0.4) !important;
         }}
 
+        /* BOTÓN DE ASCENSO (BACK TO TOP) */
+        #btn-ascenso {{
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 55px;
+            height: 55px;
+            background: rgba(0, 0, 0, 0.8);
+            color: var(--blanco);
+            border: 2px solid var(--rojo-sangre);
+            border-radius: 50%;
+            font-size: 2rem;
+            cursor: pointer;
+            display: none; 
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 0 15px rgba(163, 0, 0, 0.5);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(4px);
+            text-decoration: none;
+            padding-bottom: 5px; 
+        }}
+        #btn-ascenso:hover {{
+            transform: scale(1.1);
+            background: var(--rojo-sangre);
+            box-shadow: 0 0 25px rgba(163, 0, 0, 0.8);
+        }}
+
         @media (max-width: 900px) {{
             .grilla-tacuru {{ grid-template-columns: repeat(3, 1fr) !important; }}
             h1 {{ font-size: 4rem !important; }}
             h2 {{ font-size: 2.2rem !important; }}
         }}
         @media (max-width: 600px) {{
-            /* CELULAR: 2 COLUMNAS */
+            /* CELULAR: 2 COLUMNAS y FUENTES ACHICADAS */
             .grilla-tacuru {{ grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }}
             h1 {{ font-size: 3.5rem !important; }}
             h2 {{ font-size: 1.8rem !important; }}
             .modal-caja {{ width: 95%; aspect-ratio: auto; min-height: 75vh; }}
             .tabs-header {{ flex-direction: column; }}
             .tab-btn {{ border-bottom: 1px solid var(--negro); }}
+            #btn-ascenso {{ bottom: 20px; right: 20px; width: 45px; height: 45px; font-size: 1.5rem; }}
+            
+            /* Ajuste quirúrgico para que los textos no revienten la caja */
+            .enlace-tarjeta {{ padding: 10px !important; }}
+            .tarjeta-expediente h3 {{ font-size: 1.15rem !important; margin-bottom: 4px !important; }}
+            .tarjeta-expediente p {{ font-size: 0.85rem !important; }}
         }}
     </style>
 </head>
@@ -291,7 +352,7 @@ HTML_TEMPLATE = """
             <div class="bajada">{bajada_pag}</div>
         </header>
 
-        <div class="caja-menu">
+        <div class="caja-menu" id="menu-selector">
             <div class="tabs-header">
                 {tabs_botones}
             </div>
@@ -313,12 +374,15 @@ HTML_TEMPLATE = """
                     <strong>EDITORIAL:</strong> <span id="modEdi"></span><br>
                     <strong>AÑO:</strong> <span id="modAño"></span>
                 </div>
-                <button class="btn-copiar" id="btnCopiar" onclick="copiarAlPortapapeles()">COPIAR DATOS AL PORTAPAPELES</button>
+                <button class="btn-copiar" id="btnCopiar" onclick="copiarAlPortapapeles()">COPIAR</button>
             </div>
         </div>
     </div>
 
+    <div id="btn-ascenso" onclick="volverArriba()" title="Volver al índice">&#8679;</div>
+
     <script>
+        // Pestañas
         function abrirTab(idTab, elemento) {{
             try {{
                 var contenidos = document.querySelectorAll('.tab-content');
@@ -335,6 +399,7 @@ HTML_TEMPLATE = """
             }}
         }}
 
+        // Modal
         const modal = document.getElementById('modalLibro');
         
         function abrirExpediente(elemento) {{
@@ -354,15 +419,20 @@ HTML_TEMPLATE = """
         }}
         function cerrarModalFuerza() {{ modal.style.display = 'none'; }}
 
+        // Portapapeles Formateado
         function copiarAlPortapapeles() {{
             const titulo = document.getElementById('modTit').innerText;
-            const datos = document.getElementById('datosCopiar').innerText;
-            const textoFinal = `SOLICITUD DE LIBRO\\n---\\nTÍTULO: ${{titulo}}\\n${{datos}}`;
+            const aut = document.getElementById('modAut').innerText;
+            const edi = document.getElementById('modEdi').innerText;
+            const ano = document.getElementById('modAño').innerText;
+            
+            const textoFinal = `Quiero este libro: "${{titulo}}" de "${{aut}}" ("${{edi}}", "${{ano}}").`;
             
             navigator.clipboard.writeText(textoFinal).then(() => {{
                 const btn = document.getElementById('btnCopiar');
                 const textoOriginal = btn.innerText;
-                btn.innerText = '¡DATOS COPIADOS!';
+                // MENSAJE TELEGRÁFICO
+                btn.innerText = '¡COPIADO!';
                 btn.style.background = 'var(--negro)';
                 btn.style.color = 'var(--blanco)';
                 setTimeout(() => {{
@@ -372,10 +442,42 @@ HTML_TEMPLATE = """
                 }}, 2500);
             }});
         }}
+
+        // Botón Ascensor
+        window.onscroll = function() {{
+            var btn = document.getElementById("btn-ascenso");
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {{
+                btn.style.display = "flex";
+            }} else {{
+                btn.style.display = "none";
+            }}
+        }};
+
+        function volverArriba() {{
+            document.getElementById('menu-selector').scrollIntoView({{ behavior: 'smooth' }});
+        }}
     </script>
 </body>
 </html>
 """
+
+def normalizar_categoria(cat_cruda):
+    c = cat_cruda.lower()
+    
+    if 'ensayo' in c:
+        return 'Ensayo'
+    if 'historia' in c:
+        return 'Historia'
+    if 'polític' in c or 'politic' in c:
+        return 'Política'
+    if 'comunicaci' in c:
+        return 'Comunicación'
+    if 'filosof' in c:
+        return 'Filosofía'
+    if 'narrativa' in c or 'literatura' in c:
+        return 'Literatura'
+        
+    return cat_cruda.split('/')[0].strip().title()
 
 def generar_catalogo():
     try:
@@ -387,22 +489,18 @@ def generar_catalogo():
             
         conf = data.get('config', {})
         
-        # 1. Agrupar libros por categoría MAESTRA (cortando en la primera barra)
         libros_agrupados = defaultdict(list)
         for lib in data.get('libros', []):
             cat_cruda = lib.get('categoria', 'Sin Categoría')
-            # Extrae solo la primera palabra clave antes de cualquier barra "/" y la capitaliza
-            cat_maestra = cat_cruda.split('/')[0].strip().title()
+            cat_maestra = normalizar_categoria(cat_cruda)
             libros_agrupados[cat_maestra].append(lib)
             
-        # 2. Construir el Índice HTML (lista de columnas)
         indice_html = '<ul class="lista-indice">'
         for cat in sorted(libros_agrupados.keys()):
             cat_id = cat.lower().replace(' ', '-').replace('ñ', 'n').replace('ó','o').replace('í','i').replace('á','a')
             indice_html += f'<li><a href="#{cat_id}">{cat.upper()}</a></li>'
         indice_html += '</ul>'
 
-        # 3. Armar Pestañas (Inyectando el índice en la de CONTENIDO)
         t_btns = ""
         t_cont = ""
         pestañas = data.get('pestañas', [])
@@ -413,14 +511,12 @@ def generar_catalogo():
             t_tit = tab.get("titulo", f"SECCIÓN {i+1}")
             t_txt = tab.get("texto", "")
             
-            # Si es la pestaña de contenido, le incrustamos la caja del índice abajo del texto
             if t_tit.upper() == "CONTENIDO" or t_id == "tab1":
                 t_txt = f'<div class="texto-pestaña">{t_txt}</div><div class="caja-indice-interna">{indice_html}</div>'
             
             t_btns += f'<button class="tab-btn {act}" onclick="abrirTab(\'{t_id}\', this)">{t_tit}</button>'
             t_cont += f'<div id="{t_id}" class="tab-content {act}">{t_txt}</div>'
 
-        # 4. Construir la Grilla de Expedientes
         secciones_html = ""
         for cat in sorted(libros_agrupados.keys()):
             cat_id = cat.lower().replace(' ', '-').replace('ñ', 'n').replace('ó','o').replace('í','i').replace('á','a')
@@ -435,7 +531,6 @@ def generar_catalogo():
                 ano = lib.get('año', '-').replace('"', '&quot;')
                 img = lib.get('imagen', '').replace('"', '&quot;')
                 
-                # Pasamos datos limpios al JS ocultos en data-attributes
                 secciones_html += f"""
                 <div class="tarjeta-expediente" 
                      data-tit="{tit}" 
@@ -456,7 +551,6 @@ def generar_catalogo():
                 """
             secciones_html += '</div>'
 
-        # Renderizar final
         html_final = HTML_TEMPLATE.format(
             titulo_head=conf.get('titulo', 'Libroteca'),
             titulo_pag=conf.get('titulo', 'Libroteca'),
@@ -470,7 +564,7 @@ def generar_catalogo():
         with open(os.path.join(base_path, 'index.html'), 'w', encoding='utf-8') as f:
             f.write(html_final)
             
-        print(">>> Catálogo reestructurado. Índice encapsulado y grilla compacta operativa.")
+        print(">>> Catálogo optimizado. Desbordes suprimidos y modalidad de campo claro activada.")
         
     except Exception as e:
         print(f">>> ERROR TÉCNICO EN EL TACURÚ (Catálogo): {e}")
