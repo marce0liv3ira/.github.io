@@ -47,7 +47,6 @@ HTML_TEMPLATE = """
         
         .contenedor {{ flex: 1; max-width: 1200px; margin: 0 auto; width: 100%; display: flow-root; }}
         
-        /* CABECERA CON LOGO COMPLETO Y VELADURA */
         header {{ 
             text-align: center; 
             border-bottom: 1px solid var(--rojo-sangre); 
@@ -56,7 +55,7 @@ HTML_TEMPLATE = """
             border-radius: 8px;
             box-shadow: 0 4px 6px -6px rgba(163, 0, 0, 0.8);
             background-image: linear-gradient(rgba(250, 246, 237, 0.85), rgba(250, 246, 237, 0.92)), url('img/logolibro.png');
-            background-size: contain; /* Para que el logo se vea entero */
+            background-size: contain; 
             background-position: center;
             background-repeat: no-repeat;
         }}
@@ -81,13 +80,14 @@ HTML_TEMPLATE = """
             z-index: 2;
         }}
         .bajada {{ 
-            font-size: 1.2rem; font-weight: bold; color: var(--negro); 
+            font-size: 1.1rem; font-weight: bold; color: var(--negro); 
             font-family: 'Inter', sans-serif; position: relative; z-index: 2; 
-            background: rgba(250, 246, 237, 0.7);
-            display: inline-block; padding: 5px 15px; border-radius: 4px;
+            background: rgba(250, 246, 237, 0.85);
+            display: inline-block; padding: 15px 25px; border-radius: 4px;
+            text-align: left; max-width: 800px; margin: 0 auto; line-height: 1.5;
+            border: 1px solid var(--rojo-sangre);
         }}
 
-        /* CAJA DE MENÚ */
         .caja-menu {{ 
             border: 1px solid var(--rojo-sangre); 
             margin-bottom: 40px; 
@@ -106,10 +106,9 @@ HTML_TEMPLATE = """
             background: var(--rojo-sangre); 
             box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
         }}
-        .tab-content {{ padding: 20px; display: none; font-size: 1.1rem; font-family: 'Inter', sans-serif; }}
+        .tab-content {{ padding: 20px; display: none; font-size: 1.1rem; font-family: 'Inter', sans-serif; line-height: 1.5; }}
         .tab-content.active {{ display: block; }}
 
-        /* ÍNDICE INTERNO (COMPRIMIDO) */
         .caja-indice-interna {{
             margin-top: 25px;
             padding-top: 15px;
@@ -144,7 +143,6 @@ HTML_TEMPLATE = """
             box-shadow: 0 0 10px rgba(163, 0, 0, 0.3);
         }}
 
-        /* GRILLA */
         .grilla-tacuru {{
             display: grid !important;
             grid-template-columns: repeat(4, 1fr) !important;
@@ -254,7 +252,6 @@ HTML_TEMPLATE = """
             text-overflow: ellipsis !important;
         }}
 
-        /* MODAL VISOR */
         .modal-overlay {{
             display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(0, 0, 0, 0.9); justify-content: center; align-items: center; backdrop-filter: blur(5px);
@@ -284,14 +281,14 @@ HTML_TEMPLATE = """
         .cerrar-modal:hover {{ color: var(--blanco); transform: scale(1.1); text-shadow: 0 0 10px rgba(163,0,0,0.8); }}
         
         .datos-expediente {{ 
-            color: var(--blanco); font-size: 1.2rem; line-height: 1.8; text-align: left; 
+            color: var(--blanco); font-size: 1.15rem; line-height: 1.8; text-align: left; 
             -webkit-user-select: text; user-select: text; font-family: 'Inter', sans-serif;
             text-shadow: 0 0 8px #000, 0 0 15px #000; 
         }}
-        .datos-expediente strong {{ color: var(--rojo-base); font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 1px; }}
+        .datos-expediente strong {{ color: var(--rojo-base); font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 1px; }}
         
         .modal-titulo {{ 
-            font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; color: var(--blanco); 
+            font-family: 'Bebas Neue', sans-serif; font-size: 2.6rem; color: var(--blanco); 
             margin: 0 0 20px 0; border-bottom: 1px solid var(--rojo-sangre); line-height: 1.1; 
             padding-bottom: 10px; box-shadow: 0 4px 6px -6px rgba(163, 0, 0, 0.8); 
             text-shadow: 0 0 8px #000, 0 0 15px #000; 
@@ -311,7 +308,6 @@ HTML_TEMPLATE = """
             box-shadow: 0 0 20px rgba(158, 40, 19, 0.8), inset 0 0 8px rgba(158, 40, 19, 0.4) !important;
         }}
 
-        /* BOTÓN ASCENSOR */
         #btn-ascenso {{
             position: fixed;
             bottom: 30px;
@@ -340,7 +336,6 @@ HTML_TEMPLATE = """
             box-shadow: 0 0 25px rgba(163, 0, 0, 0.8);
         }}
 
-        /* FOOTER HORMIGUEAR (Contenedor maestro) */
         footer {{
             margin-top: 60px;
             background-color: var(--negro);
@@ -365,6 +360,7 @@ HTML_TEMPLATE = """
             .enlace-tarjeta {{ padding: 10px !important; }}
             .tarjeta-expediente h3 {{ font-size: 1.15rem !important; margin-bottom: 4px !important; }}
             .tarjeta-expediente p {{ font-size: 0.85rem !important; }}
+            .bajada {{ font-size: 1rem; padding: 10px 15px; }}
         }}
     </style>
 </head>
@@ -396,7 +392,8 @@ HTML_TEMPLATE = """
                 <div class="datos-expediente" id="datosCopiar">
                     <strong>AUTOR:</strong> <span id="modAut"></span><br>
                     <strong>EDITORIAL:</strong> <span id="modEdi"></span><br>
-                    <strong>AÑO:</strong> <span id="modAño"></span>
+                    <strong>AÑO:</strong> <span id="modAño"></span><br>
+                    <strong>ESTADO:</strong> <span id="modEst"></span>
                 </div>
                 <button class="btn-copiar" id="btnCopiar" onclick="copiarAlPortapapeles()">COPIAR</button>
             </div>
@@ -405,7 +402,7 @@ HTML_TEMPLATE = """
 
     <div id="btn-ascenso" onclick="volverArriba()" title="Volver a arriba">&#9650;</div>
 
-    <footer>
+     <footer>
         <div class="footer-bunker" style="text-align: center; vertical-align: middle; width: 100%; color: #ffffff; line-height: 1.6; padding: 25px 0; display: block;">
             <p style="margin-bottom: 8px; text-align: center !important; vertical-align: middle;">
                 <strong class="title-site-m" style="font-family: 'Almarai', sans-serif; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.8px; text-shadow: 0 0 4px #000, 0 0 8px #000, 0 0 12px #000, 0 0 16px #000, 0 0 20px #000 !important;"> 
@@ -450,6 +447,7 @@ HTML_TEMPLATE = """
             document.getElementById('modAut').innerText = elemento.getAttribute('data-aut');
             document.getElementById('modEdi').innerText = elemento.getAttribute('data-edi');
             document.getElementById('modAño').innerText = elemento.getAttribute('data-ano');
+            document.getElementById('modEst').innerText = elemento.getAttribute('data-est');
             
             const imgUrl = elemento.getAttribute('data-img');
             document.getElementById('modalFondo').style.backgroundImage = `url('${{imgUrl}}')`;
@@ -514,7 +512,7 @@ def normalizar_categoria(cat_cruda):
         return 'Comunicación'
     if 'filosof' in c:
         return 'Filosofía'
-    if 'narrativa' in c or 'literatura' in c:
+    if 'narrativa' in c or 'literatura' in c or 'crónica' in c or 'cronica' in c:
         return 'Literatura'
     if 'sociolog' in c:
         return 'Sociología'
@@ -528,7 +526,6 @@ def normalizar_categoria(cat_cruda):
     return cat_cruda.split('/')[0].strip().title()
 
 def orden_mafioso(cat):
-    # Condena a "Varios" a estar siempre al final de la lista
     if cat.upper() == 'VARIOS':
         return 'ZZZZZZ'
     return cat
@@ -541,7 +538,19 @@ def generar_catalogo():
         with open(ruta_json, 'r', encoding='utf-8') as f:
             data = json.load(f)
             
-        conf = data.get('config', {})
+        bajada_forzada = (
+            "Libros usados listos para seguir circulando.<br>"
+            "Esta es una venta pensada para lectoras y lectores de la zona. Las ofertas se hacen por tandas. Voy cargando títulos a medida que avanzo con el inventario de mi biblioteca, por estantes.<br>"
+            "Todos los libros están en muy buen estado; algunos, incluso, son nuevos. Fueron cuidados como corresponde, como mucho, alguna marca de lápiz. "
+            "Los pocos ejemplares deteriorados lo están por razones nobles: paso del tiempo, ferias, reventas. Los títulos descatalogados, la resistencia."
+        )
+        
+        pestañas_forzadas = [
+            {"id": "tab1", "titulo": "CONTENIDO", "texto": "Las categorías son orientativas. Algunos libros encajan en varias y otros en ninguna. Revisá todo, nunca confíes en las clasificaciones."},
+            {"id": "tab2", "titulo": "CÓMO", "texto": "Revisá, hacé picá en el título y copiá los datos del libro. Podés usarlos para escribirme, comparar precios o buscar reseñas en la web. Si no podés contactarme, este sitio no es para vos.<br>Si podés contactarme, coordinamos detalles: estado del libro, forma de pago y entrega. El pago es en pesos argentinos, por transferencia o efectivo. No acepto trueques, monedas extranjeras ni pagos en especies (por más seductora que sea la oferta)."},
+            {"id": "tab3", "titulo": "QUIÉNES", "texto": "Este sitio está pensado para lectoras y lectores cercanos. Posadas y Candelaria funcionan como referencia, pero lo central es el contacto: si podés ubicarme (directa o indirectamente), podés comprar. Si no, este sitio no es para vos."},
+            {"id": "tab4", "titulo": "ENTREGA", "texto": "Las compras iguales o superiores a $25.000 tienen envío gratuito a domicilio dentro de Posadas y Candelaria. Cada entrega o retiro se coordina; fecha, lugar y horario se acuerdan entre ambas partes lectoras."}
+        ]
         
         libros_agrupados = defaultdict(list)
         for lib in data.get('libros', []):
@@ -549,7 +558,6 @@ def generar_catalogo():
             cat_maestra = normalizar_categoria(cat_cruda)
             libros_agrupados[cat_maestra].append(lib)
             
-        # Generar lista de categorías con el orden especial (Varios al final)
         categorias_ordenadas = sorted(libros_agrupados.keys(), key=orden_mafioso)
 
         indice_html = '<ul class="lista-indice">'
@@ -560,13 +568,12 @@ def generar_catalogo():
 
         t_btns = ""
         t_cont = ""
-        pestañas = data.get('pestañas', [])
         
-        for i, tab in enumerate(pestañas):
+        for i, tab in enumerate(pestañas_forzadas):
             act = "active" if i == 0 else ""
-            t_id = tab.get("id", f"tab_seguro_{i}")
-            t_tit = tab.get("titulo", f"SECCIÓN {i+1}")
-            t_txt = tab.get("texto", "")
+            t_id = tab.get("id")
+            t_tit = tab.get("titulo")
+            t_txt = tab.get("texto")
             
             if t_tit.upper() == "CONTENIDO" or t_id == "tab1":
                 t_txt = f'<div class="texto-pestaña">{t_txt}</div><div class="caja-indice-interna">{indice_html}</div>'
@@ -588,12 +595,17 @@ def generar_catalogo():
                 ano = lib.get('año', '-').replace('"', '&quot;')
                 img = lib.get('imagen', '').replace('"', '&quot;')
                 
+                # ACÁ OCURRE LA MAGIA DEL ESTADO DINÁMICO
+                # El script busca "estado" en tu JSON. Si no lo pusiste, clava un "Muy bueno".
+                est = lib.get('estado', 'Muy bueno').replace('"', '&quot;')
+                
                 secciones_html += f"""
                 <div class="tarjeta-expediente" 
                      data-tit="{tit}" 
                      data-aut="{aut}" 
                      data-edi="{edi}" 
                      data-ano="{ano}" 
+                     data-est="{est}"
                      data-img="{img}" 
                      onclick="abrirExpediente(this)">
                      
@@ -612,7 +624,7 @@ def generar_catalogo():
             titulo_head="Libroteca",
             titulo_pag="LIBROTECA",
             sub_pag="ESTANTE DE ABAJO",
-            bajada_pag=conf.get('bajada', ''),
+            bajada_pag=bajada_forzada,
             tabs_botones=t_btns,
             tabs_contenido=t_cont,
             secciones_html=secciones_html
@@ -621,7 +633,7 @@ def generar_catalogo():
         with open(os.path.join(base_path, 'index.html'), 'w', encoding='utf-8') as f:
             f.write(html_final)
             
-        print(">>> Catálogo calibrado. Títulos sobreescritos, podadora operativa y footer del búnker anclado.")
+        print(">>> Catálogo sellado. Textos puenteados y variable de estado dinámica operativa.")
         
     except Exception as e:
         print(f">>> ERROR TÉCNICO EN EL TACURÚ (Catálogo): {e}")
