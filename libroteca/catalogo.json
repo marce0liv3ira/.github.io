@@ -1,15 +1,8 @@
 {
   "config": {
-    "titulo": "ESTANTE DE ABAJO",
-    "subtitulo": "DE MI LIBROTECA",
-    "bajada": "El manual de operaciones de esta trinchera literaria. Seleccioná una obra para abrir el expediente."
+    "titulo": "LIBROTECA",
+    "subtitulo": "ESTANTE DE ABAJO"
   },
-  "pestañas": [
-    {"id": "tab1", "titulo": "CONTENIDO", "texto": "."},
-    {"id": "tab2", "titulo": "CÓMO", "texto": "Instrucciones tácticas: Elegí el libro, copiá los datos en el portapapeles con el botón de la ficha y contactanos."},
-    {"id": "tab3", "titulo": "QUIÉNES", "texto": "Somos el personal nodocente de la UNaM, administrando la circulación de saberes desde las sombras."},
-    {"id": "tab4", "titulo": "ENTREGA", "texto": "Punto de encuentro y protocolos de entrega de los libros solicitados presencialmente."}
-  ],
   "libros": [
     {
       "titulo": "¿Tienen derechos las mujeres? Política y ciudadanía en la Argentina del siglo XX",
@@ -30,26 +23,29 @@
       "coleccion": "",
       "precio": "$14.000",
       "año": "2003",
+      "estado": "Muy bueno",
       "imagen": "img/sielotro (Mediana).jpg"
     },
     {
       "titulo": "4 manos poesías",
       "autor": "Inés Sarri",
-      "editorial": "Editorial Universitaria de Misiones",
+      "editorial": "Edunam",
       "categoria": "Literatura",
       "coleccion": "",
       "precio": "$5.000 - $16.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/4manos (Mediana).jpg"
     },
     {
       "titulo": "Alfabetización semiótica en las fronteras. Vol. I",
       "autor": "Ana Camblong; Froilán Fernández",
-      "editorial": "Editorial Universitaria de Misiones",
+      "editorial": "Edunam",
       "categoria": "Comunicación / Semiótica",
       "coleccion": "",
       "precio": "$8.000 - $16.000",
       "año": "2010",
+      "estado": "Muy bueno",
       "imagen": "img/alfabetsemio (Mediana).jpg"
     },
     {
@@ -60,17 +56,8 @@
       "coleccion": "",
       "precio": "$9.000 - $22.000",
       "año": "2011",
+      "estado": "Muy bueno",
       "imagen": "img/antropoahora (Mediana).jpg"
-    },
-    {
-      "titulo": "Revista de Ciencias Sociales",
-      "autor": "VV. AA.",
-      "editorial": "Universidad Nacional de Quilmes",
-      "categoria": "Varios",
-      "coleccion": "Revista de ciencias sociales",
-      "precio": "$8.000",
-      "año": "1994",
-      "imagen": "img/revistacs1 (Mediana).jpg"
     },
     {
       "titulo": "ArqueTipas",
@@ -80,16 +67,18 @@
       "coleccion": "",
       "precio": "$5.000 - $16.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/arquetipas (Mediana).jpg"
     },
     {
-      "titulo": "Arte del buen vivir",
+      "titulo": "Arte del buen vivir. Respuestas filosóficas a la ética, a la ciencia y a la religión",
       "autor": "Arthur Schopenhauer",
       "editorial": "Losada / Aguilar",
       "categoria": "Filosofía",
-      "coleccion": "Clásicos de siempre",
-      "precio": "$7.000 - $18.000",
+      "coleccion": "Clásicos de siempre / Grandes filósofos",
+      "precio": "7000-17999",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/schopen2 (Mediana).jpg"
     },
     {
@@ -100,6 +89,7 @@
       "coleccion": "",
       "precio": "$6.000 - $15.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/historiapsiqui (Mediana).jpg"
     },
     {
@@ -121,6 +111,7 @@
       "coleccion": "Biblioteca esencial",
       "precio": "$9.000 - $22.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/capitalcultu (Mediana).jpg"
     },
     {
@@ -131,16 +122,18 @@
       "coleccion": "",
       "precio": "$6.000 - $15.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/cartonero (Mediana).jpg"
     },
     {
       "titulo": "Colonos y ocupantes en la frontera agraria de Misiones",
       "autor": "Gabriela Schiavoni",
-      "editorial": "Editorial Universitaria de Misiones",
+      "editorial": "Edunam",
       "categoria": "Antropología",
       "coleccion": "Libros Arribeños",
       "precio": "$9.000 - $22.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/colonosocupan (Mediana).jpg"
     },
     {
@@ -151,6 +144,7 @@
       "coleccion": "Claves para Todos",
       "precio": "$13.000",
       "año": "2007",
+      "estado": "Muy bueno",
       "imagen": "img/combatemem (Mediana).jpg"
     },
     {
@@ -161,7 +155,30 @@
       "coleccion": "Grandes Ideas",
       "precio": "$8.000 - $9.500",
       "año": "2007",
+      "estado": "Muy bueno",
       "imagen": "img/confeetica (Mediana).jpg"
+    },
+    {
+      "titulo": "Conferencia sobre ética (y otros textos)",
+      "autor": "Ludwig Wittgenstein",
+      "editorial": "Folio",
+      "categoria": "Filosofía",
+      "coleccion": "Grandes Ideas",
+      "precio": "8000 - 9500",
+      "año": "2007",
+      "estado": "Muy bueno",
+      "imagen": "img/confeetica (Mediana).jpg"
+    },
+    {
+      "titulo": "Conocimiento y sociedad en Durkheim",
+      "autor": "Ernesto López",
+      "editorial": "Universidad Nacional de Quilmes",
+      "categoria": "Sociología",
+      "coleccion": "",
+      "precio": "9000-22000",
+      "año": "s/d",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
     },
     {
       "titulo": "Crimen y castigo",
@@ -171,6 +188,7 @@
       "coleccion": "",
       "precio": "$5.000 - $16.000",
       "año": "1866",
+      "estado": "Muy bueno",
       "imagen": "img/crimencast (Mediana).jpg"
     },
     {
@@ -181,7 +199,19 @@
       "coleccion": "Claves para Todos",
       "precio": "$4.000 - $9.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/crisisreforma (Mediana).jpg"
+    },
+    {
+      "titulo": "Crítica en la democracia, democracia crítica",
+      "autor": "Sergio Waisman? / Nancy Fraser / Jürgen Habermas",
+      "editorial": "Universidad Nacional del Litoral",
+      "categoria": "Filosofía política",
+      "coleccion": "Revista de ciencias sociales",
+      "precio": "7000-18000",
+      "año": "s/d",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
     },
     {
       "titulo": "Crónica de una muerte anunciada",
@@ -191,23 +221,25 @@
       "coleccion": "Biblioteca García Márquez",
       "precio": "$5.000 - $16.000",
       "año": "1981",
+      "estado": "Muy bueno",
       "imagen": "img/cronicamuert (Mediana).jpg"
     },
     {
-      "titulo": "Cuerpos del tabaco",
+      "titulo": "Cuerpos del tabaco. La percepción del cuerpo entre las cigarreras",
       "autor": "Liliana Sero",
-      "editorial": "Editorial Universitaria de Misiones",
+      "editorial": "Edunam",
       "categoria": "Antropología / Trabajo",
       "coleccion": "",
       "precio": "$6.000 - $15.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/cuerpostabac (Mediana).jpg"
     },
     {
       "titulo": "Cumbia: nación, etnia y género en Latinoamérica",
-      "autor": "Pablo Semán; Pablo Vila",
+      "autor": "Pablo Semán; Pablo Vila (comps.)",
       "editorial": "Gorla",
-      "categoria": "Comunicación / Cultura",
+      "categoria": "Comunicación/Cultura/Estudios Culturales",
       "coleccion": "",
       "precio": "$17.000",
       "año": "2011",
@@ -222,6 +254,7 @@
       "coleccion": "Obras maestras del pensamiento",
       "precio": "$6.000 - $15.000",
       "año": "1916",
+      "estado": "Muy bueno",
       "imagen": "img/corsuling (Mediana).jpg"
     },
     {
@@ -232,7 +265,19 @@
       "coleccion": "Grandes Ideas",
       "precio": "$10.000",
       "año": "2007",
+      "estado": "Muy bueno",
       "imagen": "img/dedios (Mediana).jpg"
+    },
+    {
+      "titulo": "De Paulo VI a Bergoglio: las relaciones secretas de la Iglesia con la ESMA",
+      "autor": "",
+      "editorial": "Página/12 / Sudamericana",
+      "categoria": "Historia/Memoria",
+      "coleccion": "",
+      "precio": "13000",
+      "año": "2010",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
     },
     {
       "titulo": "Déjame que te cuente: ensayos sobre narrativa y educación",
@@ -242,6 +287,7 @@
       "coleccion": "",
       "precio": "$16.000",
       "año": "1995",
+      "estado": "Muy bueno",
       "imagen": "img/dejame que (Mediana).jpg"
     },
     {
@@ -252,7 +298,19 @@
       "coleccion": "Biblioteca García Márquez",
       "precio": "$5.000 - $16.000",
       "año": "1994",
+      "estado": "Muy bueno",
       "imagen": "img/amoryotro (Mediana).jpg"
+    },
+    {
+      "titulo": "Del intelectual orgánico al analista simbólico",
+      "autor": "Emilio Tenti Fanfani",
+      "editorial": "Universidad Nacional de Quilmes",
+      "categoria": "Sociología / Intelectuales",
+      "coleccion": "",
+      "precio": "9000-22000",
+      "año": "s/d",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
     },
     {
       "titulo": "Deleuze: los movimientos aberrantes",
@@ -262,6 +320,7 @@
       "coleccion": "",
       "precio": "$20.900",
       "año": "2016",
+      "estado": "Muy bueno",
       "imagen": "img/deleuzemovi (Mediana).jpg"
     },
     {
@@ -272,6 +331,7 @@
       "coleccion": "Biblioteca Pedagógica",
       "precio": "$8.000 - $18.000",
       "año": "1995",
+      "estado": "Muy bueno",
       "imagen": "img/democrayeduca (Mediana).jpg"
     },
     {
@@ -282,6 +342,7 @@
       "coleccion": "",
       "precio": "$6.000 - $14.000",
       "año": "2004",
+      "estado": "Muy bueno",
       "imagen": "img/ddhhinfo (Mediana).jpg"
     },
     {
@@ -292,7 +353,19 @@
       "coleccion": "",
       "precio": "$8.000 - $15.000",
       "año": "2000",
+      "estado": "Muy bueno",
       "imagen": "img/descentra (Mediana).jpg"
+    },
+    {
+      "titulo": "Diadema de metacarpos",
+      "autor": "Raúl Novau",
+      "editorial": "Edunam",
+      "categoria": "Literatura",
+      "coleccion": "Libros Arribeños",
+      "precio": "5000-16000",
+      "año": "s/d",
+      "estado": "Muy bueno",
+      "imagen": "img/diadema (Mediana).jpg"
     },
     {
       "titulo": "Días y noches de amor y de guerra",
@@ -302,6 +375,7 @@
       "coleccion": "",
       "precio": "$6.000 - $15.000",
       "año": "1978",
+      "estado": "Muy bueno",
       "imagen": "img/diasnoches (Mediana).jpg"
     },
     {
@@ -312,16 +386,18 @@
       "coleccion": "",
       "precio": "$7.000 - $18.000",
       "año": "1908",
+      "estado": "Muy bueno",
       "imagen": "img/eccehomo (Mediana).jpg"
     },
     {
       "titulo": "Educar la mirada: políticas y pedagogías de la imagen",
-      "autor": "Inés Dussel; Daniela Gutiérrez",
+      "autor": "Inés Dussel; Daniela Gutiérrez (comps.)",
       "editorial": "Manantial / FLACSO",
       "categoria": "Educación / Pedagogía",
       "coleccion": "",
       "precio": "$18.000",
       "año": "2006",
+      "estado": "Muy bueno",
       "imagen": "img/educarmira (Mediana).jpg"
     },
     {
@@ -332,6 +408,7 @@
       "coleccion": "",
       "precio": "$8.000 - $16.000",
       "año": "2003",
+      "estado": "Muy bueno",
       "imagen": "img/educarfigura (Mediana).jpg"
     },
     {
@@ -342,6 +419,7 @@
       "coleccion": "Claves para Todos",
       "precio": "$4.000 - $9.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/campoargen (Mediana).jpg"
     },
     {
@@ -352,6 +430,7 @@
       "coleccion": "Claves para Todos",
       "precio": "$8.000",
       "año": "2005",
+      "estado": "Muy bueno",
       "imagen": "img/ciudadano (Mediana).jpg"
     },
     {
@@ -362,16 +441,18 @@
       "coleccion": "Contemporánea",
       "precio": "$5.000 - $16.000",
       "año": "1961",
+      "estado": "Muy bueno",
       "imagen": "img/coronelno (Mediana).jpg"
     },
     {
-      "titulo": "El costo de la democracia",
+      "titulo": "El costo de la democracia. Poder económico y partidos políticos",
       "autor": "Christian Gruenberg",
       "editorial": "Capital Intelectual",
       "categoria": "Política",
       "coleccion": "Claves para Todos",
       "precio": "$4.000 - $9.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/costodemoc (Mediana).jpg"
     },
     {
@@ -382,6 +463,7 @@
       "coleccion": "Grandes Ideas",
       "precio": "$3.000 - $8.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/crepusculo (Mediana).jpg"
     },
     {
@@ -392,6 +474,7 @@
       "coleccion": "Seminario",
       "precio": "$8.000 - $18.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/deseolacan (Mediana).jpg"
     },
     {
@@ -402,7 +485,19 @@
       "coleccion": "Claves para Todos",
       "precio": "$4.000 - $9.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/dilemamerco (Mediana).jpg"
+    },
+    {
+      "titulo": "El espectador emancipado",
+      "autor": "Jacques Rancière",
+      "editorial": "Manantial",
+      "categoria": "Filosofía / Estética",
+      "coleccion": "BORDES / Manantial",
+      "precio": "7000-18000",
+      "año": "2013",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
     },
     {
       "titulo": "El existencialismo es un humanismo",
@@ -412,6 +507,7 @@
       "coleccion": "Grandes Ideas",
       "precio": "$3.000 - $8.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/existenciahumanis (Mediana).jpg"
     },
     {
@@ -422,7 +518,19 @@
       "coleccion": "Grandes novelistas",
       "precio": "$5.000 - $16.000",
       "año": "1971",
+      "estado": "Muy bueno",
       "imagen": "img/elexorcis (Mediana).jpg"
+    },
+    {
+      "titulo": "El grito manso",
+      "autor": "Paulo Freire",
+      "editorial": "Siglo XXI",
+      "categoria": "Pedagogía",
+      "coleccion": "Educación",
+      "precio": "12500",
+      "año": "2003",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
     },
     {
       "titulo": "El hombre sin Dios (Pensamientos)",
@@ -432,6 +540,7 @@
       "coleccion": "Grandes Ideas",
       "precio": "$3.000 - $8.000",
       "año": "1670",
+      "estado": "Muy bueno",
       "imagen": "img/hombresin (Mediana).jpg"
     },
     {
@@ -442,6 +551,7 @@
       "coleccion": "Pensamiento contemporáneo",
       "precio": "$7.000 - $18.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/inconcienteeste (Mediana).jpg"
     },
     {
@@ -452,6 +562,7 @@
       "coleccion": "Obras maestras",
       "precio": "$6.000 - $15.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/chomsky (Mediana).jpg"
     },
     {
@@ -462,6 +573,7 @@
       "coleccion": "",
       "precio": "$6.000 - $12.000",
       "año": "2005",
+      "estado": "Muy bueno",
       "imagen": "img/oficiover (Mediana).jpg"
     },
     {
@@ -472,6 +584,7 @@
       "coleccion": "Narrativa",
       "precio": "$14.000",
       "año": "1989",
+      "estado": "Muy bueno",
       "imagen": "img/péndulo1 (Mediana).jpg"
     },
     {
@@ -482,6 +595,7 @@
       "coleccion": "",
       "precio": "$5.000 - $16.000",
       "año": "1985",
+      "estado": "Muy bueno",
       "imagen": "img/perfume (Mediana).jpg"
     },
     {
@@ -492,7 +606,19 @@
       "coleccion": "",
       "precio": "$5.000 - $16.000",
       "año": "1984",
+      "estado": "Muy bueno",
       "imagen": "img/pudoerdel (Mediana).jpg"
+    },
+    {
+      "titulo": "El regreso de las palabras",
+      "autor": "Héctor Schmucler",
+      "editorial": "Universidad Nacional de Quilmes (UNQ)",
+      "categoria": "Comunicación",
+      "coleccion": "-",
+      "precio": "12000 - 18000",
+      "año": "1997",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
     },
     {
       "titulo": "El sentido práctico",
@@ -502,6 +628,7 @@
       "coleccion": "Biblioteca esencial",
       "precio": "$9.000 - $22.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/sentidoprac (Mediana).jpg"
     },
     {
@@ -523,6 +650,7 @@
       "coleccion": "",
       "precio": "$6.000 - $15.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/silencio (Mediana).jpg"
     },
     {
@@ -533,6 +661,7 @@
       "coleccion": "",
       "precio": "$20.000",
       "año": "2001",
+      "estado": "Muy bueno",
       "imagen": "img/terrorchomsk (Mediana).jpg"
     },
     {
@@ -543,6 +672,7 @@
       "coleccion": "Grandes Ideas",
       "precio": "$3.000 - $8.000",
       "año": "1511",
+      "estado": "Muy bueno",
       "imagen": "img/elogiolocu (Mediana).jpg"
     },
     {
@@ -553,6 +683,7 @@
       "coleccion": "",
       "precio": "$6.000 - $15.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/guerrapaz (Mediana).jpg"
     },
     {
@@ -563,7 +694,30 @@
       "coleccion": "",
       "precio": "$60.000 - $180.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/encicloeduca (Mediana).jpg"
+    },
+    {
+      "titulo": "Enseñanza pública en Buenos Aires",
+      "autor": "Juan María Gutiérrez",
+      "editorial": "UNQ",
+      "categoria": "Historia",
+      "coleccion": "-",
+      "precio": "11000 - 18000",
+      "año": "1998",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
+    },
+    {
+      "titulo": "Entre la \"incertidumbre\" y la tradición política. Una crítica de la primera generación de estudios sobre la transición",
+      "autor": "José Álvaro Moisés",
+      "editorial": "Universidad Nacional del Litoral",
+      "categoria": "Sociología política",
+      "coleccion": "Revista de ciencias sociales",
+      "precio": "9000-22000",
+      "año": "s/d",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
     },
     {
       "titulo": "Epistemología, ética y ciencias de la educación",
@@ -573,6 +727,7 @@
       "coleccion": "Serie Estudios Sociales",
       "precio": "$16.000",
       "año": "2006",
+      "estado": "Muy bueno",
       "imagen": "img/episteetica (Mediana).jpg"
     },
     {
@@ -583,7 +738,19 @@
       "coleccion": "",
       "precio": "$14.000",
       "año": "1987",
+      "estado": "Muy bueno",
       "imagen": "img/estadosocied (Mediana).jpg"
+    },
+    {
+      "titulo": "Estrategias argumentativas: el caso de la \"infografía\"",
+      "autor": "Roberto Marafioti",
+      "editorial": "Universidad Nacional del Litoral",
+      "categoria": "Comunicación",
+      "coleccion": "Revista de ciencias sociales",
+      "precio": "8000-16000",
+      "año": "s/d",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
     },
     {
       "titulo": "Freud en Buenos Aires",
@@ -593,6 +760,7 @@
       "coleccion": "",
       "precio": "$8.000 - $18.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/freudbaires (Mediana).jpg"
     },
     {
@@ -603,6 +771,7 @@
       "coleccion": "Grandes Ideas",
       "precio": "$12.000",
       "año": "2004",
+      "estado": "Muy bueno",
       "imagen": "img/fundamekant (Mediana).jpg"
     },
     {
@@ -613,6 +782,7 @@
       "coleccion": "",
       "precio": "$14.000 - $25.000",
       "año": "2004",
+      "estado": "Muy bueno",
       "imagen": "img/gillesherenc (Mediana).jpg"
     },
     {
@@ -623,7 +793,19 @@
       "coleccion": "Claves para Todos",
       "precio": "$4.000 - $9.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/gobernarimper (Mediana).jpg"
+    },
+    {
+      "titulo": "Gran enciclopedia universal Espasa Calpe",
+      "autor": "Clarín / Espasa-Calpe",
+      "editorial": "Planeta / Espasa Calpe",
+      "categoria": "Enciclopedia/Referencia",
+      "coleccion": "Clarín-Proyectos especiales",
+      "precio": "200000",
+      "año": "2005",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
     },
     {
       "titulo": "Guerra y paz en el siglo XXI",
@@ -633,6 +815,7 @@
       "coleccion": "Temas de Historia",
       "precio": "$19.000",
       "año": "2007",
+      "estado": "Muy bueno",
       "imagen": "img/guerrapaz (Mediana).jpg"
     },
     {
@@ -643,6 +826,7 @@
       "coleccion": "Biblioteca pedagógica",
       "precio": "$8.000 - $18.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/historiaedupeda (Mediana).jpg"
     },
     {
@@ -653,7 +837,19 @@
       "coleccion": "Biblioteca esencial",
       "precio": "$9.000 - $22.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/homoacade (Mediana).jpg"
+    },
+    {
+      "titulo": "Intelectuales. Gilles Deleuze y su herencia filosófica",
+      "autor": "Alain Beaulieu (coord.)",
+      "editorial": "Mañantial /? OCR parcialmente ilegible",
+      "categoria": "Filosofía",
+      "coleccion": "",
+      "precio": "17000",
+      "año": "2010",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
     },
     {
       "titulo": "Jóvenes, crisis y saberes",
@@ -663,17 +859,30 @@
       "coleccion": "Conjunciones",
       "precio": "$13.000",
       "año": "2009",
+      "estado": "Muy bueno",
       "imagen": "img/jovenescri (Mediana).jpg"
     },
     {
       "titulo": "Jóvenes, territorios y complicidades",
-      "autor": "Varios",
-      "editorial": "Espacio",
-      "categoria": "Antropología",
+      "autor": "Alicia Susana Cibeira; Mario Betteo Barberis (coords.)",
+      "editorial": "Noveduc",
+      "categoria": "Educación/Pedagogía",
+      "coleccion": "Conjunciones",
+      "precio": "13000",
+      "año": "2009",
+      "estado": "Muy bueno",
+      "imagen": "img/jovenescri (Mediana).jpg"
+    },
+    {
+      "titulo": "Karl Popper: Paradoja de la utopía racionalista",
+      "autor": "Roberto González Gentile",
+      "editorial": "Universidad Nacional de Quilmes",
+      "categoria": "Filosofía",
       "coleccion": "",
-      "precio": "$9.000 - $22.000",
+      "precio": "7000-18000",
       "año": "s/d",
-      "imagen": "img/jovenesterri (Mediana).jpg"
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
     },
     {
       "titulo": "La antropología brasileña contemporánea",
@@ -683,6 +892,7 @@
       "coleccion": "",
       "precio": "$9.000 - $22.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/antropobrasil (Mediana).jpg"
     },
     {
@@ -693,6 +903,7 @@
       "coleccion": "",
       "precio": "$9.000 - $22.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/articulaetno (Mediana).jpg"
     },
     {
@@ -703,6 +914,7 @@
       "coleccion": "Claves para Todos",
       "precio": "$4.000 - $9.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/brechaurbana (Mediana).jpg"
     },
     {
@@ -713,6 +925,7 @@
       "coleccion": "Claves para Todos",
       "precio": "$4.000 - $9.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/burgueterra (Mediana).jpg"
     },
     {
@@ -723,6 +936,7 @@
       "coleccion": "",
       "precio": "$7.000 - $18.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/cienciametobunge (Mediana).jpg"
     },
     {
@@ -733,6 +947,7 @@
       "coleccion": "Divulgación",
       "precio": "$7.000 - $18.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/conexcosmica (Mediana).jpg"
     },
     {
@@ -743,7 +958,19 @@
       "coleccion": "Claves para Todos",
       "precio": "$5.000 - $8.500",
       "año": "2006",
+      "estado": "Muy bueno",
       "imagen": "img/crisisconficto (Mediana).jpg"
+    },
+    {
+      "titulo": "La cuestión militar",
+      "autor": "Dekt Pion-Berlin; Thomas Schelling; Aaus Tibiletti",
+      "editorial": "Universidad Nacional del Litoral",
+      "categoria": "Política / Fuerzas armadas",
+      "coleccion": "Revista de ciencias sociales",
+      "precio": "7000-16000",
+      "año": "s/d",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
     },
     {
       "titulo": "La densidad nacional. El caso argentino",
@@ -753,16 +980,18 @@
       "coleccion": "Claves para Todos",
       "precio": "$4.000 - $9.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/densidadnaci (Mediana).jpg"
     },
     {
       "titulo": "La escritura en manos de todos",
       "autor": "Carvallo; Andruskevicz",
-      "editorial": "Editorial Universitaria de Misiones",
+      "editorial": "Edunam",
       "categoria": "Educación / Escritura",
       "coleccion": "",
       "precio": "$8.000 - $18.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/escritura (Mediana).jpg"
     },
     {
@@ -773,6 +1002,7 @@
       "coleccion": "",
       "precio": "$14.000",
       "año": "2003",
+      "estado": "Muy bueno",
       "imagen": "img/escuelaperfor (Mediana).jpg"
     },
     {
@@ -783,6 +1013,7 @@
       "coleccion": "Grandes pensadores",
       "precio": "$7.000 - $18.000",
       "año": "1938",
+      "estado": "Muy bueno",
       "imagen": "img/fisicaaventura (Mediana).jpg"
     },
     {
@@ -793,16 +1024,29 @@
       "coleccion": "Biblioteca García Márquez",
       "precio": "$5.000 - $16.000",
       "año": "1955",
+      "estado": "Muy bueno",
       "imagen": "img/hojarasca (Mediana).jpg"
     },
     {
-      "titulo": "La marca de la gorra",
+      "titulo": "La literatura bioantropológica argentina",
+      "autor": "Alberto J. Marcellino",
+      "editorial": "Universidad Nacional de Quilmes",
+      "categoria": "Historia/Memoria",
+      "coleccion": "",
+      "precio": "14000",
+      "año": "1994",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
+    },
+    {
+      "titulo": "La marca de la gorra. Un análisis de la policía federal",
       "autor": "Mariana Galvani",
       "editorial": "Capital Intelectual",
       "categoria": "Política / Seguridad",
       "coleccion": "Claves para Todos",
       "precio": "$4.000 - $9.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/marcagorra (Mediana).jpg"
     },
     {
@@ -813,6 +1057,7 @@
       "coleccion": "",
       "precio": "$13.500",
       "año": "2010",
+      "estado": "Muy bueno",
       "imagen": "img/masacreober (Mediana).jpg"
     },
     {
@@ -823,6 +1068,7 @@
       "coleccion": "Colección Nogal",
       "precio": "$5.000 - $16.000",
       "año": "1915",
+      "estado": "Muy bueno",
       "imagen": "img/metamorfo (Mediana).jpg"
     },
     {
@@ -833,6 +1079,7 @@
       "coleccion": "",
       "precio": "$12.200",
       "año": "2003",
+      "estado": "Muy bueno",
       "imagen": "img/mujerducha (Mediana).jpg"
     },
     {
@@ -843,6 +1090,7 @@
       "coleccion": "Biblioteca Clásica",
       "precio": "$22.450",
       "año": "2013",
+      "estado": "Muy bueno",
       "imagen": "img/nobleaestado (Mediana).jpg"
     },
     {
@@ -853,7 +1101,19 @@
       "coleccion": "Obras maestras",
       "precio": "$7.000 - $18.000",
       "año": "1957",
+      "estado": "Muy bueno",
       "imagen": "img/poeticaespa (Mediana).jpg"
+    },
+    {
+      "titulo": "La política social de los municipios argentinos: un panorama global",
+      "autor": "Eduardo Passalacqua; Alejandro Villar",
+      "editorial": "Universidad Nacional de Quilmes",
+      "categoria": "Política / Gestión pública",
+      "coleccion": "",
+      "precio": "7000-16000",
+      "año": "s/d",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
     },
     {
       "titulo": "La política y el Estado moderno",
@@ -863,6 +1123,7 @@
       "coleccion": "Obras Maestras",
       "precio": "$12.000",
       "año": "1993",
+      "estado": "Muy bueno",
       "imagen": "img/gramsci (Mediana).jpg"
     },
     {
@@ -873,16 +1134,18 @@
       "coleccion": "Breviarios",
       "precio": "$22.000",
       "año": "1992",
+      "estado": "Muy bueno",
       "imagen": "img/psicoindustri (Mediana).jpg"
     },
     {
-      "titulo": "La razón humanitaria",
+      "titulo": "La razón humanitaria. Una historia moral del tiempo presente",
       "autor": "Didier Fassin",
       "editorial": "Prometeo",
       "categoria": "Ensayo / Sociología",
       "coleccion": "",
       "precio": "$6.000 - $15.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/razonhumanita (Mediana).jpg"
     },
     {
@@ -893,26 +1156,40 @@
       "coleccion": "",
       "precio": "$19.000",
       "año": "1992",
+      "estado": "Muy bueno",
       "imagen": "img/recepcinarrati (Mediana).jpg"
     },
     {
-      "titulo": "La religiosidad popular",
+      "titulo": "La Reforma Constitucional",
+      "autor": "María del Carmen Feijoó; Marcelo Fabián Saín",
+      "editorial": "Universidad Nacional de Quilmes (UNQ)",
+      "categoria": "Ciencia Política",
+      "coleccion": "-",
+      "precio": "7000 - 13000",
+      "año": "1994",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
+    },
+    {
+      "titulo": "La religiosidad popular. Creencias y vida cotidiana",
       "autor": "Pablo Semán",
       "editorial": "Capital Intelectual",
       "categoria": "Sociología / Religión",
       "coleccion": "Claves para Todos",
       "precio": "$4.000 - $9.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/religiosipopular (Mediana).jpg"
     },
     {
-      "titulo": "La revolución de Evo Morales",
-      "autor": "Pablo Stefanoni",
+      "titulo": "La revolución de Evo Morales. De la coca al palacio",
+      "autor": "Pablo Stefanoni; Hervé Do Alto",
       "editorial": "Capital Intelectual",
       "categoria": "Política",
       "coleccion": "Claves para Todos",
       "precio": "$4.000 - $9.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/revolucevo (Mediana).jpg"
     },
     {
@@ -923,6 +1200,7 @@
       "coleccion": "",
       "precio": "$9.000 - $22.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/sociolocla (Mediana).jpg"
     },
     {
@@ -933,6 +1211,7 @@
       "coleccion": "Divulgación Científica",
       "precio": "$7.000",
       "año": "1980",
+      "estado": "Muy bueno",
       "imagen": "img/tercerola (Mediana).jpg"
     },
     {
@@ -943,6 +1222,7 @@
       "coleccion": "",
       "precio": "$6.000 - $15.000",
       "año": "1997",
+      "estado": "Muy bueno",
       "imagen": "img/voluntad (Mediana).jpg"
     },
     {
@@ -953,7 +1233,30 @@
       "coleccion": "Bordes",
       "precio": "$14.000",
       "año": "2000",
+      "estado": "Muy bueno",
       "imagen": "img/carceles (Mediana).jpg"
+    },
+    {
+      "titulo": "Las estrategias de la reproducción social",
+      "autor": "Pierre Bourdieu",
+      "editorial": "Siglo XXI Editores",
+      "categoria": "Sociología",
+      "coleccion": "Biblioteca esencial del pensamiento contemporáneo",
+      "precio": "9000-22000",
+      "año": "s/d",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
+    },
+    {
+      "titulo": "Las Prácticas Sociales",
+      "autor": "Alicia Gutiérrez",
+      "editorial": "Edunam",
+      "categoria": "Sociología",
+      "coleccion": "-",
+      "precio": "12000 | 8000 - 15000 | 14000",
+      "año": "2005 | 1995",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
     },
     {
       "titulo": "Las privatizadas I. Ayer, hoy y mañana",
@@ -963,6 +1266,7 @@
       "coleccion": "Claves para Todos",
       "precio": "$4.000 - $9.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/pivatiza1 (Mediana).jpg"
     },
     {
@@ -973,6 +1277,7 @@
       "coleccion": "Claves para Todos",
       "precio": "$4.000 - $9.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/privatiz2 (Mediana).jpg"
     },
     {
@@ -983,6 +1288,7 @@
       "coleccion": "",
       "precio": "$6.000 - $15.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/lecturasinfanc (Mediana).jpg"
     },
     {
@@ -993,16 +1299,40 @@
       "coleccion": "Grandes Obras",
       "precio": "$7.000 - $18.000",
       "año": "1651",
+      "estado": "Muy bueno",
       "imagen": "img/leviatan (Mediana).jpg"
     },
     {
-      "titulo": "Los condenados de la ciudad",
+      "titulo": "Literatura",
+      "autor": "María Teresa Martínez",
+      "editorial": "Editorial Universitaria (UNaM)",
+      "categoria": "Literatura / Crítica",
+      "coleccion": "-",
+      "precio": "7000 - 12000",
+      "año": "2000",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
+    },
+    {
+      "titulo": "Los ciclos de la historia",
+      "autor": "Nicolás Casullo",
+      "editorial": "Universidad Nacional del Litoral",
+      "categoria": "Historia / Ensayo",
+      "coleccion": "Revista de ciencias sociales",
+      "precio": "6000-15000",
+      "año": "s/d",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
+    },
+    {
+      "titulo": "Los condenados de la ciudad: gueto, periferias y Estado",
       "autor": "Loïc Wacquant",
       "editorial": "Siglo XXI Editores",
       "categoria": "Sociología",
       "coleccion": "",
       "precio": "$27.390",
       "año": "2013",
+      "estado": "Muy bueno",
       "imagen": "img/condenados (Mediana).jpg"
     },
     {
@@ -1013,7 +1343,19 @@
       "coleccion": "Claves para Todos",
       "precio": "$4.000 - $9.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/desafíosdesa (Mediana).jpg"
+    },
+    {
+      "titulo": "Los estudiantes y la cultura",
+      "autor": "Pierre Bourdieu; Jean-Claude Passeron",
+      "editorial": "Siglo XXI Editores",
+      "categoria": "Sociología",
+      "coleccion": "-",
+      "precio": "10000 - 15000",
+      "año": "2003",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
     },
     {
       "titulo": "Los gobiernos locales y los procesos de descentralización",
@@ -1023,6 +1365,7 @@
       "coleccion": "",
       "precio": "$6.000 - $15.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/goblocales (Mediana).jpg"
     },
     {
@@ -1033,7 +1376,41 @@
       "coleccion": "Educación",
       "precio": "$13.000",
       "año": "2003",
+      "estado": "Muy bueno",
       "imagen": "img/herederos (Mediana).jpg"
+    },
+    {
+      "titulo": "Los medios, las coartadas del \"New Order\" y la casuística",
+      "autor": "Aníbal Ford",
+      "editorial": "Universidad Nacional de Quilmes",
+      "categoria": "Comunicación",
+      "coleccion": "",
+      "precio": "8000-16000",
+      "año": "s/d",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
+    },
+    {
+      "titulo": "Los recursos financieros de los municipios del conurbano bonaerense",
+      "autor": "Sergio R. Bart",
+      "editorial": "Universidad Nacional del Litoral",
+      "categoria": "Gestión pública",
+      "coleccion": "Revista de ciencias sociales",
+      "precio": "6000-15000",
+      "año": "s/d",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
+    },
+    {
+      "titulo": "Los roles del sindicalismo durante la transición democrática (1983-1996)",
+      "autor": "Arturo Fernández",
+      "editorial": "Universidad Nacional del Litoral",
+      "categoria": "Sociología / Trabajo",
+      "coleccion": "Revista de ciencias sociales",
+      "precio": "9000-22000",
+      "año": "s/d",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
     },
     {
       "titulo": "Manifiesto comunista",
@@ -1043,6 +1420,7 @@
       "coleccion": "Grandes Ideas",
       "precio": "$7.800 - $10.000",
       "año": "2007",
+      "estado": "Muy bueno",
       "imagen": "img/manifiesto (Mediana).jpg"
     },
     {
@@ -1053,16 +1431,18 @@
       "coleccion": "Biblioteca García Márquez",
       "precio": "$5.000 - $16.000",
       "año": "2004",
+      "estado": "Muy bueno",
       "imagen": "img/memiriasputas (Mediana).jpg"
     },
     {
       "titulo": "Mercosur, un modelo de integración",
       "autor": "Roberto C. Abinzano",
-      "editorial": "Editorial Universitaria de Misiones",
+      "editorial": "Edunam",
       "categoria": "Política",
       "coleccion": "Contemporánea",
       "precio": "$7.000 - $16.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/mercosur (Mediana).jpg"
     },
     {
@@ -1073,17 +1453,52 @@
       "coleccion": "Grandes Ideas",
       "precio": "$7.800 - $9.000",
       "año": "2007",
+      "estado": "Muy bueno",
       "imagen": "img/metafiamor (Mediana).jpg"
     },
     {
       "titulo": "Mirada de los viajeros a Misiones",
       "autor": "Rodolfo Nicolás Capaccio",
-      "editorial": "Editorial Universitaria de Misiones",
+      "editorial": "Edunam",
       "categoria": "Historia / Viajes",
       "coleccion": "",
       "precio": "$6.000 - $15.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/miradaviajer (Mediana).jpg"
+    },
+    {
+      "titulo": "Mirada. Políticas y pedagogías de la imagen",
+      "autor": "Dussel / Gutiérrez",
+      "editorial": "Manantial/FLACSO",
+      "categoria": "Educación",
+      "coleccion": "",
+      "precio": "9000-18000",
+      "año": "",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
+    },
+    {
+      "titulo": "Nación, etnia y género en Latinoamérica (Cumbia)",
+      "autor": "Pablo Semán; Pablo Vila (comps.)",
+      "editorial": "Editorial Gorla / Ediciones EPC",
+      "categoria": "Antropología/Estudios Culturales",
+      "coleccion": "-",
+      "precio": "11500 - 18000",
+      "año": "2011",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
+    },
+    {
+      "titulo": "Nacionalismos argentinos (1810-1930)",
+      "autor": "Oscar Terán",
+      "editorial": "Universidad Nacional de Quilmes (UNQ)",
+      "categoria": "Historia",
+      "coleccion": "-",
+      "precio": "10000 - 18000",
+      "año": "2003",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
     },
     {
       "titulo": "No sabés lo que me hizo",
@@ -1093,6 +1508,7 @@
       "coleccion": "",
       "precio": "$12.000",
       "año": "2003",
+      "estado": "Muy bueno",
       "imagen": "img/nosabelosq (Mediana).jpg"
     },
     {
@@ -1103,7 +1519,19 @@
       "coleccion": "",
       "precio": "$6.000 - $15.000",
       "año": "1988",
+      "estado": "Muy bueno",
       "imagen": "img/nopsdecimos (Mediana).jpg"
+    },
+    {
+      "titulo": "Noticias históricas sobre el origen y desarrollo de la enseñanza pública en Buenos Aires",
+      "autor": "Juan María Gutiérrez",
+      "editorial": "Universidad Nacional de Quilmes (UNQ)",
+      "categoria": "Historia/Memoria",
+      "coleccion": "",
+      "precio": "14000",
+      "año": "1997",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
     },
     {
       "titulo": "Ojos de perro azul",
@@ -1113,16 +1541,18 @@
       "coleccion": "",
       "precio": "$8.000 - $15.000",
       "año": "1990",
+      "estado": "Muy bueno",
       "imagen": "img/ojoperro (Mediana).jpg"
     },
     {
       "titulo": "Palitos cruzados",
       "autor": "Raúl Novau",
-      "editorial": "Editorial Universitaria de Misiones",
+      "editorial": "Edunam",
       "categoria": "Literatura",
       "coleccion": "",
       "precio": "$5.000 - $16.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/palitos (Mediana).jpg"
     },
     {
@@ -1133,7 +1563,19 @@
       "coleccion": "Claves para Todos",
       "precio": "$12.000",
       "año": "2007",
+      "estado": "Muy bueno",
       "imagen": "img/leerfacu (Mediana).jpg"
+    },
+    {
+      "titulo": "Parentesco, reciprocidad y diferenciación social en la frontera agraria de Misiones",
+      "autor": "Gabriela Schiavoni",
+      "editorial": "Edunam",
+      "categoria": "Antropología",
+      "coleccion": "",
+      "precio": "14000",
+      "año": "1995",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
     },
     {
       "titulo": "Parias urbanos: marginalidad en la ciudad",
@@ -1143,37 +1585,63 @@
       "coleccion": "",
       "precio": "$16.000",
       "año": "2001",
+      "estado": "Muy bueno",
       "imagen": "img/parias (Mediana).jpg"
     },
     {
       "titulo": "Pobres, ausentes y reciénvenidos",
       "autor": "Rodolfo Nicolás Capaccio",
-      "editorial": "Editorial Universitaria de Misiones",
+      "editorial": "Edunam",
       "categoria": "Literatura",
       "coleccion": "Libros Arribeños",
       "precio": "$5.000 - $16.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/pobresausentes (Mediana).jpg"
     },
     {
-      "titulo": "Poder y terror",
+      "titulo": "Poder y terror. Reflexiones posteriores al 11/09/2000",
       "autor": "Noam Chomsky",
       "editorial": "Zarzal",
       "categoria": "Política",
       "coleccion": "",
       "precio": "$7.000 - $14.000",
       "año": "2003",
+      "estado": "Muy bueno",
       "imagen": "img/poderterror (Mediana).jpg"
     },
     {
-      "titulo": "Política exterior argentina",
+      "titulo": "Poder y terror. Reflexiones posteriores al 11/09/2001",
+      "autor": "Noam Chomsky",
+      "editorial": "Zarzal",
+      "categoria": "Política",
+      "coleccion": "-",
+      "precio": "7000-14000 | 7000 - 14000",
+      "año": "2003",
+      "estado": "Muy bueno",
+      "imagen": "img/poderterror (Mediana).jpg"
+    },
+    {
+      "titulo": "Política exterior argentina. Poder y conflictos internos (1880-2001)",
       "autor": "Mario Rapoport; Claudio Spiguel",
       "editorial": "Capital Intelectual",
       "categoria": "Política / Historia",
       "coleccion": "Claves para Todos",
       "precio": "$4.000 - $9.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/políticaexterior (Mediana).jpg"
+    },
+    {
+      "titulo": "Políticas y pedagogías de la imagen",
+      "autor": "Inés Dussel; Daniela Gutiérrez (comps.)",
+      "editorial": "Manantial / FLACSO",
+      "categoria": "Educación / Pedagogía",
+      "coleccion": "-",
+      "precio": "13000 - 29000",
+      "año": "2006",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
     },
     {
       "titulo": "Pueblo y política. La construcción de la república",
@@ -1183,6 +1651,7 @@
       "coleccion": "Claves para Todos",
       "precio": "$4.000 - $9.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/pueblopoli (Mediana).jpg"
     },
     {
@@ -1193,6 +1662,7 @@
       "coleccion": "Claves para Todos",
       "precio": "$4.000 - $9.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/quesevayan (Mediana).jpg"
     },
     {
@@ -1203,7 +1673,30 @@
       "coleccion": "Grandes obras",
       "precio": "$9.000 - $22.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/razaycultu (Mediana).jpg"
+    },
+    {
+      "titulo": "Revista de Ciencias Sociales",
+      "autor": "VV. AA.",
+      "editorial": "Universidad Nacional de Quilmes",
+      "categoria": "Varios",
+      "coleccion": "Revista de ciencias sociales",
+      "precio": "$8.000",
+      "año": "1994",
+      "estado": "Muy bueno",
+      "imagen": "img/revistacs1 (Mediana).jpg"
+    },
+    {
+      "titulo": "Riesgo país: la jerga financiera como mecanismo de poder",
+      "autor": "Ricardo Aronskind",
+      "editorial": "Capital Intelectual",
+      "categoria": "Política/Estado/Sociedad",
+      "coleccion": "Claves para Todos",
+      "precio": "10000",
+      "año": "2007",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
     },
     {
       "titulo": "San La Muerte. Culto y representación mágico religiosa",
@@ -1213,16 +1706,18 @@
       "coleccion": "Libros de la memoria",
       "precio": "$6.000 - $15.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/sanlamu (Mediana).jpg"
     },
     {
-      "titulo": "Sarmiento, más allá de la educación",
+      "titulo": "Sarmiento, más allá de la educación: retrato de un intelectual en acción",
       "autor": "Mauricio Lebedinsky",
       "editorial": "Capital Intelectual",
       "categoria": "Historia / Memoria",
       "coleccion": "Claves para Todos",
       "precio": "$10.000",
       "año": "2009",
+      "estado": "Muy bueno",
       "imagen": "img/sarmiento (Mediana).jpg"
     },
     {
@@ -1233,16 +1728,18 @@
       "coleccion": "",
       "precio": "$11.871",
       "año": "2010",
+      "estado": "Muy bueno",
       "imagen": "img/sercomo (Mediana).jpg"
     },
     {
-      "titulo": "Sexualidad y poder",
+      "titulo": "Sexualidad y poder (y otros textos)",
       "autor": "Michel Foucault",
       "editorial": "Folio",
       "categoria": "Filosofía / Sociología",
       "coleccion": "Grandes Ideas",
       "precio": "$12.000",
       "año": "2004",
+      "estado": "Muy bueno",
       "imagen": "img/sexypoder (Mediana).jpg"
     },
     {
@@ -1253,6 +1750,7 @@
       "coleccion": "Divulgación científica",
       "precio": "$7.000 - $18.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/teorelatividad (Mediana).jpg"
     },
     {
@@ -1263,6 +1761,7 @@
       "coleccion": "Obras maestras",
       "precio": "$6.000 - $15.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/sociovspsico (Mediana).jpg"
     },
     {
@@ -1273,16 +1772,29 @@
       "coleccion": "Libros Arribeños",
       "precio": "$8.000 - $15.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/sumidos (Mediana).jpg"
     },
     {
-      "titulo": "Temor y control: la gestión de la inseguridad",
+      "titulo": "Temor y control: la gestión de la inseguridad como forma de gobierno",
       "autor": "Esteban Rodríguez Alzueta",
       "editorial": "Futuro Anterior",
       "categoria": "Política / Sociedad",
       "coleccion": "",
       "precio": "$15.000",
       "año": "2014",
+      "estado": "Muy bueno",
+      "imagen": "img/temorcontro (Mediana).jpg"
+    },
+    {
+      "titulo": "Temor y control: la gestión de la inseguridad como forma de gobierno",
+      "autor": "Esteban Rodríguez Alzueta",
+      "editorial": "Futuro Anterior",
+      "categoria": "Política/Estado/Sociedad",
+      "coleccion": "",
+      "precio": "15000",
+      "año": "2014",
+      "estado": "Muy bueno",
       "imagen": "img/temorcontro (Mediana).jpg"
     },
     {
@@ -1293,27 +1805,52 @@
       "coleccion": "Grandes Ideas",
       "precio": "$8.000 - $11.000",
       "año": "2007",
+      "estado": "Muy bueno",
       "imagen": "img/temortemblor (Mediana).jpg"
     },
     {
-      "titulo": "Teorías débiles: una crítica de la deconstrucción",
+      "titulo": "Teorías débiles: una crítica de la deconstrucción y de los estudios culturales",
       "autor": "Roberto Follari",
       "editorial": "Homo Sapiens / Noveduc",
       "categoria": "Filosofía",
       "coleccion": "Serie Estudios Sociales",
       "precio": "$8.000 - $15.000",
       "año": "2002",
+      "estado": "Muy bueno",
+      "imagen": "img/teodebiles (Mediana).jpg"
+    },
+    {
+      "titulo": "Teorías débiles: una crítica de la deconstrucción y de los estudios culturales",
+      "autor": "Roberto Follari",
+      "editorial": "Homo Sapiens / Noveduc",
+      "categoria": "Filosofía",
+      "coleccion": "Serie Estudios Sociales",
+      "precio": "8000-15000 | 8000 - 15000",
+      "año": "2002",
+      "estado": "Muy bueno",
       "imagen": "img/teodebiles (Mediana).jpg"
     },
     {
       "titulo": "Trago de nada",
       "autor": "Javier Chemes",
-      "editorial": "Editorial Universitaria de Misiones",
+      "editorial": "Edunam",
       "categoria": "Literatura",
       "coleccion": "",
       "precio": "$5.000 - $16.000",
       "año": "s/d",
+      "estado": "Muy bueno",
       "imagen": "img/tragonada (Mediana).jpg"
+    },
+    {
+      "titulo": "Un examen del perfil competitivo de las exportaciones argentinas",
+      "autor": "José A. Bekinschtein",
+      "editorial": "Universidad Nacional de Quilmes",
+      "categoria": "Economía",
+      "coleccion": "",
+      "precio": "7000-18000",
+      "año": "s/d",
+      "estado": "Muy bueno",
+      "imagen": "img/default.jpg"
     },
     {
       "titulo": "Un médico rural",
@@ -1323,6 +1860,7 @@
       "coleccion": "",
       "precio": "$5.000 - $16.000",
       "año": "1919",
+      "estado": "Muy bueno",
       "imagen": "img/medicorural (Mediana).jpg"
     },
     {
@@ -1333,6 +1871,7 @@
       "coleccion": "",
       "precio": "$6.000 - $12.000",
       "año": "2003",
+      "estado": "Muy bueno",
       "imagen": "img/wing (Mediana).jpg"
     },
     {
@@ -1343,6 +1882,7 @@
       "coleccion": "Ensayo",
       "precio": "$9.000",
       "año": "2011",
+      "estado": "Muy bueno",
       "imagen": "img/zonceras (Mediana).jpg"
     }
   ]
