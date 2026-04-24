@@ -5,7 +5,7 @@
     "bajada": "El manual de operaciones de esta trinchera literaria. Seleccioná una obra para abrir el expediente."
   },
   "pestañas": [
-    {"id": "tab1", "titulo": "CONTENIDO", "texto": "Material de lectura para tiempos de ajuste. Filosofía, sociología, literatura y resistencia."},
+    {"id": "tab1", "titulo": "CONTENIDO", "texto": "."},
     {"id": "tab2", "titulo": "CÓMO", "texto": "Instrucciones tácticas: Elegí el libro, copiá los datos en el portapapeles con el botón de la ficha y contactanos."},
     {"id": "tab3", "titulo": "QUIÉNES", "texto": "Somos el personal nodocente de la UNaM, administrando la circulación de saberes desde las sombras."},
     {"id": "tab4", "titulo": "ENTREGA", "texto": "Punto de encuentro y protocolos de entrega de los libros solicitados presencialmente."}
