@@ -136,13 +136,14 @@ HTML_TEMPLATE = """
         }}
         #btn-ascenso:hover {{ background: var(--rojo-sangre); transform: scale(1.1) translateY(-5px); box-shadow: 0 0 20px var(--rojo-sangre); }}
 
-        footer {{ margin-top: 60px; background-color: var(--negro); border-top: 4px solid var(--rojo-sangre); width: 100%; }}
-        .footer-bunker {{ text-align: center; color: #ffffff; padding: 30px 20px; }}
+        /* NUEVA INSTRUCCIÓN 2: FOOTER TRANSPARENTE */
+        footer {{ margin-top: 60px; background-color: transparent; border-top: 2px solid var(--rojo-sangre); width: 100%; }}
+        .footer-bunker {{ text-align: center; color: var(--negro); padding: 30px 20px; }}
 
         @media (max-width: 900px) {{ .grilla-tacuru {{ grid-template-columns: repeat(3, 1fr) !important; }} }}
         @media (max-width: 600px) {{ 
             /* AJUSTE 3: LOGO DE FONDO EN MÓVIL CHICO Y MÁS ARRIBA */
-            header {{ background-size: 50% !important; background-position: center 20px !important; padding-top: 170px !important; }}
+            header {{ background-size: 50% !important; background-position: center 20px !important; padding-top: 180px !important; }}
             
             /* AJUSTE 2: TÍTULOS MÁS GRANDES EN MÓVIL */
             h1 {{ font-size: 4.8rem !important; }}
@@ -156,8 +157,20 @@ HTML_TEMPLATE = """
             .modal-caja {{ aspect-ratio: auto !important; min-height: 70vh; max-height: 90vh; overflow-y: auto; }}
             .modal-oscuridad {{ justify-content: flex-start !important; padding-top: 60px !important; }}
 
-            .header-superior {{ flex-direction: column; align-items: flex-start; gap: 15px; }}
-            .bloque-autor {{ width: 100%; justify-content: flex-start; }}
+            /* NUEVA INSTRUCCIÓN 1: TARJETA DE AUTOR COLGANDO DEL TOP DERECHO */
+            .header-superior {{ position: relative; display: block; }}
+            .header-superior > a {{ position: absolute; top: 0; right: 0; z-index: 10; }}
+            .bloque-autor {{ 
+                flex-direction: column; 
+                background: transparent; 
+                border: none; 
+                padding: 0; 
+                gap: 5px; 
+                box-shadow: none; 
+            }}
+            .foto-autor {{ width: 45px; height: 45px; border: 1px solid var(--rojo-sangre); }}
+            .nombre-autor {{ font-size: 0.85rem; }}
+
             /* AJUSTE MOBILE: 2 COLUMNAS SIEMPRE */
             .grilla-tacuru {{ grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }} 
             /* AJUSTE ÍNDICE MOBILE: 2 COLUMNAS BALANCEADAS */
@@ -219,12 +232,12 @@ HTML_TEMPLATE = """
         <div class="footer-bunker">
             <p style="margin-bottom: 8px;">
                 <strong style="font-family: 'Almarai', sans-serif; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.8px;">
-                    <a href="https://hormigue.ar/" style="color: white !important;">HORMIGUE.AR</a>
+                    <a href="https://hormigue.ar/" style="color: var(--rojo-sangre) !important;">HORMIGUE.AR</a>
                 </strong>
                 <a href="https://hormigue.ar/">
                     <img style="height: 2rem; vertical-align: middle; margin: 0 5px;" src="https://pica.hormigue.ar/hormiMG/icono%20hormi.png" alt="H">
                 
-                <span><a href="https://hormigue.ar/" style="color: white !important;">Libroteca</a></span>
+                <span><a href="https://hormigue.ar/" style="color: var(--rojo-sangre) !important;">Libroteca</a></span>
                 </a>
             </p>
             <p style="font-family: 'Arial Narrow', sans-serif; font-size: 0.8rem; opacity: 0.8;">conocé el sitio creado con pocos recursos técnicos, económicos e intelectuales</p>
