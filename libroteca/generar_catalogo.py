@@ -137,8 +137,8 @@ HTML_TEMPLATE = """
         #btn-ascenso:hover {{ background: var(--rojo-sangre); transform: scale(1.1) translateY(-5px); box-shadow: 0 0 20px var(--rojo-sangre); }}
 
         /* NUEVA INSTRUCCIÓN 2: FOOTER TRANSPARENTE */
-        footer {{ margin-top: 60px; background-color: rgba(0, 0, 0, 0.7); border-top: 2px solid var(--rojo-sangre); width: 100%; }}
-        .footer-bunker {{ text-align: center; color: var(--negro); padding: 30px 20px; }}
+        footer {{ margin-top: 60px; background-color: rgba(0, 0, 0, 0.83); border-top: 2px solid var(--rojo-sangre); width: 100%; }}
+        .footer-bunker {{ text-align: center; color: rgba(255, 255, 255, 0.95) ; padding: 30px 20px; }}
 
         @media (max-width: 900px) {{ .grilla-tacuru {{ grid-template-columns: repeat(3, 1fr) !important; }} }}
         @media (max-width: 600px) {{ 
