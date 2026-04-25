@@ -38,6 +38,7 @@ HTML_TEMPLATE = """
         
         .contenedor {{ flex: 1; max-width: 1200px; margin: 0 auto; width: 100%; display: flow-root; }}
         
+        /* AJUSTE 3: LOGO DE FONDO MÁS SÓLIDO (Menos transparencia en el gradiente) */
         header {{ 
             border-bottom: 1px solid var(--rojo-sangre); padding: 40px 20px; margin-bottom: 30px; border-radius: 8px;
             box-shadow: 0 4px 6px -6px rgba(163, 0, 0, 0.8);
@@ -49,90 +50,119 @@ HTML_TEMPLATE = """
         .header-superior {{ display: flex; justify-content: space-between; align-items: center; width: 100%; }}
         .header-titulos {{ text-align: left; }}
 
-        /* AJUSTE 2: TÍTULOS MONUMENTALES */
-        h1 {{ font-family: 'Bebas Neue', sans-serif !important; font-size: 6.5rem !important; color: var(--rojo-sangre) !important; margin: 0; line-height: 0.85 !important; }}
+        /* AJUSTE 2: TÍTULO Y SUBTÍTULO MÁS GRANDES EN PC */
+        h1 {{ font-family: 'Bebas Neue', sans-serif !important; font-size: 6.5rem !important; color: var(--rojo-sangre) !important; margin: 0; line-height: 0.9 !important; }}
         h2 {{ font-family: 'Bebas Neue', sans-serif !important; font-size: 3.5rem !important; color: var(--negro) !important; margin: 0; }}
 
-        /* AJUSTE 4: LINK EN BLOQUE AUTOR */
-        .bloque-autor {{ display: flex; align-items: center; gap: 15px; background: rgba(163, 0, 0, 0.05); padding: 10px 15px; border-radius: 50px 10px 10px 50px; border: 1px solid rgba(163, 0, 0, 0.2); transition: 0.3s; cursor: pointer; }}
+        .bloque-autor {{ display: flex; align-items: center; gap: 15px; background: rgba(163, 0, 0, 0.05); padding: 10px 15px; border-radius: 50px 10px 10px 50px; border: 1px solid rgba(163, 0, 0, 0.2); transition: 0.3s; }}
         .bloque-autor:hover {{ background: rgba(163, 0, 0, 0.1); transform: translateX(5px); }}
-        .foto-autor {{ width: 75px; height: 75px; border-radius: 50%; border: 2px solid var(--rojo-sangre); object-fit: cover; box-shadow: 0 0 10px rgba(163, 0, 0, 0.3); }}
-        .nombre-autor {{ font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: var(--negro); letter-spacing: 1px; text-transform: uppercase; }}
+        .foto-autor {{ width: 70px; height: 70px; border-radius: 50%; border: 2px solid var(--rojo-sangre); object-fit: cover; box-shadow: 0 0 10px rgba(163, 0, 0, 0.3); }}
+        .nombre-autor {{ font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; color: var(--negro); letter-spacing: 1px; text-transform: uppercase; }}
 
+        /* AJUSTE 2: BAJADA CON MÁS TRANSPARENCIA */
         .bajada {{ 
-            font-size: 1.15rem; font-weight: 500; color: var(--negro); 
-            background: rgba(255, 255, 255, 0.35); padding: 20px; border-radius: 4px;
-            text-align: left; max-width: 100%; line-height: 1.6; border-left: 4px solid var(--rojo-sangre);
+            font-size: 1.1rem; font-weight: 500; color: var(--negro); 
+            font-family: 'Inter', sans-serif; 
+            background: rgba(255, 255, 255, 0.35);
+            padding: 15px 20px; border-radius: 4px;
+            text-align: left; max-width: 100%; line-height: 1.5;
+            border-left: 4px solid var(--rojo-sangre);
             backdrop-filter: blur(2px);
         }}
 
         .caja-menu {{ border: 1px solid var(--rojo-sangre); margin-bottom: 40px; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 0 12px rgba(163, 0, 0, 0.25); }}
         .tabs-header {{ display: flex; border-bottom: 1px solid var(--rojo-sangre); background: var(--negro); }}
-        .tab-btn {{ flex: 1; padding: 14px; cursor: pointer; font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; color: var(--blanco); background: transparent; border: none; transition: 0.3s; letter-spacing: 1px; }}
+        .tab-btn {{ flex: 1; padding: 12px; cursor: pointer; font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--blanco); background: transparent; border: none; transition: all 0.3s ease; letter-spacing: 1px; }}
         .tab-btn.active, .tab-btn:hover {{ background: var(--rojo-sangre); }}
-        .tab-content {{ padding: 25px; display: none; font-size: 1.15rem; line-height: 1.6; }}
+        .tab-content {{ padding: 20px; display: none; font-size: 1.1rem; line-height: 1.5; }}
         .tab-content.active {{ display: block; }}
         
-        .lista-indice {{ 
-            list-style-type: none; padding: 0; margin: 0; display: flex; flex-direction: column; 
-            flex-wrap: wrap; align-content: flex-start; gap: 8px 30px; max-height: 150px; 
-        }}
-        .lista-indice li {{ font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 1px; }}
+        .caja-indice-interna {{ margin-top: 25px; padding-top: 15px; border-top: 1px dashed var(--rojo-sangre); }}
 
-        .titulo-categoria {{ font-family: 'Bebas Neue', sans-serif !important; font-size: 3.5rem !important; color: var(--blanco) !important; background: var(--negro) !important; padding: 10px 20px !important; border-left: 6px solid var(--rojo-sangre) !important; margin: 60px 0 25px 0 !important; text-transform: uppercase !important; border-radius: 4px; }}
-        .grilla-tacuru {{ display: grid !important; grid-template-columns: repeat(4, 1fr) !important; gap: 20px !important; margin: 2rem 0 !important; }}
+        /* AJUSTE 1: ÍNDICE CON SALTO DE COLUMNA TÁCTICO (PC) */
+        .lista-indice {{ 
+            list-style-type: none; padding: 0; margin: 0;
+            display: flex; flex-direction: column; flex-wrap: wrap;
+            align-content: flex-start; gap: 6px 30px; 
+            max-height: 140px; /* Forzamos el quiebre después de la 5ta categoría aprox */
+            overflow: hidden;
+        }}
+        .lista-indice li {{ font-family: 'Bebas Neue', sans-serif; font-size: 1.25rem; letter-spacing: 1px; }}
+
+        .titulo-categoria {{ font-family: 'Bebas Neue', sans-serif !important; font-size: 3rem !important; color: var(--blanco) !important; background: var(--negro) !important; padding: 5px 15px !important; border-left: 5px solid var(--rojo-sangre) !important; margin: 50px 0 20px 0 !important; text-transform: uppercase !important; border-radius: 4px; }}
         
-        .tarjeta-expediente {{ position: relative !important; aspect-ratio: 1 / 1 !important; background-color: #000 !important; border: 1px solid var(--rojo-oscuro) !important; border-radius: 8px !important; overflow: hidden; transition: 0.4s; cursor: pointer; }}
+        /* AJUSTE MOBILE: GRILLA DE 2 COLUMNAS */
+        .grilla-tacuru {{ display: grid !important; grid-template-columns: repeat(4, 1fr) !important; gap: 15px !important; margin: 2rem 0 !important; }}
+        
+        .tarjeta-expediente {{ position: relative !important; aspect-ratio: 1 / 1 !important; background-color: #000 !important; border: 1px solid var(--rojo-oscuro) !important; border-radius: 8px !important; overflow: hidden; transition: all 0.4s ease; cursor: pointer; }}
         .tarjeta-expediente:hover {{ transform: scale(1.03) !important; border-color: var(--rojo-sangre) !important; box-shadow: 0 0 25px rgba(163, 0, 0, 0.65); }}
+        .tarjeta-imagen-wrapper {{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }}
         .tarjeta-imagen-wrapper img {{ width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); opacity: 0.6; transition: 0.5s; }}
         .tarjeta-expediente:hover img {{ filter: grayscale(0%); opacity: 1; }}
         
+        .enlace-tarjeta {{ display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100%; height: 100%; padding: 15px; position: relative; z-index: 10; text-align: center; box-sizing: border-box; }}
+        
+        /* AJUSTE 4: CONTROL DE DESBORDE DE TEXTO EN GRID */
         .tarjeta-expediente h3 {{ 
-            font-family: 'Bebas Neue', sans-serif !important; color: #fff !important; font-size: 1.7rem !important; 
-            margin: 0 0 6px 0; line-height: 1 !important; text-shadow: 2px 2px 4px #000; width: 100%; 
-            overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; 
+            font-family: 'Bebas Neue', sans-serif !important; color: #fff !important; 
+            font-size: 1.6rem !important; margin: 0 0 6px 0; line-height: 1 !important; 
+            text-shadow: 2px 2px 4px #000; width: 100%; overflow: hidden; 
+            text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; 
+        }}
+        .tarjeta-expediente p {{ 
+            font-family: 'Inter', sans-serif; color: var(--fondo-hueso); font-size: 0.95rem; margin: 0; 
+            text-shadow: 1px 1px 3px #000; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 90%; 
         }}
 
         .modal-overlay {{ display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); justify-content: center; align-items: center; backdrop-filter: blur(5px); }}
-        .modal-caja {{ position: relative; width: 90%; max-width: 450px; aspect-ratio: 2/3; border: 2px solid var(--rojo-sangre); border-radius: 8px; background-size: cover; background-position: center; overflow: hidden; box-shadow: 0 0 40px rgba(0,0,0,0.6); }}
-        .modal-oscuridad {{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.75); display: flex; flex-direction: column; justify-content: center; padding: 35px; box-sizing: border-box; }}
-        .modal-titulo {{ font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; color: var(--blanco); margin: 0 0 25px 0; border-bottom: 2px solid var(--rojo-sangre); padding-bottom: 12px; line-height: 1.1; }}
-        .datos-expediente {{ color: var(--blanco); font-size: 1.2rem; line-height: 1.9; text-align: left; }}
-        .datos-expediente strong {{ color: var(--rojo-sangre) !important; font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 1px; }}
+        .modal-caja {{ position: relative; width: 90%; max-width: 450px; aspect-ratio: 2/3; border: 2px solid var(--rojo-sangre); border-radius: 8px; background-size: cover; background-position: center; overflow: hidden; }}
+        .modal-oscuridad {{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); display: flex; flex-direction: column; justify-content: center; padding: 30px; box-sizing: border-box; }}
+        .modal-titulo {{ font-family: 'Bebas Neue', sans-serif; font-size: 2.6rem; color: var(--blanco); margin: 0 0 20px 0; border-bottom: 1px solid var(--rojo-sangre); padding-bottom: 10px; line-height: 1.1; }}
         
-        /* AJUSTE 1: TRIÁNGULO CENTRADO Y BOTÓN SUBIR */
+        /* AJUSTE 5: ROJO SANGRE SECA EN VARIABLES DEL MODAL */
+        .datos-expediente {{ color: var(--blanco); font-size: 1.15rem; line-height: 1.8; text-align: left; }}
+        .datos-expediente strong {{ color: var(--rojo-sangre) !important; font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 1px; }}
+        
+        .btn-copiar {{ margin-top: 25px; width: 100%; padding: 15px; background: var(--rojo-sangre); color: var(--blanco); border: none; font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; cursor: pointer; border-radius: 8px; transition: 0.3s; }}
+        .btn-copiar:hover {{ background: var(--negro); color: var(--rojo-sangre); border: 1px solid var(--rojo-sangre); }}
+
+        /* AJUSTE a: TRIÁNGULO DEL BOTÓN CENTRADO */
         #btn-ascenso {{ 
-            position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: rgba(0, 0, 0, 0.85); 
-            color: var(--blanco); border: 2px solid var(--rojo-sangre); border-radius: 50%; font-size: 1.8rem; 
+            position: fixed; bottom: 30px; right: 30px; width: 55px; height: 55px; background: rgba(0, 0, 0, 0.8); 
+            color: var(--blanco); border: 2px solid var(--rojo-sangre); border-radius: 50%; font-size: 1.5rem; 
             cursor: pointer; display: none; justify-content: center; align-items: center; z-index: 1000; 
-            transition: 0.3s; padding-bottom: 6px; /* Compensación visual */
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            padding-bottom: 4px; /* Centrado visual del triángulo Unicode */
         }}
         #btn-ascenso:hover {{ background: var(--rojo-sangre); transform: scale(1.1) translateY(-5px); box-shadow: 0 0 20px var(--rojo-sangre); }}
 
-        footer {{ margin-top: 80px; background-color: var(--negro); border-top: 4px solid var(--rojo-sangre); width: 100%; padding: 40px 20px; }}
+        footer {{ margin-top: 60px; background-color: var(--negro); border-top: 4px solid var(--rojo-sangre); width: 100%; }}
+        .footer-bunker {{ text-align: center; color: #ffffff; padding: 30px 20px; }}
 
+        @media (max-width: 900px) {{ .grilla-tacuru {{ grid-template-columns: repeat(3, 1fr) !important; }} }}
         @media (max-width: 600px) {{ 
-            /* AJUSTE 3: LOGO MÓVIL CHICO Y ARRIBA */
-            header {{ 
-                background-size: 55% !important; 
-                background-position: center 20px !important; 
-                padding: 85px 15px 35px 15px !important; 
-            }}
-            /* AJUSTE 2: TÍTULOS MÓVIL */
-            h1 {{ font-size: 4.8rem !important; }}
-            h2 {{ font-size: 2.4rem !important; }}
+            /* AJUSTE 3: LOGO DE FONDO EN MÓVIL CHICO Y MÁS ARRIBA */
+            header {{ background-size: 50% !important; background-position: center 20px !important; padding-top: 90px !important; }}
             
-            /* AJUSTE FOOTER: AIRE EN MÓVILES */
-            footer {{ padding: 70px 20px !important; }}
+            /* AJUSTE 2: TÍTULOS MÁS GRANDES EN MÓVIL */
+            h1 {{ font-size: 4.8rem !important; }}
+            h2 {{ font-size: 2.6rem !important; }}
+
+            /* AJUSTE b: AIRE AL FOOTER EN MÓVIL */
+            .footer-bunker {{ padding: 60px 20px !important; }}
             .footer-bunker p {{ margin-bottom: 25px !important; }}
 
-            .grilla-tacuru {{ grid-template-columns: repeat(2, 1fr) !important; gap: 12px !important; }} 
-            .lista-indice {{ max-height: none !important; flex-direction: row !important; flex-wrap: wrap !important; }}
-            .lista-indice li {{ width: 45%; margin-bottom: 8px; }}
+            /* AJUSTE 5: DESBORDE CAJA FLOTANTE EN MÓVILES */
+            .modal-caja {{ aspect-ratio: auto !important; min-height: 70vh; max-height: 90vh; overflow-y: auto; }}
+            .modal-oscuridad {{ justify-content: flex-start !important; padding-top: 60px !important; }}
 
-            /* AJUSTE 5: DESBORDE MODAL MÓVIL */
-            .modal-caja {{ aspect-ratio: auto !important; min-height: 75vh; max-height: 92vh; overflow-y: auto; }}
-            .modal-oscuridad {{ justify-content: flex-start !important; padding-top: 70px !important; }}
+            .header-superior {{ flex-direction: column; align-items: flex-start; gap: 15px; }}
+            .bloque-autor {{ width: 100%; justify-content: flex-start; }}
+            /* AJUSTE MOBILE: 2 COLUMNAS SIEMPRE */
+            .grilla-tacuru {{ grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }} 
+            /* AJUSTE ÍNDICE MOBILE: 2 COLUMNAS BALANCEADAS */
+            .lista-indice {{ max-height: none !important; flex-direction: row !important; flex-wrap: wrap !important; }}
+            .lista-indice li {{ width: 45%; margin-bottom: 5px; }}
         }}
     </style>
 </head>
@@ -144,7 +174,7 @@ HTML_TEMPLATE = """
                     <h1>{titulo_pag}</h1>
                     <h2>{sub_pag}</h2>
                 </div>
-                <a href="https://hormigue.ar/" target="_blank">
+                <a href="https://hormigue.ar/" target="_blank" style="text-decoration: none;">
                     <div class="bloque-autor">
                         <img src="https://hormigue.ar/media/website/marcef.webp" class="foto-autor" alt="marce oliveira">
                         <span class="nombre-autor">marce oliveira</span>
@@ -155,8 +185,12 @@ HTML_TEMPLATE = """
         </header>
 
         <div class="caja-menu" id="menu-selector">
-            <div class="tabs-header">{tabs_botones}</div>
-            <div class="tabs-cuerpo">{tabs_contenido}</div>
+            <div class="tabs-header">
+                {tabs_botones}
+            </div>
+            <div class="tabs-cuerpo">
+                {tabs_contenido}
+            </div>
         </div>
 
         {secciones_html}
@@ -164,7 +198,7 @@ HTML_TEMPLATE = """
 
     <div id="modalLibro" class="modal-overlay" onclick="cerrarModal(event)">
         <div class="modal-caja" id="modalFondo">
-            <span style="position:absolute; top:15px; right:20px; color:white; font-size:3.5rem; cursor:pointer; z-index:100; line-height:1;" onclick="cerrarModalFuerza()">&times;</span>
+            <span style="position:absolute; top:10px; right:20px; color:white; font-size:3rem; cursor:pointer; z-index:100;" onclick="cerrarModalFuerza()">&times;</span>
             <div class="modal-oscuridad">
                 <div class="modal-titulo" id="modTit"></div>
                 <div class="datos-expediente">
@@ -182,17 +216,18 @@ HTML_TEMPLATE = """
     <div id="btn-ascenso" onclick="volverArriba()" title="Volver a arriba">&#9650;</div>
 
     <footer>
-        <div class="footer-bunker" style="text-align: center; color: #ffffff;">
-            <p style="margin-bottom: 12px;">
-                <strong style="font-family: 'Almarai', sans-serif; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 0.9px;">
+        <div class="footer-bunker">
+            <p style="margin-bottom: 8px;">
+                <strong style="font-family: 'Almarai', sans-serif; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.8px;">
                     <a href="https://hormigue.ar/" style="color: white !important;">HORMIGUE.AR</a>
                 </strong>
                 <a href="https://hormigue.ar/">
-                    <img style="height: 2.2rem; vertical-align: middle; margin: 0 8px;" src="https://pica.hormigue.ar/hormiMG/icono%20hormi.png" alt="H">
-                </a>
+                    <img style="height: 2rem; vertical-align: middle; margin: 0 5px;" src="https://pica.hormigue.ar/hormiMG/icono%20hormi.png" alt="H">
+                
                 <span><a href="https://hormigue.ar/" style="color: white !important;">Libroteca</a></span>
+                </a>
             </p>
-            <p style="font-family: 'Arial Narrow', sans-serif; font-size: 0.9rem; opacity: 0.8;">conocé el sitio creado con pocos recursos técnicos, económicos e intelectuales</p>
+            <p style="font-family: 'Arial Narrow', sans-serif; font-size: 0.8rem; opacity: 0.8;">conocé el sitio creado con pocos recursos técnicos, económicos e intelectuales</p>
         </div>
     </footer>
 
@@ -215,18 +250,18 @@ HTML_TEMPLATE = """
             document.getElementById('modPre').innerText = elemento.getAttribute('data-pre');
             document.getElementById('modalFondo').style.backgroundImage = `url('${{elemento.getAttribute('data-img')}}')`;
             document.getElementById('modalLibro').style.display = 'flex';
-            document.body.style.overflow = 'hidden'; // Sin scroll de fondo
+            document.body.style.overflow = 'hidden'; // Evita scroll de fondo cuando la caja está abierta
         }}
 
-        // AJUSTE 1: CIERRE TÁCTICO
-        function cerrarModal(e) {{
+        // AJUSTE 1: LOGICA PARA CERRAR CAJA
+        function cerrarModal(e) {{ 
             if (e.target.id === 'modalLibro') {{
                 cerrarModalFuerza();
             }}
         }}
-        function cerrarModalFuerza() {{
-            document.getElementById('modalLibro').style.display = 'none';
-            document.body.style.overflow = 'auto';
+        function cerrarModalFuerza() {{ 
+            document.getElementById('modalLibro').style.display = 'none'; 
+            document.body.style.overflow = ''; // Restaura el scroll
         }}
 
         function copiarAlPortapapeles() {{
@@ -322,7 +357,7 @@ def generar_catalogo():
             bajada_pag=bajada_forzada, tabs_botones=t_btns, tabs_contenido=t_cont, secciones_html=secciones_html
         )
         
-        with open(RUTA_HTML_DESTINO, 'w', encoding='utf-8') as f:
+        with open(os.path.join(os.path.dirname(__file__), 'index.html'), 'w', encoding='utf-8') as f:
             f.write(html_final)
         print(">>> Catálogo sellado. Perfil de autor inyectado.")
         
