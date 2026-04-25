@@ -41,7 +41,7 @@
       "titulo": "Alfabetización semiótica en las fronteras. Vol. I",
       "autor": "Ana Camblong; Froilán Fernández",
       "editorial": "Edunam",
-      "categoria": "Comunicación / Semiótica",
+      "categoria": "Educación / Semiótica",
       "coleccion": "",
       "precio": "$8.000 - $16.000",
       "año": "2010",
@@ -148,17 +148,6 @@
       "imagen": "img/confeetica (Mediana).jpg"
     },
     {
-      "titulo": "Conferencia sobre ética (y otros textos)",
-      "autor": "Ludwig Wittgenstein",
-      "editorial": "Folio",
-      "categoria": "Filosofía",
-      "coleccion": "Grandes Ideas",
-      "precio": "8000 - 9500",
-      "año": "2007",
-      "estado": "Muy bueno",
-      "imagen": "img/confeetica (Mediana).jpg"
-    },
-    {
       "titulo": "Crimen y castigo",
       "autor": "Fiódor Dostoievski",
       "editorial": "Debolsillo",
@@ -206,7 +195,7 @@
       "titulo": "Cumbia. Nación, etnia y género en Latinoamérica",
       "autor": "Pablo Semán; Pablo Vila (comps.)",
       "editorial": "Gorla",
-      "categoria": "Comunicación/Cultura/Estudios Culturales",
+      "categoria": "Antropología/Cultura/Estudios Culturales",
       "coleccion": "",
       "precio": "$17.000",
       "año": "2011",
@@ -302,17 +291,6 @@
       "imagen": "img/descentra (Mediana).jpg"
     },
     {
-      "titulo": "Diadema de metacarpos",
-      "autor": "Raúl Novau",
-      "editorial": "Edunam",
-      "categoria": "Literatura",
-      "coleccion": "Libros Arribeños",
-      "precio": "5000-16000",
-      "año": "s/d",
-      "estado": "Muy bueno",
-      "imagen": "img/diadema (Mediana).jpg"
-    },
-    {
       "titulo": "Días y noches de amor y de guerra",
       "autor": "Eduardo Galeano",
       "editorial": "Siglo XXI Editores",
@@ -333,17 +311,6 @@
       "año": "1908",
       "estado": "Muy bueno",
       "imagen": "img/eccehomo (Mediana).jpg"
-    },
-    {
-      "titulo": "Educar la mirada: políticas y pedagogías de la imagen",
-      "autor": "Inés Dussel; Daniela Gutiérrez (comps.)",
-      "editorial": "Manantial / FLACSO",
-      "categoria": "Educación / Pedagogía",
-      "coleccion": "",
-      "precio": "$18.000",
-      "año": "2006",
-      "estado": "Muy bueno",
-      "imagen": "img/educarmira (Mediana).jpg"
     },
     {
       "titulo": "Educar: figuras y efectos del amor",
@@ -1319,18 +1286,7 @@
       "editorial": "Zarzal",
       "categoria": "Política",
       "coleccion": "",
-      "precio": "$7.000 - $14.000",
-      "año": "2003",
-      "estado": "Muy bueno",
-      "imagen": "img/poderterror (Mediana).jpg"
-    },
-    {
-      "titulo": "Poder y terror. Reflexiones posteriores al 11/09/2001",
-      "autor": "Noam Chomsky",
-      "editorial": "Zarzal",
-      "categoria": "Política",
-      "coleccion": "-",
-      "precio": "7000-14000 | 7000 - 14000",
+      "precio": "$14.000",
       "año": "2003",
       "estado": "Muy bueno",
       "imagen": "img/poderterror (Mediana).jpg"
@@ -1490,17 +1446,6 @@
       "imagen": "img/temorcontro (Mediana).jpg"
     },
     {
-      "titulo": "Temor y control: la gestión de la inseguridad como forma de gobierno",
-      "autor": "Esteban Rodríguez Alzueta",
-      "editorial": "Futuro Anterior",
-      "categoria": "Política/Estado/Sociedad",
-      "coleccion": "",
-      "precio": "15000",
-      "año": "2014",
-      "estado": "Muy bueno",
-      "imagen": "img/temorcontro (Mediana).jpg"
-    },
-    {
       "titulo": "Temor y temblor",
       "autor": "Søren Kierkegaard",
       "editorial": "Folio",
@@ -1518,17 +1463,6 @@
       "categoria": "Filosofía",
       "coleccion": "Serie Estudios Sociales",
       "precio": "$8.000 - $15.000",
-      "año": "2002",
-      "estado": "Muy bueno",
-      "imagen": "img/teodebiles (Mediana).jpg"
-    },
-    {
-      "titulo": "Teorías débiles: una crítica de la deconstrucción y de los estudios culturales",
-      "autor": "Roberto Follari",
-      "editorial": "Homo Sapiens / Noveduc",
-      "categoria": "Filosofía",
-      "coleccion": "Serie Estudios Sociales",
-      "precio": "8000-15000 | 8000 - 15000",
       "año": "2002",
       "estado": "Muy bueno",
       "imagen": "img/teodebiles (Mediana).jpg"
