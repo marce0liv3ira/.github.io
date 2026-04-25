@@ -159,7 +159,7 @@ HTML_TEMPLATE = """
 
             /* NUEVA INSTRUCCIÓN 1: TARJETA DE AUTOR COLGANDO DEL TOP DERECHO */
             .header-superior {{ position: relative; display: block; }}
-            .header-superior > a {{ position: absolute; top: 70; right: 0; z-index: 10; }}
+            .header-superior > a {{ position: absolute; top: -70; right: 0; z-index: 10; }}
             .bloque-autor {{ 
                 flex-direction: column; 
                 background: transparent; 
