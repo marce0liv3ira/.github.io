@@ -142,7 +142,7 @@ HTML_TEMPLATE = """
         @media (max-width: 900px) {{ .grilla-tacuru {{ grid-template-columns: repeat(3, 1fr) !important; }} }}
         @media (max-width: 600px) {{ 
             /* AJUSTE 3: LOGO DE FONDO EN MÓVIL CHICO Y MÁS ARRIBA */
-            header {{ background-size: 50% !important; background-position: center 20px !important; padding-top: 90px !important; }}
+            header {{ background-size: 50% !important; background-position: center 20px !important; padding-top: 170px !important; }}
             
             /* AJUSTE 2: TÍTULOS MÁS GRANDES EN MÓVIL */
             h1 {{ font-size: 4.8rem !important; }}
