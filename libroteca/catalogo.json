@@ -505,8 +505,8 @@
       "editorial": "Siglo XXI Editores",
       "categoria": "Sociología",
       "coleccion": "Biblioteca esencial",
-      "precio": "$9.000 - $22.000",
-      "año": "s/d",
+      "precio": "$21.000",
+      "año": "2014",
       "estado": "Muy bueno",
       "imagen": "img/sentidoprac (Mediana).jpg"
     },
@@ -516,8 +516,8 @@
       "editorial": "Siglo XXI Editores",
       "categoria": "Sociología",
       "coleccion": "Biblioteca esencial",
-      "precio": "$32.000",
-      "año": "s/d",
+      "precio": "$26.000",
+      "año": "2014",
       "estado": "Nuevo, nunca probado ni saboreado",
       "imagen": "img/sentidosocial (Mediana).jpg"
     },
@@ -527,8 +527,8 @@
       "editorial": "Sudamericana",
       "categoria": "Periodismo / Historia",
       "coleccion": "",
-      "precio": "$6.000 - $15.000",
-      "año": "s/d",
+      "precio": "$14.000",
+      "año": "2006",
       "estado": "Muy bueno",
       "imagen": "img/silencio (Mediana).jpg"
     },
@@ -538,7 +538,7 @@
       "editorial": "Libros del Zorzal",
       "categoria": "Política / Estado / Sociedad",
       "coleccion": "",
-      "precio": "$20.000",
+      "precio": "$18.000",
       "año": "2001",
       "estado": "Muy bueno",
       "imagen": "img/terrorchomsk (Mediana).jpg"
@@ -549,8 +549,8 @@
       "editorial": "Folio",
       "categoria": "Filosofía / Sátira",
       "coleccion": "Grandes Ideas",
-      "precio": "$3.000 - $8.000",
-      "año": "1511",
+      "precio": "$15.000",
+      "año": "2007",
       "estado": "Muy bueno",
       "imagen": "img/elogiolocu (Mediana).jpg"
     },
@@ -566,14 +566,14 @@
       "imagen": "img/guerrapaz (Mediana).jpg"
     },
     {
-      "titulo": "Enciclopedia de la educación moderna",
+      "titulo": "Enciclopedia de la educación moderna (t. 1)",
       "autor": "Harry N. Rivlin; Herbert Schueler",
       "editorial": "Aguilar / Losada",
       "categoria": "Enciclopedia",
       "coleccion": "",
-      "precio": "$60.000 - $180.000",
-      "año": "s/d",
-      "estado": "Muy bueno",
+      "precio": "$18.000",
+      "año": "1952",
+      "estado": "Entero, demasiado bien lleva el paso del tiempo. Sobrevive porque es emblema de una época.",
       "imagen": "img/encicloeduca (Mediana).jpg"
     },
     {
@@ -582,7 +582,7 @@
       "editorial": "Ediciones del Estante",
       "categoria": "Educación / Pedagogía",
       "coleccion": "Serie Estudios Sociales",
-      "precio": "$16.000",
+      "precio": "$18.000",
       "año": "2006",
       "estado": "Muy bueno",
       "imagen": "img/episteetica (Mediana).jpg"
@@ -593,7 +593,7 @@
       "editorial": "Cántaro",
       "categoria": "Política / Estado / Sociedad",
       "coleccion": "",
-      "precio": "$14.000",
+      "precio": "$21.000",
       "año": "1987",
       "estado": "Muy bueno",
       "imagen": "img/estadosocied (Mediana).jpg"
@@ -604,8 +604,8 @@
       "editorial": "Universidad Nacional de Quilmes",
       "categoria": "Psicoanálisis / Historia",
       "coleccion": "",
-      "precio": "$28.000",
-      "año": "s/d",
+      "precio": "$26.000",
+      "año": "2005",
       "estado": "Muy bueno",
       "imagen": "img/freudbaires (Mediana).jpg"
     },
@@ -615,7 +615,7 @@
       "editorial": "Folio",
       "categoria": "Filosofía / Ética",
       "coleccion": "Grandes Ideas",
-      "precio": "$12.000",
+      "precio": "$15.000",
       "año": "2004",
       "estado": "Muy bueno",
       "imagen": "img/fundamekant (Mediana).jpg"
@@ -626,31 +626,20 @@
       "editorial": " Campo De Ideas S.L.",
       "categoria": "Filosofía",
       "coleccion": "Intelectuales",
-      "precio": "$14.000 - $25.000",
+      "precio": "$22.000",
       "año": "2013",
       "estado": "Muy bueno",
       "imagen": "img/gillesherenc (Mediana).jpg"
     },
     {
-      "titulo": "Gobernar el imperio. Los tiempos de Bush",
-      "autor": "Oscar Oszlak",
-      "editorial": "Capital Intelectual",
-      "categoria": "Política internacional",
-      "coleccion": "Claves para Todos",
-      "precio": "$4.000 - $9.000",
-      "año": "s/d",
-      "estado": "Muy bueno",
-      "imagen": "img/gobernarimper (Mediana).jpg"
-    },
-    {
-      "titulo": "Gran enciclopedia universal Espasa Calpe",
-      "autor": "Clarín / Espasa-Calpe",
+      "titulo": "Gran Enciclopedia Universal Espasa Calpe",
+      "autor": "AA.VV. / Espasa-Calpe",
       "editorial": "Planeta / Espasa Calpe",
       "categoria": "Enciclopedia/Referencia",
       "coleccion": "Clarín-Proyectos especiales",
-      "precio": "200000",
+      "precio": "$120.000",
       "año": "2005",
-      "estado": "Muy bueno",
+      "estado": "Muy bueno. Un clásico de la familia argentina en tiempos de speed search y pérdida de vocabulario",
       "imagen": "img/enciclopedia (Mediana).jpg"
     },
     {
@@ -670,9 +659,9 @@
       "editorial": "Losada",
       "categoria": "Educación / Historia",
       "coleccion": "Biblioteca pedagógica",
-      "precio": "$8.000 - $18.000",
-      "año": "s/d",
-      "estado": "Muy bueno",
+      "precio": "$18.000",
+      "año": "1965",
+      "estado": "Bien a pesar del tiempo. Es parte de los libros institucionales de allá ité.",
       "imagen": "img/historiaedupeda (Mediana).jpg"
     },
     {
@@ -681,8 +670,8 @@
       "editorial": "Siglo XXI Editores",
       "categoria": "Sociología",
       "coleccion": "Biblioteca esencial",
-      "precio": "$9.000 - $22.000",
-      "año": "s/d",
+      "precio": "$26.000",
+      "año": "2014",
       "estado": "Muy bueno",
       "imagen": "img/homoacade (Mediana).jpg"
     },
@@ -692,7 +681,7 @@
       "editorial": "Noveduc",
       "categoria": "Educación / Pedagogía",
       "coleccion": "Conjunciones",
-      "precio": "$13.000",
+      "precio": "$23.000",
       "año": "2009",
       "estado": "Muy bueno",
       "imagen": "img/jovenescri (Mediana).jpg"
@@ -703,7 +692,7 @@
       "editorial": "Noveduc",
       "categoria": "Educación/Pedagogía",
       "coleccion": "Conjunciones",
-      "precio": "13000",
+      "precio": "$21.000",
       "año": "2009",
       "estado": "Muy bueno",
       "imagen": "img/jovenescri (Mediana).jpg"
@@ -714,8 +703,8 @@
       "editorial": "Prometeo",
       "categoria": "Antropología",
       "coleccion": "",
-      "precio": "$9.000 - $22.000",
-      "año": "s/d",
+      "precio": "$24.000",
+      "año": "2004",
       "estado": "Muy bueno",
       "imagen": "img/antropobrasil (Mediana).jpg"
     },
@@ -725,8 +714,8 @@
       "editorial": "Editorial Biblos",
       "categoria": "Antropología",
       "coleccion": "",
-      "precio": "$9.000 - $22.000",
-      "año": "s/d",
+      "precio": "$22.000",
+      "año": "2012",
       "estado": "Muy bueno",
       "imagen": "img/articulaetno (Mediana).jpg"
     },
@@ -736,8 +725,8 @@
       "editorial": "Capital Intelectual",
       "categoria": "Sociología urbana",
       "coleccion": "Claves para Todos",
-      "precio": "$4.000 - $9.000",
-      "año": "s/d",
+      "precio": "$15.000",
+      "año": "2005",
       "estado": "Muy bueno",
       "imagen": "img/brechaurbana (Mediana).jpg"
     },
@@ -747,8 +736,8 @@
       "editorial": "Capital Intelectual",
       "categoria": "Historia económica",
       "coleccion": "Claves para Todos",
-      "precio": "$4.000 - $9.000",
-      "año": "s/d",
+      "precio": "$15.000",
+      "año": "2005",
       "estado": "Muy bueno",
       "imagen": "img/burgueterra (Mediana).jpg"
     },
@@ -758,9 +747,9 @@
       "editorial": "Siglo Veinte",
       "categoria": "Filosofía de la ciencia",
       "coleccion": "",
-      "precio": "$7.000 - $18.000",
-      "año": "s/d",
-      "estado": "Muy bueno",
+      "precio": "$14.000",
+      "año": "1985",
+      "estado": "Bueno. Ideal para estudiantes universitarios iniciales (y no tanto).",
       "imagen": "img/cienciametobunge (Mediana).jpg"
     },
     {
@@ -769,8 +758,8 @@
       "editorial": "Muy Interesante",
       "categoria": "Ciencia",
       "coleccion": "Divulgación",
-      "precio": "$7.000 - $18.000",
-      "año": "s/d",
+      "precio": "$14.000",
+      "año": "1995",
       "estado": "Muy bueno",
       "imagen": "img/conexcosmica (Mediana).jpg"
     },
@@ -780,7 +769,7 @@
       "editorial": "Capital Intelectual",
       "categoria": "Economía",
       "coleccion": "Claves para Todos",
-      "precio": "$5.000 - $8.500",
+      "precio": "$14.500",
       "año": "2006",
       "estado": "Muy bueno",
       "imagen": "img/crisisconficto (Mediana).jpg"
@@ -791,8 +780,8 @@
       "editorial": "Capital Intelectual",
       "categoria": "Economía",
       "coleccion": "Claves para Todos",
-      "precio": "$4.000 - $9.000",
-      "año": "s/d",
+      "precio": "$15.000",
+      "año": "2004",
       "estado": "Muy bueno",
       "imagen": "img/densidadnaci (Mediana).jpg"
     },
@@ -802,8 +791,8 @@
       "editorial": "Edunam",
       "categoria": "Educación / Aprendizaje / Escritura literaria",
       "coleccion": "Especial",
-      "precio": "$8.000 - $18.000",
-      "año": "s/d",
+      "precio": "$8.000",
+      "año": "2011",
       "estado": "Muy bueno",
       "imagen": "img/escritura (Mediana).jpg"
     },
@@ -813,8 +802,8 @@
       "editorial": "Siglo XXI Editores",
       "categoria": "Educación / Pedagogía",
       "coleccion": "",
-      "precio": "$14.000",
-      "año": "2003",
+      "precio": "$24.000",
+      "año": "2013",
       "estado": "Muy bueno",
       "imagen": "img/escuelaperfor (Mediana).jpg"
     },
@@ -824,8 +813,8 @@
       "editorial": "Losada",
       "categoria": "Ciencia",
       "coleccion": "Grandes pensadores",
-      "precio": "$7.000 - $18.000",
-      "año": "1938",
+      "precio": "$17.000",
+      "año": "1998",
       "estado": "Muy bueno",
       "imagen": "img/fisicaaventura (Mediana).jpg"
     },
@@ -835,9 +824,9 @@
       "editorial": "Sudamericana",
       "categoria": "Literatura",
       "coleccion": "Biblioteca García Márquez",
-      "precio": "$5.000 - $16.000",
-      "año": "1955",
-      "estado": "Muy bueno",
+      "precio": "$16.000",
+      "año": "2006",
+      "estado": "Bueno",
       "imagen": "img/hojarasca (Mediana).jpg"
     },
     {
@@ -846,9 +835,9 @@
       "editorial": "Universidad Nacional de Quilmes",
       "categoria": "Historia/Memoria",
       "coleccion": "",
-      "precio": "14000",
+      "precio": "$15.000",
       "año": "1994",
-      "estado": "Muy bueno",
+      "estado": "Bueno",
       "imagen": "img/literaturabioantro (Mediana).jpg"
     },
     {
@@ -857,8 +846,8 @@
       "editorial": "Capital Intelectual",
       "categoria": "Política / Seguridad",
       "coleccion": "Claves para Todos",
-      "precio": "$4.000 - $9.000",
-      "año": "s/d",
+      "precio": "$15.000",
+      "año": "2005",
       "estado": "Muy bueno",
       "imagen": "img/marcagorra (Mediana).jpg"
     },
@@ -867,10 +856,10 @@
       "autor": "Silvia Andrea Waskiewicz",
       "editorial": "Edunam",
       "categoria": "Historia / Memoria",
-      "coleccion": "",
-      "precio": "$13.500",
+      "coleccion": "Libros de la Memoria",
+      "precio": "$8.000",
       "año": "2010",
-      "estado": "Muy bueno",
+      "estado": "Bueno",
       "imagen": "img/masacreober (Mediana).jpg"
     },
     {
@@ -879,8 +868,8 @@
       "editorial": "Página/12",
       "categoria": "Literatura",
       "coleccion": "Colección Nogal",
-      "precio": "$5.000 - $16.000",
-      "año": "1915",
+      "precio": "$12.000",
+      "año": "2012",
       "estado": "Muy bueno",
       "imagen": "img/metamorfo (Mediana).jpg"
     },
@@ -890,8 +879,8 @@
       "editorial": "Sudamericana",
       "categoria": "Literatura",
       "coleccion": "",
-      "precio": "$12.200",
-      "año": "2003",
+      "precio": "$14.200",
+      "año": "2005",
       "estado": "Muy bueno",
       "imagen": "img/mujerducha (Mediana).jpg"
     },
@@ -901,7 +890,7 @@
       "editorial": "Siglo XXI Editores",
       "categoria": "Sociología",
       "coleccion": "Biblioteca Clásica",
-      "precio": "$22.450",
+      "precio": "$24.450",
       "año": "2013",
       "estado": "Muy bueno",
       "imagen": "img/nobleaestado (Mediana).jpg"
@@ -912,8 +901,8 @@
       "editorial": "Planeta",
       "categoria": "Filosofía / Estética",
       "coleccion": "Obras maestras",
-      "precio": "$7.000 - $18.000",
-      "año": "1957",
+      "precio": "$17.000",
+      "año": "2007",
       "estado": "Muy bueno",
       "imagen": "img/poeticaespa (Mediana).jpg"
     },
@@ -923,8 +912,8 @@
       "editorial": "Planeta-Agostini",
       "categoria": "Política",
       "coleccion": "Obras Maestras",
-      "precio": "$12.000",
-      "año": "1993",
+      "precio": "$22.000",
+      "año": "2009",
       "estado": "Muy bueno",
       "imagen": "img/gramsci (Mediana).jpg"
     },
@@ -934,7 +923,7 @@
       "editorial": "Fondo de Cultura Económica",
       "categoria": "Psicología",
       "coleccion": "Breviarios",
-      "precio": "$22.000",
+      "precio": "$16.000",
       "año": "1992",
       "estado": "Muy bueno",
       "imagen": "img/psicoindustri (Mediana).jpg"
@@ -945,8 +934,8 @@
       "editorial": "Prometeo",
       "categoria": "Ensayo / Sociología",
       "coleccion": "",
-      "precio": "$6.000 - $15.000",
-      "año": "s/d",
+      "precio": "$29.000",
+      "año": "2016",
       "estado": "Muy bueno",
       "imagen": "img/razonhumanita (Mediana).jpg"
     },
@@ -956,7 +945,7 @@
       "editorial": "Editorial Vinciguerra",
       "categoria": "Literatura / Crítica",
       "coleccion": "",
-      "precio": "$19.000",
+      "precio": "$26.000",
       "año": "1992",
       "estado": "Muy bueno",
       "imagen": "img/recepcinarrati (Mediana).jpg"
@@ -967,8 +956,8 @@
       "editorial": "Capital Intelectual",
       "categoria": "Sociología / Religión",
       "coleccion": "Claves para Todos",
-      "precio": "$4.000 - $9.000",
-      "año": "s/d",
+      "precio": "$15.000",
+      "año": "2004",
       "estado": "Muy bueno",
       "imagen": "img/religiosipopular (Mediana).jpg"
     },
@@ -978,8 +967,8 @@
       "editorial": "Capital Intelectual",
       "categoria": "Política",
       "coleccion": "Claves para Todos",
-      "precio": "$4.000 - $9.000",
-      "año": "s/d",
+      "precio": "$15.000",
+      "año": "2004",
       "estado": "Muy bueno",
       "imagen": "img/revolucevo (Mediana).jpg"
     },
@@ -989,9 +978,9 @@
       "editorial": "CEAL",
       "categoria": "Sociología",
       "coleccion": "",
-      "precio": "$9.000 - $22.000",
-      "año": "s/d",
-      "estado": "Muy bueno",
+      "precio": "$18.000",
+      "año": "1988",
+      "estado": "Bueno. Un infaltable en biblio del estudiante de ciencias sociales.",
       "imagen": "img/sociolocla (Mediana).jpg"
     },
     {
@@ -1000,9 +989,9 @@
       "editorial": "Muy Interesante",
       "categoria": "Sociedad",
       "coleccion": "Divulgación Científica",
-      "precio": "$7.000",
+      "precio": "$14.000",
       "año": "1980",
-      "estado": "Muy bueno",
+      "estado": "Bueno. Tapa dura. De los pocos libros de divulgación que perduran.",
       "imagen": "img/tercerola (Mediana).jpg"
     },
     {
@@ -1011,9 +1000,9 @@
       "editorial": "Grupo Editorial Norma",
       "categoria": "Historia / Política",
       "coleccion": "",
-      "precio": "$6.000 - $15.000",
+      "precio": "$24.000",
       "año": "1997",
-      "estado": "Muy bueno",
+      "estado": "Bueno.",
       "imagen": "img/voluntad (Mediana).jpg"
     },
     {
@@ -1022,7 +1011,7 @@
       "editorial": "Manantial",
       "categoria": "Sociología",
       "coleccion": "Bordes",
-      "precio": "$14.000",
+      "precio": "$19.000",
       "año": "2000",
       "estado": "Muy bueno",
       "imagen": "img/carceles (Mediana).jpg"
@@ -1033,8 +1022,8 @@
       "editorial": "Capital Intelectual",
       "categoria": "Economía",
       "coleccion": "Claves para Todos",
-      "precio": "$4.000 - $9.000",
-      "año": "s/d",
+      "precio": "$15.000",
+      "año": "2005",
       "estado": "Muy bueno",
       "imagen": "img/pivatiza1 (Mediana).jpg"
     },
@@ -1044,8 +1033,8 @@
       "editorial": "Capital Intelectual",
       "categoria": "Economía",
       "coleccion": "Claves para Todos",
-      "precio": "$4.000 - $9.000",
-      "año": "s/d",
+      "precio": "$15.000",
+      "año": "2005",
       "estado": "Muy bueno",
       "imagen": "img/privatiz2 (Mediana).jpg"
     },
@@ -1055,9 +1044,9 @@
       "editorial": "EUDEBA",
       "categoria": "Filosofía / Literatura",
       "coleccion": "",
-      "precio": "$6.000 - $15.000",
-      "año": "s/d",
-      "estado": "Muy bueno",
+      "precio": "$19.000",
+      "año": "1997",
+      "estado": "Bueno. Rareza bibliográfica por demás interesante.",
       "imagen": "img/lecturasinfanc (Mediana).jpg"
     },
     {
@@ -1066,8 +1055,8 @@
       "editorial": "Losada",
       "categoria": "Filosofía política",
       "coleccion": "Grandes Obras",
-      "precio": "$7.000 - $18.000",
-      "año": "1651",
+      "precio": "$11.000",
+      "año": "2000",
       "estado": "Muy bueno",
       "imagen": "img/leviatan (Mediana).jpg"
     },
@@ -1077,7 +1066,7 @@
       "editorial": "Siglo XXI Editores",
       "categoria": "Sociología",
       "coleccion": "",
-      "precio": "$27.390",
+      "precio": "$22.390",
       "año": "2013",
       "estado": "Muy bueno",
       "imagen": "img/condenados (Mediana).jpg"
@@ -1088,8 +1077,8 @@
       "editorial": "Capital Intelectual",
       "categoria": "Economía",
       "coleccion": "Claves para Todos",
-      "precio": "$4.000 - $9.000",
-      "año": "s/d",
+      "precio": "$15.000",
+      "año": "2005",
       "estado": "Muy bueno",
       "imagen": "img/desafíosdesa (Mediana).jpg"
     },
@@ -1099,9 +1088,9 @@
       "editorial": "Siglo XXI Editores",
       "categoria": "Sociología",
       "coleccion": "-",
-      "precio": "10000 - 15000",
+      "precio": "$28.000",
       "año": "2003",
-      "estado": "Muy bueno",
+      "estado": "Muy bueno. Pocas marcas en lápiz. Lectura de rigor, hoy despierta más desconcierto que certezas científicas.",
       "imagen": "img/herederos (Mediana).jpg"
     },
     {
@@ -1109,9 +1098,9 @@
       "autor": "Carlos González Villar",
       "editorial": "Edunam",
       "categoria": "Política / Administración",
-      "coleccion": "",
-      "precio": "$6.000 - $15.000",
-      "año": "s/d",
+      "coleccion": "Cátedra",
+      "precio": "$8.000",
+      "año": "2010",
       "estado": "Muy bueno",
       "imagen": "img/goblocales (Mediana).jpg"
     },
@@ -1121,7 +1110,7 @@
       "editorial": "Folio",
       "categoria": "Política",
       "coleccion": "Grandes Ideas",
-      "precio": "$7.800 - $10.000",
+      "precio": "$15.000",
       "año": "2007",
       "estado": "Muy bueno",
       "imagen": "img/manifiesto (Mediana).jpg"
@@ -1132,7 +1121,7 @@
       "editorial": "Sudamericana",
       "categoria": "Literatura",
       "coleccion": "Biblioteca García Márquez",
-      "precio": "$5.000 - $16.000",
+      "precio": "$18.000",
       "año": "2004",
       "estado": "Muy bueno",
       "imagen": "img/memiriasputas (Mediana).jpg"
@@ -1143,8 +1132,8 @@
       "editorial": "Edunam",
       "categoria": "Política",
       "coleccion": "Contemporánea",
-      "precio": "$7.000 - $16.000",
-      "año": "s/d",
+      "precio": "$14.000",
+      "año": "2000",
       "estado": "Muy bueno",
       "imagen": "img/mercosur (Mediana).jpg"
     },
@@ -1154,7 +1143,7 @@
       "editorial": "Folio",
       "categoria": "Filosofía",
       "coleccion": "Grandes Ideas",
-      "precio": "$7.800 - $9.000",
+      "precio": "$15.000",
       "año": "2007",
       "estado": "Muy bueno",
       "imagen": "img/metafiamor (Mediana).jpg"
@@ -1165,8 +1154,8 @@
       "editorial": "Edunam",
       "categoria": "Historia / Viajes",
       "coleccion": "",
-      "precio": "$6.000 - $15.000",
-      "año": "s/d",
+      "precio": "$10.000",
+      "año": "2017",
       "estado": "Muy bueno",
       "imagen": "img/miradaviajer (Mediana).jpg"
     },
@@ -1187,7 +1176,7 @@
       "editorial": "Página/12",
       "categoria": "Ensayo",
       "coleccion": "",
-      "precio": "$12.000",
+      "precio": "$8.000",
       "año": "2003",
       "estado": "Muy bueno",
       "imagen": "img/nosabelosq (Mediana).jpg"
@@ -1198,8 +1187,8 @@
       "editorial": "Siglo XXI Editores",
       "categoria": "Ensayo / Política",
       "coleccion": "",
-      "precio": "$6.000 - $15.000",
-      "año": "1988",
+      "precio": "$16.000",
+      "año": "2017",
       "estado": "Muy bueno",
       "imagen": "img/nopsdecimos (Mediana).jpg"
     },
@@ -1209,8 +1198,8 @@
       "editorial": "Sudamericana",
       "categoria": "Literatura",
       "coleccion": "",
-      "precio": "$8.000 - $15.000",
-      "año": "1990",
+      "precio": "$18.000",
+      "año": "2003",
       "estado": "Muy bueno",
       "imagen": "img/ojoperro (Mediana).jpg"
     },
@@ -1220,8 +1209,8 @@
       "editorial": "Edunam",
       "categoria": "Literatura",
       "coleccion": "",
-      "precio": "$5.000 - $16.000",
-      "año": "s/d",
+      "precio": "$13.000",
+      "año": "2017",
       "estado": "Muy bueno",
       "imagen": "img/palitos (Mediana).jpg"
     },
@@ -1231,7 +1220,7 @@
       "editorial": "Capital Intelectual",
       "categoria": "Historia / Memoria / Literatura",
       "coleccion": "Claves para Todos",
-      "precio": "$12.000",
+      "precio": "$15.000",
       "año": "2007",
       "estado": "Muy bueno",
       "imagen": "img/leerfacu (Mediana).jpg"
@@ -1242,8 +1231,8 @@
       "editorial": "Edunam",
       "categoria": "Antropología",
       "coleccion": "Contemporánea",
-      "precio": "18.000",
-      "año": "1995",
+      "precio": "$17.000",
+      "año": "1999",
       "estado": "Muy bueno",
       "imagen": "img/colonosocupan (Mediana).jpg"
     },
@@ -1253,8 +1242,8 @@
       "editorial": "Manantial",
       "categoria": "Sociología",
       "coleccion": "",
-      "precio": "$16.000",
-      "año": "2001",
+      "precio": "$18.000",
+      "año": "2011",
       "estado": "Muy bueno",
       "imagen": "img/parias (Mediana).jpg"
     },
@@ -1264,8 +1253,8 @@
       "editorial": "Edunam",
       "categoria": "Literatura",
       "coleccion": "Libros Arribeños",
-      "precio": "$5.000 - $16.000",
-      "año": "s/d",
+      "precio": "$16.000",
+      "año": "1998",
       "estado": "Muy bueno",
       "imagen": "img/pobresausentes (Mediana).jpg"
     },
@@ -1275,8 +1264,8 @@
       "editorial": "Zarzal",
       "categoria": "Política",
       "coleccion": "",
-      "precio": "$14.000",
-      "año": "2003",
+      "precio": "$18.000",
+      "año": "2013",
       "estado": "Muy bueno",
       "imagen": "img/poderterror (Mediana).jpg"
     },
@@ -1286,8 +1275,8 @@
       "editorial": "Capital Intelectual",
       "categoria": "Política / Historia",
       "coleccion": "Claves para Todos",
-      "precio": "$4.000 - $9.000",
-      "año": "s/d",
+      "precio": "$15.000",
+      "año": "2005",
       "estado": "Muy bueno",
       "imagen": "img/políticaexterior (Mediana).jpg"
     },
@@ -1297,8 +1286,8 @@
       "editorial": "Capital Intelectual",
       "categoria": "Historia / Política",
       "coleccion": "Claves para Todos",
-      "precio": "$4.000 - $9.000",
-      "año": "s/d",
+      "precio": "$15.000",
+      "año": "2005",
       "estado": "Muy bueno",
       "imagen": "img/pueblopoli (Mediana).jpg"
     },
@@ -1308,8 +1297,8 @@
       "editorial": "Capital Intelectual",
       "categoria": "Política",
       "coleccion": "Claves para Todos",
-      "precio": "$4.000 - $9.000",
-      "año": "s/d",
+      "precio": "$15.000",
+      "año": "2006",
       "estado": "Muy bueno",
       "imagen": "img/quesevayan (Mediana).jpg"
     },
@@ -1319,8 +1308,8 @@
       "editorial": "Losada",
       "categoria": "Antropología",
       "coleccion": "Grandes obras",
-      "precio": "$9.000 - $22.000",
-      "año": "s/d",
+      "precio": "$19.000",
+      "año": "2003",
       "estado": "Muy bueno",
       "imagen": "img/razaycultu (Mediana).jpg"
     },
@@ -1341,7 +1330,7 @@
       "editorial": "Capital Intelectual",
       "categoria": "Política/Estado/Sociedad",
       "coleccion": "Claves para Todos",
-      "precio": "10000",
+      "precio": "$15.000",
       "año": "2007",
       "estado": "Muy bueno",
       "imagen": "img/riesgopa (Mediana).jpg"
@@ -1352,7 +1341,7 @@
       "editorial": "Edunam",
       "categoria": "Antropología / Religión",
       "coleccion": "Libros de la memoria",
-      "precio": "$6.000 - $15.000",
+      "precio": "$14.000",
       "año": "2002",
       "estado": "Muy bueno",
       "imagen": "img/sanlamu (Mediana).jpg"
@@ -1363,7 +1352,7 @@
       "editorial": "Capital Intelectual",
       "categoria": "Historia / Memoria",
       "coleccion": "Claves para Todos",
-      "precio": "$10.000",
+      "precio": "$15.000",
       "año": "2009",
       "estado": "Muy bueno",
       "imagen": "img/sarmiento (Mediana).jpg"
@@ -1374,7 +1363,7 @@
       "editorial": "Siglo XXI Editores",
       "categoria": "Comunicación / Cultura",
       "coleccion": "",
-      "precio": "$11.871",
+      "precio": "$15.871",
       "año": "2010",
       "estado": "Muy bueno",
       "imagen": "img/sercomo (Mediana).jpg"
@@ -1385,7 +1374,7 @@
       "editorial": "Folio",
       "categoria": "Filosofía / Sociología",
       "coleccion": "Grandes Ideas",
-      "precio": "$12.000",
+      "precio": "$15.000",
       "año": "2004",
       "estado": "Muy bueno",
       "imagen": "img/sexypoder (Mediana).jpg"
@@ -1396,8 +1385,8 @@
       "editorial": "Muy Interesante",
       "categoria": "Ciencia",
       "coleccion": "Divulgación científica",
-      "precio": "$7.000 - $18.000",
-      "año": "s/d",
+      "precio": "$17.0000",
+      "año": "1995",
       "estado": "Muy bueno",
       "imagen": "img/teorelatividad (Mediana).jpg"
     },
@@ -1407,8 +1396,8 @@
       "editorial": "Altaya",
       "categoria": "Sociología / Psicoanálisis",
       "coleccion": "Obras maestras",
-      "precio": "$6.000 - $15.000",
-      "año": "s/d",
+      "precio": "$16.000",
+      "año": "1969",
       "estado": "Muy bueno",
       "imagen": "img/sociovspsico (Mediana).jpg"
     },
@@ -1418,9 +1407,9 @@
       "editorial": "Edunam",
       "categoria": "Narrativa Regional",
       "coleccion": "Libros Arribeños",
-      "precio": "$8.000 - $15.000",
-      "año": "s/d",
-      "estado": "Muy bueno",
+      "precio": "$16.000",
+      "año": "2010",
+      "estado": "Bueno",
       "imagen": "img/sumidos (Mediana).jpg"
     },
     {
@@ -1429,7 +1418,7 @@
       "editorial": "Futuro Anterior",
       "categoria": "Política / Sociedad",
       "coleccion": "",
-      "precio": "$15.000",
+      "precio": "$22.000",
       "año": "2014",
       "estado": "Muy bueno",
       "imagen": "img/temorcontro (Mediana).jpg"
@@ -1440,7 +1429,7 @@
       "editorial": "Folio",
       "categoria": "Filosofía",
       "coleccion": "Grandes Ideas",
-      "precio": "$8.000 - $11.000",
+      "precio": "$15.000",
       "año": "2007",
       "estado": "Muy bueno",
       "imagen": "img/temortemblor (Mediana).jpg"
@@ -1451,8 +1440,8 @@
       "editorial": "Homo Sapiens / Noveduc",
       "categoria": "Filosofía",
       "coleccion": "Serie Estudios Sociales",
-      "precio": "$8.000 - $15.000",
-      "año": "2002",
+      "precio": "$18.000",
+      "año": "2012",
       "estado": "Muy bueno",
       "imagen": "img/teodebiles (Mediana).jpg"
     },
@@ -1462,8 +1451,8 @@
       "editorial": "Edunam",
       "categoria": "Literatura",
       "coleccion": "",
-      "precio": "$5.000 - $16.000",
-      "año": "s/d",
+      "precio": "$8.200",
+      "año": "2010",
       "estado": "Muy bueno",
       "imagen": "img/tragonada (Mediana).jpg"
     },
@@ -1473,8 +1462,8 @@
       "editorial": "Página/12",
       "categoria": "Literatura",
       "coleccion": "",
-      "precio": "$5.000 - $16.000",
-      "año": "1919",
+      "precio": "$12.000",
+      "año": "1989",
       "estado": "Muy bueno",
       "imagen": "img/medicorural (Mediana).jpg"
     },
@@ -1484,7 +1473,7 @@
       "editorial": "Página/12",
       "categoria": "Literatura",
       "coleccion": "",
-      "precio": "$6.000 - $12.000",
+      "precio": "$14.000",
       "año": "2003",
       "estado": "Muy bueno",
       "imagen": "img/wing (Mediana).jpg"
@@ -1497,7 +1486,7 @@
       "coleccion": "Ensayo",
       "precio": "$9.000",
       "año": "2011",
-      "estado": "Muy bueno",
+      "estado": "Muy bueno. Curiosidades literarias, picos de autoestima.",
       "imagen": "img/zonceras (Mediana).jpg"
     }
   ]
