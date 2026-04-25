@@ -104,17 +104,6 @@
       "imagen": "img/capoindustr (Mediana).jpg"
     },
     {
-      "titulo": "Capital cultural, escuela y espacio social",
-      "autor": "Pierre Bourdieu",
-      "editorial": "Siglo XXI Editores",
-      "categoria": "Sociología",
-      "coleccion": "Biblioteca esencial",
-      "precio": "$18.000",
-      "año": "2000",
-      "estado": "Muy bueno",
-      "imagen": "img/capitalcultu (Mediana).jpg"
-    },
-    {
       "titulo": "Cartoneros. Recuperadores de desechos y causas perdidas",
       "autor": "Eduardo Anguita",
       "editorial": "Página/12 / Sudamericana",
@@ -313,17 +302,6 @@
       "imagen": "img/eccehomo (Mediana).jpg"
     },
     {
-      "titulo": "Educar: figuras y efectos del amor",
-      "autor": "Graciela Frigerio; Gabriela Diker",
-      "editorial": "Noveduc",
-      "categoria": "Educación / Pedagogía",
-      "coleccion": "",
-      "precio": "$21.000",
-      "año": "2003",
-      "estado": "Muy bueno",
-      "imagen": "img/educarfigura (Mediana).jpg"
-    },
-    {
       "titulo": "El campo argentino. Crecimiento con exclusión",
       "autor": "Mario Lattuada; Guillermo Neiman",
       "editorial": "Capital Intelectual",
@@ -511,17 +489,6 @@
       "imagen": "img/sentidoprac (Mediana).jpg"
     },
     {
-      "titulo": "El sentido social del gusto",
-      "autor": "Pierre Bourdieu",
-      "editorial": "Siglo XXI Editores",
-      "categoria": "Sociología",
-      "coleccion": "Biblioteca esencial",
-      "precio": "$26.000",
-      "año": "2014",
-      "estado": "Nuevo, nunca probado ni saboreado",
-      "imagen": "img/sentidosocial (Mediana).jpg"
-    },
-    {
       "titulo": "El silencio. De Paulo VI a Bergoglio",
       "autor": "Horacio Verbitsky",
       "editorial": "Sudamericana",
@@ -542,17 +509,6 @@
       "año": "2001",
       "estado": "Muy bueno",
       "imagen": "img/terrorchomsk (Mediana).jpg"
-    },
-    {
-      "titulo": "Elogio de la locura",
-      "autor": "Erasmo de Rotterdam",
-      "editorial": "Folio",
-      "categoria": "Filosofía / Sátira",
-      "coleccion": "Grandes Ideas",
-      "precio": "$15.000",
-      "año": "2007",
-      "estado": "Muy bueno",
-      "imagen": "img/elogiolocu (Mediana).jpg"
     },
     {
       "titulo": "Enciclopedia de la educación moderna (t. 1)",
@@ -1028,17 +984,6 @@
       "imagen": "img/privatiz2 (Mediana).jpg"
     },
     {
-      "titulo": "Lecturas de Infancia",
-      "autor": "J.-F. Lyotard y otros",
-      "editorial": "EUDEBA",
-      "categoria": "Filosofía / Literatura",
-      "coleccion": "",
-      "precio": "$19.000",
-      "año": "1997",
-      "estado": "Bueno. Rareza bibliográfica por demás interesante.",
-      "imagen": "img/lecturasinfanc (Mediana).jpg"
-    },
-    {
       "titulo": "Leviatán, Tomo II",
       "autor": "Thomas Hobbes",
       "editorial": "Losada",
@@ -1323,17 +1268,6 @@
       "año": "2007",
       "estado": "Muy bueno",
       "imagen": "img/riesgopa (Mediana).jpg"
-    },
-    {
-      "titulo": "San La Muerte. Culto y representación mágico religiosa",
-      "autor": "Elena María Krautstofl",
-      "editorial": "Edunam",
-      "categoria": "Antropología / Religión",
-      "coleccion": "Libros de la memoria",
-      "precio": "$14.000",
-      "año": "2002",
-      "estado": "Muy bueno",
-      "imagen": "img/sanlamu (Mediana).jpg"
     },
     {
       "titulo": "Sarmiento, más allá de la educación: retrato de un intelectual en acción",
