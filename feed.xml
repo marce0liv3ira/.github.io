@@ -3,12 +3,37 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-05-06T04:25:25-03:00</updated>
+    <updated>2026-05-09T13:39:41-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
     <id>https://hormigue.ar</id>
 
+    <entry>
+        <title>Voca divino</title>
+        <author>
+            <name>marce oliveira</name>
+        </author>
+        <link href="https://hormigue.ar/voca-talisman/"/>
+        <id>https://hormigue.ar/voca-talisman/</id>
+        <media:content url="https://hormigue.ar/media/posts/77/portada.png" medium="image" />
+            <category term="sindicalismo"/>
+            <category term="pose"/>
+            <category term="plastas"/>
+            <category term="oficialismo permanente"/>
+            <category term="mersada"/>
+            <category term="democracia"/>
+            <category term="comunicación"/>
+
+        <updated>2026-05-08T23:13:00-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://hormigue.ar/media/posts/77/portada.png" alt="" />
+                    Cada día son más los bobos que nunca participan de nada ni hacen nada ni se la juegan por nada, pero les gusta decir que la asamblea no sirve, el&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
     <entry>
         <title>Minuta política</title>
         <author>
@@ -223,29 +248,6 @@
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/57/tricota.jpg" alt="" />
                     Así comienza esta contienda electoral. Con las mañas tradicionales. Ni bien se oficialicen las listas, arranca el despliegue de campaña y sabremos qué tienen para decir los aspirantes en pugna:&hellip;
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>Minuta sindical</title>
-        <author>
-            <name>marce oliveira</name>
-        </author>
-        <link href="https://hormigue.ar/minuta-sindical/"/>
-        <id>https://hormigue.ar/minuta-sindical/</id>
-        <media:content url="https://hormigue.ar/media/posts/53/1000158068.jpg" medium="image" />
-            <category term="sindicalismo"/>
-            <category term="pose"/>
-            <category term="movimiento"/>
-            <category term="democracia"/>
-            <category term="comunicación"/>
-
-        <updated>2026-02-19T11:52:24-03:00</updated>
-            <summary type="html">
-                <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/53/1000158068.jpg" alt="" />
-                    En Misiones recrudecen los problemas económicos y laborales: despidos y ahogamiento de Dass en Eldorado; cesantías en el hipermercado Libertad de Posadas; éxodo de trabajadores rurales a Brasil desde Alba&hellip;
                 ]]>
             </summary>
         <content></content>
