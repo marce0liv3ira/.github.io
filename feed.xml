@@ -3,12 +3,35 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-05-16T06:14:51-03:00</updated>
+    <updated>2026-05-16T21:38:01-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
     <id>https://hormigue.ar</id>
 
+    <entry>
+        <title>Invitación</title>
+        <author>
+            <name>marce oliveira</name>
+        </author>
+        <link href="https://hormigue.ar/invitacion/"/>
+        <id>https://hormigue.ar/invitacion/</id>
+        <media:content url="https://hormigue.ar/media/posts/78/file_00000000ca6471fb883de3d5d908f7aa~2.png" medium="image" />
+            <category term="sindicalismo"/>
+            <category term="recursos"/>
+            <category term="laboral"/>
+            <category term="comunicación"/>
+            <category term="Smaunam"/>
+
+        <updated>2026-05-16T20:48:00-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://hormigue.ar/media/posts/78/file_00000000ca6471fb883de3d5d908f7aa~2.png" alt="" />
+                    Mientras preparo Kè botaron, un breve resumen de los resultados electorales de Apunam, aprovecho para comentar algunas tareas que tengo en curso e invitar a participar a quien quiera y&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
     <entry>
         <title>Voca divino</title>
         <author>
@@ -224,30 +247,6 @@
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/65/dospronodo.jpg" alt="" />
                     Año electoral universitario. Primero las elecciones gremiales nodocentes, después el resto. El ajuste se siente en el bolsillo de los trabajadores universitarios y en la institución; pero, sobre todo, se&hellip;
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>Eventos electorales: consideraciones</title>
-        <author>
-            <name>marce oliveira</name>
-        </author>
-        <link href="https://hormigue.ar/eventos-electorales-consideraciones/"/>
-        <id>https://hormigue.ar/eventos-electorales-consideraciones/</id>
-        <media:content url="https://hormigue.ar/media/posts/57/tricota.jpg" medium="image" />
-            <category term="sindicalismo"/>
-            <category term="pose"/>
-            <category term="oficialismo permanente"/>
-            <category term="democracia"/>
-            <category term="comunicación"/>
-            <category term="canicheo"/>
-
-        <updated>2026-03-08T21:06:57-03:00</updated>
-            <summary type="html">
-                <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/57/tricota.jpg" alt="" />
-                    Así comienza esta contienda electoral. Con las mañas tradicionales. Ni bien se oficialicen las listas, arranca el despliegue de campaña y sabremos qué tienen para decir los aspirantes en pugna:&hellip;
                 ]]>
             </summary>
         <content></content>

@@ -11,6 +11,25 @@
     },
     "items": [
         {
+            "id": "https://hormigue.ar/invitacion/",
+            "url": "https://hormigue.ar/invitacion/",
+            "title": "Invitación",
+            "summary": "Mientras preparo Kè botaron, un breve resumen de los resultados electorales de Apunam, aprovecho para comentar algunas tareas que tengo en curso e invitar a participar a quien quiera y&hellip;",
+            "image": "https://hormigue.ar/media/posts/78/file_00000000ca6471fb883de3d5d908f7aa~2.png",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "sindicalismo",
+                   "recursos",
+                   "laboral",
+                   "comunicación",
+                   "Smaunam"
+            ],
+            "date_published": "2026-05-16T20:48:00-03:00",
+            "date_modified": "2026-05-16T21:38:01-03:00"
+        },
+        {
             "id": "https://hormigue.ar/voca-divino/",
             "url": "https://hormigue.ar/voca-divino/",
             "title": "Voca divino",
@@ -192,26 +211,6 @@
             ],
             "date_published": "2026-03-11T20:26:08-03:00",
             "date_modified": "2026-04-28T16:05:09-03:00"
-        },
-        {
-            "id": "https://hormigue.ar/eventos-electorales-consideraciones/",
-            "url": "https://hormigue.ar/eventos-electorales-consideraciones/",
-            "title": "Eventos electorales: consideraciones",
-            "summary": "Así comienza esta contienda electoral. Con las mañas tradicionales. Ni bien se oficialicen las listas, arranca el despliegue de campaña y sabremos qué tienen para decir los aspirantes en pugna:&hellip;",
-            "image": "https://hormigue.ar/media/posts/57/tricota.jpg",
-            "author": {
-                "name": "marce oliveira"
-            },
-            "tags": [
-                   "sindicalismo",
-                   "pose",
-                   "oficialismo permanente",
-                   "democracia",
-                   "comunicación",
-                   "canicheo"
-            ],
-            "date_published": "2026-03-08T21:06:57-03:00",
-            "date_modified": "2026-04-07T04:37:14-03:00"
         }
     ]
 }
