@@ -3,12 +3,35 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-05-21T04:02:02-03:00</updated>
+    <updated>2026-05-23T08:52:52-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
     <id>https://hormigue.ar</id>
 
+    <entry>
+        <title>dos inquietudes electorales</title>
+        <author>
+            <name>marce oliveira</name>
+        </author>
+        <link href="https://hormigue.ar/dos-inquietudes-electorales/"/>
+        <id>https://hormigue.ar/dos-inquietudes-electorales/</id>
+        <media:content url="https://hormigue.ar/media/posts/79/dosca.jpg" medium="image" />
+            <category term="oficialismo permanente"/>
+            <category term="mersada"/>
+            <category term="elecciones"/>
+            <category term="democracia"/>
+            <category term="comunicación"/>
+
+        <updated>2026-05-22T21:55:00-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://hormigue.ar/media/posts/79/dosca.jpg" alt="" />
+                    Esta semana intenté hacer un seguimiento de las elecciones generales, especialmente las rectorales. Todo comenzó con un breve aviso mediante el email institucional del secretario de la Junta Electoral, sin&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
     <entry>
         <title>Invitación</title>
         <author>
@@ -225,28 +248,6 @@
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/68/datosUNaM.jpg" alt="" />
                     Esto es un avance de la revisión de datos que fui reuniendo en los últimos meses. Todo lo expuesto debe tomarse como parte de un proceso inacabado. Iré completando y&hellip;
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>Dos propuestas</title>
-        <author>
-            <name>marce oliveira</name>
-        </author>
-        <link href="https://hormigue.ar/dos-propuestas/"/>
-        <id>https://hormigue.ar/dos-propuestas/</id>
-        <media:content url="https://hormigue.ar/media/posts/65/dospronodo.jpg" medium="image" />
-            <category term="sindicalismo"/>
-            <category term="pose"/>
-            <category term="democracia"/>
-            <category term="comunicación"/>
-
-        <updated>2026-03-11T20:26:08-03:00</updated>
-            <summary type="html">
-                <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/65/dospronodo.jpg" alt="" />
-                    Año electoral universitario. Primero las elecciones gremiales nodocentes, después el resto. El ajuste se siente en el bolsillo de los trabajadores universitarios y en la institución; pero, sobre todo, se&hellip;
                 ]]>
             </summary>
         <content></content>

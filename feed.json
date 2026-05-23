@@ -11,6 +11,25 @@
     },
     "items": [
         {
+            "id": "https://hormigue.ar/dos-inquietudes-electorales/",
+            "url": "https://hormigue.ar/dos-inquietudes-electorales/",
+            "title": "dos inquietudes electorales",
+            "summary": "Esta semana intenté hacer un seguimiento de las elecciones generales, especialmente las rectorales. Todo comenzó con un breve aviso mediante el email institucional del secretario de la Junta Electoral, sin&hellip;",
+            "image": "https://hormigue.ar/media/posts/79/dosca.jpg",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "oficialismo permanente",
+                   "mersada",
+                   "elecciones",
+                   "democracia",
+                   "comunicación"
+            ],
+            "date_published": "2026-05-22T21:55:00-03:00",
+            "date_modified": "2026-05-23T08:52:52-03:00"
+        },
+        {
             "id": "https://hormigue.ar/invitacion/",
             "url": "https://hormigue.ar/invitacion/",
             "title": "Invitación",
@@ -193,24 +212,6 @@
             ],
             "date_published": "2026-03-13T05:36:00-03:00",
             "date_modified": "2026-05-20T19:21:10-03:00"
-        },
-        {
-            "id": "https://hormigue.ar/dos-propuestas/",
-            "url": "https://hormigue.ar/dos-propuestas/",
-            "title": "Dos propuestas",
-            "summary": "Año electoral universitario. Primero las elecciones gremiales nodocentes, después el resto. El ajuste se siente en el bolsillo de los trabajadores universitarios y en la institución; pero, sobre todo, se&hellip;",
-            "image": "https://hormigue.ar/media/posts/65/dospronodo.jpg",
-            "author": {
-                "name": "marce oliveira"
-            },
-            "tags": [
-                   "sindicalismo",
-                   "pose",
-                   "democracia",
-                   "comunicación"
-            ],
-            "date_published": "2026-03-11T20:26:08-03:00",
-            "date_modified": "2026-04-28T16:05:09-03:00"
         }
     ]
 }
