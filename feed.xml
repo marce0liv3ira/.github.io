@@ -3,12 +3,37 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-05-29T09:47:50-03:00</updated>
+    <updated>2026-05-31T23:11:47-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
     <id>https://hormigue.ar</id>
 
+    <entry>
+        <title>Kè botaron</title>
+        <author>
+            <name>marce oliveira</name>
+        </author>
+        <link href="https://hormigue.ar/ke-botaron/"/>
+        <id>https://hormigue.ar/ke-botaron/</id>
+        <media:content url="https://hormigue.ar/media/posts/80/mosquitas.png" medium="image" />
+            <category term="sindicalismo"/>
+            <category term="plastas"/>
+            <category term="mersada"/>
+            <category term="laboral"/>
+            <category term="elecciones"/>
+            <category term="democracia"/>
+            <category term="canicheo"/>
+
+        <updated>2026-05-31T21:04:27-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://hormigue.ar/media/posts/80/mosquitas.png" alt="" />
+                    Con el diario del lunes no tiene sentido hacer pucherito y soltar aires de superioridad política. Mejor apuntar algunas notas sobre el perfil sindical nodocente que salió fortalecido de estas&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
     <entry>
         <title>Dos inquietudes electorales</title>
         <author>
@@ -43,6 +68,7 @@
             <category term="sindicalismo"/>
             <category term="recursos"/>
             <category term="laboral"/>
+            <category term="elecciones"/>
             <category term="comunicación"/>
             <category term="Smaunam"/>
 
@@ -93,6 +119,7 @@
             <category term="oficialismo permanente"/>
             <category term="movimiento"/>
             <category term="mersada"/>
+            <category term="elecciones"/>
             <category term="democracia"/>
             <category term="canicheo"/>
 
@@ -226,28 +253,6 @@
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/70/24m2026ch.jpg" alt="" />
                     El 24M revitalizó la movilización de todas las disidencias habidas y por haber. Una vez más, la memoria sobre los crímenes de lesa humanidad cometidos por los genocidas que utilizaron&hellip;
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>Data UNaM</title>
-        <author>
-            <name>marce oliveira</name>
-        </author>
-        <link href="https://hormigue.ar/data-unam/"/>
-        <id>https://hormigue.ar/data-unam/</id>
-        <media:content url="https://hormigue.ar/media/posts/68/datosUNaM.jpg" medium="image" />
-            <category term="sindicalismo"/>
-            <category term="salario"/>
-            <category term="recursos"/>
-            <category term="laboral"/>
-
-        <updated>2026-03-13T05:36:00-03:00</updated>
-            <summary type="html">
-                <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/68/datosUNaM.jpg" alt="" />
-                    Esto es un avance de la revisión de datos que fui reuniendo en los últimos meses. Todo lo expuesto debe tomarse como parte de un proceso inacabado. Iré completando y&hellip;
                 ]]>
             </summary>
         <content></content>
