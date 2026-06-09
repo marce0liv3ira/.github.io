@@ -3,12 +3,36 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-06-07T15:44:36-03:00</updated>
+    <updated>2026-06-09T01:02:49-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
     <id>https://hormigue.ar</id>
 
+    <entry>
+        <title>Condiciones</title>
+        <author>
+            <name>marce oliveira</name>
+        </author>
+        <link href="https://hormigue.ar/condiciones-2/"/>
+        <id>https://hormigue.ar/condiciones-2/</id>
+        <media:content url="https://hormigue.ar/media/posts/82/1765967643984-Personalizado.png" medium="image" />
+            <category term="sindicalismo"/>
+            <category term="salario"/>
+            <category term="recursos"/>
+            <category term="plastas"/>
+            <category term="democracia"/>
+            <category term="comunicación"/>
+
+        <updated>2026-06-09T00:41:23-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://hormigue.ar/media/posts/82/1765967643984-Personalizado.png" alt="" />
+                    Hace algunas semanas, el CIN volvió a abrirle la puerta al Gobierno para revisar la propuesta de financiamiento universitario hecha por Milei, Sturzenegger, Torrendell y Álvarez. Se sospecha que la&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
     <entry>
         <title>Kè botaron</title>
         <author>
@@ -230,29 +254,6 @@
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/71/canicheCUC.png" alt="" />
                     Según la Organización Mundial de la Salud, la principal causa de trastornos mentales y cognitivos es el estrés. Así que esta entrega llega sin nervios. Si el Ejecutivo nacional se&hellip;
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>Las nubes</title>
-        <author>
-            <name>marce oliveira</name>
-        </author>
-        <link href="https://hormigue.ar/las-nubes/"/>
-        <id>https://hormigue.ar/las-nubes/</id>
-        <media:content url="https://hormigue.ar/media/posts/70/24m2026ch.jpg" medium="image" />
-            <category term="sindicalismo"/>
-            <category term="pose"/>
-            <category term="ombliguismo"/>
-            <category term="movimiento"/>
-            <category term="blendi U"/>
-
-        <updated>2026-03-25T04:45:00-03:00</updated>
-            <summary type="html">
-                <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/70/24m2026ch.jpg" alt="" />
-                    El 24M revitalizó la movilización de todas las disidencias habidas y por haber. Una vez más, la memoria sobre los crímenes de lesa humanidad cometidos por los genocidas que utilizaron&hellip;
                 ]]>
             </summary>
         <content></content>

@@ -11,6 +11,26 @@
     },
     "items": [
         {
+            "id": "https://hormigue.ar/condiciones-2/",
+            "url": "https://hormigue.ar/condiciones-2/",
+            "title": "Condiciones",
+            "summary": "Hace algunas semanas, el CIN volvió a abrirle la puerta al Gobierno para revisar la propuesta de financiamiento universitario hecha por Milei, Sturzenegger, Torrendell y Álvarez. Se sospecha que la&hellip;",
+            "image": "https://hormigue.ar/media/posts/82/1765967643984-Personalizado.png",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "sindicalismo",
+                   "salario",
+                   "recursos",
+                   "plastas",
+                   "democracia",
+                   "comunicación"
+            ],
+            "date_published": "2026-06-09T00:41:23-03:00",
+            "date_modified": "2026-06-09T01:02:49-03:00"
+        },
+        {
             "id": "https://hormigue.ar/ke-botaron/",
             "url": "https://hormigue.ar/ke-botaron/",
             "title": "Kè botaron",
@@ -198,25 +218,6 @@
             ],
             "date_published": "2026-03-30T15:29:50-03:00",
             "date_modified": "2026-04-28T16:04:53-03:00"
-        },
-        {
-            "id": "https://hormigue.ar/las-nubes/",
-            "url": "https://hormigue.ar/las-nubes/",
-            "title": "Las nubes",
-            "summary": "El 24M revitalizó la movilización de todas las disidencias habidas y por haber. Una vez más, la memoria sobre los crímenes de lesa humanidad cometidos por los genocidas que utilizaron&hellip;",
-            "image": "https://hormigue.ar/media/posts/70/24m2026ch.jpg",
-            "author": {
-                "name": "marce oliveira"
-            },
-            "tags": [
-                   "sindicalismo",
-                   "pose",
-                   "ombliguismo",
-                   "movimiento",
-                   "blendi U"
-            ],
-            "date_published": "2026-03-25T04:45:00-03:00",
-            "date_modified": "2026-04-28T16:05:01-03:00"
         }
     ]
 }
