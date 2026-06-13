@@ -11,10 +11,29 @@
     },
     "items": [
         {
+            "id": "https://hormigue.ar/lo-ajeno/",
+            "url": "https://hormigue.ar/lo-ajeno/",
+            "title": "Lo ajeno",
+            "summary": "El acuerdo El 10 de junio se firmó un acuerdo político entre el Gobierno nacional, el Consejo Interuniversitario Nacional (CIN) y las conducciones sindicales universitarias que pone en riesgo el&hellip;",
+            "image": "https://hormigue.ar/media/posts/83/portada.png",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "sindicalismo",
+                   "salario",
+                   "laboral",
+                   "democracia",
+                   "comunicación"
+            ],
+            "date_published": "2026-06-11T15:49:59-03:00",
+            "date_modified": "2026-06-13T14:04:31-03:00"
+        },
+        {
             "id": "https://hormigue.ar/condiciones-2/",
             "url": "https://hormigue.ar/condiciones-2/",
             "title": "Condiciones",
-            "summary": "Hace algunas semanas, el CIN volvió a abrirle la puerta al Gobierno para revisar la propuesta de financiamiento universitario hecha por Milei, Sturzenegger, Torrendell y Álvarez. Se sospecha que la&hellip;",
+            "summary": "Hace algunas semanas, el CIN volvió a abrirle la puerta al Gobierno para revisar la propuesta de financiamiento universitario impulsada por Milei, Sturzenegger, Torrendell y Álvarez. Se sospecha que la&hellip;",
             "image": "https://hormigue.ar/media/posts/82/1765967643984-Personalizado.png",
             "author": {
                 "name": "marce oliveira"
@@ -28,7 +47,7 @@
                    "comunicación"
             ],
             "date_published": "2026-06-08T21:23:00-03:00",
-            "date_modified": "2026-06-09T05:14:43-03:00"
+            "date_modified": "2026-06-11T15:49:37-03:00"
         },
         {
             "id": "https://hormigue.ar/ke-botaron/",
@@ -196,28 +215,6 @@
             ],
             "date_published": "2026-04-07T16:03:00-03:00",
             "date_modified": "2026-04-22T19:50:11-03:00"
-        },
-        {
-            "id": "https://hormigue.ar/bajan/",
-            "url": "https://hormigue.ar/bajan/",
-            "title": "Bajan",
-            "summary": "Según la Organización Mundial de la Salud, la principal causa de trastornos mentales y cognitivos es el estrés. Así que esta entrega llega sin nervios. Si el Ejecutivo nacional se&hellip;",
-            "image": "https://hormigue.ar/media/posts/71/canicheCUC.png",
-            "author": {
-                "name": "marce oliveira"
-            },
-            "tags": [
-                   "sindicalismo",
-                   "salario",
-                   "pose",
-                   "oficialismo permanente",
-                   "movimiento",
-                   "democracia",
-                   "canicheo",
-                   "blendi U"
-            ],
-            "date_published": "2026-03-30T15:29:50-03:00",
-            "date_modified": "2026-04-28T16:04:53-03:00"
         }
     ]
 }

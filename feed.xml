@@ -3,12 +3,35 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-06-09T05:14:43-03:00</updated>
+    <updated>2026-06-13T14:04:31-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
     <id>https://hormigue.ar</id>
 
+    <entry>
+        <title>Lo ajeno</title>
+        <author>
+            <name>marce oliveira</name>
+        </author>
+        <link href="https://hormigue.ar/lo-ajeno/"/>
+        <id>https://hormigue.ar/lo-ajeno/</id>
+        <media:content url="https://hormigue.ar/media/posts/83/portada.png" medium="image" />
+            <category term="sindicalismo"/>
+            <category term="salario"/>
+            <category term="laboral"/>
+            <category term="democracia"/>
+            <category term="comunicación"/>
+
+        <updated>2026-06-11T15:49:59-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://hormigue.ar/media/posts/83/portada.png" alt="" />
+                    El acuerdo El 10 de junio se firmó un acuerdo político entre el Gobierno nacional, el Consejo Interuniversitario Nacional (CIN) y las conducciones sindicales universitarias que pone en riesgo el&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
     <entry>
         <title>Condiciones</title>
         <author>
@@ -28,7 +51,7 @@
             <summary type="html">
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/82/1765967643984-Personalizado.png" alt="" />
-                    Hace algunas semanas, el CIN volvió a abrirle la puerta al Gobierno para revisar la propuesta de financiamiento universitario hecha por Milei, Sturzenegger, Torrendell y Álvarez. Se sospecha que la&hellip;
+                    Hace algunas semanas, el CIN volvió a abrirle la puerta al Gobierno para revisar la propuesta de financiamiento universitario impulsada por Milei, Sturzenegger, Torrendell y Álvarez. Se sospecha que la&hellip;
                 ]]>
             </summary>
         <content></content>
@@ -228,32 +251,6 @@
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/72/1000211316.jpg" alt="" />
                     La comunidad UNaM no está en un momento cualquiera. Y no hablo del desfinanciamiento, la crisis pedagógica, el colapso salarial ni el creciente arancelamiento. Eso ya es paisaje. Otra vez&hellip;
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>Bajan</title>
-        <author>
-            <name>marce oliveira</name>
-        </author>
-        <link href="https://hormigue.ar/bajan/"/>
-        <id>https://hormigue.ar/bajan/</id>
-        <media:content url="https://hormigue.ar/media/posts/71/canicheCUC.png" medium="image" />
-            <category term="sindicalismo"/>
-            <category term="salario"/>
-            <category term="pose"/>
-            <category term="oficialismo permanente"/>
-            <category term="movimiento"/>
-            <category term="democracia"/>
-            <category term="canicheo"/>
-            <category term="blendi U"/>
-
-        <updated>2026-03-30T15:29:50-03:00</updated>
-            <summary type="html">
-                <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/71/canicheCUC.png" alt="" />
-                    Según la Organización Mundial de la Salud, la principal causa de trastornos mentales y cognitivos es el estrés. Así que esta entrega llega sin nervios. Si el Ejecutivo nacional se&hellip;
                 ]]>
             </summary>
         <content></content>
