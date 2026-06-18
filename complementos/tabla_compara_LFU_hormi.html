@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>TABLA COMPARATIVA - HORMIGUEAR</title>
+    <meta name="description" content="Tabla comparativa: lo que manda la LFU vs el acuerdo patronal. Entendé qué se resigna.">
+    <meta name="generator" content="Publii Open-Source CMS for Static Site">
+    
+    <link rel="shortcut icon" href="https://hormigue.ar/media/website/logo-hormi-new.png" type="image/x-icon">
+    <link rel="preload" href="https://hormigue.ar/assets/dynamic/fonts/archivonarrow/archivonarrow.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://hormigue.ar/assets/dynamic/fonts/archivonarrow/archivonarrow-italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="https://hormigue.ar/assets/css/fontawesome-all.min.css?v=85514f933f9e0b82460af63f1a403fa5">
+    <link rel="stylesheet" href="https://hormigue.ar/assets/css/style.css?v=daacea9621e9ec37ee84b1388c166738">
+    <noscript><link rel="stylesheet" href="https://hormigue.ar/assets/css/noscript.css?v=efa867a99f5064d6729e4dc2008ad50b"></noscript>
+    
+    <style>
+        /* REGLA GLOBAL: NO SUBRAYAR NUNCA ENLACES */
+        a, a:link, a:visited, a:hover, a:active {
+            text-decoration: none !important;
+            border-bottom: none !important;
+            box-shadow: none !important;
+        }
+
+        #wrapper > .bg {               
+            background-image: url(https://hormigue.ar/assets/images/overlay.png), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(https://hormigue.ar/media/website/hormigas-negativas-rojo-3.png);           
+        }
+
+        /* --- CONTENEDOR ANCHO Y FLEXIBLE PARA TABLAS --- */
+        .tacuru-contenedor-tablas {
+            width: 100% !important;
+            max-width: 1800px !important;
+            margin: 30px auto !important; 
+            background-color: transparent !important;
+            display: flex;
+            flex-direction: column;
+            align-items: center !important; 
+            justify-content: center !important;
+            overflow-x: auto; 
+            padding: 0 15px; 
+            z-index: 5;
+        }
+
+        /* FORZAR TRANSPARENCIA AL CONTENEDOR PRINCIPAL DE PUBLII */
+        main#main {
+            background-color: transparent !important;
+            background: none !important;
+        }
+
+        /* FONDO DEL ARTÍCULO (TEXTOS) */
+        article.post {
+            background-color: #FAF6ED !important; 
+            border: 1px solid #A30000 !important;
+            border-radius: 4px;
+            padding: 2em; 
+        }
+
+        /* BOTÓN DE LA INTRODUCCIÓN */
+        .btn-tacuru-info {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 24px;
+            font-family: 'Bebas Neue', 'Roboto Condensed', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 1.5px;
+            color: #A30000!important;
+            background-color: transparent;
+            border: 2px solid #A30000;
+            border-radius: 4px;
+            text-transform: uppercase;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+        }
+
+        .btn-tacuru-info:hover {
+            background-color: #A30000;
+            color: #FFFFFF !important;
+            box-shadow: 0 0 12px rgba(163, 0, 0, 0.6);
+        }
+
+        /* HOVER DEL ICONO DEL FOOTER (SINDICALIZADO CON REDES) */
+        .icon-hormi-footer {
+            display: inline-block !important;
+            text-decoration: none !important;
+            border: none !important;
+            transition: all 0.3s ease-in-out !important;
+            vertical-align: middle !important;
+            margin: 0 0.3em !important;
+        }
+
+        .icon-hormi-footer:hover {
+            filter: brightness(0) saturate(100%) invert(24%) sepia(99%) saturate(7454%) hue-rotate(358deg) brightness(93%) contrast(92%) !important;
+            transform: scale(1.15) rotate(10deg) !important;
+        }
+    </style>
+    <noscript>
+        <style>img[loading] { opacity: 1; }</style>
+    </noscript>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Bebas+Neue&family=Inter:wght@400;500;700&family=Roboto+Condensed:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://hormigue.ar/media/website/logo-hormi-new.png" media="(prefers-color-scheme: light)">
+    <link rel="shortcut icon" href="https://pica.hormigue.ar/img/ico/icohormiblancovec.png" media="(prefers-color-scheme: dark)">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" nonce="MjYxNzE2OTQ3NSw0MDk3OTI4ODY2"></script>
+    <link rel="stylesheet" href="https://hormigue.ar/media/plugins/coreLightboxGallery/photoswipe.min.css">
+    <style>
+        :root {		       	 
+            --pswp-bg: rgba(0,0,0,0.79);					 
+            --pswp-placeholder-bg: rgba(38, 40, 44, 1);					 
+            --pswp-ui-bg: rgba(96,5,5,0.82);                
+            --pswp-ui-color: rgba(255,255,255,0.9);                
+            --pswp-icon-stroke-width: 1.5;                
+            --pswp-icon-size: 24px;            
+        }
+        .pswp--zoomed-in .pswp__zoom-icn-bar-v { display: none; }
+    </style>
+</head>
+
+<body class="is-preload post-template">
+<div id="wrapper">
+    
+    <header id="header">
+        <a class="logo logo-image" href="https://hormigue.ar/">
+            <img src="https://hormigue.ar/media/website/logo-hormi-new-2.png" alt="HORMIGUEAR" width="1837" height="1809">
+        </a>
+    </header>
+
+    <main id="main">
+        
+        <!-- PRIMERA MITAD DEL ARTÍCULO: Cabecera y texto introductorio -->
+        <article class="post">
+            <header class="major" style="padding-bottom: 20px;">
+                <h1 style="color: #A30000; text-shadow: 0 0 10px rgba(163,0,0,0.3);">TABLA COMPARATIVA</h1><br><h2 style="color: #A30000; text-shadow: 0 0 10px rgba(163,0,0,0.3);">QUÉ SE RESIGNA CON EL ACUERDO PATRONAL</h2><br>
+                <p class="post__inner" style="font-family: 'Inter', sans-serif; font-size: 1.2rem; font-weight: 500; color: #FFFFFF; line-height: 1.5; margin-top: 15px;">
+                    El contraste entre la Ley de Financiamiento Universitario, avalada por el Congreso y con fallos favorables por parte de la justicia, y el pacto político entre el Gobierno, los rectorados y las conducciones sindicales universitarias pone en riesgo las condiciones técnicas de la cautelar y la misma ley. Todo por migajas y un delirio sindical exitista.
+                </p>
+            </header>
+            
+            <div class="post__inner post__entry">
+                <p style="font-family: 'Inter', sans-serif; font-size: 1.05rem; color: #A30000; border-left: 3px solid #A30000; padding-left: 15px; margin-bottom: 30px; font-style: normal;">La tabla que sigue contrasta los beneficios previstos por la Ley de Financiamiento Universitario con los resultados concretos del acuerdo firmado.</p>
+                <p style="font-family: 'Inter', sans-serif; font-size: 1.05rem; color: #A30000; border-left: 3px solid #A30000; padding-left: 15px; margin-bottom: 30px; font-style: normal;">El material circula de manera informal en ámbitos del sindicalismo universitario combativo y continúa sujeto a revisión y verificación. Aun así, permite observar una tendencia general difícil de ignorar. <b>Las correcciones, críticas y colaboraciones son bienvenidas.</b></p>
+                <p style="font-family: 'Inter', sans-serif; font-size: 1.05rem; color: #A30000; border-left: 3px solid #A30000; padding-left: 15px; margin-bottom: 30px; font-style: normal;">Según esta estimación, el acuerdo reconoce apenas una fracción de lo que correspondería percibir bajo el cumplimiento pleno de la ley y de las resoluciones judiciales vigentes.</p>
+                <p style="font-family: 'Inter', sans-serif; font-size: 1.05rem; color: #A30000; border-left: 3px solid #A30000; padding-left: 15px; margin-bottom: 30px; font-style: normal;">Por eso la discusión excede los porcentajes. Lo que está en juego es si un derecho reconocido por el Congreso y respaldado por la Justicia puede ser reemplazado por una negociación parcial entre funcionarios, rectorados y conducciones sindicales. Tal como suele ocurrir dentro de las propias universidades.</p>
+            <p><div style="text-align: center; margin-top: 30px; margin-bottom: 10px; padding-bottom: 15px;" title="Conocé otros aportes de Hormiguear">
+                <a href="https://hormigue.ar/lo-ajeno/" class="btn-tacuru-info" target="_blank" rel="noopener noreferrer">Un poco más</a>
+            </div></p>
+            </div>
+
+        </article>
+
+
+        <!-- TIERRA DE NADIE: CONTENEDOR FLEXIBLE Y ANCHO (EL TACURÚ) -->
+        <div class="tacuru-contenedor-tablas" title="Es un servicio de Hormiguear">
+<img
+    class="img-fija"
+    style="vertical-align: middle; margin-left: 10px; background-color: #FFCCC2; border-radius: 50%;"
+    title="Girá el celu para ver la tabla"
+    src="https://www.machala.gob.ec/wp-content/uploads/2024/05/giphy_devide_left.gif"
+    alt="Girá el celu para ver la tabla"
+    width="44"
+    height="44">
+             <!-- LA TABLA COMPARATIVA -->
+            <div style="font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif; font-size: 13px; line-height: 1.4; user-select: none; border: 2px solid #A30000; box-shadow: 0 0 10px #A30000; background-color: #000000; color: #ffffff; margin: 25px 0; padding: 8px; border-radius: 4px; position: relative; background-image: url('https://replicate.delivery/xpbkg/H7GfXz34YF0QJpE8X6K6K3J9S8U6S6S6S6S6S6S6S6S6S6S/hormiguear_watermark.png'); background-repeat: no-repeat; background-position: center center; background-size: contain; overflow-x: auto; width: 100%;">
+                <div style="width: 100%; min-width: 680px; display: flex; flex-direction: column; position: relative; z-index: 2; background-color: rgba(0, 0, 0, 0.85);">
+                    <!-- CABECERA SANEADA -->
+                    <div style="display: flex; align-items: center; border-bottom: 2px solid #A30000; background-color: #A30000; color: #FFFFFF; font-family: 'Bebas Neue', sans-serif; font-size: 22px; text-transform: uppercase; letter-spacing: 1px;">
+                        <div style="flex: 1.2; padding: 10px 12px; border-right: 1px solid #7a0000;">Aspecto</div>
+                        <div style="flex: 2; padding: 10px 12px; border-right: 1px solid #7a0000;">La ley de financiamiento universitario</div>
+                        <div style="flex: 2; padding: 10px 12px; border-right: 1px solid #7a0000;">El acuerdo de Milei</div>
+                        <div style="flex: 1.2; padding: 10px 12px; text-align: center;">Diferencia</div>
+                    </div>
+
+                    <div style="display: flex; border-bottom: 1px solid #A30000; color: #ffffff;">
+                        <div style="flex: 1.2; padding: 10px 12px; border-right: 1px solid #A30000; font-weight: 600; color: #ffcccc;">Aumento a junio 2026</div>
+                        <div style="flex: 2; padding: 10px 12px; border-right: 1px solid #A30000;">56,65% según IPC acumulado por LFU</div>
+                        <div style="flex: 2; padding: 10px 12px; border-right: 1px solid #A30000;">21,33% sobre básico mayo 2026</div>
+                        <div style="flex: 1.2; padding: 10px 12px; color: #ff6666; font-weight: bold;">-35,32 puntos<br>de un solo saque</div>
+                    </div>
+
+                    <div style="display: flex; border-bottom: 1px solid #A30000; color: #ffffff;">
+                        <div style="flex: 1.2; padding: 10px 12px; border-right: 1px solid #A30000; font-weight: 600; color: #ffcccc;">Aumento adicional a oct 2026 (jul-oct)</div>
+                        <div style="flex: 2; padding: 10px 12px; border-right: 1px solid #A30000;">7,70% por IPC proyectado jul-oct 2026 (REM BCRA)</div>
+                        <div style="flex: 2; padding: 10px 12px; border-right: 1px solid #A30000;">3% sobre básico sept 2026</div>
+                        <div style="flex: 1.2; padding: 10px 12px; color: #ff6666; font-weight: bold;">-4,70 puntos<br>más de la mitad perdida</div>
+                    </div>
+
+                    <div style="display: flex; border-bottom: 1px solid #A30000; color: #ffffff;">
+                        <div style="flex: 1.2; padding: 10px 12px; border-right: 1px solid #A30000; font-weight: 600; color: #ffcccc;">Incremento total acumulado (dic 2023 - oct 2026)</div>
+                        <div style="flex: 2; padding: 10px 12px; border-right: 1px solid #A30000;">68,70% IPC acumulado completo por LFU</div>
+                        <div style="flex: 2; padding: 10px 12px; border-right: 1px solid #A30000;">25% total con ambas cuotas</div>
+                        <div style="flex: 1.2; padding: 10px 12px; color: #ff6666; font-weight: bold;">Solo el 36% de lo que corresponde por ley.<br>64% recortado.</div>
+                    </div>
+
+                    <div style="display: flex; border-bottom: 1px solid #A30000; color: #ffffff;">
+                        <div style="flex: 1.2; padding: 10px 12px; border-right: 1px solid #A30000; font-weight: 600; color: #ffcccc;">Retroactivo (nov 2025 - may 2026)</div>
+                        <div style="flex: 2; padding: 10px 12px; border-right: 1px solid #A30000;">La LFU y la cautelar ordenan recomposición desde nov 2025, en una sola cuota, por IPC dic 2023 - oct 2025</div>
+                        <div style="flex: 2; padding: 10px 12px; border-right: 1px solid #A30000;">No contemplado en ningún punto del acuerdo</div>
+                        <div style="flex: 1.2; padding: 10px 12px; color: #ff6666; font-weight: bold;">7 meses sin cobrar</div>
+                    </div>
+
+                    <div style="display: flex; border-bottom: 1px solid #A30000; color: #ffffff;">
+                        <div style="flex: 1.2; padding: 10px 12px; border-right: 1px solid #A30000; font-weight: 600; color: #ffcccc;">Sectores excluidos del retroactivo</div>
+                        <div style="flex: 2; padding: 10px 12px; border-right: 1px solid #A30000;">Cobertura universal: docentes, no docentes, investigadores, alumnos, jubilados</div>
+                        <div style="flex: 2; padding: 10px 12px; border-right: 1px solid #A30000;">&bull; Docentes que dejaron de trabajar entre 1/10/25-31/5/26<br>&bull; Contratos temporales en ese período<br>&bull; Jubilados Ley 26.508 (RIPDUN): congelados mar-sep 2026<br>&bull; Ayudantes de 2da: excluidos de Garantía Salarial</div>
+                        <div style="flex: 1.2; padding: 10px 12px; color: #ff6666; font-weight: bold;">Exclusiones no contempladas por la LFU</div>
+                    </div>
+
+                    <div style="display: flex; border-bottom: 1px solid #A30000; color: #ffffff;">
+                        <div style="flex: 1.2; padding: 10px 12px; border-right: 1px solid #A30000; font-weight: 600; color: #ffcccc;">Becas estudiantiles (art. 6°)</div>
+                        <div style="flex: 2; padding: 10px 12px; border-right: 1px solid #A30000;">Recomposición por IPC acumulado dic 2023 - oct 2025 de todos los programas (Progresar, Manuel Belgrano, Enfermería, etc.)</div>
+                        <div style="flex: 2; padding: 10px 12px; border-right: 1px solid #A30000;">+50% Manuel Belgrano.<br>Comisión para "debatir" Progresar.<br>Sin IPC acumulado.</div>
+                        <div style="flex: 1.2; padding: 10px 12px; color: #ff6666; font-weight: bold;">Art. 6º sin cumplir</div>
+                    </div>
+
+                    <div style="display: flex; border-bottom: 1px solid #A30000; color: #ffffff;">
+                        <div style="flex: 1.2; padding: 10px 12px; border-right: 1px solid #A30000; font-weight: 600; color: #ffcccc;">Periodicidad paritaria</div>
+                        <div style="flex: 2; padding: 10px 12px; border-right: 1px solid #A30000;">Mensual, no inferior al IPC cada mes (art. 5° LFU)</div>
+                        <div style="flex: 2; padding: 10px 12px; border-right: 1px solid #A30000;">Cada 3 meses, sin garantía de no inferioridad al IPC mensual</div>
+                        <div style="flex: 1.2; padding: 10px 12px; color: #ff6666; font-weight: bold;">Por debajo de la ley</div>
+                    </div>
+
+                    <div style="display: flex; border-bottom: 1px solid #A30000; color: #ffffff;">
+                        <div style="flex: 1.2; padding: 10px 12px; border-right: 1px solid #A30000; font-weight: 600; color: #ffcccc;">Reclamo judicial (decreto 759)</div>
+                        <div style="flex: 2; padding: 10px 12px; border-right: 1px solid #A30000;">Cautelar vigente.<br>Decreto 759 prima facie inconstitucional.<br>Dos fallos favorables.</div>
+                        <div style="flex: 2; padding: 10px 12px; border-right: 1px solid #A30000;">CIN dice mantenerlo.</div>
+                        <div style="flex: 1.2; padding: 10px 12px; color: #ff6666; font-weight: bold;">Incertidumbre</div>
+                    </div>
+
+                    <div style="display: flex; border-bottom: 1px solid #A30000; color: #ffffff;">
+                        <div style="flex: 1.2; padding: 10px 12px; border-right: 1px solid #A30000; font-weight: 600; color: #ffcccc;">Impacto político y judicial</div>
+                        <div style="flex: 2; padding: 10px 12px; border-right: 1px solid #A30000;">Mantiene presión sobre Corte Suprema. Sostiene plan de lucha.</div>
+                        <div style="flex: 2; padding: 10px 12px; border-right: 1px solid #A30000;">&bull; Le da "aire" al gobierno<br>&bull; Cancela planes de lucha<br>&bull; Versión en circulación: con acuerdo firmado, el gobierno podría ir a la Corte a pedir levantar la cautelar - y nos quedaríamos sin nada</div>
+                        <div style="flex: 1.2; padding: 10px 12px; color: #ff6666; font-weight: bold;">Riesgo de perder la cautelar.<br>Desvirtúa la marcha del 15/5.</div>
+                    </div>
+
+                    <div style="display: flex; border-bottom: 1px solid #A30000; color: #ffffff;">
+                        <div style="flex: 1.2; padding: 10px 12px; border-right: 1px solid #A30000; font-weight: 600; color: #ffcccc;">Remuneratividad y bonificabilidad</div>
+                        <div style="flex: 2; padding: 10px 12px; border-right: 1px solid #A30000;">Todo aumento debe ser remunerativo y bonificable (art. 5° LFU)</div>
+                        <div style="flex: 2; padding: 10px 12px; border-right: 1px solid #A30000;">La Garantía Salarial continúa:<br>Docentes: remunerativa pero no bonificable.<br>No docentes: no remunerativa ni bonificable.<br>No se incorpora a básicos.</div>
+                        <div style="flex: 1.2; padding: 10px 12px; color: #ff6666; font-weight: bold;">Incumplimiento del art. 5° LFU</div>
+                    </div>
+
+                    <div style="display: flex; color: #ffffff;">
+                        <div style="flex: 1.2; padding: 10px 12px; border-right: 1px solid #A30000; font-weight: 600; color: #ffcccc;">Incorporación sumas NR/NB a básicos</div>
+                        <div style="flex: 2; padding: 10px 12px; border-right: 1px solid #A30000;">Incorporación completa durante el corriente año (art. 5° LFU)</div>
+                        <div style="flex: 2; padding: 10px 12px; border-right: 1px solid #A30000;">No mencionado. La Garantía Salarial sigue separada del básico: impacta en aguinaldo, antigüedad y jubilación.</div>
+                        <div style="flex: 1.2; padding: 10px 12px; color: #ff6666; font-weight: bold;">Omitido</div>
+                    </div>
+
+                    <!-- PIE DE TABLA SANEADO -->
+                    <div style="padding: 12px; font-size: 13px; line-height: 1.3; color: #e0e0e0; border-top: 2px solid #A30000; background-color: rgba(0, 0, 0, 0.85); position: relative; z-index: 2;">
+                        <span style="color: #ff6666; font-family: 'Bebas Neue', sans-serif; font-size: 17px; letter-spacing: 0.5px;">RESUMEN:</span> el acuerdo representa solo el 36% de lo que corresponde por LFU.<br>
+                        Un millón y medio de personas marcharon hace menos de un mes bajo una sola consigna: ¡Cumplan la ley! Esta propuesta no la cumple.<br><br>
+                        <span style="color: #e6b800; font-family: 'Bebas Neue', sans-serif; font-size: 17px; letter-spacing: 0.5px;">RIESGO ADICIONAL:</span> con acuerdo firmado, el gobierno podría pedir a la Corte el levantamiento de la cautelar.<br>
+                        Si eso prospera, se pierde el único instrumento judicial que obligaba a cumplir el resto de la ley.<br><br>
+                        <span style="font-size: 11px; opacity: 0.6;">Fuentes: LFU 27.795. Instructivo liquidación mayo 2026. Fallo Cámara CAF 30.437/2025 (31/03/2026). REM BCRA (4/06/2026). Lista Roja APJUNLU. Comunicado CIN (10/06/2026)</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- FIN DE LA TABLA COMPARATIVA -->
+
+        </div>
+
+
+        <!-- SEGUNDA MITAD DEL ARTÍCULO: Exclusivo para la biografía -->
+        <article class="post">
+            <div class="post__inner post__entry" style="padding-top: 0; margin-top: -20px;">
+                <div class="post__bio"><img src="https://hormigue.ar/media/website/marcef.webp" loading="lazy" height="598" width="599" alt="marce oliveira" class="is-loaded"><div><h3><a href="https://hormigue.ar/acerca-de/" class="invert" target="_blank" rel="noopener noreferrer">marce oliveira</a></h3><p>Empleado nodocente de la Universidad Nacional de Misiones, activista integrante del Comité de Lucha Universitaria y de Izquierda Socialista.</p><div class="bio-contacto">CONTACTO<br><a href="mailto:marceoliveira@hormigue.ar" target="_blank" rel="noopener noreferrer">marceoliveira@hormigue.ar <b>&#9993;</b></a></div></div></div>
+            </div>
+        </article>
+
+    </main>
+
+   <footer id="copyright">
+        <div class="footer-bunker" style="text-align: center; vertical-align: middle; width: 100%; color: #ffffff; line-height: 1.6; padding: 25px 0; display: block;">
+            <p style="margin-bottom: 8px; text-align: center !important; vertical-align: middle;">
+                <strong class="title-site-m" style="font-family: 'Almarai', sans-serif; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.8px; text-shadow: 0 0 4px #000, 0 0 8px #000, 0 0 12px #000, 0 0 16px #000, 0 0 20px #000 !important;">HORMIGUE.AR  </strong>
+                 <a href="https://hormigue.ar/" class="icon brands icon-hormi-footer" target="_blank" rel="noopener noreferrer"><span class="no-break" style="white-space: nowrap !important; display: inline-block;"><img style="height: 2rem; width: auto; vertical-align: middle; filter: drop-shadow(0 0 4px #000) drop-shadow(0 0 8px #000) drop-shadow(0 0 12px #000);" src="https://pica.hormigue.ar/hormiMG/icono%20hormi.png" alt="Ícono Hormi"></span></a><span style="text-shadow: 0 0 4px #000, 0 0 8px #000, 0 0 12px #000, 0 0 16px #000, 0 0 20px #000 !important;"><span style="display: inline-block; transform: scaleX(-1);">C</span>opyleft</span>
+            </p>
+            <p class="sub-text-m" style="font-family: 'Arial Narrow', Arial, sans-serif; font-weight: 500; font-size: 0.4rem; color: #ffffff; margin: 0 auto; max-width: 90%; text-shadow: 0 0 5px #000, 0 0 9px #000; text-align: center; vertical-align: middle;">un sitio creado con pocos recursos técnicos,<br>económicos e intelectuales</p>
+        </div>
+    </footer>
+
+</div>
+
+<script src="https://hormigue.ar/assets/js/jquery.min.js?v=c9771cc3e90e18f5336eedbd0fffb2cf" nonce="MjYxNzE2OTQ3NSw0MDk3OTI4ODY2"></script>
+<script src="https://hormigue.ar/assets/js/jquery.scrollex.min.js?v=f89065e3d988006af9791b44561d7c90" nonce="MjYxNzE2OTQ3NSw0MDk3OTI4ODY2"></script>
+<script src="https://hormigue.ar/assets/js/jquery.scrolly.min.js?v=1ed5a78bde1476875a40f6b9ff44fc14" nonce="MjYxNzE2OTQ3NSw0MDk3OTI4ODY2"></script>
+<script src="https://hormigue.ar/assets/js/browser.min.js?v=c07298dd19048a8a69ad97e754dfe8d0" nonce="MjYxNzE2OTQ3NSw0MDk3OTI4ODY2"></script>
+<script src="https://hormigue.ar/assets/js/breakpoints.min.js?v=81a479eb099e3b187613943b085923b8" nonce="MjYxNzE2OTQ3NSw0MDk3OTI4ODY2"></script>
+<script src="https://hormigue.ar/assets/js/util.min.js?v=4201a626f8c9b614a663b3a1d7d82615" nonce="MjYxNzE2OTQ3NSw0MDk3OTI4ODY2"></script>
+<script src="https://hormigue.ar/assets/js/main.min.js?v=56233c354bd814758be8bff42f7e13a5" nonce="MjYxNzE2OTQ3NSw0MDk3OTI4ODY2"></script>
+<script nonce="MjYxNzE2OTQ3NSw0MDk3OTI4ODY2">/*<![CDATA[*/var images=document.querySelectorAll("img[loading]");for(var i=0;i<images.length;i++){if(images[i].complete){images[i].classList.add("is-loaded")}else{images[i].addEventListener("load",function(){this.classList.add("is-loaded")},false)}};/*]]>*/</script>
+
+<style>
+/* =========================   AUDIO FLOTANTE ========================= */
+#audio-floating-player { position: fixed; top: 180px; left: 16px; z-index: 9999; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 10px 12px 2px 12px; background: rgba(0, 0, 0, 0.65); border: 1px solid #A30000; border-radius: 10px; box-shadow: 0 0 8px rgba(163, 0, 0, 0.6), 0 0 18px rgba(163, 0, 0, 0.4); backdrop-filter: blur(4px); transition: all 0.2s ease;}
+#audio-floating-player audio { width: 250px;}
+#audio-floating-player .audio-label { font-family: 'HerosCond', sans-serif; font-size: 11px; font-weight: normal; color: #ff2b2b; margin-top: -6px; letter-spacing: 1px; text-transform: uppercase; opacity: 0.85;}
+@media (max-width: 768px) { #audio-floating-player { top: 30px !important; left: 10px !important; display: flex !important; justify-content: center !important; align-items: center !important; width: 50px !important; height: 50px !important; padding: 0 !important; border-radius: 50% !important; background: rgba(0, 0, 0, 0.65) !important; cursor: pointer !important; overflow: visible !important; } #audio-floating-player audio { display: none !important; } #audio-floating-player::before { content: "\f04b" !important; font-family: "Font Awesome 5 Free", "FontAwesome", sans-serif !important; font-weight: 700 !important; color: #ff2b2b !important; font-size: 20px !important; margin-left: 4px !important; transition: all 0.2s ease-in-out !important; } #audio-floating-player.playing::before { content: "\f04c" !important; margin-left: 0 !important; } #audio-floating-player .audio-label { position: absolute !important; bottom: -28px !important; left: 50% !important; transform: translateX(-50%) !important; font-size: 0 !important; color: transparent !important; letter-spacing: 0 !important; background-color: transparent !important; box-shadow: none !important; border-radius: 0 !important; background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.65) 20%, rgba(0, 0, 0, 0) 55%) !important; padding: 8px 20px !important; text-shadow: none !important; opacity: 0.95 !important; } #audio-floating-player .audio-label::after { content: "\f028" !important; font-family: "Font Awesome 5 Free", "FontAwesome", sans-serif !important; font-weight: 900 !important; font-size: 15px !important; color: #ff2b2b !important; display: block !important; } }
+/* =========================   LIGHTBOX ========================= */
+.lightbox-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.85); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; z-index: 99999;}
+.lightbox-overlay.active { opacity: 1; pointer-events: auto;}
+.lightbox-overlay img { max-width: 90%; max-height: 90%; border: 3px solid #A30000; box-shadow: 0 0 40px rgba(163,0,0,0.5); border-radius: 6px;}
+/* PIE DE PÁGINA GENÉRICO */
+#footer, .footer, footer, #copyright, .copyright { font-family: 'Almarai', sans-serif !important;}
+.post__share-popup a.js-share i,.post__share-popup a.js-share .label { transition: color 0.2s ease !important;}.post__share-popup a.js-share:hover i,.post__share-popup a.js-share:hover .label { color: #A30000 !important;}
+</style>
+
+<script defer="defer" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dc0ddf9a3f35462c9a71165422e41fe5"}' nonce="MjYxNzE2OTQ3NSw0MDk3OTI4ODY2"></script>
+
+<script nonce="MjYxNzE2OTQ3NSw0MDk3OTI4ODY2">
+(function() {
+    /* SEGURIDAD TÁCTICA */
+    function mostrarBloqueo() {
+        if (document.getElementById('bloqueo-hormigueo')) return;
+        const overlay = document.createElement('div'); overlay.id = 'bloqueo-hormigueo'; overlay.style.cssText = "position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9999999; display:flex; align-items:center; justify-content:center; color:white; text-align:center; cursor:pointer; backdrop-filter: blur(5px);";
+        overlay.innerHTML = `
+            <div style="padding:25px 30px; border:3px solid #A30000; background:rgba(0,0,0,0.75); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); width:95%; max-width:540px; box-shadow:0 0 25px rgba(163,0,0,0.5); border-radius:8px;">
+                <h2 style="color:#FFFFFF; font-family:'Inter', sans-serif; font-weight:700; margin-bottom:15px; font-size:1.2rem; text-transform:uppercase;">¡PINTÓ CAPTURA!</h2>
+                <h5 style="color:#FFFFFF; font-family:'Almarai', sans-serif; font-weight:500; font-size:0.90rem; line-height:1.4; margin-bottom:8px;">Si te gustó o disgustó el contenido y querés hormiguear</h5>
+                <h4 style="color:#FFFFFF; font-family:'Almarai', sans-serif; font-size:0.90rem; font-weight:700; margin-top:0;">🔗 compartí el enlace de este sitio 🔗.</h4>
+                <p style="color:#FFFFFF; margin-top:15px; font-family:'Almarai', sans-serif; font-weight:500; font-size:0.75rem; opacity:0.8; text-align: center;">(Tocá escape o picá en cualquier parte para volver al inicio)</p>
+            </div>`; 
+        overlay.onclick = () => overlay.remove(); document.body.appendChild(overlay);
+    }
+    window.addEventListener('keyup', e => { if (e.key === 'PrintScreen' || e.keyCode === 44) mostrarBloqueo(); });
+    window.addEventListener('keydown', e => { if (e.key === 'PrintScreen' || (e.shiftKey && e.key === 'PrintScreen') || (e.ctrlKey && e.key === 'PrintScreen') || (e.altKey && e.key === 'PrintScreen')) mostrarBloqueo(); });
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('copy', e => {
+        const link = window.location.href;
+        e.clipboardData.setData('text/plain', '🐜 Picá y mirá esto en: ' + link);
+        e.preventDefault();
+        alert('Hormigueá y compartí el contenido 🔗 Ya te facilitamos el enlace.');
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const dic = {'Next': 'Siguiente', 'Previous': 'Anterior', 'Menu': 'MENÚ'};
+        document.querySelectorAll('a, button, .pagination-next, .pagination-prev, #navPanel a').forEach(el => {
+            const txt = el.textContent.trim();
+            Object.keys(dic).forEach(key => { if (txt.includes(key)) el.innerHTML = el.innerHTML.replace(key, dic[key]); });
+        });
+
+        // CONTACTO OFICIAL INYECTADO EN LA BIO
+        const bioAuthorP = document.querySelector('.post__bio p');
+        if (bioAuthorP && !document.querySelector('.bio-contacto')) {
+            const emailHTML = `<div class="bio-contacto">CONTACTO<br><a href="mailto:marceoliveira@hormigue.ar" target="_blank" rel="noopener noreferrer">marceoliveira@hormigue.ar <i class="fa-solid fa-envelope"></i></a></div>`;
+            bioAuthorP.insertAdjacentHTML('afterend', emailHTML);
+        }
+    }); 
+})();
+</script>
+
+<script nonce="MjYxNzE2OTQ3NSw0MDk3OTI4ODY2">
+(function() {
+    var originalTitle = document.title;
+    var timeout;
+    document.addEventListener("visibilitychange", function() {
+        if (document.hidden) {
+            document.title = "hormigue.ar";
+        } else {
+            clearTimeout(timeout);
+            document.title = "hola";
+            setTimeout(function() { document.title = originalTitle; }, 2000);
+        }
+    });
+})();
+</script>
+
+</body>
+</html>

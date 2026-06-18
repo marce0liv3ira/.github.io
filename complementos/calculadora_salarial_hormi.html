@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>CALCULADORA NODOCENTE - HORMIGUEAR</title>
+    <meta name="description" content="Simulador salarial para Nodocentes. Entendé tu recibo y qué se resigna con el acuerdo patronal.">
+    <meta name="generator" content="Publii Open-Source CMS for Static Site">
+    
+    <link rel="shortcut icon" href="https://hormigue.ar/media/website/logo-hormi-new.png" type="image/x-icon">
+    <link rel="preload" href="https://hormigue.ar/assets/dynamic/fonts/archivonarrow/archivonarrow.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://hormigue.ar/assets/dynamic/fonts/archivonarrow/archivonarrow-italic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="https://hormigue.ar/assets/css/fontawesome-all.min.css?v=85514f933f9e0b82460af63f1a403fa5">
+    <link rel="stylesheet" href="https://hormigue.ar/assets/css/style.css?v=daacea9621e9ec37ee84b1388c166738">
+    <noscript><link rel="stylesheet" href="https://hormigue.ar/assets/css/noscript.css?v=efa867a99f5064d6729e4dc2008ad50b"></noscript>
+    
+    <style>
+        #wrapper > .bg {               
+            background-image: url(https://hormigue.ar/assets/images/overlay.png), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(https://hormigue.ar/media/website/hormigas-negativas-rojo-3.png);           
+        }
+
+        /* --- CONTENEDOR ANCHO Y FLEXIBLE PARA TABLAS --- */
+        .tacuru-contenedor-tablas {
+            width: 100%;
+            max-width: 1800px;
+            margin: 30px auto; 
+            background-color: transparent !important;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center;
+            overflow-x: auto; 
+            padding: 0 5px; 
+            z-index: 5;
+        }
+
+        /* --- ESTILOS DE LA CALCULADORA TACURÚ --- */
+        .tacuru-calculadora {
+            font-family: 'Roboto Condensed', 'Inter', sans-serif;
+            color: #FFFFFF;
+            background-color: #000000;
+            border: 2px solid #A30000;
+            border-radius: 4px;
+            padding: 12px;
+            margin: 0;
+            box-shadow: 0 0 10px #A30000;
+            background-image: url('https://replicate.delivery/xpbkg/H7GfXz34YF0QJpE8X6K6K3J9S8U6S6S6S6S6S6S6S6S6S6S/hormiguear_watermark.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            position: relative;
+            user-select: none;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .tacuru-calculadora * { box-sizing: border-box; }
+
+        .tacuru-calc-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .calc-panel {
+            background-color: rgba(0, 0, 0, 0.85);
+            border: 1px solid #A30000;
+            border-radius: 4px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .calc-header {
+            background-color: #A30000;
+            color: #FFFFFF;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.3rem;
+            padding: 6px 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-align: center;
+            border-bottom: 2px solid #991A1A;
+        }
+
+        .calc-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.95rem;
+        }
+
+        .calc-row:last-child { border-bottom: none; }
+
+        .calc-row.total-row {
+            background-color: #991A1A;
+            font-weight: bold;
+            color: #FFFFFF;
+            border-top: 2px solid #A30000;
+        }
+
+        .calc-row.neto-row {
+            background-color: #FFFFFF;
+            color: #000000;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border-top: 4px solid #A30000;
+            padding: 10px;
+        }
+
+        .calc-row label {
+            flex: 1;
+            cursor: pointer;
+            font-weight: 500;
+            color: #ffcccc;
+        }
+
+        .calc-row span.label-out {
+            flex: 1;
+            font-weight: 400;
+            color: #FFFFFF;
+        }
+
+        .calc-input, .calc-select {
+            width: 165px; 
+            background-color: #FAF6ED;
+            border: 1px solid #A30000;
+            color: #000000;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 0.95rem;
+            padding: 3px;
+            text-align: right;
+            border-radius: 2px;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .calc-select {
+            text-align: left;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 6px center;
+            background-size: 12px;
+            padding-right: 22px;
+        }
+
+        .calc-input:focus, .calc-select:focus {
+            outline: none;
+            box-shadow: 0 0 8px #ff4d4d;
+        }
+
+        .calc-value {
+            font-weight: 500;
+            text-align: right;
+            flex-shrink: 0;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        .destacado-carga {
+            background-color: rgba(163, 0, 0, 0.3);
+            border-left: 3px solid #ff4d4d;
+        }
+
+        .calc-footer {
+            margin-top: 12px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(163, 0, 0, 0.7);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            font-size: 0.72rem;
+            color: #c9c9c9;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.4;
+        }
+
+        .calc-footer-text { flex: 1; }
+        .calc-footer a { color: #ff6666; text-decoration: none; font-weight: 600; }
+        .calc-footer a:hover { color: #ffffff; text-decoration: underline; }
+        .calc-footer-logo img { width: 70px; height: auto; display: block; opacity: 0.55; transition: opacity 0.2s ease; }
+        .calc-footer-logo img:hover { opacity: 1; }
+
+        @media (max-width: 900px) {
+            .tacuru-calc-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .calc-input, .calc-select {
+                width: 50%;
+                max-width: 140px;
+            }
+            .calc-footer {
+                flex-direction: column;
+                text-align: center;
+            }
+            .calc-footer-logo img {
+                width: 120px;
+            }
+        }
+
+/* CENTRADO ABSOLUTO DE LA CALCULADORA (O TABLA) */
+.tacuru-calculadora, 
+.contenedor-prueba {
+    margin: 0 auto !important; /* alineación izquierda */
+    width: 100%;
+    
+}
+/* FORZAR TRANSPARENCIA AL CONTENEDOR PRINCIPAL DE PUBLII */
+main#main {
+    background-color: transparent !important;
+    background: none !important;
+}
+
+/* BLINDAJE DEL CONTENEDOR TACURÚ */
+.tacuru-contenedor-tablas {
+    width: 100%;
+    
+    margin: 30px auto !important; /* Auto a los lados */
+    background-color: transparent !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center !important; /* O */
+    justify-content: center !important;
+    overflow-x: auto; 
+    padding: 0 15px; 
+    z-index: 5;
+}
+
+/* --- RECUPERACIÓN DE ESTILOS ORIGINALES --- */
+
+/* 1. fondo  article.post */
+article.post {
+    background-color: #FAF6ED !important; /*  */
+    border: 1px solid #A30000 !important;
+    border-radius: 4px;
+    padding: 2em; /* relleno original texto */
+}
+
+/* 2. El contenedor dentro del flujo */
+.tacuru-contenedor-tablas {
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+    background: transparent !important; /*  */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+    padding: 0 15px;
+}
+
+.footer-bunker a,
+.footer-bunker a:hover,
+.footer-bunker a:focus,
+.footer-bunker a:active {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.footer-bunker a img {
+    opacity: 0.55;
+    transition: opacity 0.2s ease;
+}
+
+.footer-bunker a:hover img {
+    opacity: 1;
+}
+
+    </style>
+    <noscript>
+        <style>img[loading] { opacity: 1; }</style>
+    </noscript>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Bebas+Neue&family=Inter:wght@400;500;700&family=Roboto+Condensed:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://hormigue.ar/media/website/logo-hormi-new.png" media="(prefers-color-scheme: light)">
+    <link rel="shortcut icon" href="https://pica.hormigue.ar/img/ico/icohormiblancovec.png" media="(prefers-color-scheme: dark)">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js" nonce="NDI3MjUyMjM3OCw5NTM2MjY2OTk="></script>
+    <link rel="stylesheet" href="https://hormigue.ar/media/plugins/coreLightboxGallery/photoswipe.min.css">
+    <style>
+        :root {		       	 
+            --pswp-bg: rgba(0,0,0,0.79);					 
+            --pswp-placeholder-bg: rgba(38, 40, 44, 1);					 
+            --pswp-ui-bg: rgba(96,5,5,0.82);                
+            --pswp-ui-color: rgba(255,255,255,0.9);                
+            --pswp-icon-stroke-width: 1.5;                
+            --pswp-icon-size: 24px;            
+        }
+        .pswp--zoomed-in .pswp__zoom-icn-bar-v { display: none; }
+    </style>
+</head>
+
+<body class="is-preload post-template">
+<div id="wrapper">
+    
+    <header id="header">
+        <a class="logo logo-image" href="https://hormigue.ar/">
+            <img src="https://hormigue.ar/media/website/logo-hormi-new-2.png" alt="HORMIGUEAR" width="1837" height="1809">
+        </a>
+    </header>
+
+    <main id="main">
+        
+        <!-- PRIMERA MITAD DEL ARTÍCULO: Cabecera y texto introductorio -->
+        <article class="post">
+            <header class="major" style="padding-bottom: 20px;">
+                <h1 style="color: #A30000; text-shadow: 0 0 10px rgba(163,0,0,0.3);">SIMULADOR PIRAPIRÉ</h1><br><h2 style="color: #A30000; text-shadow: 0 0 10px rgba(163,0,0,0.3);">CALCULADORA SALARIAL NODOCENTE</h2><br>
+                <p class="post__inner" style="font-family: 'Inter', sans-serif; font-size: 1.2rem; font-weight: 500; color: #FFFFFF; line-height: 1.5; margin-top: 15px;">
+                    La calculadora se construyó tomando como parámetro la liquidación salarial nodocente de la Universidad Nacional de Misiones y los instructivos y el CCT 366/06. Vale tener en cuenta las particularidades locales y convenios que podrían sesgar el resultado final.
+                </p>
+            </header>
+            <style>
+                .btn-tacuru-info {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 10px 24px;
+                    font-family: 'Bebas Neue', 'Roboto Condensed', sans-serif;
+                    font-size: 1.2rem;
+                    letter-spacing: 1.5px;
+                    color: #A30000!important;
+                    background-color: transparent;
+                    border: 2px solid #A30000;
+                    border-radius: 4px;
+                    text-decoration: none !important;
+                    text-transform: uppercase;
+                    transition: all 0.2s ease-in-out;
+                    cursor: pointer;
+                }
+
+                .btn-tacuru-info:hover {
+                    background-color: #A30000;
+                    color: #FFFFFF !important;
+                    box-shadow: 0 0 12px rgba(163, 0, 0, 0.6);
+                }
+            </style>
+            
+            <div class="post__inner post__entry">
+                <p style="font-family: 'Inter', sans-serif; font-size: 1.05rem; color: #A30000; border-left: 3px solid #A30000; padding-left: 15px; margin-bottom: 30px; font-style: normal;">
+                    Los cálculos de los distintos ítems se realizaron a partir del Convenio Colectivo de Trabajo (CCT), los instructivos de liquidación y documentación publicada por otras universidades nacionales. La grilla salarial utilizada es la de mayo y se actualizará en la medida que evolucionen los salarios.</p>
+<p style="font-family: 'Inter', sans-serif; font-size: 1.05rem; color: #A30000; border-left: 3px solid #A30000; padding-left: 15px; margin-bottom: 30px; font-style: normal;">Como las actas y los procedimientos de cálculo no siempre son públicos ni fáciles de conseguir, parte del trabajo consistió en <b>reconstruir criterios</b> a partir de recibos históricos, instructivos y normativa dispersa. La transparencia administrativa sigue siendo una tradición exótica en buena parte del sistema universitario.</p>
+<p style="font-family: 'Inter', sans-serif; font-size: 1.05rem; color: #A30000; border-left: 3px solid #A30000; padding-left: 15px; margin-bottom: 30px; font-style: normal;">Aunque la calculadora fue revisada y contrastada con distintas fuentes, puede contener <b>diferencias menores</b> en casos puntuales. <b>Las correcciones, críticas y colaboraciones son bienvenidas</b>. Para eso está disponible el correo de contacto que figura al pie de esta página.</p>
+<p style="font-family: 'Inter', sans-serif; font-size: 1.05rem; color: #A30000; border-left: 3px solid #A30000; padding-left: 15px; margin-bottom: 30px; font-style: normal;">La herramienta sirve también para estimar de cuánto sería la liquidación salarial si Milei cumpliera con la Ley de Financiamiento Universitario.</p>
+                </p>
+            </div>
+    <div style="text-align: center; margin: 20px 0;" title="Conocé otros aportes de Hormiguear">
+                <a href="https://hormigue.ar/data-unam/" class="btn-tacuru-info" target="_blank" rel="noopener noreferrer">Un poco más</a>
+            </div>
+        </article>
+
+
+        <!-- TIERRA DE NADIE: CONTENEDOR FLEXIBLE Y ANCHO (EL TACURÚ) -->
+        <div class="tacuru-contenedor-tablas">
+            
+            <!-- LA CALCULADORA INYECTADA -->
+            <div class="tacuru-calculadora" title="Un servicio de Hormiguear">
+                <div class="tacuru-calc-grid">
+                    
+                    <!-- COLUMNA 1: INPUTS TÁCTICOS -->
+                    <div class="calc-panel">
+                        <div class="calc-header">Carga de Datos</div>
+                        
+                        <div class="calc-row">
+                            <label for="sel-categoria">Categoría</label>
+                            <select class="calc-select" id="sel-categoria">
+                                <option value="1">Categoría 1</option>
+                                <option value="2">Categoría 2</option>
+                                <option value="3">Categoría 3</option>
+                                <option value="4">Categoría 4</option>
+                                <option value="5">Categoría 5</option>
+                                <option value="6">Categoría 6</option>
+                                <option value="7" selected>Categoría 7</option>
+                            </select>
+                        </div>
+                        
+                        <!-- BÁSICO AUTOMATIZADO Y SELLADO -->
+                        <div class="calc-row">
+                            <label>Básico de Categoría</label>
+                            <span class="calc-value" id="out-basico-carga" style="color: #ffcccc;">$ 0.00</span>
+                        </div>
+
+                        <div class="calc-row destacado-carga">
+                            <label for="inp-aumento">Aumento (%)</label>
+                            <input type="number" class="calc-input" id="inp-aumento" value="" step="0.01">
+                        </div>
+                        
+                        <!-- SWITCH ZONA DESFAVORABLE -->
+                        <div class="calc-row" style="margin-top: 5px; border-top: 1px solid rgba(255,255,255,0.3);">
+                            <label for="sel-zona">Zona Desfavorable</label>
+                            <select class="calc-select" id="sel-zona">
+                                <option value="si">Sí</option>
+                                <option value="no" selected>No</option>
+                            </select>
+                        </div>
+
+                        <div class="calc-row">
+                            <label for="inp-antiguedad">Antigüedad (Años)</label>
+                            <input type="number" class="calc-input" id="inp-antiguedad" value="" min="0" step="1">
+                        </div>
+                        
+                        <div class="calc-row">
+                            <label for="sel-permanencia">Permanencia</label>
+                            <select class="calc-select" id="sel-permanencia">
+                                <option value="0" selected>Menos de 2 años</option>
+                                <option value="0.10">2 a 3 años (10%)</option>
+                                <option value="0.25">4 a 5 años (25%)</option>
+                                <option value="0.45">6 a 7 años (45%)</option>
+                                <option value="0.70">8 o más años (70%)</option>
+                            </select>
+                        </div>
+                        <div class="calc-row">
+                            <label for="sel-titulo">Adicional Título</label>
+                            <select class="calc-select" id="sel-titulo">
+                                <option value="0" selected>Sin título</option>
+                                <option value="secundario">Secundario / Polimodal</option>
+                                <option value="0.10">Pregrado (1 a 3 años)</option>
+                                <option value="0.20">Tecnicatura (TGU)</option>
+                                <option value="0.25">Grado</option>
+                                <option value="0.30">Posgrado</option>
+                            </select>
+                        </div>
+
+                        <div class="calc-row" style="margin-top: 5px; border-top: 1px solid rgba(255,255,255,0.3);">
+                            <label for="sel-grado">¿Percibe Adic. Grado?</label>
+                            <select class="calc-select" id="sel-grado">
+                                <option value="si" selected>Sí</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div class="calc-row">
+                            <label for="sel-cap">¿Percibe Capacitación?</label>
+                            <select class="calc-select" id="sel-cap">
+                                <option value="si" selected>Sí</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div class="calc-row">
+                            <label for="sel-afiliado">Afiliado Gremio</label>
+                            <select class="calc-select" id="sel-afiliado">
+                                <option value="si" selected>Sí</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div class="calc-row" style="margin-top: 5px; border-top: 1px solid rgba(255,255,255,0.3);">
+                            <label for="inp-garantia">Bono Garantía Salarial</label>
+                            <input type="number" class="calc-input" id="inp-garantia" value="" step="0.01">
+                        </div>
+                        <div class="calc-row">
+                            <label for="inp-consuelo">Bonito Consuelo</label>
+                            <input type="number" class="calc-input" id="inp-consuelo" value="" step="0.01">
+                        </div>
+                    </div>
+
+                    <!-- COLUMNA 2: HABERES -->
+                    <div class="calc-panel">
+                        <div class="calc-header">Haberes</div>
+                        <div class="calc-row">
+                            <span class="label-out">101-BASICO</span>
+                            <span class="calc-value" id="out-basico">$ 0.00</span>
+                        </div>
+                        <div class="calc-row">
+                            <span class="label-out">114-AD.DTO.1610/93</span>
+                            <span class="calc-value" id="out-dto">$ 90.00</span>
+                        </div>
+                        <div class="calc-row">
+                            <span class="label-out">120-ZONA</span>
+                            <span class="calc-value" id="out-zona">$ 0.00</span>
+                        </div>
+                        <div class="calc-row">
+                            <span class="label-out" id="lbl-titulo">135-TIT.SECUNDARIO</span>
+                            <span class="calc-value" id="out-titulo">$ 0.00</span>
+                        </div>
+                        <div class="calc-row">
+                            <span class="label-out">155-ANTIGUEDAD</span>
+                            <span class="calc-value" id="out-antiguedad">$ 0.00</span>
+                        </div>
+                        <div class="calc-row">
+                            <span class="label-out">177-AC.PARIT. NO DO</span>
+                            <span class="calc-value" id="out-ac">$ 56.25</span>
+                        </div>
+                        <div class="calc-row">
+                            <span class="label-out">180-PERMANENCIA</span>
+                            <span class="calc-value" id="out-permanencia">$ 0.00</span>
+                        </div>
+                        <div class="calc-row">
+                            <span class="label-out">202-VALES L. 26341</span>
+                            <span class="calc-value" id="out-vales">$ 240.96</span>
+                        </div>
+                        <div class="calc-row" style="color: #e6b800;">
+                            <span class="label-out">210-S.FIJA ND NRNB</span>
+                            <span class="calc-value" id="out-210">$ 1,000.00</span>
+                        </div>
+                        <div class="calc-row">
+                            <span class="label-out" id="lbl-grado">217-ADIC.REM. GRADO</span>
+                            <span class="calc-value" id="out-grado">$ 0.00</span>
+                        </div>
+                        <div class="calc-row">
+                            <span class="label-out" id="lbl-cap">220-ADIC. CAPACITAC</span>
+                            <span class="calc-value" id="out-cap">$ 0.00</span>
+                        </div>
+                        <div class="calc-row" style="color: #e6b800;">
+                            <span class="label-out">338-GS ND NR NB</span>
+                            <span class="calc-value" id="out-norem">$ 0.00</span>
+                        </div>
+                        <div class="calc-row" style="color: #ffcccc;">
+                            <span class="label-out">347-SF REM NB ND</span>
+                            <span class="calc-value" id="out-sf">$ 0.00</span>
+                        </div>
+                        
+                        <div style="flex-grow: 1;"></div>
+                        
+                        <div class="calc-row total-row">
+                            <span class="label-out">BRUTO TOTAL</span>
+                            <span class="calc-value" id="out-bruto">$ 0.00</span>
+                        </div>
+                    </div>
+
+                    <!-- COLUMNA 3: RETENCIONES -->
+                    <div class="calc-panel">
+                        <div class="calc-header">Retenciones</div>
+                        <div class="calc-row">
+                            <span class="label-out">505-SEG.OBLIGATORIO</span>
+                            <span class="calc-value" id="out-seg">$ 3.80</span>
+                        </div>
+                        <div class="calc-row">
+                            <span class="label-out">520-AP. OB.SOCIAL (Smaunam) 3%</span>
+                            <span class="calc-value" id="out-os">$ 0.00</span>
+                        </div>
+                        <div class="calc-row">
+                            <span class="label-out">530-AP.INSSPJP (PAMI) 3%</span>
+                            <span class="calc-value" id="out-insspjp">$ 0.00</span>
+                        </div>
+                        <div class="calc-row">
+                            <span class="label-out">532-AJUB.NO DO 11%</span>
+                            <span class="calc-value" id="out-jub">$ 0.00</span>
+                        </div>
+                        <div class="calc-row">
+                            <span class="label-out">535-APORTE APUNAM</span>
+                            <span class="calc-value" id="out-apunam">$ 0.00</span>
+                        </div>
+                        
+                        <div class="calc-row total-row" style="background-color: rgba(255,255,255,0.1); border-top: 1px solid rgba(255,255,255,0.3); margin-bottom: 20px;">
+                            <span class="label-out">Total Retenciones</span>
+                            <span class="calc-value" id="out-totaldesc">$ 0.00</span>
+                        </div>
+
+                        <div style="flex-grow: 1;"></div>
+                        
+                        <div class="calc-header" style="background-color: #ffffff; color: #A30000; border-top: 3px solid #A30000; margin-top: auto;">Liquidación Final</div>
+                        <div class="calc-row neto-row">
+                            <span class="label-out" style="color: #A30000;">NETO</span>
+                            <span class="calc-value" id="out-neto" style="color: #A30000;">$ 0.00</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="calc-footer">
+
+    <div class="calc-footer-text">
+                        <b style="color: #D4B0A7;">Fabricación:</b>
+                        <a href="https://hormigue.ar/" target="_blank" rel="noopener noreferrer">
+                            Hormiguear
+                        </a>
+                        <br>
+                        <b style="color: #D4B0A7;">Fuentes:</b> CCT 366/06; Instructivo de Liquidación mayo 2026; Guías de Liquidación VVAA UUNN.<br>
+			<b style="color: #D4B0A7;">Dato coyuntural:</b> la Canasta de Consumos Mínimos estimada por <a href="https://www.instagram.com/ateindec/" target="_blank" rel="noopener noreferrer">ATE-Indec</a> para NEA (abr 2026) es de <b style="color: #F0E2DD;">$2.136.407</b>.<br>La CCM indica el ingreso <em>mínimo</em>, no óptimo. Incluye bienes y servicios básicos no contemplados en indicadores clásicos.<br>La <a href="https://www.instagram.com/p/DZfb5dglEXq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer">federación sindical de Aceiteros+</a> calculó para <b style="color: #F0E2DD;">junio</b> un Salario Vital y Móvil en <b style="color: #F0E2DD;">$2.802.754</b> con los datos IPC e Indec.
+                    </div>
+
+                    <div class="calc-footer-logo">
+                        <a href="https://hormigue.ar/" target="_blank" rel="noopener noreferrer">
+                            <img src="https://pica.hormigue.ar/img/ico/icohormiblanco.svg" alt="Hormiguear">
+                        </a>
+                    </div>
+
+</div>
+            </div>
+            <!-- FIN DE LA CALCULADORA -->
+
+        </div>
+
+
+        <!-- SEGUNDA MITAD DEL ARTÍCULO: Exclusivo para la biografía -->
+        <article class="post">
+            <div class="post__inner post__entry" style="padding-top: 0; margin-top: -20px;">
+                <div class="post__bio"><img src="https://hormigue.ar/media/website/marcef.webp" loading="lazy" height="598" width="599" alt="marce oliveira" class="is-loaded"><div><h3><a href="https://hormigue.ar/acerca-de/" class="invert" target="_blank" rel="noopener noreferrer">marce oliveira</a></h3><p>Empleado nodocente de la Universidad Nacional de Misiones, activista integrante del Comité de Lucha Universitaria y de Izquierda Socialista.</p><div class="bio-contacto">CONTACTO<br><a href="mailto:marceoliveira@hormigue.ar" target="_blank" rel="noopener noreferrer">marceoliveira@hormigue.ar <b>&#9993;</b></a></div></div></div>
+            </div>
+        </article>
+
+    </main>
+
+   <footer id="copyright">
+        <div class="footer-bunker" style="text-align: center; vertical-align: middle; width: 100%; color: #ffffff; line-height: 1.6; padding: 25px 0; display: block;">
+            <p style="margin-bottom: 8px; text-align: center !important; vertical-align: middle;">
+                <strong class="title-site-m" style="font-family: 'Almarai', sans-serif; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.8px; text-shadow: 0 0 4px #000, 0 0 8px #000, 0 0 12px #000, 0 0 16px #000, 0 0 20px #000 !important;">HORMIGUE.AR  </strong>
+                 <a href="https://hormigue.ar/" target="_blank" rel="noopener noreferrer"><span class="no-break" style="white-space: nowrap !important; display: inline-block;"><img style="height: 2rem; width: auto; vertical-align: middle; filter: drop-shadow(0 0 4px #000) drop-shadow(0 0 8px #000) drop-shadow(0 0 12px #000);" src="https://pica.hormigue.ar/hormiMG/icono%20hormi.png" alt="Ícono Hormi"></span></a>
+                <span style="text-shadow: 0 0 4px #000, 0 0 8px #000, 0 0 12px #000, 0 0 16px #000, 0 0 20px #000 !important;"><span style="display: inline-block; transform: scaleX(-1);">C</span>opyleft</span>
+            </p>
+            <p class="sub-text-m" style="font-family: 'Arial Narrow', Arial, sans-serif; font-weight: 500; font-size: 0.4rem; color: #ffffff; margin: 0 auto; max-width: 90%; text-shadow: 0 0 5px #000, 0 0 9px #000; text-align: center; vertical-align: middle;">un sitio creado con pocos recursos técnicos,<br>económicos e intelectuales</p>
+        </div>
+    </footer>
+
+</div>
+
+<script src="https://hormigue.ar/assets/js/jquery.min.js?v=c9771cc3e90e18f5336eedbd0fffb2cf" nonce="NDI3MjUyMjM3OCw5NTM2MjY2OTk="></script>
+<script src="https://hormigue.ar/assets/js/jquery.scrollex.min.js?v=f89065e3d988006af9791b44561d7c90" nonce="NDI3MjUyMjM3OCw5NTM2MjY2OTk="></script>
+<script src="https://hormigue.ar/assets/js/jquery.scrolly.min.js?v=1ed5a78bde1476875a40f6b9ff44fc14" nonce="NDI3MjUyMjM3OCw5NTM2MjY2OTk="></script>
+<script src="https://hormigue.ar/assets/js/browser.min.js?v=c07298dd19048a8a69ad97e754dfe8d0" nonce="NDI3MjUyMjM3OCw5NTM2MjY2OTk="></script>
+<script src="https://hormigue.ar/assets/js/breakpoints.min.js?v=81a479eb099e3b187613943b085923b8" nonce="NDI3MjUyMjM3OCw5NTM2MjY2OTk="></script>
+<script src="https://hormigue.ar/assets/js/util.min.js?v=4201a626f8c9b614a663b3a1d7d82615" nonce="NDI3MjUyMjM3OCw5NTM2MjY2OTk="></script>
+<script src="https://hormigue.ar/assets/js/main.min.js?v=56233c354bd814758be8bff42f7e13a5" nonce="NDI3MjUyMjM3OCw5NTM2MjY2OTk="></script>
+<script nonce="NDI3MjUyMjM3OCw5NTM2MjY2OTk=">/*<![CDATA[*/var images=document.querySelectorAll("img[loading]");for(var i=0;i<images.length;i++){if(images[i].complete){images[i].classList.add("is-loaded")}else{images[i].addEventListener("load",function(){this.classList.add("is-loaded")},false)}};/*]]>*/</script>
+
+<style>
+/* =========================   AUDIO FLOTANTE ========================= */
+#audio-floating-player { position: fixed; top: 180px; left: 16px; z-index: 9999; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 10px 12px 2px 12px; background: rgba(0, 0, 0, 0.65); border: 1px solid #A30000; border-radius: 10px; box-shadow: 0 0 8px rgba(163, 0, 0, 0.6), 0 0 18px rgba(163, 0, 0, 0.4); backdrop-filter: blur(4px); transition: all 0.2s ease;}
+#audio-floating-player audio { width: 250px;}
+#audio-floating-player .audio-label { font-family: 'HerosCond', sans-serif; font-size: 11px; font-weight: normal; color: #ff2b2b; margin-top: -6px; letter-spacing: 1px; text-transform: uppercase; opacity: 0.85;}
+@media (max-width: 768px) { #audio-floating-player { top: 30px !important; left: 10px !important; display: flex !important; justify-content: center !important; align-items: center !important; width: 50px !important; height: 50px !important; padding: 0 !important; border-radius: 50% !important; background: rgba(0, 0, 0, 0.65) !important; cursor: pointer !important; overflow: visible !important; } #audio-floating-player audio { display: none !important; } #audio-floating-player::before { content: "\f04b" !important; font-family: "Font Awesome 5 Free", "FontAwesome", sans-serif !important; font-weight: 700 !important; color: #ff2b2b !important; font-size: 20px !important; margin-left: 4px !important; transition: all 0.2s ease-in-out !important; } #audio-floating-player.playing::before { content: "\f04c" !important; margin-left: 0 !important; } #audio-floating-player .audio-label { position: absolute !important; bottom: -28px !important; left: 50% !important; transform: translateX(-50%) !important; font-size: 0 !important; color: transparent !important; letter-spacing: 0 !important; background-color: transparent !important; box-shadow: none !important; border-radius: 0 !important; background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.65) 20%, rgba(0, 0, 0, 0) 55%) !important; padding: 8px 20px !important; text-shadow: none !important; opacity: 0.95 !important; } #audio-floating-player .audio-label::after { content: "\f028" !important; font-family: "Font Awesome 5 Free", "FontAwesome", sans-serif !important; font-weight: 900 !important; font-size: 15px !important; color: #ff2b2b !important; display: block !important; } }
+/* =========================   LIGHTBOX ========================= */
+.lightbox-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.85); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; z-index: 99999;}
+.lightbox-overlay.active { opacity: 1; pointer-events: auto;}
+.lightbox-overlay img { max-width: 90%; max-height: 90%; border: 3px solid #A30000; box-shadow: 0 0 40px rgba(163,0,0,0.5); border-radius: 6px;}
+/* PIE DE PÁGINA GENÉRICO */
+#footer, .footer, footer, #copyright, .copyright { font-family: 'Almarai', sans-serif !important;}
+.post__share-popup a.js-share i,.post__share-popup a.js-share .label { transition: color 0.2s ease !important;}.post__share-popup a.js-share:hover i,.post__share-popup a.js-share:hover .label { color: #A30000 !important;}
+</style>
+
+<script defer="defer" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "dc0ddf9a3f35462c9a71165422e41fe5"}' nonce="NDI3MjUyMjM3OCw5NTM2MjY2OTk="></script>
+
+<script nonce="NDI3MjUyMjM3OCw5NTM2MjY2OTk=">
+(function() {
+    /* SEGURIDAD TÁCTICA */
+    function mostrarBloqueo() {
+        if (document.getElementById('bloqueo-hormigueo')) return;
+        const overlay = document.createElement('div'); overlay.id = 'bloqueo-hormigueo'; overlay.style.cssText = "position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9999999; display:flex; align-items:center; justify-content:center; color:white; text-align:center; cursor:pointer; backdrop-filter: blur(5px);";
+        overlay.innerHTML = `
+            <div style="padding:25px 30px; border:3px solid #A30000; background:rgba(0,0,0,0.75); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); width:95%; max-width:540px; box-shadow:0 0 25px rgba(163,0,0,0.5); border-radius:8px;">
+                <h2 style="color:#FFFFFF; font-family:'Inter', sans-serif; font-weight:700; margin-bottom:15px; font-size:1.2rem; text-transform:uppercase;">¡PINTÓ CAPTURA!</h2>
+                <h5 style="color:#FFFFFF; font-family:'Almarai', sans-serif; font-weight:500; font-size:0.90rem; line-height:1.4; margin-bottom:8px;">Si te gustó o disgustó el contenido y querés hormiguear</h5>
+                <h4 style="color:#FFFFFF; font-family:'Almarai', sans-serif; font-size:0.90rem; font-weight:700; margin-top:0;">🔗 compartí el enlace de este sitio 🔗.</h4>
+                <p style="color:#FFFFFF; margin-top:15px; font-family:'Almarai', sans-serif; font-weight:500; font-size:0.75rem; opacity:0.8; text-align: center;">(Tocá escape o picá en cualquier parte para volver al inicio)</p>
+            </div>`; 
+        overlay.onclick = () => overlay.remove(); document.body.appendChild(overlay);
+    }
+    window.addEventListener('keyup', e => { if (e.key === 'PrintScreen' || e.keyCode === 44) mostrarBloqueo(); });
+    window.addEventListener('keydown', e => { if (e.key === 'PrintScreen' || (e.shiftKey && e.key === 'PrintScreen') || (e.ctrlKey && e.key === 'PrintScreen') || (e.altKey && e.key === 'PrintScreen')) mostrarBloqueo(); });
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('copy', e => {
+        const link = window.location.href;
+        e.clipboardData.setData('text/plain', '🐜 Picá y mirá esto en: ' + link);
+        e.preventDefault();
+        alert('Hormigueá y compartí el contenido 🔗 Ya te facilitamos el enlace.');
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const dic = {'Next': 'Siguiente', 'Previous': 'Anterior', 'Menu': 'MENÚ'};
+        document.querySelectorAll('a, button, .pagination-next, .pagination-prev, #navPanel a').forEach(el => {
+            const txt = el.textContent.trim();
+            Object.keys(dic).forEach(key => { if (txt.includes(key)) el.innerHTML = el.innerHTML.replace(key, dic[key]); });
+        });
+
+        // CONTACTO OFICIAL INYECTADO EN LA BIO
+        const bioAuthorP = document.querySelector('.post__bio p');
+        if (bioAuthorP && !document.querySelector('.bio-contacto')) {
+            const emailHTML = `<div class="bio-contacto">CONTACTO<br><a href="mailto:marceoliveira@hormigue.ar" target="_blank" rel="noopener noreferrer">marceoliveira@hormigue.ar <i class="fa-solid fa-envelope"></i></a></div>`;
+            bioAuthorP.insertAdjacentHTML('afterend', emailHTML);
+        }
+    }); 
+})();
+</script>
+
+<script nonce="NDI3MjUyMjM3OCw5NTM2MjY2OTk=">
+(function() {
+    var originalTitle = document.title;
+    var timeout;
+    document.addEventListener("visibilitychange", function() {
+        if (document.hidden) {
+            document.title = "hormigue.ar";
+        } else {
+            clearTimeout(timeout);
+            document.title = "hola";
+            setTimeout(function() { document.title = originalTitle; }, 2000);
+        }
+    });
+})();
+</script>
+
+<!-- MOTOR LÓGICO DE LA CALCULADORA -->
+<script nonce="NDI3MjUyMjM3OCw5NTM2MjY2OTk=">
+document.addEventListener('DOMContentLoaded', function() {
+    const basicosEscala = {
+        1: 2071851.68, 2: 1726545.86, 3: 1436504.78, 4: 1194787.22, 
+        5: 994491.85,  6: 828732.04,  7: 690617.33
+    };
+
+    const pctGradoCat = {
+        1: 0.06, 2: 0.07, 3: 0.08, 4: 0.11, 
+        5: 0.14, 6: 0.23, 7: 0.27
+    };
+
+    const pctCapCat = {
+        1: 0.03, 2: 0.04, 3: 0.05, 4: 0.06, 
+        5: 0.07, 6: 0.08, 7: 0.10
+    };
+
+    const PCT_ZONA_BONO = 0.50;
+    const PCT_ANTIGUEDAD = 0.02; 
+    const FIJO_DTO = 90.00;
+    const FIJO_AC = 56.25;
+    const FIJO_VALES = 240.96;
+    const FIJO_210_NRNB = 1000.00; 
+    const FIJO_SEG_OBL = 3.80;
+
+    const formatoArs = new Intl.NumberFormat('es-AR', {
+        style: 'currency', currency: 'ARS', minimumFractionDigits: 2
+    });
+
+    function calcularSueldo() {
+        const cat = parseInt(document.getElementById('sel-categoria').value);
+        
+        const basicoBaseOficial = basicosEscala[cat];
+        document.getElementById('out-basico-carga').innerText = formatoArs.format(basicoBaseOficial);
+
+        const pctAumento = parseFloat(document.getElementById('inp-aumento').value) || 0;
+        const factorAumento = 1 + (pctAumento / 100);
+        
+        const sueldoBasicoLiquidado = basicoBaseOficial * factorAumento;
+
+        const percibeZona = document.getElementById('sel-zona').value === 'si';
+        const aniosAntiguedad = parseInt(document.getElementById('inp-antiguedad').value) || 0;
+        const coefPermanencia = parseFloat(document.getElementById('sel-permanencia').value);
+        const valTitulo = document.getElementById('sel-titulo').value;
+        const afiliado = document.getElementById('sel-afiliado').value === 'si';
+        const percibeGrado = document.getElementById('sel-grado').value === 'si';
+        const percibeCap = document.getElementById('sel-cap').value === 'si';
+        
+        const baseTituloCat7Fantasma = 680411.14; 
+        
+        const vGarantiaNRNB = parseFloat(document.getElementById('inp-garantia').value) || 0;
+        const vSF = parseFloat(document.getElementById('inp-consuelo').value) || 0;
+
+        const vZona = percibeZona ? (sueldoBasicoLiquidado * PCT_ZONA_BONO) : 0;
+        const vAntiguedad = sueldoBasicoLiquidado * (aniosAntiguedad * PCT_ANTIGUEDAD);
+        
+        const pctGradoReal = pctGradoCat[cat];
+        const pctCapReal = pctCapCat[cat];
+        
+        const vGrado = percibeGrado ? (sueldoBasicoLiquidado * pctGradoReal) : 0;
+        const vCap = percibeCap ? (sueldoBasicoLiquidado * pctCapReal) : 0;
+        
+        let vTitulo = 0;
+        let labelTitulo = "135-TIT.SECUNDARIO";
+        if (valTitulo === 'secundario') {
+            const basicoCat7Proyectado = baseTituloCat7Fantasma * factorAumento;
+            vTitulo = basicoCat7Proyectado * 0.175;
+        } else if (valTitulo !== "0") {
+            vTitulo = sueldoBasicoLiquidado * parseFloat(valTitulo);
+            labelTitulo = "135-TIT.UNIV";
+        }
+        document.getElementById('lbl-titulo').innerText = labelTitulo;
+
+        let vPermanencia = 0;
+        if (coefPermanencia > 0) {
+            let diferencia = 0;
+            if (cat === 1) {
+                diferencia = sueldoBasicoLiquidado * 0.37;
+            } else {
+                const basicoCatSupProyectado = basicosEscala[cat - 1] * factorAumento;
+                const basicoActualProyectado = basicosEscala[cat] * factorAumento;
+                diferencia = basicoCatSupProyectado - basicoActualProyectado;
+            }
+            vPermanencia = diferencia * coefPermanencia;
+        }
+
+        const baseRemunerativa = sueldoBasicoLiquidado + vZona + vAntiguedad + vPermanencia + vTitulo + vGrado + vCap + FIJO_DTO + FIJO_AC + FIJO_VALES + vSF;
+        const brutoTotal = baseRemunerativa + vGarantiaNRNB + FIJO_210_NRNB;
+
+        const dOS = baseRemunerativa * 0.03;
+        const dInsspjp = baseRemunerativa * 0.03;
+        const dJub = baseRemunerativa * 0.11;
+        const dApunam = afiliado ? (baseRemunerativa * 0.02) : 0;
+
+        const totalDesc = FIJO_SEG_OBL + dOS + dInsspjp + dJub + dApunam;
+        const neto = brutoTotal - totalDesc;
+
+        document.getElementById('out-basico').innerText = formatoArs.format(sueldoBasicoLiquidado);
+        document.getElementById('out-zona').innerText = formatoArs.format(vZona);
+        document.getElementById('out-antiguedad').innerText = formatoArs.format(vAntiguedad);
+        document.getElementById('out-permanencia').innerText = formatoArs.format(vPermanencia);
+        document.getElementById('out-titulo').innerText = formatoArs.format(vTitulo);
+        document.getElementById('out-grado').innerText = formatoArs.format(vGrado);
+        document.getElementById('out-cap').innerText = formatoArs.format(vCap);
+        
+        document.getElementById('out-210').innerText = formatoArs.format(FIJO_210_NRNB);
+        document.getElementById('out-sf').innerText = formatoArs.format(vSF);
+        document.getElementById('out-norem').innerText = formatoArs.format(vGarantiaNRNB);
+        document.getElementById('out-bruto').innerText = formatoArs.format(brutoTotal);
+
+        document.getElementById('out-os').innerText = formatoArs.format(dOS);
+        document.getElementById('out-insspjp').innerText = formatoArs.format(dInsspjp);
+        document.getElementById('out-jub').innerText = formatoArs.format(dJub);
+        document.getElementById('out-apunam').innerText = formatoArs.format(dApunam);
+        document.getElementById('out-totaldesc').innerText = formatoArs.format(totalDesc);
+        
+        document.getElementById('out-neto').innerText = formatoArs.format(neto);
+    }
+
+    const elementos = document.querySelectorAll('.tacuru-calculadora .calc-input, .tacuru-calculadora .calc-select');
+    elementos.forEach(el => {
+        el.addEventListener('input', calcularSueldo);
+        el.addEventListener('change', calcularSueldo);
+    });
+
+    calcularSueldo();
+});
+</script>
+
+</body>
+</html>
