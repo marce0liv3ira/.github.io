@@ -24,10 +24,11 @@
                    "salario",
                    "laboral",
                    "democracia",
-                   "comunicación"
+                   "comunicación",
+                   "Ley de Financiamiento"
             ],
             "date_published": "2026-06-13T15:49:00-03:00",
-            "date_modified": "2026-06-18T15:51:37-03:00"
+            "date_modified": "2026-06-19T19:07:28-03:00"
         },
         {
             "id": "https://hormigue.ar/condiciones-2/",
@@ -44,10 +45,11 @@
                    "recursos",
                    "plastas",
                    "democracia",
-                   "comunicación"
+                   "comunicación",
+                   "Ley de Financiamiento"
             ],
             "date_published": "2026-06-08T21:23:00-03:00",
-            "date_modified": "2026-06-11T15:49:37-03:00"
+            "date_modified": "2026-06-19T19:07:50-03:00"
         },
         {
             "id": "https://hormigue.ar/ke-botaron/",
@@ -68,7 +70,7 @@
                    "canicheo"
             ],
             "date_published": "2026-05-31T21:04:27-03:00",
-            "date_modified": "2026-06-18T15:51:42-03:00"
+            "date_modified": "2026-06-19T19:06:23-03:00"
         },
         {
             "id": "https://hormigue.ar/dos-inquietudes-electorales/",
@@ -128,7 +130,7 @@
                    "comunicación"
             ],
             "date_published": "2026-05-08T23:13:00-03:00",
-            "date_modified": "2026-06-18T15:51:46-03:00"
+            "date_modified": "2026-06-19T19:06:29-03:00"
         },
         {
             "id": "https://hormigue.ar/minuta-politica/",
@@ -170,7 +172,7 @@
                    "asamblea"
             ],
             "date_published": "2026-04-17T17:28:54-03:00",
-            "date_modified": "2026-06-18T15:51:53-03:00"
+            "date_modified": "2026-06-19T19:06:33-03:00"
         },
         {
             "id": "https://hormigue.ar/la-paja-2/",
