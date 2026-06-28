@@ -3,7 +3,7 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-06-19T19:07:50-03:00</updated>
+    <updated>2026-06-28T12:26:01-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
@@ -73,6 +73,7 @@
             <category term="elecciones"/>
             <category term="democracia"/>
             <category term="canicheo"/>
+            <category term="adornideada"/>
 
         <updated>2026-05-31T21:04:27-03:00</updated>
             <summary type="html">
@@ -195,6 +196,7 @@
             <category term="democracia"/>
             <category term="comunicación"/>
             <category term="asamblea"/>
+            <category term="adornideada"/>
 
         <updated>2026-04-17T17:28:54-03:00</updated>
             <summary type="html">
