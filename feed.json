@@ -11,6 +11,28 @@
     },
     "items": [
         {
+            "id": "https://hormigue.ar/cin-ley/",
+            "url": "https://hormigue.ar/cin-ley/",
+            "title": "CIN LEY",
+            "summary": "La publicación de esta entrada se retrasó por cuestiones organizativas. Se escribió una semana antes de la ratificación judicial del 25 de junio que obligó al Poder Ejecutivo a cumplir&hellip;",
+            "image": "https://hormigue.ar/media/posts/85/portadaLUP-hormiguear.png",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "sindicalismo",
+                   "salario",
+                   "plastas",
+                   "oficialismo permanente",
+                   "democracia",
+                   "comunicación",
+                   "asamblea",
+                   "Ley de Financiamiento"
+            ],
+            "date_published": "2026-07-03T16:52:54-03:00",
+            "date_modified": "2026-07-05T20:50:33-03:00"
+        },
+        {
             "id": "https://hormigue.ar/lo-ajeno/",
             "url": "https://hormigue.ar/lo-ajeno/",
             "title": "Lo ajeno",
@@ -198,27 +220,6 @@
             ],
             "date_published": "2026-04-08T18:56:04-03:00",
             "date_modified": "2026-04-10T18:44:18-03:00"
-        },
-        {
-            "id": "https://hormigue.ar/la-paja-1/",
-            "url": "https://hormigue.ar/la-paja-1/",
-            "title": "La paja (1)",
-            "summary": "La comunidad UNaM no está en un momento cualquiera. Y no hablo del desfinanciamiento, la crisis pedagógica, el colapso salarial ni el creciente arancelamiento. Eso ya es paisaje. Otra vez&hellip;",
-            "image": "https://hormigue.ar/media/posts/72/1000211316.jpg",
-            "author": {
-                "name": "marce oliveira"
-            },
-            "tags": [
-                   "pose",
-                   "plastas",
-                   "oficialismo permanente",
-                   "democracia",
-                   "canicheo",
-                   "asamblea",
-                   "Smaunam"
-            ],
-            "date_published": "2026-04-07T16:03:00-03:00",
-            "date_modified": "2026-04-22T19:50:11-03:00"
         }
     ]
 }

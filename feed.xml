@@ -3,12 +3,38 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-06-30T19:55:05-03:00</updated>
+    <updated>2026-07-05T20:50:33-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
     <id>https://hormigue.ar</id>
 
+    <entry>
+        <title>CIN LEY</title>
+        <author>
+            <name>marce oliveira</name>
+        </author>
+        <link href="https://hormigue.ar/cin-ley/"/>
+        <id>https://hormigue.ar/cin-ley/</id>
+        <media:content url="https://hormigue.ar/media/posts/85/portadaLUP-hormiguear.png" medium="image" />
+            <category term="sindicalismo"/>
+            <category term="salario"/>
+            <category term="plastas"/>
+            <category term="oficialismo permanente"/>
+            <category term="democracia"/>
+            <category term="comunicación"/>
+            <category term="asamblea"/>
+            <category term="Ley de Financiamiento"/>
+
+        <updated>2026-07-03T16:52:54-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://hormigue.ar/media/posts/85/portadaLUP-hormiguear.png" alt="" />
+                    La publicación de esta entrada se retrasó por cuestiones organizativas. Se escribió una semana antes de la ratificación judicial del 25 de junio que obligó al Poder Ejecutivo a cumplir&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
     <entry>
         <title>Lo ajeno</title>
         <author>
@@ -230,31 +256,6 @@
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/73/1000211316.jpg" alt="" />
                     La primera parte ilustra la atmósfera universitaria. Esta confirma una época. La efervescencia electoral está en retirada hace rato, y cada vez más rápido. No logró revitalizar el entusiasmo hablar&hellip;
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>La paja (1)</title>
-        <author>
-            <name>marce oliveira</name>
-        </author>
-        <link href="https://hormigue.ar/la-paja-1/"/>
-        <id>https://hormigue.ar/la-paja-1/</id>
-        <media:content url="https://hormigue.ar/media/posts/72/1000211316.jpg" medium="image" />
-            <category term="pose"/>
-            <category term="plastas"/>
-            <category term="oficialismo permanente"/>
-            <category term="democracia"/>
-            <category term="canicheo"/>
-            <category term="asamblea"/>
-            <category term="Smaunam"/>
-
-        <updated>2026-04-07T16:03:00-03:00</updated>
-            <summary type="html">
-                <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/72/1000211316.jpg" alt="" />
-                    La comunidad UNaM no está en un momento cualquiera. Y no hablo del desfinanciamiento, la crisis pedagógica, el colapso salarial ni el creciente arancelamiento. Eso ya es paisaje. Otra vez&hellip;
                 ]]>
             </summary>
         <content></content>
