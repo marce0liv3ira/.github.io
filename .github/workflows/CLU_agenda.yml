@@ -7,12 +7,15 @@ on:
       - 'agenda/generar_agenda_CLU.py'
       - 'libroteca/catalogo.json'
       - 'libroteca/generar_catalogo.py'
+  # Opcional: Esto permite que tú mismo lo pruebes manualmente si lo necesitas
+  workflow_dispatch: 
 
 permissions:
   contents: write
 
 jobs:
   build:
+    # Usar ubuntu-latest es correcto, pero puedes forzar la versión si quieres
     runs-on: ubuntu-latest
     steps:
       - name: Checkout del código
@@ -21,7 +24,7 @@ jobs:
       - name: Configurar Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.9'
+          python-version: '3.12' # Recomendado: 3.9 ya es un poco antiguo
 
       - name: Ejecutar Motores de Renderizado
         run: |
@@ -33,5 +36,6 @@ jobs:
           git config --global user.name "Hormigueo Bot"
           git config --global user.email "bot@hormigue.ar"
           git add agenda/index.html libroteca/index.html
+          # El '|| exit 0' es excelente, evita que falle si no hay cambios
           git commit -m "Actualización automática: Agenda CLU / Libroteca" || exit 0
           git push
