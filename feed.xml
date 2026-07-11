@@ -3,12 +3,39 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-07-09T17:17:27-03:00</updated>
+    <updated>2026-07-11T12:00:44-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
     <id>https://hormigue.ar</id>
 
+    <entry>
+        <title>SindicaLita</title>
+        <author>
+            <name>marce oliveira</name>
+        </author>
+        <link href="https://hormigue.ar/sindicalita/"/>
+        <id>https://hormigue.ar/sindicalita/</id>
+        <media:content url="https://hormigue.ar/media/posts/90/portada.jpg" medium="image" />
+            <category term="sindicalismo"/>
+            <category term="salario"/>
+            <category term="plastas"/>
+            <category term="oficialismo permanente"/>
+            <category term="movimiento"/>
+            <category term="mersada"/>
+            <category term="laboral"/>
+            <category term="democracia"/>
+            <category term="canicheo"/>
+
+        <updated>2026-07-11T09:13:48-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://hormigue.ar/media/posts/90/portada.jpg" alt="" />
+                    Estereotipos Los estereotipos tienen mala fama con justa razón: condensan, de forma grotesca y tendenciosa, rasgos dispersos que terminan estigmatizando a quienes se les aplican. Su eficacia reside en mezclar&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
     <entry>
         <title>CIN LEY</title>
         <author>
@@ -229,33 +256,6 @@
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/75/mememascotafuego-Personalizado.png" alt="" />
                     Corren litros de saliva nodocente diciendo que vamos a recuperar el gremio. Reacción pavloviana a los procesos electorales. Aunque no se precise recuperar qué, cómo ni con quiénes, la expresión&hellip;
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>La paja (2)</title>
-        <author>
-            <name>marce oliveira</name>
-        </author>
-        <link href="https://hormigue.ar/la-paja-2/"/>
-        <id>https://hormigue.ar/la-paja-2/</id>
-        <media:content url="https://hormigue.ar/media/posts/73/1000211316.jpg" medium="image" />
-            <category term="sindicalismo"/>
-            <category term="pose"/>
-            <category term="ombliguismo"/>
-            <category term="oficialismo permanente"/>
-            <category term="democracia"/>
-            <category term="canicheo"/>
-            <category term="blendi U"/>
-            <category term="asamblea"/>
-            <category term="Smaunam"/>
-
-        <updated>2026-04-08T18:56:04-03:00</updated>
-            <summary type="html">
-                <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/73/1000211316.jpg" alt="" />
-                    La primera parte ilustra la atmósfera universitaria. Esta confirma una época. La efervescencia electoral está en retirada hace rato, y cada vez más rápido. No logró revitalizar el entusiasmo hablar&hellip;
                 ]]>
             </summary>
         <content></content>

@@ -11,6 +11,29 @@
     },
     "items": [
         {
+            "id": "https://hormigue.ar/sindicalita/",
+            "url": "https://hormigue.ar/sindicalita/",
+            "title": "SindicaLita",
+            "summary": "Estereotipos Los estereotipos tienen mala fama con justa razón: condensan, de forma grotesca y tendenciosa, rasgos dispersos que terminan estigmatizando a quienes se les aplican. Su eficacia reside en mezclar&hellip;",
+            "image": "https://hormigue.ar/media/posts/90/portada.jpg",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "sindicalismo",
+                   "salario",
+                   "plastas",
+                   "oficialismo permanente",
+                   "movimiento",
+                   "mersada",
+                   "laboral",
+                   "democracia",
+                   "canicheo"
+            ],
+            "date_published": "2026-07-11T09:13:48-03:00",
+            "date_modified": "2026-07-11T12:00:44-03:00"
+        },
+        {
             "id": "https://hormigue.ar/cin-ley/",
             "url": "https://hormigue.ar/cin-ley/",
             "title": "CIN LEY",
@@ -197,29 +220,6 @@
             ],
             "date_published": "2026-04-17T17:28:54-03:00",
             "date_modified": "2026-06-28T12:26:01-03:00"
-        },
-        {
-            "id": "https://hormigue.ar/la-paja-2/",
-            "url": "https://hormigue.ar/la-paja-2/",
-            "title": "La paja (2)",
-            "summary": "La primera parte ilustra la atmósfera universitaria. Esta confirma una época. La efervescencia electoral está en retirada hace rato, y cada vez más rápido. No logró revitalizar el entusiasmo hablar&hellip;",
-            "image": "https://hormigue.ar/media/posts/73/1000211316.jpg",
-            "author": {
-                "name": "marce oliveira"
-            },
-            "tags": [
-                   "sindicalismo",
-                   "pose",
-                   "ombliguismo",
-                   "oficialismo permanente",
-                   "democracia",
-                   "canicheo",
-                   "blendi U",
-                   "asamblea",
-                   "Smaunam"
-            ],
-            "date_published": "2026-04-08T18:56:04-03:00",
-            "date_modified": "2026-04-10T18:44:18-03:00"
         }
     ]
 }
