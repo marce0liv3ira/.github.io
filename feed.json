@@ -2,20 +2,20 @@
     "version": "https://jsonfeed.org/version/1",
     "title": "HORMIGUEAR",
     "description": "",
-    "home_page_url": "https://hormigue.ar",
-    "feed_url": "https://hormigue.ar/feed.json",
+    "home_page_url": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output",
+    "feed_url": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/feed.json",
     "user_comment": "",
-    "icon": "https://hormigue.ar/media/website/logo-hormi-new-2.png",
+    "icon": "file:///C:/Users/sebam/Documents/Publii/sites/hormiguear/output/media/website/logo-hormi-new-2.png",
     "author": {
         "name": "marce oliveira"
     },
     "items": [
         {
-            "id": "https://hormigue.ar/ocio-y-soccer/",
-            "url": "https://hormigue.ar/ocio-y-soccer/",
+            "id": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/ocio-y-soccer/index.html",
+            "url": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/ocio-y-soccer/index.html",
             "title": "Ocio y soccer",
             "summary": "La llave del Mundial 2026 nos vuelve a colocar frente a un espejo histórico. Lo primero que vemos es patriotería y racismo. La porquería de siempre. Argentina juega esta tarde&hellip;",
-            "image": "https://hormigue.ar/media/posts/91/ocioysoccer-Personalizado.png",
+            "image": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/91/ocioysoccer-Personalizado.png",
             "author": {
                 "name": "marce oliveira"
             },
@@ -27,14 +27,14 @@
                    "libros"
             ],
             "date_published": "2026-07-15T06:24:00-03:00",
-            "date_modified": "2026-07-15T14:21:56-03:00"
+            "date_modified": "2026-07-15T14:25:23-03:00"
         },
         {
-            "id": "https://hormigue.ar/sindicalita/",
-            "url": "https://hormigue.ar/sindicalita/",
+            "id": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/sindicalita/index.html",
+            "url": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/sindicalita/index.html",
             "title": "SindicaLita",
             "summary": "Estereotipos Los estereotipos tienen mala fama con justa razón: condensan, de forma grotesca y tendenciosa, rasgos dispersos que terminan estigmatizando a quienes se les aplican. Su eficacia reside en mezclar&hellip;",
-            "image": "https://hormigue.ar/media/posts/90/portada.jpg",
+            "image": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/90/portada.jpg",
             "author": {
                 "name": "marce oliveira"
             },
@@ -53,11 +53,11 @@
             "date_modified": "2026-07-11T14:40:12-03:00"
         },
         {
-            "id": "https://hormigue.ar/cin-ley/",
-            "url": "https://hormigue.ar/cin-ley/",
+            "id": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/cin-ley/index.html",
+            "url": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/cin-ley/index.html",
             "title": "CIN LEY",
             "summary": "La publicación de esta entrada se retrasó por cuestiones organizativas. Se escribió una semana antes de la ratificación judicial del 25 de junio que obligó al Poder Ejecutivo a cumplir&hellip;",
-            "image": "https://hormigue.ar/media/posts/85/portadaLUP-hormiguear.png",
+            "image": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/85/portadaLUP-hormiguear.png",
             "author": {
                 "name": "marce oliveira"
             },
@@ -75,11 +75,11 @@
             "date_modified": "2026-07-06T16:07:10-03:00"
         },
         {
-            "id": "https://hormigue.ar/lo-ajeno/",
-            "url": "https://hormigue.ar/lo-ajeno/",
+            "id": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/lo-ajeno/index.html",
+            "url": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/lo-ajeno/index.html",
             "title": "Lo ajeno",
             "summary": "El acuerdo El 10 de junio se firmó un acuerdo político entre el Gobierno nacional, el Consejo Interuniversitario Nacional (CIN) y las conducciones sindicales universitarias que pone en riesgo el&hellip;",
-            "image": "https://hormigue.ar/media/posts/83/portada-2.png",
+            "image": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/83/portada-2.png",
             "author": {
                 "name": "marce oliveira"
             },
@@ -95,11 +95,11 @@
             "date_modified": "2026-07-09T17:17:27-03:00"
         },
         {
-            "id": "https://hormigue.ar/condiciones-2/",
-            "url": "https://hormigue.ar/condiciones-2/",
+            "id": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/condiciones-2/index.html",
+            "url": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/condiciones-2/index.html",
             "title": "Condiciones",
             "summary": "Hace algunas semanas, el CIN volvió a abrirle la puerta al Gobierno para revisar la propuesta de financiamiento universitario impulsada por Milei, Sturzenegger, Torrendell y Álvarez. Se sospecha que la&hellip;",
-            "image": "https://hormigue.ar/media/posts/82/1765967643984-Personalizado.png",
+            "image": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/82/1765967643984-Personalizado.png",
             "author": {
                 "name": "marce oliveira"
             },
@@ -116,11 +116,11 @@
             "date_modified": "2026-06-19T19:07:50-03:00"
         },
         {
-            "id": "https://hormigue.ar/ke-botaron/",
-            "url": "https://hormigue.ar/ke-botaron/",
+            "id": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/ke-botaron/index.html",
+            "url": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/ke-botaron/index.html",
             "title": "Kè botaron",
             "summary": "Con el diario del lunes no tiene sentido hacer pucherito y soltar aires de superioridad política. Mejor apuntar algunas notas sobre el perfil sindical nodocente que salió fortalecido de estas&hellip;",
-            "image": "https://hormigue.ar/media/posts/80/mosquitas.png",
+            "image": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/80/mosquitas.png",
             "author": {
                 "name": "marce oliveira"
             },
@@ -138,11 +138,11 @@
             "date_modified": "2026-06-30T19:46:48-03:00"
         },
         {
-            "id": "https://hormigue.ar/dos-inquietudes-electorales/",
-            "url": "https://hormigue.ar/dos-inquietudes-electorales/",
+            "id": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/dos-inquietudes-electorales/index.html",
+            "url": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/dos-inquietudes-electorales/index.html",
             "title": "Dos inquietudes electorales",
             "summary": "Esta semana intenté hacer un seguimiento de las elecciones generales, especialmente las del rectorado. Todo comenzó con un breve aviso mediante el email institucional del secretario de la Junta Electoral,&hellip;",
-            "image": "https://hormigue.ar/media/posts/79/dosca.jpg",
+            "image": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/79/dosca.jpg",
             "author": {
                 "name": "marce oliveira"
             },
@@ -157,11 +157,11 @@
             "date_modified": "2026-06-03T09:48:49-03:00"
         },
         {
-            "id": "https://hormigue.ar/invitacion/",
-            "url": "https://hormigue.ar/invitacion/",
+            "id": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/invitacion/index.html",
+            "url": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/invitacion/index.html",
             "title": "Invitación",
             "summary": "Mientras preparo Kè botaron, un breve resumen de los resultados electorales de Apunam, aprovecho para comentar algunas tareas que tengo en curso e invitar a participar a quien quiera y&hellip;",
-            "image": "https://hormigue.ar/media/posts/78/file_00000000ca6471fb883de3d5d908f7aa~2.png",
+            "image": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/78/file_00000000ca6471fb883de3d5d908f7aa~2.png",
             "author": {
                 "name": "marce oliveira"
             },
@@ -177,11 +177,11 @@
             "date_modified": "2026-05-31T22:02:22-03:00"
         },
         {
-            "id": "https://hormigue.ar/voca-divino/",
-            "url": "https://hormigue.ar/voca-divino/",
+            "id": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/voca-divino/index.html",
+            "url": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/voca-divino/index.html",
             "title": "Voca divino",
             "summary": "Ahora que ya pasó la ansiedad colectiva por descubrir qué vedettes ocuparán el próximo rectorado de la UNaM, podemos aprovechar este pequeño paréntesis entre la semana de lucha universitaria y&hellip;",
-            "image": "https://hormigue.ar/media/posts/77/portada.png",
+            "image": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/77/portada.png",
             "author": {
                 "name": "marce oliveira"
             },
@@ -198,11 +198,11 @@
             "date_modified": "2026-06-19T19:06:29-03:00"
         },
         {
-            "id": "https://hormigue.ar/minuta-politica/",
-            "url": "https://hormigue.ar/minuta-politica/",
+            "id": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/minuta-politica/index.html",
+            "url": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/minuta-politica/index.html",
             "title": "Minuta política",
             "summary": "Abril tiene su encanto, algunas cosas florecen, será por eso que es elemento de tantas canciones y poemas. Dicen que es por la primavera en otras regiones. Si así fuera,&hellip;",
-            "image": "https://hormigue.ar/media/posts/76/portadaminuta-CH.jpg",
+            "image": "file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/76/portadaminuta-CH.jpg",
             "author": {
                 "name": "marce oliveira"
             },
