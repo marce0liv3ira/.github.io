@@ -3,12 +3,35 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-07-11T14:40:12-03:00</updated>
+    <updated>2026-07-15T13:55:39-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
     <id>https://hormigue.ar</id>
 
+    <entry>
+        <title>Ocio y soccer</title>
+        <author>
+            <name>marce oliveira</name>
+        </author>
+        <link href="https://hormigue.ar/ocio-y-soccer/"/>
+        <id>https://hormigue.ar/ocio-y-soccer/</id>
+        <media:content url="https://hormigue.ar/media/posts/91/ocioysoccer-Personalizado.png" medium="image" />
+            <category term="pose"/>
+            <category term="ocio"/>
+            <category term="movimiento"/>
+            <category term="literatura"/>
+            <category term="libros"/>
+
+        <updated>2026-07-15T06:24:00-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://hormigue.ar/media/posts/91/ocioysoccer-Personalizado.png" alt="" />
+                    La llave del Mundial 2026 nos vuelve a colocar frente a un espejo histórico. Lo primero que vemos es patriotería y racismo. La porquería de siempre. Argentina juega esta tarde&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
     <entry>
         <title>SindicaLita</title>
         <author>
@@ -231,31 +254,6 @@
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/76/portadaminuta-CH.jpg" alt="" />
                     Abril tiene su encanto, algunas cosas florecen, será por eso que es elemento de tantas canciones y poemas. Dicen que es por la primavera en otras regiones. Si así fuera,&hellip;
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>Memo</title>
-        <author>
-            <name>marce oliveira</name>
-        </author>
-        <link href="https://hormigue.ar/memo/"/>
-        <id>https://hormigue.ar/memo/</id>
-        <media:content url="https://hormigue.ar/media/posts/75/mememascotafuego-Personalizado.png" medium="image" />
-            <category term="sindicalismo"/>
-            <category term="recursos"/>
-            <category term="movimiento"/>
-            <category term="democracia"/>
-            <category term="comunicación"/>
-            <category term="asamblea"/>
-            <category term="adornideada"/>
-
-        <updated>2026-04-17T17:28:54-03:00</updated>
-            <summary type="html">
-                <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/75/mememascotafuego-Personalizado.png" alt="" />
-                    Corren litros de saliva nodocente diciendo que vamos a recuperar el gremio. Reacción pavloviana a los procesos electorales. Aunque no se precise recuperar qué, cómo ni con quiénes, la expresión&hellip;
                 ]]>
             </summary>
         <content></content>

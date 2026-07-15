@@ -11,6 +11,25 @@
     },
     "items": [
         {
+            "id": "https://hormigue.ar/ocio-y-soccer/",
+            "url": "https://hormigue.ar/ocio-y-soccer/",
+            "title": "Ocio y soccer",
+            "summary": "La llave del Mundial 2026 nos vuelve a colocar frente a un espejo histórico. Lo primero que vemos es patriotería y racismo. La porquería de siempre. Argentina juega esta tarde&hellip;",
+            "image": "https://hormigue.ar/media/posts/91/ocioysoccer-Personalizado.png",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "pose",
+                   "ocio",
+                   "movimiento",
+                   "literatura",
+                   "libros"
+            ],
+            "date_published": "2026-07-15T06:24:00-03:00",
+            "date_modified": "2026-07-15T13:55:39-03:00"
+        },
+        {
             "id": "https://hormigue.ar/sindicalita/",
             "url": "https://hormigue.ar/sindicalita/",
             "title": "SindicaLita",
@@ -199,27 +218,6 @@
             ],
             "date_published": "2026-04-19T11:46:00-03:00",
             "date_modified": "2026-05-31T22:02:38-03:00"
-        },
-        {
-            "id": "https://hormigue.ar/memo/",
-            "url": "https://hormigue.ar/memo/",
-            "title": "Memo",
-            "summary": "Corren litros de saliva nodocente diciendo que vamos a recuperar el gremio. Reacción pavloviana a los procesos electorales. Aunque no se precise recuperar qué, cómo ni con quiénes, la expresión&hellip;",
-            "image": "https://hormigue.ar/media/posts/75/mememascotafuego-Personalizado.png",
-            "author": {
-                "name": "marce oliveira"
-            },
-            "tags": [
-                   "sindicalismo",
-                   "recursos",
-                   "movimiento",
-                   "democracia",
-                   "comunicación",
-                   "asamblea",
-                   "adornideada"
-            ],
-            "date_published": "2026-04-17T17:28:54-03:00",
-            "date_modified": "2026-06-28T12:26:01-03:00"
         }
     ]
 }
