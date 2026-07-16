@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
     <title>HORMIGUEAR</title>
-    <link href="https://hormigue.ar/feed.xml" rel="self" />
-    <link href="https://hormigue.ar" />
-    <updated>2026-07-15T14:58:03-03:00</updated>
+    <link href="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/feed.xml" rel="self" />
+    <link href="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output" />
+    <updated>2026-07-16T14:44:03-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
-    <id>https://hormigue.ar</id>
+    <id>file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output</id>
 
     <entry>
         <title>Ocio y soccer</title>
         <author>
             <name>marce oliveira</name>
         </author>
-        <link href="https://hormigue.ar/ocio-y-soccer/"/>
-        <id>https://hormigue.ar/ocio-y-soccer/</id>
-        <media:content url="https://hormigue.ar/media/posts/91/ocioysoccer-Personalizado.png" medium="image" />
+        <link href="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/ocio-y-soccer/index.html"/>
+        <id>file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/ocio-y-soccer/index.html</id>
+        <media:content url="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/91/ocioysoccer-Personalizado.png" medium="image" />
             <category term="pose"/>
             <category term="ocio"/>
             <category term="movimiento"/>
@@ -26,7 +26,7 @@
         <updated>2026-07-15T06:24:00-03:00</updated>
             <summary type="html">
                 <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/91/ocioysoccer-Personalizado.png" alt="" />
+                        <img src="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/91/ocioysoccer-Personalizado.png" alt="" />
                     La llave del Mundial 2026 nos vuelve a colocar frente a un espejo histórico. Lo primero que vemos es patriotería y racismo. La porquería de siempre. Argentina juega esta tarde&hellip;
                 ]]>
             </summary>
@@ -37,9 +37,9 @@
         <author>
             <name>marce oliveira</name>
         </author>
-        <link href="https://hormigue.ar/sindicalita/"/>
-        <id>https://hormigue.ar/sindicalita/</id>
-        <media:content url="https://hormigue.ar/media/posts/90/portada.jpg" medium="image" />
+        <link href="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/sindicalita/index.html"/>
+        <id>file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/sindicalita/index.html</id>
+        <media:content url="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/90/portada.jpg" medium="image" />
             <category term="sindicalismo"/>
             <category term="salario"/>
             <category term="plastas"/>
@@ -53,7 +53,7 @@
         <updated>2026-07-11T09:13:48-03:00</updated>
             <summary type="html">
                 <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/90/portada.jpg" alt="" />
+                        <img src="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/90/portada.jpg" alt="" />
                     Estereotipos Los estereotipos tienen mala fama con justa razón: condensan, de forma grotesca y tendenciosa, rasgos dispersos que terminan estigmatizando a quienes se les aplican. Su eficacia reside en mezclar&hellip;
                 ]]>
             </summary>
@@ -64,9 +64,9 @@
         <author>
             <name>marce oliveira</name>
         </author>
-        <link href="https://hormigue.ar/cin-ley/"/>
-        <id>https://hormigue.ar/cin-ley/</id>
-        <media:content url="https://hormigue.ar/media/posts/85/portadaLUP-hormiguear.png" medium="image" />
+        <link href="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/cin-ley/index.html"/>
+        <id>file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/cin-ley/index.html</id>
+        <media:content url="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/85/portadaLUP-hormiguear.png" medium="image" />
             <category term="sindicalismo"/>
             <category term="salario"/>
             <category term="plastas"/>
@@ -79,7 +79,7 @@
         <updated>2026-07-03T16:52:54-03:00</updated>
             <summary type="html">
                 <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/85/portadaLUP-hormiguear.png" alt="" />
+                        <img src="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/85/portadaLUP-hormiguear.png" alt="" />
                     La publicación de esta entrada se retrasó por cuestiones organizativas. Se escribió una semana antes de la ratificación judicial del 25 de junio que obligó al Poder Ejecutivo a cumplir&hellip;
                 ]]>
             </summary>
@@ -90,9 +90,9 @@
         <author>
             <name>marce oliveira</name>
         </author>
-        <link href="https://hormigue.ar/lo-ajeno/"/>
-        <id>https://hormigue.ar/lo-ajeno/</id>
-        <media:content url="https://hormigue.ar/media/posts/83/portada-2.png" medium="image" />
+        <link href="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/lo-ajeno/index.html"/>
+        <id>file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/lo-ajeno/index.html</id>
+        <media:content url="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/83/portada-2.png" medium="image" />
             <category term="sindicalismo"/>
             <category term="salario"/>
             <category term="laboral"/>
@@ -103,7 +103,7 @@
         <updated>2026-06-13T15:49:00-03:00</updated>
             <summary type="html">
                 <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/83/portada-2.png" alt="" />
+                        <img src="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/83/portada-2.png" alt="" />
                     El acuerdo El 10 de junio se firmó un acuerdo político entre el Gobierno nacional, el Consejo Interuniversitario Nacional (CIN) y las conducciones sindicales universitarias que pone en riesgo el&hellip;
                 ]]>
             </summary>
@@ -114,9 +114,9 @@
         <author>
             <name>marce oliveira</name>
         </author>
-        <link href="https://hormigue.ar/condiciones-2/"/>
-        <id>https://hormigue.ar/condiciones-2/</id>
-        <media:content url="https://hormigue.ar/media/posts/82/1765967643984-Personalizado.png" medium="image" />
+        <link href="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/condiciones-2/index.html"/>
+        <id>file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/condiciones-2/index.html</id>
+        <media:content url="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/82/1765967643984-Personalizado.png" medium="image" />
             <category term="sindicalismo"/>
             <category term="salario"/>
             <category term="recursos"/>
@@ -128,7 +128,7 @@
         <updated>2026-06-08T21:23:00-03:00</updated>
             <summary type="html">
                 <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/82/1765967643984-Personalizado.png" alt="" />
+                        <img src="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/82/1765967643984-Personalizado.png" alt="" />
                     Hace algunas semanas, el CIN volvió a abrirle la puerta al Gobierno para revisar la propuesta de financiamiento universitario impulsada por Milei, Sturzenegger, Torrendell y Álvarez. Se sospecha que la&hellip;
                 ]]>
             </summary>
@@ -139,9 +139,9 @@
         <author>
             <name>marce oliveira</name>
         </author>
-        <link href="https://hormigue.ar/ke-botaron/"/>
-        <id>https://hormigue.ar/ke-botaron/</id>
-        <media:content url="https://hormigue.ar/media/posts/80/mosquitas.png" medium="image" />
+        <link href="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/ke-botaron/index.html"/>
+        <id>file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/ke-botaron/index.html</id>
+        <media:content url="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/80/mosquitas.png" medium="image" />
             <category term="sindicalismo"/>
             <category term="plastas"/>
             <category term="mersada"/>
@@ -154,7 +154,7 @@
         <updated>2026-05-31T21:04:27-03:00</updated>
             <summary type="html">
                 <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/80/mosquitas.png" alt="" />
+                        <img src="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/80/mosquitas.png" alt="" />
                     Con el diario del lunes no tiene sentido hacer pucherito y soltar aires de superioridad política. Mejor apuntar algunas notas sobre el perfil sindical nodocente que salió fortalecido de estas&hellip;
                 ]]>
             </summary>
@@ -165,9 +165,9 @@
         <author>
             <name>marce oliveira</name>
         </author>
-        <link href="https://hormigue.ar/dos-inquietudes-electorales/"/>
-        <id>https://hormigue.ar/dos-inquietudes-electorales/</id>
-        <media:content url="https://hormigue.ar/media/posts/79/dosca.jpg" medium="image" />
+        <link href="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/dos-inquietudes-electorales/index.html"/>
+        <id>file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/dos-inquietudes-electorales/index.html</id>
+        <media:content url="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/79/dosca.jpg" medium="image" />
             <category term="oficialismo permanente"/>
             <category term="mersada"/>
             <category term="elecciones"/>
@@ -177,7 +177,7 @@
         <updated>2026-05-22T21:55:00-03:00</updated>
             <summary type="html">
                 <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/79/dosca.jpg" alt="" />
+                        <img src="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/79/dosca.jpg" alt="" />
                     Esta semana intenté hacer un seguimiento de las elecciones generales, especialmente las del rectorado. Todo comenzó con un breve aviso mediante el email institucional del secretario de la Junta Electoral,&hellip;
                 ]]>
             </summary>
@@ -188,9 +188,9 @@
         <author>
             <name>marce oliveira</name>
         </author>
-        <link href="https://hormigue.ar/invitacion/"/>
-        <id>https://hormigue.ar/invitacion/</id>
-        <media:content url="https://hormigue.ar/media/posts/78/file_00000000ca6471fb883de3d5d908f7aa~2.png" medium="image" />
+        <link href="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/invitacion/index.html"/>
+        <id>file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/invitacion/index.html</id>
+        <media:content url="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/78/file_00000000ca6471fb883de3d5d908f7aa~2.png" medium="image" />
             <category term="sindicalismo"/>
             <category term="recursos"/>
             <category term="laboral"/>
@@ -201,7 +201,7 @@
         <updated>2026-05-16T20:48:00-03:00</updated>
             <summary type="html">
                 <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/78/file_00000000ca6471fb883de3d5d908f7aa~2.png" alt="" />
+                        <img src="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/78/file_00000000ca6471fb883de3d5d908f7aa~2.png" alt="" />
                     Mientras preparo Kè botaron, un breve resumen de los resultados electorales de Apunam, aprovecho para comentar algunas tareas que tengo en curso e invitar a participar a quien quiera y&hellip;
                 ]]>
             </summary>
@@ -212,9 +212,9 @@
         <author>
             <name>marce oliveira</name>
         </author>
-        <link href="https://hormigue.ar/voca-divino/"/>
-        <id>https://hormigue.ar/voca-divino/</id>
-        <media:content url="https://hormigue.ar/media/posts/77/portada.png" medium="image" />
+        <link href="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/voca-divino/index.html"/>
+        <id>file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/voca-divino/index.html</id>
+        <media:content url="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/77/portada.png" medium="image" />
             <category term="sindicalismo"/>
             <category term="pose"/>
             <category term="plastas"/>
@@ -226,7 +226,7 @@
         <updated>2026-05-08T23:13:00-03:00</updated>
             <summary type="html">
                 <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/77/portada.png" alt="" />
+                        <img src="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/77/portada.png" alt="" />
                     Ahora que ya pasó la ansiedad colectiva por descubrir qué vedettes ocuparán el próximo rectorado de la UNaM, podemos aprovechar este pequeño paréntesis entre la semana de lucha universitaria y&hellip;
                 ]]>
             </summary>
@@ -237,9 +237,9 @@
         <author>
             <name>marce oliveira</name>
         </author>
-        <link href="https://hormigue.ar/minuta-politica/"/>
-        <id>https://hormigue.ar/minuta-politica/</id>
-        <media:content url="https://hormigue.ar/media/posts/76/portadaminuta-CH.jpg" medium="image" />
+        <link href="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/minuta-politica/index.html"/>
+        <id>file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/minuta-politica/index.html</id>
+        <media:content url="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/76/portadaminuta-CH.jpg" medium="image" />
             <category term="sindicalismo"/>
             <category term="pose"/>
             <category term="oficialismo permanente"/>
@@ -252,7 +252,7 @@
         <updated>2026-04-19T11:46:00-03:00</updated>
             <summary type="html">
                 <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/76/portadaminuta-CH.jpg" alt="" />
+                        <img src="file:///C:\Users\sebam\Documents\Publii\sites\hormiguear\output/media/posts/76/portadaminuta-CH.jpg" alt="" />
                     Abril tiene su encanto, algunas cosas florecen, será por eso que es elemento de tantas canciones y poemas. Dicen que es por la primavera en otras regiones. Si así fuera,&hellip;
                 ]]>
             </summary>
