@@ -11,6 +11,28 @@
     },
     "items": [
         {
+            "id": "https://hormigue.ar/plenarios/",
+            "url": "https://hormigue.ar/plenarios/",
+            "title": "Plenarios",
+            "summary": "Volvieron los plenarios de delegados y secretarios de Apunam. Mientras la Fatun espera que el CIN haga algo y cuenta los días de incumplimiento de la Ley de Financiamiento Universitario&hellip;",
+            "image": "https://hormigue.ar/media/posts/92/diamarmota.png",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "sindicalismo",
+                   "oficialismo permanente",
+                   "movimiento",
+                   "democracia",
+                   "comunicación",
+                   "blendi U",
+                   "asamblea",
+                   "adornideada"
+            ],
+            "date_published": "2026-07-28T21:04:00-03:00",
+            "date_modified": "2026-07-29T14:38:24-03:00"
+        },
+        {
             "id": "https://hormigue.ar/ocio-y-soccer/",
             "url": "https://hormigue.ar/ocio-y-soccer/",
             "title": "Ocio y soccer",
@@ -198,28 +220,6 @@
             ],
             "date_published": "2026-05-08T23:13:00-03:00",
             "date_modified": "2026-07-17T10:33:00-03:00"
-        },
-        {
-            "id": "https://hormigue.ar/minuta-politica/",
-            "url": "https://hormigue.ar/minuta-politica/",
-            "title": "Minuta política",
-            "summary": "Abril tiene su encanto, algunas cosas florecen, será por eso que es elemento de tantas canciones y poemas. Dicen que es por la primavera en otras regiones. Si así fuera,&hellip;",
-            "image": "https://hormigue.ar/media/posts/76/portadaminuta-CH.jpg",
-            "author": {
-                "name": "marce oliveira"
-            },
-            "tags": [
-                   "sindicalismo",
-                   "pose",
-                   "oficialismo permanente",
-                   "movimiento",
-                   "mersada",
-                   "elecciones",
-                   "democracia",
-                   "canicheo"
-            ],
-            "date_published": "2026-04-19T11:46:00-03:00",
-            "date_modified": "2026-05-31T22:02:38-03:00"
         }
     ]
 }

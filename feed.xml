@@ -3,12 +3,38 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-07-17T19:36:14-03:00</updated>
+    <updated>2026-07-29T14:38:24-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
     <id>https://hormigue.ar</id>
 
+    <entry>
+        <title>Plenarios</title>
+        <author>
+            <name>marce oliveira</name>
+        </author>
+        <link href="https://hormigue.ar/plenarios/"/>
+        <id>https://hormigue.ar/plenarios/</id>
+        <media:content url="https://hormigue.ar/media/posts/92/diamarmota.png" medium="image" />
+            <category term="sindicalismo"/>
+            <category term="oficialismo permanente"/>
+            <category term="movimiento"/>
+            <category term="democracia"/>
+            <category term="comunicación"/>
+            <category term="blendi U"/>
+            <category term="asamblea"/>
+            <category term="adornideada"/>
+
+        <updated>2026-07-28T21:04:00-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://hormigue.ar/media/posts/92/diamarmota.png" alt="" />
+                    Volvieron los plenarios de delegados y secretarios de Apunam. Mientras la Fatun espera que el CIN haga algo y cuenta los días de incumplimiento de la Ley de Financiamiento Universitario&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
     <entry>
         <title>Ocio y soccer</title>
         <author>
@@ -230,32 +256,6 @@
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/77/portada.png" alt="" />
                     Ahora que ya pasó la ansiedad colectiva por descubrir qué vedettes ocuparán el próximo rectorado de la UNaM, podemos aprovechar este pequeño paréntesis entre la semana de lucha universitaria y&hellip;
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>Minuta política</title>
-        <author>
-            <name>marce oliveira</name>
-        </author>
-        <link href="https://hormigue.ar/minuta-politica/"/>
-        <id>https://hormigue.ar/minuta-politica/</id>
-        <media:content url="https://hormigue.ar/media/posts/76/portadaminuta-CH.jpg" medium="image" />
-            <category term="sindicalismo"/>
-            <category term="pose"/>
-            <category term="oficialismo permanente"/>
-            <category term="movimiento"/>
-            <category term="mersada"/>
-            <category term="elecciones"/>
-            <category term="democracia"/>
-            <category term="canicheo"/>
-
-        <updated>2026-04-19T11:46:00-03:00</updated>
-            <summary type="html">
-                <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/76/portadaminuta-CH.jpg" alt="" />
-                    Abril tiene su encanto, algunas cosas florecen, será por eso que es elemento de tantas canciones y poemas. Dicen que es por la primavera en otras regiones. Si así fuera,&hellip;
                 ]]>
             </summary>
         <content></content>
