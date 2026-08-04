@@ -3,12 +3,68 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-07-30T05:20:00-03:00</updated>
+    <updated>2026-08-04T15:27:35-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
     <id>https://hormigue.ar</id>
 
+    <entry>
+        <title>Horizonte nariz (2)</title>
+        <author>
+            <name>marce oliveira</name>
+        </author>
+        <link href="https://hormigue.ar/horizonte-nariz-2/"/>
+        <id>https://hormigue.ar/horizonte-nariz-2/</id>
+        <media:content url="https://hormigue.ar/media/posts/94/unam-espiral-hormiguear.png" medium="image" />
+            <category term="sindicalismo"/>
+            <category term="salario"/>
+            <category term="plastas"/>
+            <category term="ombliguismo"/>
+            <category term="oficialismo permanente"/>
+            <category term="movimiento"/>
+            <category term="laboral"/>
+            <category term="democracia"/>
+            <category term="comunicación"/>
+            <category term="canicheo"/>
+            <category term="blendi U"/>
+            <category term="asamblea"/>
+            <category term="Ley de Financiamiento"/>
+
+        <updated>2026-08-04T14:23:11-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://hormigue.ar/media/posts/94/unam-espiral-hormiguear.png" alt="" />
+                    El grueso de la reunión del Cuerpo de Delegados y la CD Apunam está en el dedicado informe de la delegada Mónica de Enfermería al final de esta entrada. Solo&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
+    <entry>
+        <title>Horizonte nariz  (1)</title>
+        <author>
+            <name>marce oliveira</name>
+        </author>
+        <link href="https://hormigue.ar/horizonte-nariz-1/"/>
+        <id>https://hormigue.ar/horizonte-nariz-1/</id>
+        <media:content url="https://hormigue.ar/media/posts/93/unam-espiral-hormiguear.png" medium="image" />
+            <category term="ombliguismo"/>
+            <category term="oficialismo permanente"/>
+            <category term="elecciones"/>
+            <category term="democracia"/>
+            <category term="comunicación"/>
+            <category term="blendi U"/>
+            <category term="Ley de Financiamiento"/>
+
+        <updated>2026-08-04T14:08:05-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://hormigue.ar/media/posts/93/unam-espiral-hormiguear.png" alt="" />
+                    Contra toda expectativa de entretenimiento como válvula de descompresión, el mundial de fútbol nos devolvió a la cuestión sociopolítica. El campeonato invocó problemáticas que tarde o temprano acaban señalando el&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
     <entry>
         <title>Plenarios</title>
         <author>
@@ -206,56 +262,6 @@
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/79/dosca.jpg" alt="" />
                     Esta semana intenté hacer un seguimiento de las elecciones generales, especialmente las del rectorado. Todo comenzó con un breve aviso mediante el email institucional del secretario de la Junta Electoral,&hellip;
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>Invitación</title>
-        <author>
-            <name>marce oliveira</name>
-        </author>
-        <link href="https://hormigue.ar/invitacion/"/>
-        <id>https://hormigue.ar/invitacion/</id>
-        <media:content url="https://hormigue.ar/media/posts/78/file_00000000ca6471fb883de3d5d908f7aa~2.png" medium="image" />
-            <category term="sindicalismo"/>
-            <category term="recursos"/>
-            <category term="laboral"/>
-            <category term="elecciones"/>
-            <category term="comunicación"/>
-            <category term="Smaunam"/>
-
-        <updated>2026-05-16T20:48:00-03:00</updated>
-            <summary type="html">
-                <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/78/file_00000000ca6471fb883de3d5d908f7aa~2.png" alt="" />
-                    Mientras preparo Kè botaron, un breve resumen de los resultados electorales de Apunam, aprovecho para comentar algunas tareas que tengo en curso e invitar a participar a quien quiera y&hellip;
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>Voca divino</title>
-        <author>
-            <name>marce oliveira</name>
-        </author>
-        <link href="https://hormigue.ar/voca-divino/"/>
-        <id>https://hormigue.ar/voca-divino/</id>
-        <media:content url="https://hormigue.ar/media/posts/77/portada.png" medium="image" />
-            <category term="sindicalismo"/>
-            <category term="pose"/>
-            <category term="plastas"/>
-            <category term="oficialismo permanente"/>
-            <category term="mersada"/>
-            <category term="libros"/>
-            <category term="democracia"/>
-            <category term="comunicación"/>
-
-        <updated>2026-05-08T23:13:00-03:00</updated>
-            <summary type="html">
-                <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/77/portada.png" alt="" />
-                    Ahora que ya pasó la ansiedad colectiva por descubrir qué vedettes ocuparán el próximo rectorado de la UNaM, podemos aprovechar este pequeño paréntesis entre la semana de lucha universitaria y&hellip;
                 ]]>
             </summary>
         <content></content>

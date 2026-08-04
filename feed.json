@@ -11,6 +11,54 @@
     },
     "items": [
         {
+            "id": "https://hormigue.ar/horizonte-nariz-2/",
+            "url": "https://hormigue.ar/horizonte-nariz-2/",
+            "title": "Horizonte nariz (2)",
+            "summary": "El grueso de la reunión del Cuerpo de Delegados y la CD Apunam está en el dedicado informe de la delegada Mónica de Enfermería al final de esta entrada. Solo&hellip;",
+            "image": "https://hormigue.ar/media/posts/94/unam-espiral-hormiguear.png",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "sindicalismo",
+                   "salario",
+                   "plastas",
+                   "ombliguismo",
+                   "oficialismo permanente",
+                   "movimiento",
+                   "laboral",
+                   "democracia",
+                   "comunicación",
+                   "canicheo",
+                   "blendi U",
+                   "asamblea",
+                   "Ley de Financiamiento"
+            ],
+            "date_published": "2026-08-04T14:23:11-03:00",
+            "date_modified": "2026-08-04T15:27:35-03:00"
+        },
+        {
+            "id": "https://hormigue.ar/horizonte-nariz-1/",
+            "url": "https://hormigue.ar/horizonte-nariz-1/",
+            "title": "Horizonte nariz  (1)",
+            "summary": "Contra toda expectativa de entretenimiento como válvula de descompresión, el mundial de fútbol nos devolvió a la cuestión sociopolítica. El campeonato invocó problemáticas que tarde o temprano acaban señalando el&hellip;",
+            "image": "https://hormigue.ar/media/posts/93/unam-espiral-hormiguear.png",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "ombliguismo",
+                   "oficialismo permanente",
+                   "elecciones",
+                   "democracia",
+                   "comunicación",
+                   "blendi U",
+                   "Ley de Financiamiento"
+            ],
+            "date_published": "2026-08-04T14:08:05-03:00",
+            "date_modified": "2026-08-04T14:21:53-03:00"
+        },
+        {
             "id": "https://hormigue.ar/plenarios/",
             "url": "https://hormigue.ar/plenarios/",
             "title": "Plenarios",
@@ -178,48 +226,6 @@
             ],
             "date_published": "2026-05-22T21:55:00-03:00",
             "date_modified": "2026-06-03T09:48:49-03:00"
-        },
-        {
-            "id": "https://hormigue.ar/invitacion/",
-            "url": "https://hormigue.ar/invitacion/",
-            "title": "Invitación",
-            "summary": "Mientras preparo Kè botaron, un breve resumen de los resultados electorales de Apunam, aprovecho para comentar algunas tareas que tengo en curso e invitar a participar a quien quiera y&hellip;",
-            "image": "https://hormigue.ar/media/posts/78/file_00000000ca6471fb883de3d5d908f7aa~2.png",
-            "author": {
-                "name": "marce oliveira"
-            },
-            "tags": [
-                   "sindicalismo",
-                   "recursos",
-                   "laboral",
-                   "elecciones",
-                   "comunicación",
-                   "Smaunam"
-            ],
-            "date_published": "2026-05-16T20:48:00-03:00",
-            "date_modified": "2026-05-31T22:02:22-03:00"
-        },
-        {
-            "id": "https://hormigue.ar/voca-divino/",
-            "url": "https://hormigue.ar/voca-divino/",
-            "title": "Voca divino",
-            "summary": "Ahora que ya pasó la ansiedad colectiva por descubrir qué vedettes ocuparán el próximo rectorado de la UNaM, podemos aprovechar este pequeño paréntesis entre la semana de lucha universitaria y&hellip;",
-            "image": "https://hormigue.ar/media/posts/77/portada.png",
-            "author": {
-                "name": "marce oliveira"
-            },
-            "tags": [
-                   "sindicalismo",
-                   "pose",
-                   "plastas",
-                   "oficialismo permanente",
-                   "mersada",
-                   "libros",
-                   "democracia",
-                   "comunicación"
-            ],
-            "date_published": "2026-05-08T23:13:00-03:00",
-            "date_modified": "2026-07-17T10:33:00-03:00"
         }
     ]
 }
