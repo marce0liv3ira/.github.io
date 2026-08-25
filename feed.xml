@@ -3,12 +3,36 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-08-17T17:14:24-03:00</updated>
+    <updated>2026-08-25T17:13:15-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
     <id>https://hormigue.ar</id>
 
+    <entry>
+        <title>U&#x27;v Got email</title>
+        <author>
+            <name>marce oliveira</name>
+        </author>
+        <link href="https://hormigue.ar/uv-got-email/"/>
+        <id>https://hormigue.ar/uv-got-email/</id>
+        <media:content url="https://hormigue.ar/media/posts/96/email-hormiguear-2.jpg" medium="image" />
+            <category term="sindicalismo"/>
+            <category term="pose"/>
+            <category term="oficialismo permanente"/>
+            <category term="democracia"/>
+            <category term="comunicación"/>
+            <category term="blendi U"/>
+
+        <updated>2026-08-06T20:26:00-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://hormigue.ar/media/posts/96/email-hormiguear-2.jpg" alt="" />
+                    No pude conseguir autorización para compartir el texto del email ni la identidad del autor, un buen compa nodocente que me hizo llegar críticas justas el 4 de agosto. Así&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
     <entry>
         <title>Horizonte nariz (2)</title>
         <author>
@@ -239,29 +263,6 @@
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/80/mosquitas.png" alt="" />
                     Con el diario del lunes no tiene sentido hacer pucherito y soltar aires de superioridad política. Mejor apuntar algunas notas sobre el perfil sindical nodocente que salió fortalecido de estas&hellip;
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>Dos inquietudes electorales</title>
-        <author>
-            <name>marce oliveira</name>
-        </author>
-        <link href="https://hormigue.ar/dos-inquietudes-electorales/"/>
-        <id>https://hormigue.ar/dos-inquietudes-electorales/</id>
-        <media:content url="https://hormigue.ar/media/posts/79/dosca.jpg" medium="image" />
-            <category term="oficialismo permanente"/>
-            <category term="mersada"/>
-            <category term="elecciones"/>
-            <category term="democracia"/>
-            <category term="comunicación"/>
-
-        <updated>2026-05-22T21:55:00-03:00</updated>
-            <summary type="html">
-                <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/79/dosca.jpg" alt="" />
-                    Esta semana intenté hacer un seguimiento de las elecciones generales, especialmente las del rectorado. Todo comenzó con un breve aviso mediante el email institucional del secretario de la Junta Electoral,&hellip;
                 ]]>
             </summary>
         <content></content>

@@ -513,41 +513,23 @@
     window.onload = recalcular;
     setTimeout(recalcular, 2000);
 
-})();</script><div id="hormi-search-overlay" class="hormi-overlay"><div class="hormi-search-container"><button id="hormi-close-search" class="hormi-close-btn">&times;</button><div class="gcse-searchbox-only" data-resultsurl="/busqueda"></div></div></div><script async src="https://cse.google.com/cse.js?cx=b297059d507234803"></script><script type="module">import PhotoSwipeLightbox from 'https://hormigue.ar/media/plugins/coreLightboxGallery/photoswipe-lightbox.esm.min.js';
+})();</script><div id="hormi-search-overlay" class="hormi-overlay"><div class="hormi-search-container"><button id="hormi-close-search" class="hormi-close-btn">&times;</button><div class="gcse-searchbox-only" data-resultsurl="/busqueda"></div></div></div><script async src="https://cse.google.com/cse.js?cx=b297059d507234803"></script><script type="module">import PhotoSwipeLightbox from "https://hormigue.ar/media/plugins/coreLightboxGallery/photoswipe-lightbox.esm.min.js";
 				 const galleries = document.querySelectorAll('.gallery');
 				 galleries.forEach(gallery => {
-					  const lightbox = new PhotoSwipeLightbox({
-							gallery: gallery,
-children: 'figure',
-mainClass: 'pswp--custom-bg',
-showHideAnimationType: 'zoom',
-showAnimationDuration: 333,
-hideAnimationDuration: 333,
-easing: 'cubic-bezier(.4,0,.22,1)',
-initialZoomLevel: 'fit',
-secondaryZoomLevel: 1.3,
-imageClickAction: 'zoom-or-close',
-spacing: 0.15,
-loop: true,
-wheelToZoom: true,
-escKey: true,
-arrowKeys: true,
-padding: {"top":1,"bottom":1,"left":1,"right":1},
-arrowPrev: true,
-arrowNext: true,
-close: true,
-zoom: true,
-counter: false,
-preload: [1, 2],
-bgOpacity: 0.8,
-arrowPrevSVG: `<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" fill="none" class="pswp__icn" aria-hidden="true"><path d="M5 12l14 0" /><path d="M5 12l4 4" /><path d="M5 12l4 -4" /></svg>`,
-arrowNextSVG: `<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" fill="none" class="pswp__icn" aria-hidden="true"><path d="M5 12l14 0" /><path d="M5 12l4 4" /><path d="M5 12l4 -4" /></svg>`,
-closeSVG: `<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" fill="none" class="pswp__icn" aria-hidden="true"><path d="M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14z" /><path d="M9 9l6 6m0 -6l-6 6" /></svg>`,
-zoomSVG: `<svg  viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" fill="none" class="pswp__icn" aria-hidden="true"><path d="M4 8v-2a2 2 0 0 1 2 -2h2" /><path d="M4 16v2a2 2 0 0 0 2 2h2" /><path d="M16 4h2a2 2 0 0 1 2 2v2" /><path d="M16 20h2a2 2 0 0 0 2 -2v-2" /><path d="M8 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16 16l-2.5 -2.5" /></svg>`,
-                    pswpModule: () => import('https://hormigue.ar/media/plugins/coreLightboxGallery/photoswipe.esm.min.js'),
-
-					  });
+					  const lightboxOptions = {"children":"figure","mainClass":"pswp--custom-bg","showHideAnimationType":"zoom","showAnimationDuration":333,"hideAnimationDuration":333,"easing":"cubic-bezier(.4,0,.22,1)","initialZoomLevel":"fit","secondaryZoomLevel":1.3,"imageClickAction":"zoom-or-close","spacing":0.15,"loop":true,"wheelToZoom":true,"escKey":true,"arrowKeys":true,"padding":{"top":1,"bottom":1,"left":1,"right":1},"arrowPrev":true,"arrowNext":true,"close":true,"zoom":true,"counter":false,"preload":[1,2],"bgOpacity":0.8,"closeTitle":"Close","zoomTitle":"Zoom","arrowPrevTitle":"Previous","arrowNextTitle":"Next","errorMsg":"The image cannot be loaded","indexIndicatorSep":" / ","arrowPrevSVG":"\u003Csvg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\" class=\"pswp__icn\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M5 12l14 0\" /\u003E\u003Cpath d=\"M5 12l4 4\" /\u003E\u003Cpath d=\"M5 12l4 -4\" /\u003E\u003C/svg\u003E","arrowNextSVG":"\u003Csvg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\" class=\"pswp__icn\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M5 12l14 0\" /\u003E\u003Cpath d=\"M5 12l4 4\" /\u003E\u003Cpath d=\"M5 12l4 -4\" /\u003E\u003C/svg\u003E","closeSVG":"\u003Csvg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\" class=\"pswp__icn\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14z\" /\u003E\u003Cpath d=\"M9 9l6 6m0 -6l-6 6\" /\u003E\u003C/svg\u003E","zoomSVG":"\u003Csvg  viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\" class=\"pswp__icn\" aria-hidden=\"true\"\u003E\u003Cpath d=\"M4 8v-2a2 2 0 0 1 2 -2h2\" /\u003E\u003Cpath d=\"M4 16v2a2 2 0 0 0 2 2h2\" /\u003E\u003Cpath d=\"M16 4h2a2 2 0 0 1 2 2v2\" /\u003E\u003Cpath d=\"M16 20h2a2 2 0 0 0 2 -2v-2\" /\u003E\u003Cpath d=\"M8 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0\" /\u003E\u003Cpath d=\"M16 16l-2.5 -2.5\" /\u003E\u003C/svg\u003E"};
+					  lightboxOptions.gallery = gallery;
+					  lightboxOptions.pswpModule = () => import("https://hormigue.ar/media/plugins/coreLightboxGallery/photoswipe.esm.min.js");
+					  const lightbox = new PhotoSwipeLightbox(lightboxOptions);
 					  
+					  
+			 lightbox.on('afterInit', () => {
+				  const dialog = lightbox.pswp?.element;
+				  if (dialog) {
+						dialog.setAttribute('aria-modal', 'true');
+						dialog.setAttribute('aria-label', "Image gallery");
+				  }
+			 });
+		
 					  lightbox.init();
 				 });</script><script>(function() {
 			var originalTitle = document.title;

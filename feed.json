@@ -11,6 +11,26 @@
     },
     "items": [
         {
+            "id": "https://hormigue.ar/uv-got-email/",
+            "url": "https://hormigue.ar/uv-got-email/",
+            "title": "U&#x27;v Got email",
+            "summary": "No pude conseguir autorización para compartir el texto del email ni la identidad del autor, un buen compa nodocente que me hizo llegar críticas justas el 4 de agosto. Así&hellip;",
+            "image": "https://hormigue.ar/media/posts/96/email-hormiguear-2.jpg",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "sindicalismo",
+                   "pose",
+                   "oficialismo permanente",
+                   "democracia",
+                   "comunicación",
+                   "blendi U"
+            ],
+            "date_published": "2026-08-06T20:26:00-03:00",
+            "date_modified": "2026-08-25T17:13:15-03:00"
+        },
+        {
             "id": "https://hormigue.ar/horizonte-nariz-2/",
             "url": "https://hormigue.ar/horizonte-nariz-2/",
             "title": "Horizonte nariz (2)",
@@ -206,26 +226,7 @@
                    "adornideada"
             ],
             "date_published": "2026-05-31T21:04:27-03:00",
-            "date_modified": "2026-06-30T19:46:48-03:00"
-        },
-        {
-            "id": "https://hormigue.ar/dos-inquietudes-electorales/",
-            "url": "https://hormigue.ar/dos-inquietudes-electorales/",
-            "title": "Dos inquietudes electorales",
-            "summary": "Esta semana intenté hacer un seguimiento de las elecciones generales, especialmente las del rectorado. Todo comenzó con un breve aviso mediante el email institucional del secretario de la Junta Electoral,&hellip;",
-            "image": "https://hormigue.ar/media/posts/79/dosca.jpg",
-            "author": {
-                "name": "marce oliveira"
-            },
-            "tags": [
-                   "oficialismo permanente",
-                   "mersada",
-                   "elecciones",
-                   "democracia",
-                   "comunicación"
-            ],
-            "date_published": "2026-05-22T21:55:00-03:00",
-            "date_modified": "2026-06-03T09:48:49-03:00"
+            "date_modified": "2026-08-23T09:38:23-03:00"
         }
     ]
 }
