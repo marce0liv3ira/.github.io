@@ -3,12 +3,37 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-08-26T14:06:58-03:00</updated>
+    <updated>2026-08-30T23:42:40-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
     <id>https://hormigue.ar</id>
 
+    <entry>
+        <title>Marcha agosto</title>
+        <author>
+            <name>marce oliveira</name>
+        </author>
+        <link href="https://hormigue.ar/marcha-agosto/"/>
+        <id>https://hormigue.ar/marcha-agosto/</id>
+        <media:content url="https://hormigue.ar/media/posts/97/edunamcrea-hormiguear.png" medium="image" />
+            <category term="sindicalismo"/>
+            <category term="recursos"/>
+            <category term="pose"/>
+            <category term="oficialismo permanente"/>
+            <category term="movimiento"/>
+            <category term="democracia"/>
+            <category term="blendi U"/>
+
+        <updated>2026-08-30T21:12:00-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://hormigue.ar/media/posts/97/edunamcrea-hormiguear.png" alt="" />
+                    Un nuevo aniversario de aquella última gran marcha universitaria contra el gobierno de Cambiemos salió a la calle para denunciar el ajuste perpetrado por el trinomio Sturzenegger, Caputo y Bullrich;&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
     <entry>
         <title>U&#x27;v got email</title>
         <author>
@@ -237,32 +262,6 @@
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/82/1765967643984-Personalizado.png" alt="" />
                     Hace algunas semanas, el CIN volvió a abrirle la puerta al Gobierno para revisar la propuesta de financiamiento universitario impulsada por Milei, Sturzenegger, Torrendell y Álvarez. Se sospecha que la&hellip;
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>Kè botaron</title>
-        <author>
-            <name>marce oliveira</name>
-        </author>
-        <link href="https://hormigue.ar/ke-botaron/"/>
-        <id>https://hormigue.ar/ke-botaron/</id>
-        <media:content url="https://hormigue.ar/media/posts/80/mosquitas.png" medium="image" />
-            <category term="sindicalismo"/>
-            <category term="plastas"/>
-            <category term="mersada"/>
-            <category term="laboral"/>
-            <category term="elecciones"/>
-            <category term="democracia"/>
-            <category term="canicheo"/>
-            <category term="adornideada"/>
-
-        <updated>2026-05-31T21:04:27-03:00</updated>
-            <summary type="html">
-                <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/80/mosquitas.png" alt="" />
-                    Con el diario del lunes no tiene sentido hacer pucherito y soltar aires de superioridad política. Mejor apuntar algunas notas sobre el perfil sindical nodocente que salió fortalecido de estas&hellip;
                 ]]>
             </summary>
         <content></content>

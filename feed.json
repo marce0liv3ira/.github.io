@@ -11,6 +11,27 @@
     },
     "items": [
         {
+            "id": "https://hormigue.ar/marcha-agosto/",
+            "url": "https://hormigue.ar/marcha-agosto/",
+            "title": "Marcha agosto",
+            "summary": "Un nuevo aniversario de aquella última gran marcha universitaria contra el gobierno de Cambiemos salió a la calle para denunciar el ajuste perpetrado por el trinomio Sturzenegger, Caputo y Bullrich;&hellip;",
+            "image": "https://hormigue.ar/media/posts/97/edunamcrea-hormiguear.png",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "sindicalismo",
+                   "recursos",
+                   "pose",
+                   "oficialismo permanente",
+                   "movimiento",
+                   "democracia",
+                   "blendi U"
+            ],
+            "date_published": "2026-08-30T21:12:00-03:00",
+            "date_modified": "2026-08-30T23:42:40-03:00"
+        },
+        {
             "id": "https://hormigue.ar/uv-got-email/",
             "url": "https://hormigue.ar/uv-got-email/",
             "title": "U&#x27;v got email",
@@ -205,28 +226,6 @@
             ],
             "date_published": "2026-06-08T21:23:00-03:00",
             "date_modified": "2026-06-19T19:07:50-03:00"
-        },
-        {
-            "id": "https://hormigue.ar/ke-botaron/",
-            "url": "https://hormigue.ar/ke-botaron/",
-            "title": "Kè botaron",
-            "summary": "Con el diario del lunes no tiene sentido hacer pucherito y soltar aires de superioridad política. Mejor apuntar algunas notas sobre el perfil sindical nodocente que salió fortalecido de estas&hellip;",
-            "image": "https://hormigue.ar/media/posts/80/mosquitas.png",
-            "author": {
-                "name": "marce oliveira"
-            },
-            "tags": [
-                   "sindicalismo",
-                   "plastas",
-                   "mersada",
-                   "laboral",
-                   "elecciones",
-                   "democracia",
-                   "canicheo",
-                   "adornideada"
-            ],
-            "date_published": "2026-05-31T21:04:27-03:00",
-            "date_modified": "2026-08-23T09:38:23-03:00"
         }
     ]
 }
