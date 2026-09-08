@@ -11,6 +11,27 @@
     },
     "items": [
         {
+            "id": "https://hormigue.ar/delegar/",
+            "url": "https://hormigue.ar/delegar/",
+            "title": "Delegar",
+            "summary": "Grata sorpresa es el instructivo electoral que dispuso la Comisión Directiva para estimular la votación de delegados y evitar las asunciones automáticas de las listas únicas. Buscar formas de promover&hellip;",
+            "image": "https://hormigue.ar/media/posts/98/delegar-hormiguear.png",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "sindicalismo",
+                   "pose",
+                   "plastas",
+                   "oficialismo permanente",
+                   "democracia",
+                   "canicheo",
+                   "blendi U"
+            ],
+            "date_published": "2026-09-08T09:18:38-03:00",
+            "date_modified": "2026-09-08T09:31:19-03:00"
+        },
+        {
             "id": "https://hormigue.ar/marcha-agosto/",
             "url": "https://hormigue.ar/marcha-agosto/",
             "title": "Marcha agosto",
@@ -205,27 +226,6 @@
             ],
             "date_published": "2026-06-13T15:49:00-03:00",
             "date_modified": "2026-07-09T17:17:27-03:00"
-        },
-        {
-            "id": "https://hormigue.ar/condiciones-2/",
-            "url": "https://hormigue.ar/condiciones-2/",
-            "title": "Condiciones",
-            "summary": "Hace algunas semanas, el CIN volvió a abrirle la puerta al Gobierno para revisar la propuesta de financiamiento universitario impulsada por Milei, Sturzenegger, Torrendell y Álvarez. Se sospecha que la&hellip;",
-            "image": "https://hormigue.ar/media/posts/82/1765967643984-Personalizado.png",
-            "author": {
-                "name": "marce oliveira"
-            },
-            "tags": [
-                   "sindicalismo",
-                   "salario",
-                   "recursos",
-                   "plastas",
-                   "democracia",
-                   "comunicación",
-                   "Ley de Financiamiento"
-            ],
-            "date_published": "2026-06-08T21:23:00-03:00",
-            "date_modified": "2026-06-19T19:07:50-03:00"
         }
     ]
 }

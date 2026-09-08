@@ -3,12 +3,37 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-08-31T20:23:06-03:00</updated>
+    <updated>2026-09-08T09:31:19-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
     <id>https://hormigue.ar</id>
 
+    <entry>
+        <title>Delegar</title>
+        <author>
+            <name>marce oliveira</name>
+        </author>
+        <link href="https://hormigue.ar/delegar/"/>
+        <id>https://hormigue.ar/delegar/</id>
+        <media:content url="https://hormigue.ar/media/posts/98/delegar-hormiguear.png" medium="image" />
+            <category term="sindicalismo"/>
+            <category term="pose"/>
+            <category term="plastas"/>
+            <category term="oficialismo permanente"/>
+            <category term="democracia"/>
+            <category term="canicheo"/>
+            <category term="blendi U"/>
+
+        <updated>2026-09-08T09:18:38-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://hormigue.ar/media/posts/98/delegar-hormiguear.png" alt="" />
+                    Grata sorpresa es el instructivo electoral que dispuso la Comisión Directiva para estimular la votación de delegados y evitar las asunciones automáticas de las listas únicas. Buscar formas de promover&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
     <entry>
         <title>Marcha agosto</title>
         <author>
@@ -237,31 +262,6 @@
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/83/portada-2.png" alt="" />
                     El acuerdo El 10 de junio se firmó un acuerdo político entre el Gobierno nacional, el Consejo Interuniversitario Nacional (CIN) y las conducciones sindicales universitarias que pone en riesgo el&hellip;
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>Condiciones</title>
-        <author>
-            <name>marce oliveira</name>
-        </author>
-        <link href="https://hormigue.ar/condiciones-2/"/>
-        <id>https://hormigue.ar/condiciones-2/</id>
-        <media:content url="https://hormigue.ar/media/posts/82/1765967643984-Personalizado.png" medium="image" />
-            <category term="sindicalismo"/>
-            <category term="salario"/>
-            <category term="recursos"/>
-            <category term="plastas"/>
-            <category term="democracia"/>
-            <category term="comunicación"/>
-            <category term="Ley de Financiamiento"/>
-
-        <updated>2026-06-08T21:23:00-03:00</updated>
-            <summary type="html">
-                <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/82/1765967643984-Personalizado.png" alt="" />
-                    Hace algunas semanas, el CIN volvió a abrirle la puerta al Gobierno para revisar la propuesta de financiamiento universitario impulsada por Milei, Sturzenegger, Torrendell y Álvarez. Se sospecha que la&hellip;
                 ]]>
             </summary>
         <content></content>
