@@ -3,12 +3,35 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-09-08T20:21:43-03:00</updated>
+    <updated>2026-09-10T05:51:24-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
     <id>https://hormigue.ar</id>
 
+    <entry>
+        <title>recíproca</title>
+        <author>
+            <name>marce oliveira</name>
+        </author>
+        <link href="https://hormigue.ar/reciproca/"/>
+        <id>https://hormigue.ar/reciproca/</id>
+        <media:content url="https://hormigue.ar/media/posts/99/email-hormiguear.png" medium="image" />
+            <category term="sindicalismo"/>
+            <category term="plastas"/>
+            <category term="democracia"/>
+            <category term="comunicación"/>
+            <category term="blendi U"/>
+
+        <updated>2026-09-10T05:48:30-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://hormigue.ar/media/posts/99/email-hormiguear.png" alt="" />
+                    El 25 de agosto, la Comisión Directiva de Apunam respondió oficialmente, por correo electrónico, a mi pedido de información presentado el 26 de junio. Antes de que se cumplieran los&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
     <entry>
         <title>Delegar</title>
         <author>
@@ -238,30 +261,6 @@
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/85/portadaLUP-hormiguear.png" alt="" />
                     La publicación de esta entrada se retrasó por cuestiones organizativas. Se escribió una semana antes de la ratificación judicial del 25 de junio que obligó al Poder Ejecutivo a cumplir&hellip;
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>Lo ajeno</title>
-        <author>
-            <name>marce oliveira</name>
-        </author>
-        <link href="https://hormigue.ar/lo-ajeno/"/>
-        <id>https://hormigue.ar/lo-ajeno/</id>
-        <media:content url="https://hormigue.ar/media/posts/83/portada-2.png" medium="image" />
-            <category term="sindicalismo"/>
-            <category term="salario"/>
-            <category term="laboral"/>
-            <category term="democracia"/>
-            <category term="comunicación"/>
-            <category term="Ley de Financiamiento"/>
-
-        <updated>2026-06-13T15:49:00-03:00</updated>
-            <summary type="html">
-                <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/83/portada-2.png" alt="" />
-                    El acuerdo El 10 de junio se firmó un acuerdo político entre el Gobierno nacional, el Consejo Interuniversitario Nacional (CIN) y las conducciones sindicales universitarias que pone en riesgo el&hellip;
                 ]]>
             </summary>
         <content></content>
