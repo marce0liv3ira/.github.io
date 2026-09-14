@@ -3,14 +3,40 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-09-10T05:51:24-03:00</updated>
+    <updated>2026-09-14T17:27:23-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
     <id>https://hormigue.ar</id>
 
     <entry>
-        <title>recíproca</title>
+        <title>Persistir</title>
+        <author>
+            <name>marce oliveira</name>
+        </author>
+        <link href="https://hormigue.ar/persistir/"/>
+        <id>https://hormigue.ar/persistir/</id>
+        <media:content url="https://hormigue.ar/media/posts/100/persistir-hormiguear.jpg" medium="image" />
+            <category term="recursos"/>
+            <category term="plastas"/>
+            <category term="ombliguismo"/>
+            <category term="oficialismo permanente"/>
+            <category term="laboral"/>
+            <category term="democracia"/>
+            <category term="comunicación"/>
+            <category term="blendi U"/>
+
+        <updated>2026-09-13T21:04:00-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://hormigue.ar/media/posts/100/persistir-hormiguear.jpg" alt="" />
+                    Los discursos no son cosa menor, nunca son «cosas que se dicen nomás». Es cierto que escuchar es una habilidad que fuimos perdiendo frente a la maña de hablar a&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
+    <entry>
+        <title>Recíproca</title>
         <author>
             <name>marce oliveira</name>
         </author>
@@ -23,7 +49,7 @@
             <category term="comunicación"/>
             <category term="blendi U"/>
 
-        <updated>2026-09-10T05:48:30-03:00</updated>
+        <updated>2026-09-09T22:48:00-03:00</updated>
             <summary type="html">
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/99/email-hormiguear.png" alt="" />
@@ -235,32 +261,6 @@
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/90/portada.jpg" alt="" />
                     Los estereotipos tienen mala fama con justa razón: condensan, de forma grotesca y tendenciosa, rasgos dispersos que terminan estigmatizando a quienes se les aplican. Su eficacia reside en mezclar verdad&hellip;
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>CIN LEY</title>
-        <author>
-            <name>marce oliveira</name>
-        </author>
-        <link href="https://hormigue.ar/cin-ley/"/>
-        <id>https://hormigue.ar/cin-ley/</id>
-        <media:content url="https://hormigue.ar/media/posts/85/portadaLUP-hormiguear.png" medium="image" />
-            <category term="sindicalismo"/>
-            <category term="salario"/>
-            <category term="plastas"/>
-            <category term="oficialismo permanente"/>
-            <category term="democracia"/>
-            <category term="comunicación"/>
-            <category term="asamblea"/>
-            <category term="Ley de Financiamiento"/>
-
-        <updated>2026-07-03T16:52:54-03:00</updated>
-            <summary type="html">
-                <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/85/portadaLUP-hormiguear.png" alt="" />
-                    La publicación de esta entrada se retrasó por cuestiones organizativas. Se escribió una semana antes de la ratificación judicial del 25 de junio que obligó al Poder Ejecutivo a cumplir&hellip;
                 ]]>
             </summary>
         <content></content>

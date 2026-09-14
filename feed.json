@@ -11,9 +11,31 @@
     },
     "items": [
         {
+            "id": "https://hormigue.ar/persistir/",
+            "url": "https://hormigue.ar/persistir/",
+            "title": "Persistir",
+            "summary": "Los discursos no son cosa menor, nunca son «cosas que se dicen nomás». Es cierto que escuchar es una habilidad que fuimos perdiendo frente a la maña de hablar a&hellip;",
+            "image": "https://hormigue.ar/media/posts/100/persistir-hormiguear.jpg",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "recursos",
+                   "plastas",
+                   "ombliguismo",
+                   "oficialismo permanente",
+                   "laboral",
+                   "democracia",
+                   "comunicación",
+                   "blendi U"
+            ],
+            "date_published": "2026-09-13T21:04:00-03:00",
+            "date_modified": "2026-09-14T17:27:23-03:00"
+        },
+        {
             "id": "https://hormigue.ar/reciproca/",
             "url": "https://hormigue.ar/reciproca/",
-            "title": "recíproca",
+            "title": "Recíproca",
             "summary": "El 25 de agosto, la Comisión Directiva de Apunam respondió oficialmente, por correo electrónico, a mi pedido de información presentado el 26 de junio. Antes de que se cumplieran los&hellip;",
             "image": "https://hormigue.ar/media/posts/99/email-hormiguear.png",
             "author": {
@@ -26,8 +48,8 @@
                    "comunicación",
                    "blendi U"
             ],
-            "date_published": "2026-09-10T05:48:30-03:00",
-            "date_modified": "2026-09-10T05:51:24-03:00"
+            "date_published": "2026-09-09T22:48:00-03:00",
+            "date_modified": "2026-09-14T17:08:12-03:00"
         },
         {
             "id": "https://hormigue.ar/delegar/",
@@ -203,28 +225,6 @@
             ],
             "date_published": "2026-07-11T09:13:48-03:00",
             "date_modified": "2026-07-17T19:36:14-03:00"
-        },
-        {
-            "id": "https://hormigue.ar/cin-ley/",
-            "url": "https://hormigue.ar/cin-ley/",
-            "title": "CIN LEY",
-            "summary": "La publicación de esta entrada se retrasó por cuestiones organizativas. Se escribió una semana antes de la ratificación judicial del 25 de junio que obligó al Poder Ejecutivo a cumplir&hellip;",
-            "image": "https://hormigue.ar/media/posts/85/portadaLUP-hormiguear.png",
-            "author": {
-                "name": "marce oliveira"
-            },
-            "tags": [
-                   "sindicalismo",
-                   "salario",
-                   "plastas",
-                   "oficialismo permanente",
-                   "democracia",
-                   "comunicación",
-                   "asamblea",
-                   "Ley de Financiamiento"
-            ],
-            "date_published": "2026-07-03T16:52:54-03:00",
-            "date_modified": "2026-07-06T16:07:10-03:00"
         }
     ]
 }
