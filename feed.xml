@@ -3,12 +3,37 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-09-14T18:10:08-03:00</updated>
+    <updated>2026-10-01T18:12:38-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
     <id>https://hormigue.ar</id>
 
+    <entry>
+        <title>Primavera flan</title>
+        <author>
+            <name>marce oliveira</name>
+        </author>
+        <link href="https://hormigue.ar/primavera-flan/"/>
+        <id>https://hormigue.ar/primavera-flan/</id>
+        <media:content url="https://hormigue.ar/media/posts/101/primaveraflan-hormiguear.png" medium="image" />
+            <category term="sindicalismo"/>
+            <category term="pose"/>
+            <category term="plastas"/>
+            <category term="oficialismo permanente"/>
+            <category term="comunicación"/>
+            <category term="canicheo"/>
+            <category term="Ley de Financiamiento"/>
+
+        <updated>2026-09-30T21:55:00-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://hormigue.ar/media/posts/101/primaveraflan-hormiguear.png" alt="" />
+                    Casi a fines de 2025, el periodista Franco Torchia expresó en tevé que la movilización universitaria no daba la talla. Lo dijo con cierta sutileza, pero lo que me pichó&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
     <entry>
         <title>Persistir</title>
         <author>
@@ -233,34 +258,6 @@
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/91/ocioysoccer-Personalizado.png" alt="" />
                     La llave del Mundial 2026 nos vuelve a colocar frente a un espejo histórico. Lo primero que vemos es patriotería y racismo. La porquería de siempre. Argentina juega esta tarde&hellip;
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>SindicaLita</title>
-        <author>
-            <name>marce oliveira</name>
-        </author>
-        <link href="https://hormigue.ar/sindicalita/"/>
-        <id>https://hormigue.ar/sindicalita/</id>
-        <media:content url="https://hormigue.ar/media/posts/90/portada.jpg" medium="image" />
-            <category term="sindicalismo"/>
-            <category term="salario"/>
-            <category term="plastas"/>
-            <category term="oficialismo permanente"/>
-            <category term="movimiento"/>
-            <category term="mersada"/>
-            <category term="libros"/>
-            <category term="laboral"/>
-            <category term="democracia"/>
-            <category term="canicheo"/>
-
-        <updated>2026-07-11T09:13:48-03:00</updated>
-            <summary type="html">
-                <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/90/portada.jpg" alt="" />
-                    Los estereotipos tienen mala fama con justa razón: condensan, de forma grotesca y tendenciosa, rasgos dispersos que terminan estigmatizando a quienes se les aplican. Su eficacia reside en mezclar verdad&hellip;
                 ]]>
             </summary>
         <content></content>

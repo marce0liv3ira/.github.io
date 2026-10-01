@@ -11,6 +11,27 @@
     },
     "items": [
         {
+            "id": "https://hormigue.ar/primavera-flan/",
+            "url": "https://hormigue.ar/primavera-flan/",
+            "title": "Primavera flan",
+            "summary": "Casi a fines de 2025, el periodista Franco Torchia expresó en tevé que la movilización universitaria no daba la talla. Lo dijo con cierta sutileza, pero lo que me pichó&hellip;",
+            "image": "https://hormigue.ar/media/posts/101/primaveraflan-hormiguear.png",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "sindicalismo",
+                   "pose",
+                   "plastas",
+                   "oficialismo permanente",
+                   "comunicación",
+                   "canicheo",
+                   "Ley de Financiamiento"
+            ],
+            "date_published": "2026-09-30T21:55:00-03:00",
+            "date_modified": "2026-10-01T18:12:38-03:00"
+        },
+        {
             "id": "https://hormigue.ar/persistir/",
             "url": "https://hormigue.ar/persistir/",
             "title": "Persistir",
@@ -201,30 +222,6 @@
             ],
             "date_published": "2026-07-15T06:24:00-03:00",
             "date_modified": "2026-07-16T15:08:26-03:00"
-        },
-        {
-            "id": "https://hormigue.ar/sindicalita/",
-            "url": "https://hormigue.ar/sindicalita/",
-            "title": "SindicaLita",
-            "summary": "Los estereotipos tienen mala fama con justa razón: condensan, de forma grotesca y tendenciosa, rasgos dispersos que terminan estigmatizando a quienes se les aplican. Su eficacia reside en mezclar verdad&hellip;",
-            "image": "https://hormigue.ar/media/posts/90/portada.jpg",
-            "author": {
-                "name": "marce oliveira"
-            },
-            "tags": [
-                   "sindicalismo",
-                   "salario",
-                   "plastas",
-                   "oficialismo permanente",
-                   "movimiento",
-                   "mersada",
-                   "libros",
-                   "laboral",
-                   "democracia",
-                   "canicheo"
-            ],
-            "date_published": "2026-07-11T09:13:48-03:00",
-            "date_modified": "2026-07-17T19:36:14-03:00"
         }
     ]
 }
