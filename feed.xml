@@ -3,12 +3,36 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-10-01T18:17:32-03:00</updated>
+    <updated>2026-10-04T12:16:54-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
     <id>https://hormigue.ar</id>
 
+    <entry>
+        <title>Capacidad</title>
+        <author>
+            <name>marce oliveira</name>
+        </author>
+        <link href="https://hormigue.ar/capacidad/"/>
+        <id>https://hormigue.ar/capacidad/</id>
+        <media:content url="https://hormigue.ar/media/posts/102/portada.jpg" medium="image" />
+            <category term="sindicalismo"/>
+            <category term="pose"/>
+            <category term="plastas"/>
+            <category term="laboral"/>
+            <category term="democracia"/>
+            <category term="comunicación"/>
+
+        <updated>2026-10-03T08:12:00-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://hormigue.ar/media/posts/102/portada.jpg" alt="" />
+                    El encuentro se realizó por Zoom y reunió hasta 97 conexiones nodocentesEvidentemente, el total de los 112 candidatos a delegados en la UNaM no participó del taller dedicado al tema&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
     <entry>
         <title>Primavera flan</title>
         <author>
@@ -235,29 +259,6 @@
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/92/diamarmota.png" alt="" />
                     Volvieron los plenarios de delegados y secretarios de Apunam. Mientras la Fatun espera que el CIN haga algo y cuenta los días de incumplimiento de la Ley de Financiamiento Universitario&hellip;
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>Ocio y soccer</title>
-        <author>
-            <name>marce oliveira</name>
-        </author>
-        <link href="https://hormigue.ar/ocio-y-soccer/"/>
-        <id>https://hormigue.ar/ocio-y-soccer/</id>
-        <media:content url="https://hormigue.ar/media/posts/91/ocioysoccer-Personalizado.png" medium="image" />
-            <category term="pose"/>
-            <category term="ocio"/>
-            <category term="movimiento"/>
-            <category term="literatura"/>
-            <category term="libros"/>
-
-        <updated>2026-07-15T06:24:00-03:00</updated>
-            <summary type="html">
-                <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/91/ocioysoccer-Personalizado.png" alt="" />
-                    La llave del Mundial 2026 nos vuelve a colocar frente a un espejo histórico. Lo primero que vemos es patriotería y racismo. La porquería de siempre. Argentina juega esta tarde&hellip;
                 ]]>
             </summary>
         <content></content>
