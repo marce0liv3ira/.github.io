@@ -3,12 +3,36 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-10-11T05:11:37-03:00</updated>
+    <updated>2026-10-11T16:21:44-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
     <id>https://hormigue.ar</id>
 
+    <entry>
+        <title>Salud, dinero y sopor</title>
+        <author>
+            <name>marce oliveira</name>
+        </author>
+        <link href="https://hormigue.ar/salud-dinero-y-sopor/"/>
+        <id>https://hormigue.ar/salud-dinero-y-sopor/</id>
+        <media:content url="https://hormigue.ar/media/posts/104/portadasaludsopor-hormiguear.jpg" medium="image" />
+            <category term="pose"/>
+            <category term="plastas"/>
+            <category term="ombliguismo"/>
+            <category term="laboral"/>
+            <category term="blendi U"/>
+            <category term="Smaunam"/>
+
+        <updated>2026-10-10T21:54:00-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://hormigue.ar/media/posts/104/portadasaludsopor-hormiguear.jpg" alt="" />
+                    El 7 de octubre a las 9 h, en la Facultad de Humanidades y Ciencias Sociales, se organizó una reunión informativa, restringida a esa unidad académica, para revisar uno de&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
     <entry>
         <title>Capacidad</title>
         <author>
@@ -233,32 +257,6 @@
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/93/unam-espiral-hormiguear.png" alt="" />
                     Contra toda expectativa de entretenimiento como válvula de descompresión, el mundial de fútbol nos devolvió a la cuestión sociopolítica. El campeonato invocó problemáticas que tarde o temprano acaban señalando el&hellip;
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>Plenarios</title>
-        <author>
-            <name>marce oliveira</name>
-        </author>
-        <link href="https://hormigue.ar/plenarios/"/>
-        <id>https://hormigue.ar/plenarios/</id>
-        <media:content url="https://hormigue.ar/media/posts/92/diamarmota.png" medium="image" />
-            <category term="sindicalismo"/>
-            <category term="oficialismo permanente"/>
-            <category term="movimiento"/>
-            <category term="democracia"/>
-            <category term="comunicación"/>
-            <category term="blendi U"/>
-            <category term="asamblea"/>
-            <category term="adornideada"/>
-
-        <updated>2026-07-28T21:04:00-03:00</updated>
-            <summary type="html">
-                <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/92/diamarmota.png" alt="" />
-                    Volvieron los plenarios de delegados y secretarios de Apunam. Mientras la Fatun espera que el CIN haga algo y cuenta los días de incumplimiento de la Ley de Financiamiento Universitario&hellip;
                 ]]>
             </summary>
         <content></content>
