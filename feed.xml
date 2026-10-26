@@ -3,12 +3,36 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-10-25T20:04:11-03:00</updated>
+    <updated>2026-10-26T20:07:03-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
     <id>https://hormigue.ar</id>
 
+    <entry>
+        <title>La Quinta y el colágeno</title>
+        <author>
+            <name>marce oliveira</name>
+        </author>
+        <link href="https://hormigue.ar/la-quinta-y-el-colageno/"/>
+        <id>https://hormigue.ar/la-quinta-y-el-colageno/</id>
+        <media:content url="https://hormigue.ar/media/posts/106/colageno-hormiguear-2.jpg" medium="image" />
+            <category term="pose"/>
+            <category term="plastas"/>
+            <category term="ombliguismo"/>
+            <category term="movimiento"/>
+            <category term="democracia"/>
+            <category term="asamblea"/>
+
+        <updated>2026-10-18T17:04:00-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://hormigue.ar/media/posts/106/colageno-hormiguear-2.jpg" alt="" />
+                    Poco se encuentra sobre los discursos de las dirigencias universitarias durante el acto del 15 de octubre, al cierre de la Quinta Marcha Nacional Universitaria. Las malas lenguas dicen que&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
     <entry>
         <title>La Quinta también</title>
         <author>
@@ -227,37 +251,6 @@
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/96/email-hormiguear-2.jpg" alt="" />
                     No pude conseguir autorización para compartir el texto del email ni la identidad del autor, un buen compa nodocente que me hizo llegar críticas justas el 4 de agosto. Así&hellip;
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>Horizonte nariz (2)</title>
-        <author>
-            <name>marce oliveira</name>
-        </author>
-        <link href="https://hormigue.ar/horizonte-nariz-2/"/>
-        <id>https://hormigue.ar/horizonte-nariz-2/</id>
-        <media:content url="https://hormigue.ar/media/posts/94/unam-espiral-hormiguear.png" medium="image" />
-            <category term="sindicalismo"/>
-            <category term="salario"/>
-            <category term="plastas"/>
-            <category term="ombliguismo"/>
-            <category term="oficialismo permanente"/>
-            <category term="movimiento"/>
-            <category term="laboral"/>
-            <category term="democracia"/>
-            <category term="comunicación"/>
-            <category term="canicheo"/>
-            <category term="blendi U"/>
-            <category term="asamblea"/>
-            <category term="Ley de Financiamiento"/>
-
-        <updated>2026-08-02T09:23:00-03:00</updated>
-            <summary type="html">
-                <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/94/unam-espiral-hormiguear.png" alt="" />
-                    El grueso de la reunión del Cuerpo de Delegados y la CD Apunam está en el dedicado informe de la delegada Mónica de Enfermería al final de esta entrada. Solo&hellip;
                 ]]>
             </summary>
         <content></content>

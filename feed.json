@@ -11,6 +11,26 @@
     },
     "items": [
         {
+            "id": "https://hormigue.ar/la-quinta-y-el-colageno/",
+            "url": "https://hormigue.ar/la-quinta-y-el-colageno/",
+            "title": "La Quinta y el colágeno",
+            "summary": "Poco se encuentra sobre los discursos de las dirigencias universitarias durante el acto del 15 de octubre, al cierre de la Quinta Marcha Nacional Universitaria. Las malas lenguas dicen que&hellip;",
+            "image": "https://hormigue.ar/media/posts/106/colageno-hormiguear-2.jpg",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "pose",
+                   "plastas",
+                   "ombliguismo",
+                   "movimiento",
+                   "democracia",
+                   "asamblea"
+            ],
+            "date_published": "2026-10-18T17:04:00-03:00",
+            "date_modified": "2026-10-26T20:07:03-03:00"
+        },
+        {
             "id": "https://hormigue.ar/la-quinta-tambien/",
             "url": "https://hormigue.ar/la-quinta-tambien/",
             "title": "La Quinta también",
@@ -195,33 +215,6 @@
             ],
             "date_published": "2026-08-06T20:26:00-03:00",
             "date_modified": "2026-10-03T07:47:35-03:00"
-        },
-        {
-            "id": "https://hormigue.ar/horizonte-nariz-2/",
-            "url": "https://hormigue.ar/horizonte-nariz-2/",
-            "title": "Horizonte nariz (2)",
-            "summary": "El grueso de la reunión del Cuerpo de Delegados y la CD Apunam está en el dedicado informe de la delegada Mónica de Enfermería al final de esta entrada. Solo&hellip;",
-            "image": "https://hormigue.ar/media/posts/94/unam-espiral-hormiguear.png",
-            "author": {
-                "name": "marce oliveira"
-            },
-            "tags": [
-                   "sindicalismo",
-                   "salario",
-                   "plastas",
-                   "ombliguismo",
-                   "oficialismo permanente",
-                   "movimiento",
-                   "laboral",
-                   "democracia",
-                   "comunicación",
-                   "canicheo",
-                   "blendi U",
-                   "asamblea",
-                   "Ley de Financiamiento"
-            ],
-            "date_published": "2026-08-02T09:23:00-03:00",
-            "date_modified": "2026-08-13T16:43:57-03:00"
         }
     ]
 }
