@@ -3,12 +3,38 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-10-27T05:23:27-03:00</updated>
+    <updated>2026-10-27T23:37:00-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
     <id>https://hormigue.ar</id>
 
+    <entry>
+        <title>La Quinta tranqui</title>
+        <author>
+            <name>marce oliveira</name>
+        </author>
+        <link href="https://hormigue.ar/la-quinta-tranqui/"/>
+        <id>https://hormigue.ar/la-quinta-tranqui/</id>
+        <media:content url="https://hormigue.ar/media/posts/107/tranca-hormiguear.png" medium="image" />
+            <category term="sindicalismo"/>
+            <category term="salario"/>
+            <category term="plastas"/>
+            <category term="ombliguismo"/>
+            <category term="oficialismo permanente"/>
+            <category term="movimiento"/>
+            <category term="democracia"/>
+            <category term="Ley de Financiamiento"/>
+
+        <updated>2026-10-27T23:37:00-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://hormigue.ar/media/posts/107/tranca-hormiguear.png" alt="" />
+                    En la conferencia del 13 de octubre, las conducciones gremiales recuperaron protagonismo y lograron mostrar, mediante ejemplos concretos de la UNaM, el perjuicio que las políticas nacionales ocasionan a las&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
     <entry>
         <title>La Quinta y el colágeno</title>
         <author>
@@ -28,7 +54,7 @@
             <summary type="html">
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/106/colageno-hormiguear-2.jpg" alt="" />
-                    Poco se encuentra sobre los discursos de las dirigencias universitarias durante el acto del 15 de octubre, al cierre de la Quinta Marcha Nacional Universitaria. Las malas lenguas dicen que&hellip;
+                    Poco se encuentra sobre los discursos de las dirigencias universitarias durante el acto del 15 de octubre, al cierre de la Quinta Marcha Nacional Universitaria. Las malas lenguas dicen que no&hellip;
                 ]]>
             </summary>
         <content></content>
@@ -227,30 +253,6 @@
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/97/edunamcrea-hormiguear.png" alt="" />
                     Un nuevo aniversario de aquella última gran marcha universitaria contra el gobierno de Cambiemos salió a la calle para denunciar el ajuste perpetrado por el trinomio Sturzenegger, Caputo y Bullrich;&hellip;
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>U&#x27;v got email</title>
-        <author>
-            <name>marce oliveira</name>
-        </author>
-        <link href="https://hormigue.ar/uv-got-email/"/>
-        <id>https://hormigue.ar/uv-got-email/</id>
-        <media:content url="https://hormigue.ar/media/posts/96/email-hormiguear-2.jpg" medium="image" />
-            <category term="sindicalismo"/>
-            <category term="pose"/>
-            <category term="oficialismo permanente"/>
-            <category term="democracia"/>
-            <category term="comunicación"/>
-            <category term="blendi U"/>
-
-        <updated>2026-08-06T20:26:00-03:00</updated>
-            <summary type="html">
-                <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/96/email-hormiguear-2.jpg" alt="" />
-                    No pude conseguir autorización para compartir el texto del email ni la identidad del autor, un buen compa nodocente que me hizo llegar críticas justas el 4 de agosto. Así&hellip;
                 ]]>
             </summary>
         <content></content>
