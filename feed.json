@@ -11,6 +11,28 @@
     },
     "items": [
         {
+            "id": "https://hormigue.ar/la-cosa-smaunam/",
+            "url": "https://hormigue.ar/la-cosa-smaunam/",
+            "title": "La cosa Smaunam",
+            "summary": "El Manual de organización y funciones del Smaunam está disponible para descarga en el visor de documentos al final de esta página. Pronto también estará entre los demás archivos en&hellip;",
+            "image": "https://hormigue.ar/media/posts/108/portaesacosa.png",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "plastas",
+                   "oficialismo permanente",
+                   "mersada",
+                   "democracia",
+                   "comunicación",
+                   "blendi U",
+                   "adornideada",
+                   "Smaunam"
+            ],
+            "date_published": "2026-10-28T23:08:03-03:00",
+            "date_modified": "2026-10-28T23:38:27-03:00"
+        },
+        {
             "id": "https://hormigue.ar/la-quinta-tranqui/",
             "url": "https://hormigue.ar/la-quinta-tranqui/",
             "title": "La Quinta tranqui",
@@ -196,27 +218,6 @@
             ],
             "date_published": "2026-09-08T09:18:38-03:00",
             "date_modified": "2026-09-08T20:21:43-03:00"
-        },
-        {
-            "id": "https://hormigue.ar/marcha-agosto/",
-            "url": "https://hormigue.ar/marcha-agosto/",
-            "title": "Marcha agosto",
-            "summary": "Un nuevo aniversario de aquella última gran marcha universitaria contra el gobierno de Cambiemos salió a la calle para denunciar el ajuste perpetrado por el trinomio Sturzenegger, Caputo y Bullrich;&hellip;",
-            "image": "https://hormigue.ar/media/posts/97/edunamcrea-hormiguear.png",
-            "author": {
-                "name": "marce oliveira"
-            },
-            "tags": [
-                   "sindicalismo",
-                   "recursos",
-                   "pose",
-                   "oficialismo permanente",
-                   "movimiento",
-                   "democracia",
-                   "blendi U"
-            ],
-            "date_published": "2026-08-30T21:12:00-03:00",
-            "date_modified": "2026-08-30T23:42:40-03:00"
         }
     ]
 }

@@ -3,12 +3,38 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-10-28T08:07:34-03:00</updated>
+    <updated>2026-10-28T23:38:27-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
     <id>https://hormigue.ar</id>
 
+    <entry>
+        <title>La cosa Smaunam</title>
+        <author>
+            <name>marce oliveira</name>
+        </author>
+        <link href="https://hormigue.ar/la-cosa-smaunam/"/>
+        <id>https://hormigue.ar/la-cosa-smaunam/</id>
+        <media:content url="https://hormigue.ar/media/posts/108/portaesacosa.png" medium="image" />
+            <category term="plastas"/>
+            <category term="oficialismo permanente"/>
+            <category term="mersada"/>
+            <category term="democracia"/>
+            <category term="comunicación"/>
+            <category term="blendi U"/>
+            <category term="adornideada"/>
+            <category term="Smaunam"/>
+
+        <updated>2026-10-28T23:08:03-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://hormigue.ar/media/posts/108/portaesacosa.png" alt="" />
+                    El Manual de organización y funciones del Smaunam está disponible para descarga en el visor de documentos al final de esta página. Pronto también estará entre los demás archivos en&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
     <entry>
         <title>La Quinta tranqui</title>
         <author>
@@ -228,31 +254,6 @@
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/98/delegar-hormiguear.png" alt="" />
                     Grata sorpresa es el instructivo electoral que dispuso la Comisión Directiva para estimular la votación de delegados y evitar las asunciones automáticas de las listas únicas. Buscar formas de promover&hellip;
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>Marcha agosto</title>
-        <author>
-            <name>marce oliveira</name>
-        </author>
-        <link href="https://hormigue.ar/marcha-agosto/"/>
-        <id>https://hormigue.ar/marcha-agosto/</id>
-        <media:content url="https://hormigue.ar/media/posts/97/edunamcrea-hormiguear.png" medium="image" />
-            <category term="sindicalismo"/>
-            <category term="recursos"/>
-            <category term="pose"/>
-            <category term="oficialismo permanente"/>
-            <category term="movimiento"/>
-            <category term="democracia"/>
-            <category term="blendi U"/>
-
-        <updated>2026-08-30T21:12:00-03:00</updated>
-            <summary type="html">
-                <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/97/edunamcrea-hormiguear.png" alt="" />
-                    Un nuevo aniversario de aquella última gran marcha universitaria contra el gobierno de Cambiemos salió a la calle para denunciar el ajuste perpetrado por el trinomio Sturzenegger, Caputo y Bullrich;&hellip;
                 ]]>
             </summary>
         <content></content>
