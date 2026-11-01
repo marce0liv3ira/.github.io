@@ -3,12 +3,40 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-11-01T15:42:09-03:00</updated>
+    <updated>2026-11-01T20:03:56-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
     <id>https://hormigue.ar</id>
 
+    <entry>
+        <title>Smaunam charla</title>
+        <author>
+            <name>marce oliveira</name>
+        </author>
+        <link href="https://hormigue.ar/smaunam-charla/"/>
+        <id>https://hormigue.ar/smaunam-charla/</id>
+        <media:content url="https://hormigue.ar/media/posts/109/IMG_20261029_075230950_HDR~2.jpg" medium="image" />
+            <category term="risa"/>
+            <category term="plastas"/>
+            <category term="oficialismo permanente"/>
+            <category term="mersada"/>
+            <category term="laboral"/>
+            <category term="democracia"/>
+            <category term="comunicación"/>
+            <category term="blendi U"/>
+            <category term="adornideada"/>
+            <category term="Smaunam"/>
+
+        <updated>2026-11-01T18:28:09-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://hormigue.ar/media/posts/109/IMG_20261029_075230950_HDR~2.jpg" alt="" />
+                    La reunión duró dos horas y media, fue muy concurrida. Por razones de síntesis, varios datos están en los bloques de comentarios y las llamadas a pie. En los teléfonos&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
     <entry>
         <title>La cosa Smaunam</title>
         <author>
@@ -229,31 +257,6 @@
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/99/email-hormiguear.png" alt="" />
                     El 25 de agosto, la Comisión Directiva de Apunam respondió oficialmente, por correo electrónico, a mi pedido de información presentado el 26 de junio. Antes de que se cumplieran los&hellip;
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>Delegar</title>
-        <author>
-            <name>marce oliveira</name>
-        </author>
-        <link href="https://hormigue.ar/delegar/"/>
-        <id>https://hormigue.ar/delegar/</id>
-        <media:content url="https://hormigue.ar/media/posts/98/delegar-hormiguear.png" medium="image" />
-            <category term="sindicalismo"/>
-            <category term="pose"/>
-            <category term="plastas"/>
-            <category term="oficialismo permanente"/>
-            <category term="democracia"/>
-            <category term="canicheo"/>
-            <category term="blendi U"/>
-
-        <updated>2026-09-08T09:18:38-03:00</updated>
-            <summary type="html">
-                <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/98/delegar-hormiguear.png" alt="" />
-                    Grata sorpresa es el instructivo electoral que dispuso la Comisión Directiva para estimular la votación de delegados y evitar las asunciones automáticas de las listas únicas. Buscar formas de promover&hellip;
                 ]]>
             </summary>
         <content></content>

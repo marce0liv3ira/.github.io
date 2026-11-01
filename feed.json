@@ -11,6 +11,30 @@
     },
     "items": [
         {
+            "id": "https://hormigue.ar/smaunam-charla/",
+            "url": "https://hormigue.ar/smaunam-charla/",
+            "title": "Smaunam charla",
+            "summary": "La reunión duró dos horas y media, fue muy concurrida. Por razones de síntesis, varios datos están en los bloques de comentarios y las llamadas a pie. En los teléfonos&hellip;",
+            "image": "https://hormigue.ar/media/posts/109/IMG_20261029_075230950_HDR~2.jpg",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "risa",
+                   "plastas",
+                   "oficialismo permanente",
+                   "mersada",
+                   "laboral",
+                   "democracia",
+                   "comunicación",
+                   "blendi U",
+                   "adornideada",
+                   "Smaunam"
+            ],
+            "date_published": "2026-11-01T18:28:09-03:00",
+            "date_modified": "2026-11-01T20:03:56-03:00"
+        },
+        {
             "id": "https://hormigue.ar/la-cosa-smaunam/",
             "url": "https://hormigue.ar/la-cosa-smaunam/",
             "title": "La cosa Smaunam",
@@ -197,27 +221,6 @@
             ],
             "date_published": "2026-09-09T22:48:00-03:00",
             "date_modified": "2026-10-03T07:47:17-03:00"
-        },
-        {
-            "id": "https://hormigue.ar/delegar/",
-            "url": "https://hormigue.ar/delegar/",
-            "title": "Delegar",
-            "summary": "Grata sorpresa es el instructivo electoral que dispuso la Comisión Directiva para estimular la votación de delegados y evitar las asunciones automáticas de las listas únicas. Buscar formas de promover&hellip;",
-            "image": "https://hormigue.ar/media/posts/98/delegar-hormiguear.png",
-            "author": {
-                "name": "marce oliveira"
-            },
-            "tags": [
-                   "sindicalismo",
-                   "pose",
-                   "plastas",
-                   "oficialismo permanente",
-                   "democracia",
-                   "canicheo",
-                   "blendi U"
-            ],
-            "date_published": "2026-09-08T09:18:38-03:00",
-            "date_modified": "2026-09-08T20:21:43-03:00"
         }
     ]
 }
