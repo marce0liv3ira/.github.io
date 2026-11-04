@@ -1,6 +1,3 @@
 User-agent: *
-Disallow: /assets/
-Disallow: /media/website/
-Allow: /
-
+Disallow:
 Sitemap: https://hormigue.ar/sitemap.xml
