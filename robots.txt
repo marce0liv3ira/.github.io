@@ -1,7 +1,3 @@
 User-agent: *
-Allow: /
-
-Disallow: /private/
-Disallow: /tmp/
-
+Disallow:
 Sitemap: https://hormigue.ar/sitemap.xml
