@@ -11,6 +11,31 @@
     },
     "items": [
         {
+            "id": "https://hormigue.ar/minuta-y-reunion/",
+            "url": "https://hormigue.ar/minuta-y-reunion/",
+            "title": "minuta y reunión",
+            "summary": "Comparto los informes y transmito comentarios sobre la última reunión de Apunam (5 de noviembre). Como siempre, complemento con lecturas, observaciones y datos aportados verbalmente por compañeros delegados. Reconozco que&hellip;",
+            "image": "https://hormigue.ar/media/posts/111/Screenshot_20261105-144628~2.jpg",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "sindicalismo",
+                   "risa",
+                   "plastas",
+                   "ombliguismo",
+                   "mersada",
+                   "laboral",
+                   "democracia",
+                   "comunicación",
+                   "canicheo",
+                   "Smaunam",
+                   "Ley de Financiamiento"
+            ],
+            "date_published": "2026-11-07T10:28:00-03:00",
+            "date_modified": "2026-11-09T21:08:00-03:00"
+        },
+        {
             "id": "https://hormigue.ar/smaunam-charla/",
             "url": "https://hormigue.ar/smaunam-charla/",
             "title": "Smaunam charla",
@@ -202,25 +227,6 @@
             ],
             "date_published": "2026-09-13T21:04:00-03:00",
             "date_modified": "2026-09-14T18:10:08-03:00"
-        },
-        {
-            "id": "https://hormigue.ar/reciproca/",
-            "url": "https://hormigue.ar/reciproca/",
-            "title": "Recíproca",
-            "summary": "El 25 de agosto, la Comisión Directiva de Apunam respondió oficialmente, por correo electrónico, a mi pedido de información presentado el 26 de junio. Antes de que se cumplieran los&hellip;",
-            "image": "https://hormigue.ar/media/posts/99/email-hormiguear.png",
-            "author": {
-                "name": "marce oliveira"
-            },
-            "tags": [
-                   "sindicalismo",
-                   "plastas",
-                   "democracia",
-                   "comunicación",
-                   "blendi U"
-            ],
-            "date_published": "2026-09-09T22:48:00-03:00",
-            "date_modified": "2026-10-03T07:47:17-03:00"
         }
     ]
 }

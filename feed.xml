@@ -3,12 +3,41 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-11-03T18:26:44-03:00</updated>
+    <updated>2026-11-09T21:08:00-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
     <id>https://hormigue.ar</id>
 
+    <entry>
+        <title>minuta y reunión</title>
+        <author>
+            <name>marce oliveira</name>
+        </author>
+        <link href="https://hormigue.ar/minuta-y-reunion/"/>
+        <id>https://hormigue.ar/minuta-y-reunion/</id>
+        <media:content url="https://hormigue.ar/media/posts/111/Screenshot_20261105-144628~2.jpg" medium="image" />
+            <category term="sindicalismo"/>
+            <category term="risa"/>
+            <category term="plastas"/>
+            <category term="ombliguismo"/>
+            <category term="mersada"/>
+            <category term="laboral"/>
+            <category term="democracia"/>
+            <category term="comunicación"/>
+            <category term="canicheo"/>
+            <category term="Smaunam"/>
+            <category term="Ley de Financiamiento"/>
+
+        <updated>2026-11-07T10:28:00-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://hormigue.ar/media/posts/111/Screenshot_20261105-144628~2.jpg" alt="Registro de reunión de Apunam entre Cuerpo de Delegados y CD, 5 de noviembre." />
+                    Comparto los informes y transmito comentarios sobre la última reunión de Apunam (5 de noviembre). Como siempre, complemento con lecturas, observaciones y datos aportados verbalmente por compañeros delegados. Reconozco que&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
     <entry>
         <title>Smaunam charla</title>
         <author>
@@ -234,29 +263,6 @@
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/100/persistir-hormiguear.jpg" alt="" />
                     Los discursos no son cosa menor, nunca son «cosas que se dicen nomás». Es cierto que escuchar es una habilidad que fuimos perdiendo frente a la maña de hablar a&hellip;
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>Recíproca</title>
-        <author>
-            <name>marce oliveira</name>
-        </author>
-        <link href="https://hormigue.ar/reciproca/"/>
-        <id>https://hormigue.ar/reciproca/</id>
-        <media:content url="https://hormigue.ar/media/posts/99/email-hormiguear.png" medium="image" />
-            <category term="sindicalismo"/>
-            <category term="plastas"/>
-            <category term="democracia"/>
-            <category term="comunicación"/>
-            <category term="blendi U"/>
-
-        <updated>2026-09-09T22:48:00-03:00</updated>
-            <summary type="html">
-                <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/99/email-hormiguear.png" alt="" />
-                    El 25 de agosto, la Comisión Directiva de Apunam respondió oficialmente, por correo electrónico, a mi pedido de información presentado el 26 de junio. Antes de que se cumplieran los&hellip;
                 ]]>
             </summary>
         <content></content>
