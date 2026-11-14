@@ -9,11 +9,6 @@
          
         <meta name="generator" content="Publii Open-Source CMS for Static Site">
 
-			<meta name="theme-color" content="rgba(92,0,0,0.86)"  media="(prefers-color-scheme: dark)">
-	    	<meta name="theme-color" content="rgba(148,10,17,0.87)" media="(prefers-color-scheme: light)">
-	    	<meta name="msapplication-navbutton-color" content="rgba(148,10,17,0.87)">
-	    	<meta name="apple-mobile-web-app-status-bar-style" content="rgba(148,10,17,0.87)">
-    	
         <link rel="canonical" href="https://hormigue.ar/bonus/adenda-smaunam/">
         <link rel="alternate" type="application/atom+xml" href="https://hormigue.ar/feed.xml" title="HORMIGUEAR - RSS">
 <link rel="alternate" type="application/json" href="https://hormigue.ar/feed.json" title="HORMIGUEAR - JSON">
@@ -42,7 +37,7 @@
         </noscript>			
         <meta name="google-site-verification" content="CbjAH9ed_2BvMIOHsn7TaOrmsT29B55uEVeKvDj-zkQ" />
 
-<!-- Preconexiones para acelerar la red -->
+<!-- Preconexiones -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://pica.hormigue.ar">
@@ -53,9 +48,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Bebas+Neue&family=Inter:wght@100&display=swap" rel="stylesheet">
 </noscript>
 
-<!-- Favicons adaptativos -->
-<link rel="shortcut icon" href="https://hormigue.ar/media/website/logo-hormi-new.png" media="(prefers-color-scheme: light)">
-<link rel="shortcut icon" href="https://pica.hormigue.ar/img/ico/icohormiblancovec.png" media="(prefers-color-scheme: dark)">
+<!-- Color de barra en navegadores móviles (fuerza rojo en claro y oscuro) -->
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#991A1A">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#991A1A">
+<meta name="msapplication-navbutton-color" content="#991A1A">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<!-- Favicons exclusivos para pestañas de navegador -->
+<link rel="icon" type="image/png" href="https://pica.hormigue.ar/hormiMG/logo-hormi-new%20(ico).png" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/png" href="https://pica.hormigue.ar/hormiMG/icohormiblancovec%20(ico).png" media="(prefers-color-scheme: dark)">
+
+<!-- Íconos sólidos y Manifiesto para instalar como App en Android/iOS -->
+<link rel="apple-touch-icon" sizes="180x180" href="/icon-192.png">
+<link rel="manifest" href="/manifest.webmanifest">
 
 <!-- Motor de PDF externo -->
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
@@ -430,7 +435,7 @@
 <script>
 (function() {
     /* ============================================================
-        A. SISTEMA DE SEGURIDAD (Capturas de pantalla)
+        A. SISTEMA PROMOTOR (Capturas)
     ============================================================ */
     function mostrarBloqueo() {
         if (document.getElementById('bloqueo-hormigueo')) return;
@@ -467,7 +472,7 @@
     });
 
     /* ============================================================
-        B. INICIALIZACIÓN PRINCIPAL (DOM Ready)
+        B. INICIALIZACIÓN PRINCIPAL (DOM Listo)
     ============================================================ */
     document.addEventListener("DOMContentLoaded", function() {
         
@@ -646,7 +651,7 @@
             }
         });
 
-        // 10. Ascenso Táctico (Botón Volver arriba)
+        // 10. Ascenso (Botón subir)
         const btnTop = document.createElement('div');
         btnTop.id = 'btn-ascenso';
         btnTop.title = 'Volver al techo';
@@ -660,7 +665,7 @@
         btnTop.id && btnTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
         /* ============================================================
-           11. INYECCIÓN TÁCTICA: EMAIL OFICIAL Y CONTROL DE COMPARTIR
+           11. INYECCIÓN: EMAIL OFICIAL Y CONTROL COMPARTIR
            ============================================================ */
         const bioAuthorP = document.querySelector('.post__bio p');
         if (bioAuthorP && !document.querySelector('.bio-contacto')) {
@@ -717,7 +722,7 @@
     }); 
 
     /* ============================================================
-        C. RECALCULAR LLAMADAS (Al cargar recursos visuales)
+        C. RECALCULAR LLAMADAs (Al cargar recursos visuales)
     ============================================================ */
     const recalcular = () => {
         document.querySelectorAll('.llamada-pie').forEach(el => {
