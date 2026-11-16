@@ -3,12 +3,37 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-11-12T19:56:01-03:00</updated>
+    <updated>2026-11-16T18:49:57-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
     <id>https://hormigue.ar</id>
 
+    <entry>
+        <title>Lxs concursantes</title>
+        <author>
+            <name>marce oliveira</name>
+        </author>
+        <link href="https://hormigue.ar/recursos-y-humanos/"/>
+        <id>https://hormigue.ar/recursos-y-humanos/</id>
+        <media:content url="https://hormigue.ar/media/posts/112/portada-concursantes-horm.png" medium="image" />
+            <category term="sindicalismo"/>
+            <category term="recursos"/>
+            <category term="plastas"/>
+            <category term="ombliguismo"/>
+            <category term="mersada"/>
+            <category term="laboral"/>
+            <category term="democracia"/>
+
+        <updated>2026-11-16T10:10:50-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                        <img src="https://hormigue.ar/media/posts/112/portada-concursantes-horm.png" alt="" />
+                    Me detengo en el informe de la delegada de Enfermería sobre la reunión del 5 de noviembre entre los delegados y la comisión directiva de Apunam. Recomiendo su lectura porque&hellip;
+                ]]>
+            </summary>
+        <content></content>
+    </entry>
     <entry>
         <title>Minuta y reunión</title>
         <author>
@@ -237,32 +262,6 @@
                 <![CDATA[
                         <img src="https://hormigue.ar/media/posts/101/primaveraflan-hormiguear.png" alt="" />
                     Casi a fines de 2025, el periodista Franco Torchia expresó en tevé que la movilización universitaria no daba la talla. Lo dijo con cierta sutileza, pero lo que me pichó&hellip;
-                ]]>
-            </summary>
-        <content></content>
-    </entry>
-    <entry>
-        <title>Persistir</title>
-        <author>
-            <name>marce oliveira</name>
-        </author>
-        <link href="https://hormigue.ar/persistir/"/>
-        <id>https://hormigue.ar/persistir/</id>
-        <media:content url="https://hormigue.ar/media/posts/100/persistir-hormiguear.jpg" medium="image" />
-            <category term="recursos"/>
-            <category term="plastas"/>
-            <category term="ombliguismo"/>
-            <category term="oficialismo permanente"/>
-            <category term="laboral"/>
-            <category term="democracia"/>
-            <category term="comunicación"/>
-            <category term="blendi U"/>
-
-        <updated>2026-09-13T21:04:00-03:00</updated>
-            <summary type="html">
-                <![CDATA[
-                        <img src="https://hormigue.ar/media/posts/100/persistir-hormiguear.jpg" alt="" />
-                    Los discursos no son cosa menor, nunca son «cosas que se dicen nomás». Es cierto que escuchar es una habilidad que fuimos perdiendo frente a la maña de hablar a&hellip;
                 ]]>
             </summary>
         <content></content>

@@ -11,6 +11,27 @@
     },
     "items": [
         {
+            "id": "https://hormigue.ar/recursos-y-humanos/",
+            "url": "https://hormigue.ar/recursos-y-humanos/",
+            "title": "Lxs concursantes",
+            "summary": "Me detengo en el informe de la delegada de Enfermería sobre la reunión del 5 de noviembre entre los delegados y la comisión directiva de Apunam. Recomiendo su lectura porque&hellip;",
+            "image": "https://hormigue.ar/media/posts/112/portada-concursantes-horm.png",
+            "author": {
+                "name": "marce oliveira"
+            },
+            "tags": [
+                   "sindicalismo",
+                   "recursos",
+                   "plastas",
+                   "ombliguismo",
+                   "mersada",
+                   "laboral",
+                   "democracia"
+            ],
+            "date_published": "2026-11-16T10:10:50-03:00",
+            "date_modified": "2026-11-16T18:49:57-03:00"
+        },
+        {
             "id": "https://hormigue.ar/minuta-y-reunion/",
             "url": "https://hormigue.ar/minuta-y-reunion/",
             "title": "Minuta y reunión",
@@ -205,28 +226,6 @@
             ],
             "date_published": "2026-09-30T21:55:00-03:00",
             "date_modified": "2026-11-01T15:42:09-03:00"
-        },
-        {
-            "id": "https://hormigue.ar/persistir/",
-            "url": "https://hormigue.ar/persistir/",
-            "title": "Persistir",
-            "summary": "Los discursos no son cosa menor, nunca son «cosas que se dicen nomás». Es cierto que escuchar es una habilidad que fuimos perdiendo frente a la maña de hablar a&hellip;",
-            "image": "https://hormigue.ar/media/posts/100/persistir-hormiguear.jpg",
-            "author": {
-                "name": "marce oliveira"
-            },
-            "tags": [
-                   "recursos",
-                   "plastas",
-                   "ombliguismo",
-                   "oficialismo permanente",
-                   "laboral",
-                   "democracia",
-                   "comunicación",
-                   "blendi U"
-            ],
-            "date_published": "2026-09-13T21:04:00-03:00",
-            "date_modified": "2026-09-14T18:10:08-03:00"
         }
     ]
 }
