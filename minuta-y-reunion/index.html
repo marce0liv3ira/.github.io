@@ -476,8 +476,11 @@
 
 })();</script><script>(function() {
     function bautizarLupa() {
-        const leyenda = "El buscador de Google tiene todas las mañas para indexar, pero igual encuentra casi todo."; // <-- Editá acá tu mensaje
-        document.querySelectorAll("a.icon.brands.fa-facebook-f").forEach(function(lupa) {
+        const leyenda = "El buscador de Google es mañero para indexar, pero igual encuentra casi todo.";
+        const selector = "#nav ul.icons a.icon.brands.fa-facebook-f, #header ul.icons a.icon.brands.fa-facebook-f, nav ul.icons a.icon.brands.fa-facebook-f";
+        
+        document.querySelectorAll(selector).forEach(function(lupa) {
+            if (lupa.closest("footer, .share, .post-share")) return;
             lupa.setAttribute("title", leyenda);
             lupa.setAttribute("aria-label", leyenda);
             const etiqueta = lupa.querySelector(".label");
