@@ -289,135 +289,6 @@
    <script>/*<![CDATA[*/var images=document.querySelectorAll("img[loading]");for(var i=0;i<images.length;i++){if(images[i].complete){images[i].classList.add("is-loaded")}else{images[i].addEventListener("load",function(){this.classList.add("is-loaded")},false)}};/*]]>*/</script>
 
 <style>
-/* =========================
-   AUDIO FLOTANTE (ESTÉTICA PC BASE)
-========================= */
-#audio-floating-player {
-    position: fixed;
-    top: 180px;
-    left: 16px;
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 10px 12px 2px 12px; 
-    background: rgba(0, 0, 0, 0.65);
-    border: 1px solid #A30000;
-    border-radius: 10px;
-    box-shadow: 0 0 8px rgba(163, 0, 0, 0.6), 0 0 18px rgba(163, 0, 0, 0.4);
-    backdrop-filter: blur(4px);
-    transition: all 0.2s ease;
-}
-
-#audio-floating-player audio {
-    width: 250px;
-}
-
-#audio-floating-player .audio-label {
-    font-family: 'Bebas Neue', sans-serif; 
-    font-size: 11px;
-    font-weight: normal; 
-    color: #ff2b2b;
-    margin-top: -6px; 
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    opacity: 0.85;
-}
-
-/* ============================================================
-   MÓVILES: BOTÓN CIRCULAR 
-============================================================ */
-@media (max-width: 768px) {
-    #audio-floating-player {
-        top: 30px !important; 
-        left: 10px !important;
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        width: 50px !important;
-        height: 50px !important;
-        padding: 0 !important;
-        border-radius: 50% !important;
-        background: rgba(0, 0, 0, 0.65) !important;
-        cursor: pointer !important;
-        overflow: visible !important; 
-    }
-
-    #audio-floating-player audio {
-        display: none !important;
-    }
-
-    #audio-floating-player::before {
-        content: "\f04b" !important; 
-        font-family: "Font Awesome 5 Free", "FontAwesome", sans-serif !important;
-        font-weight: 700 !important;
-        color: #ff2b2b !important;
-        font-size: 20px !important;
-        margin-left: 4px !important; 
-        transition: all 0.2s ease-in-out !important;
-    }
-
-    #audio-floating-player.playing::before {
-        content: "\f04c" !important; 
-        margin-left: 0 !important; 
-    }
-
-    #audio-floating-player .audio-label {
-        position: absolute !important;
-        bottom: -28px !important; 
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        font-size: 0 !important; 
-        color: transparent !important; 
-        letter-spacing: 0 !important;
-        background-color: transparent !important; 
-        box-shadow: none !important; 
-        border-radius: 0 !important; 
-        background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.65) 20%, rgba(0, 0, 0, 0) 55%) !important; 
-        padding: 8px 20px !important; 
-        text-shadow: none !important; 
-        opacity: 0.95 !important;
-    }
-
-    #audio-floating-player .audio-label::after {
-        content: "\f028" !important; 
-        font-family: "Font Awesome 5 Free", "FontAwesome", sans-serif !important;
-        font-weight: 900 !important;
-        font-size: 15px !important; 
-        color: #ff2b2b !important; 
-        display: block !important;
-    }
-}
-
-/* =========================
-   LIGHTBOX (INTACTO)
-========================= */
-.lightbox-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.85);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-    z-index: 99999;
-}
-
-.lightbox-overlay.active {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.lightbox-overlay img {
-    max-width: 90%;
-    max-height: 90%;
-    border: 3px solid #A30000;
-    box-shadow: 0 0 40px rgba(163,0,0,0.5);
-    border-radius: 6px;
-}
 
 /* PIE DE PÁGINA GENÉRICO */
 #footer, .footer, footer, #copyright, .copyright {
@@ -614,8 +485,8 @@
             const time = Math.ceil(wordCount / 220);
             if (time > 0) {
                 const rt = document.createElement('div');
-                const_rt_style = "font-family:'Inter', sans-serif; font-size:0.75rem; font-weight:500; color:#a30000; letter-spacing:1px; margin-bottom:10px; text-transform:uppercase; text-align:center;";
-                rt.style.cssText = const_rt_style;
+                const rt_style = "font-family:'Inter', sans-serif; font-size:0.75rem; font-weight:500; color:#a30000; letter-spacing:1px; margin-bottom:10px; text-transform:uppercase; text-align:center;";
+                rt.style.cssText = rt_style;
                 rt.innerHTML = time + " MINUTOS DE LECTURA";
                 title.parentNode.insertBefore(rt, title);
             }
@@ -688,14 +559,11 @@
             }
         });
 
-        const rawShareBlock = document.querySelector('.post__share');
+       const rawShareBlock = document.querySelector('.post__share');
         if (rawShareBlock) {
-            const currentURL = encodeURIComponent(window.location.href);
-            const currentTitle = encodeURIComponent(document.title);
-            
             const extraShareNodes = `
-                <a href="mailto:?subject=${currentTitle}&body=Mirá este expediente del tacurú:%0A%0A${currentURL}" class="js-share icon" rel="nofollow noopener noreferrer" aria-label="Enviar por email">
-                    <i class="fa-regular fa-envelope" style="color: #ffffff;"></i><span class="label">Correo</span>
+                <a href="https://www.google.com/preferences/source?q=hormigue.ar" target="_blank" class="js-share icon js-google-source" rel="nofollow noopener noreferrer" aria-label="Priorizar Hormigue.ar en Google" title="Picá y dale lugar a Hormigue.ar en Google, agregala a tus fuentes de confianza">
+                    <i class="fa-solid fa-star" style="color: #ffffff;"></i><span class="label">Priorizar</span>
                 </a>
                 <a href="#" class="js-share icon js-copy-url" rel="nofollow noopener noreferrer" aria-label="Copiar enlace del post">
                     <i class="fa-solid fa-link" style="color: #ffffff;"></i><span class="label">Copiar</span>
@@ -703,7 +571,7 @@
             `;
             
             document.querySelectorAll('.post__share-popup').forEach(popupEl => {
-                if (!popupEl.querySelector('.fa-regular.fa-envelope')) {
+                if (!popupEl.querySelector('.js-google-source')) {
                     popupEl.insertAdjacentHTML('beforeend', extraShareNodes);
                 }
             });
@@ -716,12 +584,12 @@
                         const labelNode = copyBtn.querySelector('.label');
                         iconNode.className = 'fa-solid fa-check';
                         iconNode.style.color = '#A30000';
-                        if(labelNode) labelNode.innerText = '¡Copiado!';
+                        if (labelNode) labelNode.innerText = '¡Copiado!';
                         
                         setTimeout(() => {
                             iconNode.className = 'fa-solid fa-link';
                             iconNode.style.color = '#ffffff';
-                            if(labelNode) labelNode.innerText = 'Copiar';
+                            if (labelNode) labelNode.innerText = 'Copiar';
                         }, 2000);
                     });
                 });
@@ -765,7 +633,7 @@
         const selector = "#nav ul.icons a.icon.brands.fa-facebook-f, #header ul.icons a.icon.brands.fa-facebook-f, nav ul.icons a.icon.brands.fa-facebook-f";
         
         document.querySelectorAll(selector).forEach(function(lupa) {
-            if (lupa.closest("footer, .share, .post-share")) return;
+            if (lupa.closest("footer, .post__share, .post__share-popup")) return;
             lupa.setAttribute("title", leyenda);
             lupa.setAttribute("aria-label", leyenda);
             const etiqueta = lupa.querySelector(".label");
