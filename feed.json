@@ -54,7 +54,7 @@
                    "Ley de Financiamiento"
             ],
             "date_published": "2026-11-07T10:28:00-03:00",
-            "date_modified": "2026-11-16T20:01:14-03:00"
+            "date_modified": "2026-11-23T04:58:47-03:00"
         },
         {
             "id": "https://hormigue.ar/smaunam-charla/",
@@ -115,6 +115,7 @@
                    "sindicalismo",
                    "salario",
                    "plastas",
+                   "paro activo",
                    "ombliguismo",
                    "oficialismo permanente",
                    "movimiento",
@@ -122,7 +123,7 @@
                    "Ley de Financiamiento"
             ],
             "date_published": "2026-10-27T23:37:00-03:00",
-            "date_modified": "2026-11-02T18:30:23-03:00"
+            "date_modified": "2026-11-23T04:47:09-03:00"
         },
         {
             "id": "https://hormigue.ar/la-quinta-y-el-colageno/",
@@ -219,13 +220,14 @@
                    "sindicalismo",
                    "pose",
                    "plastas",
+                   "paro activo",
                    "oficialismo permanente",
                    "comunicación",
                    "canicheo",
                    "Ley de Financiamiento"
             ],
             "date_published": "2026-09-30T21:55:00-03:00",
-            "date_modified": "2026-11-01T15:42:09-03:00"
+            "date_modified": "2026-11-23T04:49:34-03:00"
         }
     ]
 }

@@ -3,7 +3,7 @@
     <title>HORMIGUEAR</title>
     <link href="https://hormigue.ar/feed.xml" rel="self" />
     <link href="https://hormigue.ar" />
-    <updated>2026-11-20T15:24:41-03:00</updated>
+    <updated>2026-11-23T04:58:47-03:00</updated>
     <author>
         <name>marce oliveira</name>
     </author>
@@ -128,6 +128,7 @@
             <category term="sindicalismo"/>
             <category term="salario"/>
             <category term="plastas"/>
+            <category term="paro activo"/>
             <category term="ombliguismo"/>
             <category term="oficialismo permanente"/>
             <category term="movimiento"/>
@@ -252,6 +253,7 @@
             <category term="sindicalismo"/>
             <category term="pose"/>
             <category term="plastas"/>
+            <category term="paro activo"/>
             <category term="oficialismo permanente"/>
             <category term="comunicación"/>
             <category term="canicheo"/>
